@@ -1,0 +1,87 @@
+name: Sync Public Mirror
+
+# Private repo'daki her main push'unda public mirror'ı günceller.
+# Hassas dosyalar (fraud, analiz pipeline, mining ağırlıkları) hariç tutulur.
+#
+# Gerekli GitHub Secrets (Settings → Secrets and variables → Actions):
+#   PUBLIC_MIRROR_TOKEN  : public mirror repo'ya push yetkisi olan GitHub PAT
+#                          (repo scope yeterli)
+#   PUBLIC_MIRROR_REPO   : örn. "yumoverse/yumoyumo-public"
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  sync:
+    name: Sync to public mirror
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout private repo (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Clone public mirror
+        env:
+          TOKEN: ${{ secrets.PUBLIC_MIRROR_TOKEN }}
+          MIRROR: ${{ secrets.PUBLIC_MIRROR_REPO }}
+        run: |
+          git clone "https://x-access-token:${TOKEN}@github.com/${MIRROR}.git" /tmp/public-mirror
+
+      - name: Sync public files (sensitive paths excluded)
+        run: |
+          rsync -av --delete \
+            --exclude='.git/' \
+            --exclude='node_modules/' \
+            --exclude='.env' \
+            --exclude='.env.*' \
+            --exclude='.env.local' \
+            --exclude='.env*.local' \
+            --exclude='.secrets' \
+            \
+            --exclude='lib/fraud/' \
+            --exclude='lib/mining/' \
+            --exclude='lib/receipt/db/duplicate/' \
+            --exclude='lib/doctypes/classifier.ts' \
+            --exclude='lib/doctypes/signals.ts' \
+            --exclude='app/api/receipt/analyze/' \
+            --exclude='app/api/debug/' \
+            \
+            --exclude='fix-passwords-api.ts' \
+            --exclude='fix-all-passwords-correct.ts' \
+            --exclude='fix-all-invalid-passwords.ts' \
+            --exclude='scripts/' \
+            --exclude='lib/db/migrations/021_dedupe_receipts_same_date_amount.sql' \
+            \
+            ./ /tmp/public-mirror/
+
+      - name: Commit and push to public mirror
+        env:
+          TOKEN: ${{ secrets.PUBLIC_MIRROR_TOKEN }}
+          MIRROR: ${{ secrets.PUBLIC_MIRROR_REPO }}
+        run: |
+          cd /tmp/public-mirror
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Boş repo: main branch yoksa oluştur
+          if ! git rev-parse --verify main 2>/dev/null; then
+            git checkout -b main
+          fi
+
+          git add -A
+
+          # Değişiklik yoksa commit atma
+          if git diff --staged --quiet; then
+            echo "No changes to sync."
+            exit 0
+          fi
+
+          COMMIT_MSG=$(git -C "$GITHUB_WORKSPACE" log -1 --pretty=format:"%s")
+          git commit -m "sync: ${COMMIT_MSG}"
+
+          git push "https://x-access-token:${TOKEN}@github.com/${MIRROR}.git" main

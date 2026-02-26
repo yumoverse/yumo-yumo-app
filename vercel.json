@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "framework": "nextjs",
+  "regions": ["iad1"],
+  "crons": [
+    {
+      "path": "/api/cron/cleanup-blobs",
+      "schedule": "0 2 * * *"
+    },
+    {
+      "path": "/api/cron/daily-backup",
+      "schedule": "0 3 * * *"
+    }
+  ]
+}
+

@@ -1,0 +1,67 @@
+# dependencies
+node_modules/
+
+# next / build
+.next/
+out/
+dist/
+.turbo/
+
+# env & secrets (never commit)
+.env
+.env.*
+!.env.example
+.env.local
+.env*.local
+.secrets
+*.pem
+
+# data storage (user data - do not commit)
+.data/
+
+# IDE / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.cursor/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.so
+.venv/
+venv/
+env/
+
+# vercel
+.vercel/
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# test / coverage
+coverage/
+.nyc_output/
+
+# one-off scripts with credentials (do not commit)
+fix-passwords-api.ts
+fix-all-passwords-correct.ts
+fix-all-invalid-passwords.ts
+scripts/create-30-roman-users.ts
+
+
+# local caches / generated (do not commit)
+product_name_cache.json
+merchant_patterns.json
+compare-extraction.json
+raw-ocr-batch.json
+hybrid_100_results.json
+hybrid_100_summary.txt
+project-structure.txt

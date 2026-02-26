@@ -1,0 +1,2695 @@
+{
+  "navigation": {
+    "logo": "Yumo Yumo",
+    "home": "Ana Sayfa",
+    "whitepaper": "Ciddi Belge",
+    "roadmap": "Yol Haritası",
+    "tokenomics": "Tokenomik",
+    "faq": "SSS",
+    "signUp": "Kayıt Ol",
+    "goApp": "Uygulamaya Git",
+    "app": "Uygulama"
+  },
+  "hero": {
+    "title": "Yumbie'yi Besle.",
+    "subtitle": "Harcamaları ödüllere dönüştür.",
+    "description": "Fişlerinde değer gizli. Yumbie bunu açığa çıkarmana yardımcı olur.",
+    "cta": "Fiş Yükle",
+    "joinWaitlist": "Bekleme Listesine Katıl"
+  },
+  "loading": {
+    "analyzing": "Fiş analiz ediliyor...",
+    "extractingHiddenCosts": "Gizli masraflar çıkartılıyor...",
+    "revealingTruth": "Gerçekler gün yüzüne çıkarılıyor..."
+  },
+  "about": {
+    "title": "Yumo Yumo Hakkında",
+    "description": "Günlük harcamaları Proof of Expense (PoE) ile oyuna dönüştüren ilk Web3 projesi. Fiş yükle, Yumbie'ni besle ve eğlenerek ödül kazan!",
+    "description1": "Yumo Yumo, dünyanın ilk fiş-karşılığı-kazanç sağlayan oyunlaştırılmış platformudur. Günlük harcamalarını Yumbie'ni fişlerle besleyerek ödüllere dönüştür.",
+    "description2": "Eğlenirken $YUMO token kazanan binlerce kullanıcıya katıl. Her harcama önemlidir."
+  },
+  "footer": {
+    "description": "Fişlerini ödüllere dönüştür. Yumbie'yi besle, token kazan ve en sevimli Web3 devrimine katıl.",
+    "resources": "Kaynaklar",
+    "community": "Topluluk",
+    "followUs": "Bizi Takip Edin",
+    "terms": "Şartlar ve Koşullar",
+    "privacy": "Gizlilik Politikası",
+    "support": "Destek",
+    "copyright": "© 2025 Yumo Yumo. Tüm hakları saklıdır. Sevgi ve Yumbie'lerle yapıldı."
+  },
+  "howItWorks": {
+    "title": "Nasıl Çalışır",
+    "subtitle": "Yolculuğuna başlamak için üç basit adım",
+    "steps": [
+      {
+        "title": "Topluluğa Katıl",
+        "description": "Waitlist'e katıl ve Yumo Yumo ekosisteminin bir parçası ol."
+      },
+      {
+        "title": "Yumo'yu Keşfet",
+        "description": "Proof of Expense'in harcamalarını ödüllere nasıl dönüştürdüğünü öğren."
+      },
+      {
+        "title": "Ödül Kazan",
+        "description": "$YUMO token'ları kazan ve gamified platformumuza katıl."
+      }
+    ]
+  },
+  "tokenomics": {
+    "title": "Token Dağılımı",
+    "subtitle": "Yumo Nasıl Paylaşılır",
+    "totalSupply": "Toplam arz: 99 Milyar $YUMO token — eğlence, adalet ve büyüme için tasarlandı",
+    "distribution": [
+      {
+        "label": "Harcama Kanıtı (Madencilik)",
+        "description": "Fiş yükleyerek ve PoE sistemine katılarak kazanılır"
+      },
+      {
+        "label": "Staking ve Uzun Vadeli Teşvikler",
+        "description": "Uzun vadeli sahipler ve stake edenler için ödüller"
+      },
+      {
+        "label": "Eğlenceli Ödüller (Görevler, Galxe, Zealy)",
+        "description": "Oyunlaştırılmış görevler ve topluluk etkinlikleri aracılığıyla dağıtılır"
+      },
+      {
+        "label": "Genesis (Erken Katılım)",
+        "description": "Erken destekçiler ve topluluk oluşturucular için ayrıldı"
+      }
+    ],
+    "detailedLink": "Detaylı tokenomik için buraya tıklayın"
+  },
+  "papers": {
+    "title": "Belgelerimizi Oku",
+    "subtitle": "Yumo Yumo'nun vizyonu ve teknik detaylarına derinlemesine bak",
+    "funPaper": {
+      "title": "Eğlenceli Belge",
+      "subtitle": "Fişlerini Ödüllere Dönüştür",
+      "description": "Yumo Yumo'nun günlük harcamaları heyecan verici bir ödül macerasına nasıl dönüştürdüğünü keşfedin. Oyunlaştırılmış ekosistemimiz ve topluluk odaklı özelliklerimiz hakkında bilgi edinin.",
+      "tags": ["Oyunlaştırma", "Ödüller", "Topluluk"]
+    },
+    "seriousPaper": {
+      "title": "Ciddi Belge",
+      "subtitle": "Teknik Mimari ve Tokenomik",
+      "description": "Harcama Kanıtı konsensüsü, akıllı sözleşme mimarisi ve Yumo Yumo'nun arkasındaki tam ekonomik modeli kapsayan kapsamlı teknik dokümantasyon.",
+      "tags": ["Harcama-Kanıtı", "Akıllı Sözleşmeler", "Ekonomi"]
+    }
+  },
+  "funPaper": {
+    "sections": [
+      {
+        "title": "1. Peki... Yumo Yumo Nedir?",
+        "content": [
+          "Yumo Yumo, zaten her gün yaptığın bir şeyi yaparak token madenciliği yapmanı sağlayan bir Web3 projesidir:",
+          "Para harcamak.",
+          "Her fiyatın katmanları vardır.",
+          "Vergiler, kâr marjları, operasyonel maliyetler...",
+          "Hepsini her gün, hiç düşünmeden ödersin.",
+          "Yumo Yumo bu katmanlara bakar ve der ki:",
+          "\"Harika! Gel bunu madenciliğe (mining) dönüştürelim.\""
+        ]
+      },
+      {
+        "title": "2. Neden İnsanların Umurunda Olsun?",
+        "content": [
+          "Çünkü neredeyse tüm finans araçları şu sıkıcı soruyu sorar:",
+          "\"Ne kadar harcadın?\"",
+          "Yumo Yumo daha iyisini sorar:",
+          "\"O fiyatın içinde aslında neler vardı?\"",
+          "Fiyatlara bu gözle bakmaya başladığında, harcama yapmak pasif bir eylem olmaktan çıkar.",
+          "Veriye dönüşür.",
+          "Ve veri kazandırır."
+        ]
+      },
+      {
+        "title": "3. Harcama Kanıtı (Proof of Expense - PoE)",
+        "content": [
+          "PoE (Harcama Kanıtı) basit ve dürüsttür.",
+          "Gerçek bir fiş yüklersin.",
+          "Sistem fiyatın içindekileri analiz eder.",
+          "Gizli maliyetler gün yüzüne çıkar.",
+          "Gerçek dünya verisi sağladığın için token kazanırsın.",
+          "Sahte aksiyon yok.",
+          "Botlarla buton tıklamak yok.",
+          "\"Sadece hislerle\" gelen ödüller yok.",
+          "Eğer gerçek hayatta harcıyorsan, Yumo Yumo'da madencilik yapabilirsin."
+        ]
+      },
+      {
+        "title": "4. Madencilik, Ama Günlük Hayatın İçinde",
+        "content": [
+          "GPU'ları (ekran kartlarını) unut.",
+          "Makine dolu depoları unut.",
+          "Yumo Yumo'da fişlerin, senin madencilik cihazlarındır.",
+          "Her geçerli fiş, sisteme bir sinyal ekler.",
+          "Her sinyal, token üretir.",
+          "Döngü tertemizdir:",
+          "Harca → Yükle → Kaz → Kazan",
+          "Zaten birinci adımı her halükarda yapıyordun."
+        ]
+      },
+      {
+        "title": "5. Tokenlar Hakkında (Önce Topluluk)",
+        "content": [
+          "Net olalım:",
+          "Ekip tahsisi (allocation) yok.",
+          "Gizli zula yok.",
+          "Pazarlama için ayrılmış dev bütçeler yok.",
+          "İçeriden birilerinin önceden token basması yok.",
+          "Yumo Yumo, tokenların merkezi bir yapıya değil, katılımcılara akması için inşa edildi.",
+          "Katkı sağlarsan kazanırsın.",
+          "Sağlamazsan kazanamazsın.",
+          "Bu kadar."
+        ]
+      },
+      {
+        "title": "6. \"Peki Bu İş Nasıl Fonlanıyor?\"",
+        "content": [
+          "Alışılagelmiş yollarla fonlanmıyor.",
+          "Devasa pazarlama bütçeleri yok.",
+          "Parayla tutulmuş reklam makineleri yok.",
+          "Yapay bir talep yok.",
+          "Yumo Yumo, Web3 yoluyla büyür:",
+          "Katılım, katkı ve paylaşılan teşviklerle.",
+          "Değer, ekibin vaatlerinden değil, insanların yaptıklarından gelir."
+        ]
+      },
+      {
+        "title": "7. Neden Web3?",
+        "content": [
+          "Çünkü kurallar insanlardan daha önemlidir.",
+          "Web3 şunları garanti eder:",
+          "Ödüller önceden tanımlanmış bir mantığı takip eder.",
+          "Dağıtım manuel olarak değiştirilemez.",
+          "Perde arkasında kimse \"kimin ne alacağına\" karar veremez.",
+          "Harcamalar ortak bir sinyale dönüşür.",
+          "Tokenlar, o sinyali oluşturan insanlara geri akar.",
+          "Basit sistemler hayatta kalır.",
+          "Şeffaf olmayanlar ise elenir."
+        ]
+      },
+      {
+        "title": "8. Bu Aslında Kimin İçin?",
+        "content": [
+          "Para harcayan insanlar.",
+          "Madenciliği seven ama uykusunu da almak isteyenler.",
+          "Hikayeler yerine kuralları tercih edenler.",
+          "Trade yapmana gerek yok.",
+          "Kaldıraç kullanmana gerek yok.",
+          "Grafik tahmin etmene gerek yok.",
+          "Sadece fişleri yüklersin."
+        ]
+      },
+      {
+        "title": "9. Büyük Resim",
+        "content": [
+          "Yumo Yumo bir farkındalıkla başlar.",
+          "Zamanla bu farkındalık şuna dönüşür:",
+          "Daha derin içgörüler.",
+          "Daha akıllı finansal araçlar.",
+          "Gerçek harcama verileri üzerine kurulu, büyüyen bir ekosistem.",
+          "Hepsi, parayı asıl harcayan insanlar tarafından desteklenir."
+        ]
+      },
+      {
+        "title": "10. Son Düşünce",
+        "content": [
+          "Cüzdanından her gün zaten para çıkıyor.",
+          "Yumo Yumo bunu durdurmaya çalışmaz.",
+          "Sadece bu olurken madencilik yapmanı sağlar.",
+          "Döngü: Harca ➔ Yükle ➔ Kaz ➔ Kazan",
+          "İşte döngü bu."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "İşin mutfağına girmeye hazır mısın?",
+      "description": "Teknik özellikler, token ekonomisinin (tokenomics) matematiksel detayları ve uygulama süreçleri hakkında çok daha derin bir dalış yap.",
+      "button": "Teknik Dökümanları İncele ➔"
+    },
+    "loop": {
+      "title": "Döngü",
+      "steps": {
+        "spend": "Harca",
+        "upload": "Yükle",
+        "mine": "Kaz",
+        "earn": "Kazan"
+      }
+    }
+  },
+  "roadmap": {
+    "title": "Geliştirme Yol Haritası",
+    "subtitle": "Harcama ödüllerini devrimleştirme yolculuğumuz",
+    "items": [
+      {
+        "quarter": "P1",
+        "year": "🚀",
+        "title": "Faz 1 — Genesis\nFarkındalık Başlıyor",
+        "items": [
+          "Adil Lansman: Topluluk odaklı likidite ve fiyat keşfi",
+          "PoE Madenciliği: Fişlerden aYUMO kazan",
+          "Dijital Kimlik: Foundation NFT'ni al, seviyeni yükselt"
+        ]
+      },
+      {
+        "quarter": "P2",
+        "year": "📈",
+        "title": "Faz 2 — Genişleme\nVeriden Güce",
+        "items": [
+          "Akıllı Ajanlar: NFT'ler AI destekli yol arkadaşlarına dönüşür",
+          "Staking Açılışı: Erken katılanlar için yüksek APR",
+          "Merchant Matrix: Kategori bazlı ödül çarpanları"
+        ]
+      },
+      {
+        "quarter": "P3",
+        "year": "🌍",
+        "title": "Faz 3 — Zeka\nSistem Öğreniyor",
+        "items": [
+          "Gelişmiş İçgörüler: AI destekli finansal raporlar",
+          "HCI Endeksi: Global hidden cost panosu",
+          "Olgun Protokol: Tamamen veri destekli ekonomi"
+        ]
+      }
+    ]
+  },
+  "waitlist": {
+    "title": "Bekleme Listesine Katılın",
+    "subtitle": "Yumo Yumo'yu ilk deneyenler arasında ol! ✨",
+    "email": "E-posta Adresi",
+    "country": "Ülken",
+    "referralSource": "Bizim hakkımızda nasıl duydun?",
+    "selectCountry": "Ülkeni seç",
+    "selectOption": "Bir seçenek seçin",
+    "submit": "Bekleme Listesine Katıl",
+    "submitting": "Katılıyor...",
+    "success": "Başarılı! Listedesin 🎉",
+    "successTitle": "Listedesin! 🎉",
+    "successMessage": "Yumo Yumo başladığında sana bildireceğiz.",
+    "inboxMessage": "Gelen kutunu kontrol et! 💌",
+    "alreadyExists": "Zaten bekleme listesindesin! 🎉",
+    "error": "Lütfen tüm alanları doldur 💕",
+    "networkError": "Ağ hatası. Lütfen bağlantını kontrol et ve tekrar dene! 💫",
+    "connectionError": "Bağlantı hatası. Lütfen tekrar dene! 💫",
+    "unexpectedError": "Sunucudan beklenmeyen yanıt. Lütfen tekrar dene! 💫",
+    "genericError": "Bir şeyler ters gitti. Lütfen tekrar dene! 💫",
+    "sources": [
+      "Sosyal medya (X, TikTok, Discord, vb.)",
+      "Google Arama",
+      "Arkadaşlar veya Aile",
+      "YouTube / Etkileyici",
+      "Haberler / Blog Makalesi",
+      "Diğer"
+    ]
+  },
+  "faq": {
+    "title": "Yumo Yumo SSS",
+    "subtitle": "Soruların mı var? Cevaplarımız var! 😊",
+    "stillHaveQuestions": "Hala soruların mı var? 💬",
+    "contactText": "DM'ye gelin veya bir tweet atın — sohbet etmeyi seviyoruz! ❤️",
+    "readWhitepaper": "Whitepaper'ı Oku",
+    "contactUs": "Bize Ulaşın",
+    "items": [
+      {
+        "question": "Yumo Yumo neyle ilgili?",
+        "answer": "Alışveriş fişlerinde gerçekte neyin gizlendiğini nihayet gösteren arkadaşız biz! 🧾✨ Yumo Yumo günlük harcamaları eğlenceli içgörüler ve gerçek ödüllere dönüştürür. Bir fiş yükle, gizli maliyetleri ortaya çıkar (vergiler, fiyat artırımları, tüm o sinsi şeyler) ve paranla daha akıllı olurken YUMO token'ları kazan."
+      },
+      {
+        "question": "Bu gerçekten nasıl çalışıyor? Çok iyi geliyor!",
+        "answer": "Harcadıkça Kazanmak mı? Şöyle: 🚀\n\nBağlan: Cüzdanınla anında giriş yap.\n\nOkut: Fişin fotoğrafını gönder (Kahve, alışveriş, ne istersen).\n\nDoğrula: PoE teknolojimiz sihrini konuşturup veriyi işlesin.\n\nKazan: Hem dökümünü al hem de ödülleri topla. Bitti bile!"
+      },
+      {
+        "question": "Tamam, ama herkesin bahsettiği bu \"gizli maliyetler\" nedir?",
+        "answer": "Fiyat etiketinin arkasındaki gerçekleri gün yüzüne çıkarıyoruz: Devletin payı 🏛️, yol maliyeti 🚚, bitmek bilmeyen enflasyon 📈 ve marka kârları 💸. Yumo Yumo ile toplam tutarın hangi katmanlara bölündüğünü gör; \"Aynı burger neden orada daha ucuz?\" sorusuna kesin cevabı al!"
+      },
+      {
+        "question": "Bu finansal tavsiye mi? Hayatımı şimdi değiştirmeli miyim? 😅",
+        "answer": "Hayır! Burada sana ne yapacağını söylemek için değil, daha net görmene yardımcı olmak için bulunuyoruz. İçgörüler sadece merak ve farkındalık uyandırmak için eğitimli tahminlerdir — kesinlikle resmi finansal tavsiye değildir. Hala cüzdanının patronu sensin! 👑"
+      },
+      {
+        "question": "Ödülleri nasıl kazanırım? Eğlenceli kısmı anlat!",
+        "answer": "Kazanmanın İki Süper Yolu! ✨\n\naYUMO 🍪: Harcadıkça kazan! Gerçek hayat fişlerini yükle, harcamalarını ödüle dönüştür. Ne kadar çok alışveriş, o kadar çok kurabiye (aYUMO)!\n\nrYUMO 🎈: Paylaştıkça kazan! Görevleri tamamla, topluluğu büyüt ve eğlenceli misyonlarla rYUMO'ları topla.\n\nGerçek Değer: Her ikisi de YUMO token'a dönüşür. Boş vaatlere değil, gerçek harcamalarına ve katkına dayanan bir ekonomi! 🚀"
+      },
+      {
+        "question": "YUMO token nedir? Aya mı gidiyor? 🚀",
+        "answer": "YUMO bizim ekosistemin \"havalı\" para birimi. Staking mi istersin, özel ayrıcalıklar mı, yoksa \"benim de bir sesim olsun\" mu? Hepsi YUMO'da. 99 milyar sabit arz; kural belli, emisyon belli, komik şakalara gerek yok. 😎 Piyasa dalgalanabilir, moral bozmak yok; biz anlık \"pump\" peşinde koşanlardan değil, bu işin temelini sağlam atanlardanız. Uzun bir yolculuğa hazır mısın? 🗺️💎"
+      },
+      {
+        "question": "Hızlıca zengin olur muyum?",
+        "answer": "Spekülasyon rüzgarlarıyla değil, gerçek hayatın ritmiyle büyüyoruz. Yumo Yumo'da ödüller \"belki\"lerden değil, yüklediğin o gerçek fişlerden doğar. Her kahve alışında, her market turunda kendine bir ödül fırlat! Bu sadece bir \"teşekkür\" değil; harcama alışkanlıklarını bir varlığa dönüştüren yeni nesil bir ekonomik hareket. Oyunun kuralları değişti, sen hala sadece harcıyor musun? 🔥🛒"
+      },
+      {
+        "question": "Her şeyi nasıl adil ve sürdürülebilir tutuyorsunuz?",
+        "answer": "Projemizin bu kısmıyla gurur duyuyoruz çünkü burada her şey net. Gizli basım riskini sıfırladık, emisyonu topluluk büyümesine göre dengeledik. Kötüye kullanıma karşı geliştirdiğimiz zırhımız sayesinde ödüller botlara değil, gerçek kullanıcılara gider. Biz saman alevi gibi yanıp sönmeye değil, sürdürülebilir bir ekonomiyle kalıcı olmaya geldik! ♻️🚀"
+      },
+      {
+        "question": "Peki gizliliğim? Sen fişlerimi görüyorsun! 😳",
+        "answer": "Sana en iyi ödülleri ve analizleri sunmak için sadece gerekli olanı işliyoruz. Sistemimizi geliştirmek için kullandığımız her veri, kimliğini asla ele vermeyecek şekilde tamamen anonimleştirilmiştir. Cüzdan adresin blockchain üzerinde (doğal olarak) halka açıktır ama kişisel detayların bizimle özel kalır. Şeffaflık konusunda takıntılıyız; Gizlilik Politikamızı yanına en sevdiğin atıştırmalığı alıp keyifle okuyabilirsin! 🍿✨"
+      },
+      {
+        "question": "Kelimenin tam anlamıyla herkes katılabilir mi?",
+        "answer": "Ülkende yasal yaşta olduğun ve yaşadığın yerde kriptonun uygun olduğu sürece — evet! 🌍 (Yerel kurallar nedeniyle bazı özellikler belirli bölgelerde sınırlı olabilir — sıkıcı ama gerekli.)"
+      },
+      {
+        "question": "Airdrop? Ücretsiz token'lar? 🤑",
+        "answer": "\"Belki airdrop gelir\" diye beklemeye son! Biz ödülleri sadece gerçek aktiviteye sahip olanlara dağıtıyoruz. İster bir kahve fişiyle ister topluluğa bir yardımınla... Kazandığın her YUMO, senin bir emeğinin karşılığıdır. Bu hem sistemi botlardan koruyor hem de topluluğumuzu her zaman canlı ve dürüst tutuyor. Gerçek hayat, gerçek kazanç! 🌍💰"
+      },
+      {
+        "question": "Ne zaman kullanmaya başlayabilirim?",
+        "answer": "Uygulama fırında pişiyor! 🔥 Whitepaper şimdi çıktı, erken erişim yakında. En taze güncellemeler için bizi X'te takip et — hazır olduğunda bağıracağız!"
+      },
+      {
+        "question": "Neden bir pazarlama bütçesi yok?",
+        "answer": "Biz dev reklam ajanslarına servet ödemek yerine, enerjimizi ve ödüllerimizi seninle paylaşmayı seçiyoruz. Yumo Yumo, büyük şirketlerin yapay desteğiyle değil; senin gibi tutkulu kullanıcıların sevgisi ve paylaşımıyla büyüyor. Bize en başından inananları ve içerik üretenleri ödüllendirmek bizim için çok daha değerli. Daha sağlıklı, insan odaklı ve kesinlikle çok daha eğlenceli! 💖✨"
+      },
+      {
+        "question": "Ekip bir \"ekip tahsisi\" tutuyor mu?",
+        "answer": "Yumo Yumo'da gizli cepler, kapalı kapılar ardında ayrılmış \"zula\"lar göremezsin. Ekip olarak biz de tam olarak senin gibi kazanıyoruz: Sistemi inşa ederek, büyüterek ve gerçek değer üreterek. Eğer Yumo Yumo sana gerçek bir fayda sunmazsa, biz de kazanamayız. Ya birlikte büyüyoruz ya da hiç büyümüyoruz! Şeffaflık bizim kırmızı çizgimiz. 🤝✨"
+      },
+      {
+        "question": "Bekle—ekip ücretsiz mi çalışıyor?",
+        "answer": "Bizim başarı kriterimiz borsadaki grafikler değil, senin bu sistemi gerçekten benimsemendir. Geliştirdiğimiz her yeni özellik, ağı daha güçlü ve topluluğu daha mutlu etmek için. İnsanlar Yumo Yumo'yu kullanmayı seviyorsa, ekosistem zaten kendi kendine büyür. Hep beraber, severek kazanmanın tadını çıkarıyoruz! 💎🎈"
+      },
+      {
+        "question": "Daha fazla öğrenmek ve kafamdaki soru işaretleri ile vedalaşmak için ne yapmalıyım?",
+        "answer": "Daha Fazlasını Merak mı Ediyorsun? Gel Konuşalım! 💬✨\n\nWhitepaper: Detaylarda kaybolmak isteyenler için \"derin dalış\" burada.\n\nX (@yumohq): En taze haberler ve bolca sohbet için oradayız, mutlaka takıl!\n\nWeb Sitemiz: yumoyumo.com her zaman güncel.\n\nDiscord/Telegram: Çok yakında kapıları açıyoruz, beklemede kal!\n\nAklına takılan başka bir şey mi var? Hiç çekinme, DM kutumuza dal veya bize bir tweet fırlat. Sohbet etmeye bayılıyoruz! 🔥🙌"
+      }
+    ]
+  },
+  "terms": {
+    "title": "Yumo Yumo Kullanım Koşulları",
+    "lastUpdated": "Son Güncelleme: 19 Aralık 2025",
+    "intro": "Selam! Yumo Yumo'ya hoş geldin — burada olduğun için çok mutluyuz. ✨",
+    "introDescription": "Bu Koşullar, bizim küçük kulübümüzün arkadaşça kuralları gibidir. Uygulamamızı, web sitemizi veya hizmetlerimizi (hepsine birden \"Hizmetler\" diyoruz) kullanarak bu kurallara \"tamam!\" demiş oluyorsun. Eğer bir şeyler içine sinmiyorsa sorun değil; sadece Hizmetleri kullanmaman yeterli.",
+    "sections": [
+      {
+        "title": "1. Eğlenceye kimler katılabilir?",
+        "content": "En az 18 yaşında (veya yaşadığın yerdeki reşitlik yaşında) olman gerekiyor. Herkesin kendi kararlarını sorumlulukla alabilmesini istiyoruz. 🔞"
+      },
+      {
+        "title": "2. Hesabın ve Cüzdanın",
+        "content": "Web3 cüzdanını bağladığında onu güvenli tut; o senin evin anahtarı gibi! 🔑 İznin olmadan başkası tarafından kullanılması durumunda sorumluluk kabul edemiyoruz. Eğer bir gariplik sezerden bize hemen haber ver."
+      },
+      {
+        "title": "3. Burada neler yapabilirsin?",
+        "content": "Fişlerini yükleyebilir, \"Harcama Kanıtı\" (PoE) ile gizli maliyetleri keşfedebilir, harcama içgörülerini görebilir ve YUMO token'lara dönüşebilen aYUMO/rYUMO ödülleri kazanabilirsin. Amacımız günlük harcamaları biraz daha \"sihirli\" hale getirmek! ✨🍔"
+      },
+      {
+        "title": "4. Fişler ve Senin Paylaştıkların",
+        "content": "Fişlerini veya içeriklerini yüklediğinde, sana içgörü sağlamak ve uygulamayı herkes için daha iyi hale getirmek adına bunları (güvenli ve anonim bir şekilde) kullanmamıza izin vermiş olursun. Paylaştığın şeylerin sana ait olduğuna ve kimsenin kalbini kırmayacağına dair bize söz ver, olur mu? 🤗"
+      },
+      {
+        "title": "5. Ödüller ve YUMO Token'lar",
+        "content": [
+          "Gerçek hayat fişlerinden aYUMO, topluluğun büyümesine yardım ederek rYUMO kazanırsın. Bunlar, net ve adil kurallar çerçevesinde YUMO token'a dönüşebilir.",
+          "YUMO, uygulama içindeki havalı işler için bir \"fayda (utility) token'ıdır\" — bir yatırım aracı veya \"köşeyi dönme bileti\" değildir. Değeri, kripto dünyasında olduğu gibi inebilir veya çıkabilir.",
+          "Ödüller üzerindeki vergiler mi? O konu sende (maalesef, yetişkin olmanın zorlukları!). 💸"
+        ]
+      },
+      {
+        "title": "6. Lütfen Nazik Ol (Sevmediğimiz Şeyler)",
+        "content": [
+          "Sahte fiş yok, sistemi kandırmaya çalışmak yok, yasa dışı işler yok, zorbalık yok, hacklemek yok.",
+          "Eğer bir şeyler yanlış hissettirirse hesabını durdurabilir veya sana veda edebiliriz — ama biz herkesin nazikçe oynamasını tercih ederiz! 😇"
+        ]
+      },
+      {
+        "title": "7. Bizimkiler Bizde Kalır",
+        "content": "Uygulama tasarımı, kodlar ve fikirler bize (veya bize yardım eden dostlarımıza) aittir. Bunları kişisel eğlencen için kullanabilirsin ama kopyalamak veya satmak yok, lütfen. 🎨"
+      },
+      {
+        "title": "8. Gizlilik — Arkandayız!",
+        "content": "Gizliliğini ciddiye (ve tatlılıkla) alıyoruz. Her şey Gizlilik Politikamızda açıklandı — en sevdiğin içeceği yanına alıp bir göz at. 🥤📖"
+      },
+      {
+        "title": "9. Üçüncü Taraf Dostlar (Cüzdanlar, Blockchainler)",
+        "content": "Cüzdanlar ve blockchain gibi diğer araçlarla ekip çalışması yapıyoruz. Onlar harikalar ama her zaman kusursuz çalışacaklarının sözünü veremeyiz. Zincir üstündeki (on-chain) her şey kalıcı ve halka açıktır — blockchain dünyası böyle yürür! ⛓️"
+      },
+      {
+        "title": "10. Dikkat — Garanti Yok & Yatırım Tavsiyesi Değildir (NFA!) 🙈",
+        "content": [
+          "Her şeyi pürüzsüz ve doğru yapmak için elimizden geleni yapıyoruz ama:",
+          {
+            "type": "list",
+            "items": [
+              {
+                "label": "Sadece Arkadaşça Tahminler:",
+                "text": "Gizli maliyet tahminleri ve harcama içgörüleri, öğrenmene yardımcı olacak arkadaşça tahminlerdir. Finansal, yatırım veya hukuk tavsiyesi değildir (NFA!). Her zaman kendi araştırmanı yap. 🔍"
+              },
+              {
+                "label": "Hizmetler \"Olduğu Gibi\":",
+                "text": "Kusursuz olmaya çalışıyoruz ama her şeyin %100 her zaman çalışacağına dair \"kusursuz sözler\" veremeyiz. 💫"
+              },
+              {
+                "label": "Kripto Maceraları:",
+                "text": "Kriptonun iniş çıkışları vardır, bilirsin. Attığın her adım senin sorumluluğundadır. 🎢"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "11. Eğer Bir Şeyler Ters Giderse 🤗",
+        "content": "Umarız hiç olmaz ama bir sorun çıkarsa, sorumluluğumuz yasaların izin verdiği ölçüde sınırlıdır. Dolaylı durumlardan sorumlu değiliz — gelin ortamı pozitif tutalım! ✨"
+      },
+      {
+        "title": "12. Kripto Gerçekleri (Ciddi Ama Dürüst Kısım) 🪙",
+        "content": "Tokenlar değer kaybedebilir, işlemler geri alınamaz ve ülkelerdeki kurallar değişebilir. YUMO bir yatırım bileti değil, bir fayda token'ıdır. Sadece blockchain dünyasının işleyişi seni rahat hissettiriyorsa eğlenceye katıl! 🌊"
+      },
+      {
+        "title": "13. Duraklatma veya Veda Etme",
+        "content": "Gerekirse hesapları durdurabilir veya kapatabiliriz (adil olmaya çalışacağız). Eğer bu olursa, talep edilmemiş ödüller de sana veda edebilir."
+      },
+      {
+        "title": "14. Yetişkinlerin Hukuk Bölümü",
+        "content": "Bu Koşullar [Örn: İngiltere ve Galler] yasalarına tabidir. Bir anlaşmazlık yaşarsak önce konuşmayı deneriz. Gerekirse [Örn: Singapur]'da arkadaşça bir tahkim yolu izleriz."
+      },
+      {
+        "title": "15. Bu Kuralları Güncelleyebiliriz",
+        "content": "Eğer değişiklik yaparsak sana haber veririz. Uygulamayı kullanmaya devam etmen, yeni versiyonla \"aran iyi\" demektir. ✅"
+      },
+      {
+        "title": "16. Sohbet Etmek İster misin?",
+        "content": "Biz çayı koyduk, gelirken çekirdek getirmeyi unutma. Bize info@yumoyumo.com adresinden ulaşabilirsin."
+      }
+    ],
+    "footer": "Yumo Yumo'nun bir parçası olduğun için teşekkürler — hadi gizli olanı açığa çıkaralım ve ortalığı karıştırarak biraz eğlenelim! 🫶✨"
+  },
+  "privacy": {
+    "title": "Yumo Yumo Gizlilik Politikası",
+    "lastUpdated": "Son Güncelleme: 19 Aralık 2025",
+    "intro": "Selam dostum! Gizliliğine gerçekten çok ama çok değer veriyoruz. Bu politika, bilgilerini olabilecek en nazik şekilde nasıl işlediğimizi açıklıyor. 🛡️✨",
+    "sections": [
+      {
+        "title": "1. Neler topluyoruz? (Sadece en gerekli olanları)",
+        "content": [
+          "Cüzdan Adresin: Bağlandığın zaman (Zaten blockchain üzerinde halka açıktır).",
+          "Yüklediğin Fişler: Sana o havalı içgörüleri sunabilmek için.",
+          "Temel Cihaz Bilgileri: Uygulamanın sorunsuz çalışması için hangi telefonu veya tarayıcıyı kullandığın.",
+          "Sohbetler: Bize ulaştığında kurduğumuz iletişimler.",
+          {
+            "type": "note",
+            "text": "Özel Not: Fişin üzerinde yanlışlıkla kalmadığı sürece hassas bilgilerini (sağlık bilgileri gibi) asla toplamayız. Lütfen bu tip detayları paylaşmamaya dikkat et, olur mu? 🤫"
+          }
+        ]
+      },
+      {
+        "title": "2. Bilgilerini nasıl kullanıyoruz?",
+        "content": [
+          "Gizli maliyetleri ve o tatlı harcama dökümlerini sana göstermek için.",
+          "Hak ettiğin ödülleri hesaplamak için.",
+          "Uygulamayı daha iyi hale getirmek için (Sadece anonim verilerle — kimse onun sen olduğunu bilmez).",
+          "Her şeyin güvenli ve tıkır tıkır işlemesini sağlamak için."
+        ]
+      },
+      {
+        "title": "3. Anonimleştirme — En sevdiğimiz sihirli numaramız! ✨",
+        "content": "Uygulamayı geliştirirken veya genel istatistikler oluştururken (örneğin: \"İstanbul'da yemek maliyetleri\"), seninle bağ kurulabilecek her şeyi silip atıyoruz. Fişlerin herkese yardımcı olur ama kimliğin hep gizli kalır."
+      },
+      {
+        "title": "4. Bilgilerini kimler görüyor?",
+        "content": [
+          "Neredeyse hiç kimse!",
+          "Güvenilir Yardımcılar: İyi davranacağına söz veren bulut servisleri ve analiz araçları.",
+          "Blockchain: Ödüller için — bu kısım tasarım gereği halka açıktır.",
+          "Sadece Yasalar İsterse: Çok nadir ve sıkıcı bir durum. Verilerini asla satmıyoruz. Serçe parmağımızla söz veriyoruz! 🤙💖"
+        ]
+      },
+      {
+        "title": "5. Blockchain sonsuzdur",
+        "content": "Ödüller zincire ulaştığında cüzdan adresin ve miktarlar halka açık hale gelir. Web3 dünyası böyle çalışır; süper şeffaf! ⛓️🔍"
+      },
+      {
+        "title": "6. Güvenliği sağlıyoruz",
+        "content": "Bilgilerini korumak için güçlü kilitler ve dikkatli alışkanlıklar kullanıyoruz. Hiçbir şey %100 kırılamaz değildir ama biz elimizden gelenin en iyisini yapıyoruz. 🔒"
+      },
+      {
+        "title": "7. Bilgileri ne kadar tutuyoruz?",
+        "content": "Sadece sana yardımcı olmak veya kurallara uymak için ihtiyacımız olduğu sürece. Bir şeylerin silinmesini mi istiyorsun? Sorman yeterli!"
+      },
+      {
+        "title": "8. Hakların (Kontrol sende!)",
+        "content": [
+          "Yaşadığın yere bağlı olarak şunları yapabilirsin:",
+          "Verilerini görebilirsin.",
+          "Düzeltilmesini veya silinmesini isteyebilirsin.",
+          "Belirli kullanımlara \"hayır, teşekkürler\" diyebilirsin. Bize bir mesaj atman yeterli — yüzümüzde bir gülümsemeyle hemen çözeriz. 😊"
+        ]
+      },
+      {
+        "title": "9. Bazen seyahat ediyoruz",
+        "content": "Verilerin başka ülkelerdeki sunucuları ziyaret edebilir ama her zaman sıkı gizlilik kurallarına uyduklarından emin oluruz. 🌍✈️"
+      },
+      {
+        "title": "10. Çocuklar için değil",
+        "content": "Uygulamamız sadece yetişkinler (18+) içindir. Çocuklardan bilgi toplamıyoruz."
+      },
+      {
+        "title": "11. Bu politikadaki güncellemeler",
+        "content": "Önemli bir şeyi değiştirirsek sana haber veririz. Uygulamayı kullanmaya devam etmen, yeni versiyonla \"okey\" olduğun anlamına gelir. ✅"
+      },
+      {
+        "title": "12. Sorular veya tatlı bir sohbet?",
+        "content": "Bize support@yumoyumo.com adresinden ulaşabilirsin. Senden haber almayı seviyoruz!"
+      }
+    ],
+    "footer": "Bize güvendiğin için teşekkürler. Para meselelerini daha az kafa karıştırıcı, daha çok ödüllendirici hale getirmek için buradayız — hem de gizliliğini sevgiyle koruyarak. Haydi gel sarılalım. 🤗✨"
+  },
+  "alerts": {
+    "auth": {
+      "termsRequired": "Lütfen Kullanım Koşulları ve Gizlilik Politikasını kabul et."
+    },
+    "dashboard": {
+      "fileSizeError": "Dosya boyutu 10MB'dan küçük olmalı",
+      "fileRequired": "Lütfen önce bir dosya seç"
+    },
+    "wallet": {
+      "signatureRequired": "Bağlanmak için imza gereklidir. Lütfen tekrar dene ve imza isteğini onayla.",
+      "connectionFailed": "Bağlantı başarısız oldu",
+      "pleaseTryAgain": "Lütfen tekrar dene."
+    },
+    "waitlist": {
+      "privacyNote": "Gizliliğine saygı duyuyoruz. Asla spam yapmıyoruz! 💕"
+    }
+  },
+  "support": {
+    "title": "Destek Merkezi",
+    "subtitle": "Bir sorunuz mu var veya yardıma mı ihtiyacınız var? Bir destek talebi gönderin, en kısa sürede size geri dönelim.",
+    "form": {
+      "username": "Kullanıcı Adı",
+      "usernamePlaceholder": "Kullanıcı adınız",
+      "email": "E-posta Adresi",
+      "emailPlaceholder": "eposta@adres.com",
+      "subject": "Konu",
+      "subjectPlaceholder": "Sorununuzun kısa açıklaması",
+      "description": "Açıklama",
+      "descriptionPlaceholder": "Lütfen sorununuz hakkında detaylı bilgi verin...",
+      "captcha": "Captcha Doğrulama",
+      "captchaPlaceholder": "Kodu girin",
+      "captchaHint": "Yukarıda gösterilen 4 haneli kodu girin",
+      "verify": "Doğrula",
+      "submit": "Destek Talebi Gönder",
+      "submitting": "Gönderiliyor..."
+    },
+    "success": {
+      "title": "Talep Başarıyla Gönderildi!",
+      "message": "Destek talebinizi aldık. Ekibimiz en kısa sürede size geri dönecektir."
+    },
+    "errors": {
+      "captchaRequired": "Lütfen önce captcha'yı doğrulayın.",
+      "fillAll": "Lütfen tüm alanları doldurun.",
+      "captchaIncorrect": "Captcha kodu yanlış. Lütfen tekrar deneyin."
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Hoş geldin! 👋",
+      "subtitle": "Hesabına giriş yap",
+      "emailLabel": "E-posta / Kullanıcı Adı",
+      "emailPlaceholder": "E-posta veya kullanıcı adı",
+      "passwordLabel": "Şifre",
+      "passwordPlaceholder": "Şifreni gir",
+      "submit": "Giriş Yap",
+      "toggle": "Hesabın yok mu?",
+      "toggleAction": "Kayıt Ol",
+      "googleError": "Google ile giriş başarısız oldu",
+      "twitterError": "X (Twitter) ile giriş başarısız oldu",
+      "unknownError": "Bilinmeyen hata"
+    },
+    "register": {
+      "title": "Yumo Dünyasına Katıl! 🎀",
+      "subtitle": "Hesabını oluştur ve ödül kazanmaya başla",
+      "walletLabel": "Cüzdan Adresi",
+      "usernameLabel": "Kullanıcı Adı",
+      "usernamePlaceholder": "Kullanıcı adın",
+      "emailLabel": "E-posta Adresi",
+      "emailPlaceholder": "email@ornek.com",
+      "passwordLabel": "Şifre",
+      "passwordPlaceholder": "Şifreni oluştur",
+      "passwordConfirmLabel": "Şifre Onayı",
+      "passwordConfirmPlaceholder": "Şifreni onayla",
+      "dateOfBirthLabel": "Doğum Tarihi",
+      "genderLabel": "Cinsiyet",
+      "genderOptional": "(Opsiyonel)",
+      "genderSelect": "Seç",
+      "countryLabel": "Ülke",
+      "countrySelect": "Ülke Seç",
+      "phoneLabel": "Telefon Numarası",
+      "phonePlaceholder": "+90 555 123 4567",
+      "termsText": "Kullanım Koşulları ve Gizlilik Politikası",
+      "termsAgree": "okudum ve kabul ediyorum",
+      "submit": "Kayıt Ol",
+      "toggle": "Zaten üye misin?",
+      "toggleAction": "Giriş Yap"
+    },
+    "social": {
+      "or": "veya"
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "navigation": {
+    "logo": "Yumo Yumo",
+    "home": "Ana Sayfa",
+    "whitepaper": "Ciddi Belge",
+    "roadmap": "Yol Haritası",
+    "tokenomics": "Tokenomik",
+    "faq": "SSS",
+    "signUp": "Kayıt Ol",
+    "goApp": "Uygulamaya Git",
+    "app": "Uygulama"
+  },
+  "hero": {
+    "title": "Yumbie'yi Besle.",
+    "subtitle": "Harcamaları ödüllere dönüştür.",
+    "description": "Fişlerinde değer gizli. Yumbie bunu açığa çıkarmana yardımcı olur.",
+    "cta": "Fiş Yükle",
+    "joinWaitlist": "Bekleme Listesine Katıl"
+  },
+  "loading": {
+    "analyzing": "Fiş analiz ediliyor...",
+    "extractingHiddenCosts": "Gizli masraflar çıkartılıyor...",
+    "revealingTruth": "Gerçekler gün yüzüne çıkarılıyor..."
+  },
+  "about": {
+    "title": "Yumo Yumo Hakkında",
+    "description": "Günlük harcamaları Proof of Expense (PoE) ile oyuna dönüştüren ilk Web3 projesi. Fiş yükle, Yumbie'ni besle ve eğlenerek ödül kazan!",
+    "description1": "Yumo Yumo, dünyanın ilk fiş-karşılığı-kazanç sağlayan oyunlaştırılmış platformudur. Günlük harcamalarını Yumbie'ni fişlerle besleyerek ödüllere dönüştür.",
+    "description2": "Eğlenirken $YUMO token kazanan binlerce kullanıcıya katıl. Her harcama önemlidir."
+  },
+  "footer": {
+    "description": "Fişlerini ödüllere dönüştür. Yumbie'yi besle, token kazan ve en sevimli Web3 devrimine katıl.",
+    "resources": "Kaynaklar",
+    "community": "Topluluk",
+    "followUs": "Bizi Takip Edin",
+    "terms": "Şartlar ve Koşullar",
+    "privacy": "Gizlilik Politikası",
+    "support": "Destek",
+    "copyright": "© 2025 Yumo Yumo. Tüm hakları saklıdır. Sevgi ve Yumbie'lerle yapıldı."
+  },
+  "howItWorks": {
+    "title": "Nasıl Çalışır",
+    "subtitle": "Yolculuğuna başlamak için üç basit adım",
+    "steps": [
+      {
+        "title": "Topluluğa Katıl",
+        "description": "Waitlist'e katıl ve Yumo Yumo ekosisteminin bir parçası ol."
+      },
+      {
+        "title": "Yumo'yu Keşfet",
+        "description": "Proof of Expense'in harcamalarını ödüllere nasıl dönüştürdüğünü öğren."
+      },
+      {
+        "title": "Ödül Kazan",
+        "description": "$YUMO token'ları kazan ve gamified platformumuza katıl."
+      }
+    ]
+  },
+  "tokenomics": {
+    "title": "Token Dağılımı",
+    "subtitle": "Yumo Nasıl Paylaşılır",
+    "totalSupply": "Toplam arz: 99 Milyar $YUMO token — eğlence, adalet ve büyüme için tasarlandı",
+    "distribution": [
+      {
+        "label": "Harcama Kanıtı (Madencilik)",
+        "description": "Fiş yükleyerek ve PoE sistemine katılarak kazanılır"
+      },
+      {
+        "label": "Staking ve Uzun Vadeli Teşvikler",
+        "description": "Uzun vadeli sahipler ve stake edenler için ödüller"
+      },
+      {
+        "label": "Eğlenceli Ödüller (Görevler, Galxe, Zealy)",
+        "description": "Oyunlaştırılmış görevler ve topluluk etkinlikleri aracılığıyla dağıtılır"
+      },
+      {
+        "label": "Genesis (Erken Katılım)",
+        "description": "Erken destekçiler ve topluluk oluşturucular için ayrıldı"
+      }
+    ],
+    "detailedLink": "Detaylı tokenomik için buraya tıklayın"
+  },
+  "papers": {
+    "title": "Belgelerimizi Oku",
+    "subtitle": "Yumo Yumo'nun vizyonu ve teknik detaylarına derinlemesine bak",
+    "funPaper": {
+      "title": "Eğlenceli Belge",
+      "subtitle": "Fişlerini Ödüllere Dönüştür",
+      "description": "Yumo Yumo'nun günlük harcamaları heyecan verici bir ödül macerasına nasıl dönüştürdüğünü keşfedin. Oyunlaştırılmış ekosistemimiz ve topluluk odaklı özelliklerimiz hakkında bilgi edinin.",
+      "tags": ["Oyunlaştırma", "Ödüller", "Topluluk"]
+    },
+    "seriousPaper": {
+      "title": "Ciddi Belge",
+      "subtitle": "Teknik Mimari ve Tokenomik",
+      "description": "Harcama Kanıtı konsensüsü, akıllı sözleşme mimarisi ve Yumo Yumo'nun arkasındaki tam ekonomik modeli kapsayan kapsamlı teknik dokümantasyon.",
+      "tags": ["Harcama-Kanıtı", "Akıllı Sözleşmeler", "Ekonomi"]
+    }
+  },
+  "funPaper": {
+    "sections": [
+      {
+        "title": "1. Peki... Yumo Yumo Nedir?",
+        "content": [
+          "Yumo Yumo, zaten her gün yaptığın bir şeyi yaparak token madenciliği yapmanı sağlayan bir Web3 projesidir:",
+          "Para harcamak.",
+          "Her fiyatın katmanları vardır.",
+          "Vergiler, kâr marjları, operasyonel maliyetler...",
+          "Hepsini her gün, hiç düşünmeden ödersin.",
+          "Yumo Yumo bu katmanlara bakar ve der ki:",
+          "\"Harika! Gel bunu madenciliğe (mining) dönüştürelim.\""
+        ]
+      },
+      {
+        "title": "2. Neden İnsanların Umurunda Olsun?",
+        "content": [
+          "Çünkü neredeyse tüm finans araçları şu sıkıcı soruyu sorar:",
+          "\"Ne kadar harcadın?\"",
+          "Yumo Yumo daha iyisini sorar:",
+          "\"O fiyatın içinde aslında neler vardı?\"",
+          "Fiyatlara bu gözle bakmaya başladığında, harcama yapmak pasif bir eylem olmaktan çıkar.",
+          "Veriye dönüşür.",
+          "Ve veri kazandırır."
+        ]
+      },
+      {
+        "title": "3. Harcama Kanıtı (Proof of Expense - PoE)",
+        "content": [
+          "PoE (Harcama Kanıtı) basit ve dürüsttür.",
+          "Gerçek bir fiş yüklersin.",
+          "Sistem fiyatın içindekileri analiz eder.",
+          "Gizli maliyetler gün yüzüne çıkar.",
+          "Gerçek dünya verisi sağladığın için token kazanırsın.",
+          "Sahte aksiyon yok.",
+          "Botlarla buton tıklamak yok.",
+          "\"Sadece hislerle\" gelen ödüller yok.",
+          "Eğer gerçek hayatta harcıyorsan, Yumo Yumo'da madencilik yapabilirsin."
+        ]
+      },
+      {
+        "title": "4. Madencilik, Ama Günlük Hayatın İçinde",
+        "content": [
+          "GPU'ları (ekran kartlarını) unut.",
+          "Makine dolu depoları unut.",
+          "Yumo Yumo'da fişlerin, senin madencilik cihazlarındır.",
+          "Her geçerli fiş, sisteme bir sinyal ekler.",
+          "Her sinyal, token üretir.",
+          "Döngü tertemizdir:",
+          "Harca → Yükle → Kaz → Kazan",
+          "Zaten birinci adımı her halükarda yapıyordun."
+        ]
+      },
+      {
+        "title": "5. Tokenlar Hakkında (Önce Topluluk)",
+        "content": [
+          "Net olalım:",
+          "Ekip tahsisi (allocation) yok.",
+          "Gizli zula yok.",
+          "Pazarlama için ayrılmış dev bütçeler yok.",
+          "İçeriden birilerinin önceden token basması yok.",
+          "Yumo Yumo, tokenların merkezi bir yapıya değil, katılımcılara akması için inşa edildi.",
+          "Katkı sağlarsan kazanırsın.",
+          "Sağlamazsan kazanamazsın.",
+          "Bu kadar."
+        ]
+      },
+      {
+        "title": "6. \"Peki Bu İş Nasıl Fonlanıyor?\"",
+        "content": [
+          "Alışılagelmiş yollarla fonlanmıyor.",
+          "Devasa pazarlama bütçeleri yok.",
+          "Parayla tutulmuş reklam makineleri yok.",
+          "Yapay bir talep yok.",
+          "Yumo Yumo, Web3 yoluyla büyür:",
+          "Katılım, katkı ve paylaşılan teşviklerle.",
+          "Değer, ekibin vaatlerinden değil, insanların yaptıklarından gelir."
+        ]
+      },
+      {
+        "title": "7. Neden Web3?",
+        "content": [
+          "Çünkü kurallar insanlardan daha önemlidir.",
+          "Web3 şunları garanti eder:",
+          "Ödüller önceden tanımlanmış bir mantığı takip eder.",
+          "Dağıtım manuel olarak değiştirilemez.",
+          "Perde arkasında kimse \"kimin ne alacağına\" karar veremez.",
+          "Harcamalar ortak bir sinyale dönüşür.",
+          "Tokenlar, o sinyali oluşturan insanlara geri akar.",
+          "Basit sistemler hayatta kalır.",
+          "Şeffaf olmayanlar ise elenir."
+        ]
+      },
+      {
+        "title": "8. Bu Aslında Kimin İçin?",
+        "content": [
+          "Para harcayan insanlar.",
+          "Madenciliği seven ama uykusunu da almak isteyenler.",
+          "Hikayeler yerine kuralları tercih edenler.",
+          "Trade yapmana gerek yok.",
+          "Kaldıraç kullanmana gerek yok.",
+          "Grafik tahmin etmene gerek yok.",
+          "Sadece fişleri yüklersin."
+        ]
+      },
+      {
+        "title": "9. Büyük Resim",
+        "content": [
+          "Yumo Yumo bir farkındalıkla başlar.",
+          "Zamanla bu farkındalık şuna dönüşür:",
+          "Daha derin içgörüler.",
+          "Daha akıllı finansal araçlar.",
+          "Gerçek harcama verileri üzerine kurulu, büyüyen bir ekosistem.",
+          "Hepsi, parayı asıl harcayan insanlar tarafından desteklenir."
+        ]
+      },
+      {
+        "title": "10. Son Düşünce",
+        "content": [
+          "Cüzdanından her gün zaten para çıkıyor.",
+          "Yumo Yumo bunu durdurmaya çalışmaz.",
+          "Sadece bu olurken madencilik yapmanı sağlar.",
+          "Döngü: Harca ➔ Yükle ➔ Kaz ➔ Kazan",
+          "İşte döngü bu."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "İşin mutfağına girmeye hazır mısın?",
+      "description": "Teknik özellikler, token ekonomisinin (tokenomics) matematiksel detayları ve uygulama süreçleri hakkında çok daha derin bir dalış yap.",
+      "button": "Teknik Dökümanları İncele ➔"
+    },
+    "loop": {
+      "title": "Döngü",
+      "steps": {
+        "spend": "Harca",
+        "upload": "Yükle",
+        "mine": "Kaz",
+        "earn": "Kazan"
+      }
+    }
+  },
+  "roadmap": {
+    "title": "Geliştirme Yol Haritası",
+    "subtitle": "Harcama ödüllerini devrimleştirme yolculuğumuz",
+    "items": [
+      {
+        "quarter": "P1",
+        "year": "🚀",
+        "title": "Faz 1 — Genesis\nFarkındalık Başlıyor",
+        "items": [
+          "Adil Lansman: Topluluk odaklı likidite ve fiyat keşfi",
+          "PoE Madenciliği: Fişlerden aYUMO kazan",
+          "Dijital Kimlik: Foundation NFT'ni al, seviyeni yükselt"
+        ]
+      },
+      {
+        "quarter": "P2",
+        "year": "📈",
+        "title": "Faz 2 — Genişleme\nVeriden Güce",
+        "items": [
+          "Akıllı Ajanlar: NFT'ler AI destekli yol arkadaşlarına dönüşür",
+          "Staking Açılışı: Erken katılanlar için yüksek APR",
+          "Merchant Matrix: Kategori bazlı ödül çarpanları"
+        ]
+      },
+      {
+        "quarter": "P3",
+        "year": "🌍",
+        "title": "Faz 3 — Zeka\nSistem Öğreniyor",
+        "items": [
+          "Gelişmiş İçgörüler: AI destekli finansal raporlar",
+          "HCI Endeksi: Global hidden cost panosu",
+          "Olgun Protokol: Tamamen veri destekli ekonomi"
+        ]
+      }
+    ]
+  },
+  "waitlist": {
+    "title": "Bekleme Listesine Katılın",
+    "subtitle": "Yumo Yumo'yu ilk deneyenler arasında ol! ✨",
+    "email": "E-posta Adresi",
+    "country": "Ülken",
+    "referralSource": "Bizim hakkımızda nasıl duydun?",
+    "selectCountry": "Ülkeni seç",
+    "selectOption": "Bir seçenek seçin",
+    "submit": "Bekleme Listesine Katıl",
+    "submitting": "Katılıyor...",
+    "success": "Başarılı! Listedesin 🎉",
+    "successTitle": "Listedesin! 🎉",
+    "successMessage": "Yumo Yumo başladığında sana bildireceğiz.",
+    "inboxMessage": "Gelen kutunu kontrol et! 💌",
+    "alreadyExists": "Zaten bekleme listesindesin! 🎉",
+    "error": "Lütfen tüm alanları doldur 💕",
+    "networkError": "Ağ hatası. Lütfen bağlantını kontrol et ve tekrar dene! 💫",
+    "connectionError": "Bağlantı hatası. Lütfen tekrar dene! 💫",
+    "unexpectedError": "Sunucudan beklenmeyen yanıt. Lütfen tekrar dene! 💫",
+    "genericError": "Bir şeyler ters gitti. Lütfen tekrar dene! 💫",
+    "sources": [
+      "Sosyal medya (X, TikTok, Discord, vb.)",
+      "Google Arama",
+      "Arkadaşlar veya Aile",
+      "YouTube / Etkileyici",
+      "Haberler / Blog Makalesi",
+      "Diğer"
+    ]
+  },
+  "faq": {
+    "title": "Yumo Yumo SSS",
+    "subtitle": "Soruların mı var? Cevaplarımız var! 😊",
+    "stillHaveQuestions": "Hala soruların mı var? 💬",
+    "contactText": "DM'ye gelin veya bir tweet atın — sohbet etmeyi seviyoruz! ❤️",
+    "readWhitepaper": "Whitepaper'ı Oku",
+    "contactUs": "Bize Ulaşın",
+    "items": [
+      {
+        "question": "Yumo Yumo neyle ilgili?",
+        "answer": "Alışveriş fişlerinde gerçekte neyin gizlendiğini nihayet gösteren arkadaşız biz! 🧾✨ Yumo Yumo günlük harcamaları eğlenceli içgörüler ve gerçek ödüllere dönüştürür. Bir fiş yükle, gizli maliyetleri ortaya çıkar (vergiler, fiyat artırımları, tüm o sinsi şeyler) ve paranla daha akıllı olurken YUMO token'ları kazan."
+      },
+      {
+        "question": "Bu gerçekten nasıl çalışıyor? Çok iyi geliyor!",
+        "answer": "Harcadıkça Kazanmak mı? Şöyle: 🚀\n\nBağlan: Cüzdanınla anında giriş yap.\n\nOkut: Fişin fotoğrafını gönder (Kahve, alışveriş, ne istersen).\n\nDoğrula: PoE teknolojimiz sihrini konuşturup veriyi işlesin.\n\nKazan: Hem dökümünü al hem de ödülleri topla. Bitti bile!"
+      },
+      {
+        "question": "Tamam, ama herkesin bahsettiği bu \"gizli maliyetler\" nedir?",
+        "answer": "Fiyat etiketinin arkasındaki gerçekleri gün yüzüne çıkarıyoruz: Devletin payı 🏛️, yol maliyeti 🚚, bitmek bilmeyen enflasyon 📈 ve marka kârları 💸. Yumo Yumo ile toplam tutarın hangi katmanlara bölündüğünü gör; \"Aynı burger neden orada daha ucuz?\" sorusuna kesin cevabı al!"
+      },
+      {
+        "question": "Bu finansal tavsiye mi? Hayatımı şimdi değiştirmeli miyim? 😅",
+        "answer": "Hayır! Burada sana ne yapacağını söylemek için değil, daha net görmene yardımcı olmak için bulunuyoruz. İçgörüler sadece merak ve farkındalık uyandırmak için eğitimli tahminlerdir — kesinlikle resmi finansal tavsiye değildir. Hala cüzdanının patronu sensin! 👑"
+      },
+      {
+        "question": "Ödülleri nasıl kazanırım? Eğlenceli kısmı anlat!",
+        "answer": "Kazanmanın İki Süper Yolu! ✨\n\naYUMO 🍪: Harcadıkça kazan! Gerçek hayat fişlerini yükle, harcamalarını ödüle dönüştür. Ne kadar çok alışveriş, o kadar çok kurabiye (aYUMO)!\n\nrYUMO 🎈: Paylaştıkça kazan! Görevleri tamamla, topluluğu büyüt ve eğlenceli misyonlarla rYUMO'ları topla.\n\nGerçek Değer: Her ikisi de YUMO token'a dönüşür. Boş vaatlere değil, gerçek harcamalarına ve katkına dayanan bir ekonomi! 🚀"
+      },
+      {
+        "question": "YUMO token nedir? Aya mı gidiyor? 🚀",
+        "answer": "YUMO bizim ekosistemin \"havalı\" para birimi. Staking mi istersin, özel ayrıcalıklar mı, yoksa \"benim de bir sesim olsun\" mu? Hepsi YUMO'da. 99 milyar sabit arz; kural belli, emisyon belli, komik şakalara gerek yok. 😎 Piyasa dalgalanabilir, moral bozmak yok; biz anlık \"pump\" peşinde koşanlardan değil, bu işin temelini sağlam atanlardanız. Uzun bir yolculuğa hazır mısın? 🗺️💎"
+      },
+      {
+        "question": "Hızlıca zengin olur muyum?",
+        "answer": "Spekülasyon rüzgarlarıyla değil, gerçek hayatın ritmiyle büyüyoruz. Yumo Yumo'da ödüller \"belki\"lerden değil, yüklediğin o gerçek fişlerden doğar. Her kahve alışında, her market turunda kendine bir ödül fırlat! Bu sadece bir \"teşekkür\" değil; harcama alışkanlıklarını bir varlığa dönüştüren yeni nesil bir ekonomik hareket. Oyunun kuralları değişti, sen hala sadece harcıyor musun? 🔥🛒"
+      },
+      {
+        "question": "Her şeyi nasıl adil ve sürdürülebilir tutuyorsunuz?",
+        "answer": "Projemizin bu kısmıyla gurur duyuyoruz çünkü burada her şey net. Gizli basım riskini sıfırladık, emisyonu topluluk büyümesine göre dengeledik. Kötüye kullanıma karşı geliştirdiğimiz zırhımız sayesinde ödüller botlara değil, gerçek kullanıcılara gider. Biz saman alevi gibi yanıp sönmeye değil, sürdürülebilir bir ekonomiyle kalıcı olmaya geldik! ♻️🚀"
+      },
+      {
+        "question": "Peki gizliliğim? Sen fişlerimi görüyorsun! 😳",
+        "answer": "Sana en iyi ödülleri ve analizleri sunmak için sadece gerekli olanı işliyoruz. Sistemimizi geliştirmek için kullandığımız her veri, kimliğini asla ele vermeyecek şekilde tamamen anonimleştirilmiştir. Cüzdan adresin blockchain üzerinde (doğal olarak) halka açıktır ama kişisel detayların bizimle özel kalır. Şeffaflık konusunda takıntılıyız; Gizlilik Politikamızı yanına en sevdiğin atıştırmalığı alıp keyifle okuyabilirsin! 🍿✨"
+      },
+      {
+        "question": "Kelimenin tam anlamıyla herkes katılabilir mi?",
+        "answer": "Ülkende yasal yaşta olduğun ve yaşadığın yerde kriptonun uygun olduğu sürece — evet! 🌍 (Yerel kurallar nedeniyle bazı özellikler belirli bölgelerde sınırlı olabilir — sıkıcı ama gerekli.)"
+      },
+      {
+        "question": "Airdrop? Ücretsiz token'lar? 🤑",
+        "answer": "\"Belki airdrop gelir\" diye beklemeye son! Biz ödülleri sadece gerçek aktiviteye sahip olanlara dağıtıyoruz. İster bir kahve fişiyle ister topluluğa bir yardımınla... Kazandığın her YUMO, senin bir emeğinin karşılığıdır. Bu hem sistemi botlardan koruyor hem de topluluğumuzu her zaman canlı ve dürüst tutuyor. Gerçek hayat, gerçek kazanç! 🌍💰"
+      },
+      {
+        "question": "Ne zaman kullanmaya başlayabilirim?",
+        "answer": "Uygulama fırında pişiyor! 🔥 Whitepaper şimdi çıktı, erken erişim yakında. En taze güncellemeler için bizi X'te takip et — hazır olduğunda bağıracağız!"
+      },
+      {
+        "question": "Neden bir pazarlama bütçesi yok?",
+        "answer": "Biz dev reklam ajanslarına servet ödemek yerine, enerjimizi ve ödüllerimizi seninle paylaşmayı seçiyoruz. Yumo Yumo, büyük şirketlerin yapay desteğiyle değil; senin gibi tutkulu kullanıcıların sevgisi ve paylaşımıyla büyüyor. Bize en başından inananları ve içerik üretenleri ödüllendirmek bizim için çok daha değerli. Daha sağlıklı, insan odaklı ve kesinlikle çok daha eğlenceli! 💖✨"
+      },
+      {
+        "question": "Ekip bir \"ekip tahsisi\" tutuyor mu?",
+        "answer": "Yumo Yumo'da gizli cepler, kapalı kapılar ardında ayrılmış \"zula\"lar göremezsin. Ekip olarak biz de tam olarak senin gibi kazanıyoruz: Sistemi inşa ederek, büyüterek ve gerçek değer üreterek. Eğer Yumo Yumo sana gerçek bir fayda sunmazsa, biz de kazanamayız. Ya birlikte büyüyoruz ya da hiç büyümüyoruz! Şeffaflık bizim kırmızı çizgimiz. 🤝✨"
+      },
+      {
+        "question": "Bekle—ekip ücretsiz mi çalışıyor?",
+        "answer": "Bizim başarı kriterimiz borsadaki grafikler değil, senin bu sistemi gerçekten benimsemendir. Geliştirdiğimiz her yeni özellik, ağı daha güçlü ve topluluğu daha mutlu etmek için. İnsanlar Yumo Yumo'yu kullanmayı seviyorsa, ekosistem zaten kendi kendine büyür. Hep beraber, severek kazanmanın tadını çıkarıyoruz! 💎🎈"
+      },
+      {
+        "question": "Daha fazla öğrenmek ve kafamdaki soru işaretleri ile vedalaşmak için ne yapmalıyım?",
+        "answer": "Daha Fazlasını Merak mı Ediyorsun? Gel Konuşalım! 💬✨\n\nWhitepaper: Detaylarda kaybolmak isteyenler için \"derin dalış\" burada.\n\nX (@yumohq): En taze haberler ve bolca sohbet için oradayız, mutlaka takıl!\n\nWeb Sitemiz: yumoyumo.com her zaman güncel.\n\nDiscord/Telegram: Çok yakında kapıları açıyoruz, beklemede kal!\n\nAklına takılan başka bir şey mi var? Hiç çekinme, DM kutumuza dal veya bize bir tweet fırlat. Sohbet etmeye bayılıyoruz! 🔥🙌"
+      }
+    ]
+  },
+  "terms": {
+    "title": "Yumo Yumo Kullanım Koşulları",
+    "lastUpdated": "Son Güncelleme: 19 Aralık 2025",
+    "intro": "Selam! Yumo Yumo'ya hoş geldin — burada olduğun için çok mutluyuz. ✨",
+    "introDescription": "Bu Koşullar, bizim küçük kulübümüzün arkadaşça kuralları gibidir. Uygulamamızı, web sitemizi veya hizmetlerimizi (hepsine birden \"Hizmetler\" diyoruz) kullanarak bu kurallara \"tamam!\" demiş oluyorsun. Eğer bir şeyler içine sinmiyorsa sorun değil; sadece Hizmetleri kullanmaman yeterli.",
+    "sections": [
+      {
+        "title": "1. Eğlenceye kimler katılabilir?",
+        "content": "En az 18 yaşında (veya yaşadığın yerdeki reşitlik yaşında) olman gerekiyor. Herkesin kendi kararlarını sorumlulukla alabilmesini istiyoruz. 🔞"
+      },
+      {
+        "title": "2. Hesabın ve Cüzdanın",
+        "content": "Web3 cüzdanını bağladığında onu güvenli tut; o senin evin anahtarı gibi! 🔑 İznin olmadan başkası tarafından kullanılması durumunda sorumluluk kabul edemiyoruz. Eğer bir gariplik sezerden bize hemen haber ver."
+      },
+      {
+        "title": "3. Burada neler yapabilirsin?",
+        "content": "Fişlerini yükleyebilir, \"Harcama Kanıtı\" (PoE) ile gizli maliyetleri keşfedebilir, harcama içgörülerini görebilir ve YUMO token'lara dönüşebilen aYUMO/rYUMO ödülleri kazanabilirsin. Amacımız günlük harcamaları biraz daha \"sihirli\" hale getirmek! ✨🍔"
+      },
+      {
+        "title": "4. Fişler ve Senin Paylaştıkların",
+        "content": "Fişlerini veya içeriklerini yüklediğinde, sana içgörü sağlamak ve uygulamayı herkes için daha iyi hale getirmek adına bunları (güvenli ve anonim bir şekilde) kullanmamıza izin vermiş olursun. Paylaştığın şeylerin sana ait olduğuna ve kimsenin kalbini kırmayacağına dair bize söz ver, olur mu? 🤗"
+      },
+      {
+        "title": "5. Ödüller ve YUMO Token'lar",
+        "content": [
+          "Gerçek hayat fişlerinden aYUMO, topluluğun büyümesine yardım ederek rYUMO kazanırsın. Bunlar, net ve adil kurallar çerçevesinde YUMO token'a dönüşebilir.",
+          "YUMO, uygulama içindeki havalı işler için bir \"fayda (utility) token'ıdır\" — bir yatırım aracı veya \"köşeyi dönme bileti\" değildir. Değeri, kripto dünyasında olduğu gibi inebilir veya çıkabilir.",
+          "Ödüller üzerindeki vergiler mi? O konu sende (maalesef, yetişkin olmanın zorlukları!). 💸"
+        ]
+      },
+      {
+        "title": "6. Lütfen Nazik Ol (Sevmediğimiz Şeyler)",
+        "content": [
+          "Sahte fiş yok, sistemi kandırmaya çalışmak yok, yasa dışı işler yok, zorbalık yok, hacklemek yok.",
+          "Eğer bir şeyler yanlış hissettirirse hesabını durdurabilir veya sana veda edebiliriz — ama biz herkesin nazikçe oynamasını tercih ederiz! 😇"
+        ]
+      },
+      {
+        "title": "7. Bizimkiler Bizde Kalır",
+        "content": "Uygulama tasarımı, kodlar ve fikirler bize (veya bize yardım eden dostlarımıza) aittir. Bunları kişisel eğlencen için kullanabilirsin ama kopyalamak veya satmak yok, lütfen. 🎨"
+      },
+      {
+        "title": "8. Gizlilik — Arkandayız!",
+        "content": "Gizliliğini ciddiye (ve tatlılıkla) alıyoruz. Her şey Gizlilik Politikamızda açıklandı — en sevdiğin içeceği yanına alıp bir göz at. 🥤📖"
+      },
+      {
+        "title": "9. Üçüncü Taraf Dostlar (Cüzdanlar, Blockchainler)",
+        "content": "Cüzdanlar ve blockchain gibi diğer araçlarla ekip çalışması yapıyoruz. Onlar harikalar ama her zaman kusursuz çalışacaklarının sözünü veremeyiz. Zincir üstündeki (on-chain) her şey kalıcı ve halka açıktır — blockchain dünyası böyle yürür! ⛓️"
+      },
+      {
+        "title": "10. Dikkat — Garanti Yok & Yatırım Tavsiyesi Değildir (NFA!) 🙈",
+        "content": [
+          "Her şeyi pürüzsüz ve doğru yapmak için elimizden geleni yapıyoruz ama:",
+          {
+            "type": "list",
+            "items": [
+              {
+                "label": "Sadece Arkadaşça Tahminler:",
+                "text": "Gizli maliyet tahminleri ve harcama içgörüleri, öğrenmene yardımcı olacak arkadaşça tahminlerdir. Finansal, yatırım veya hukuk tavsiyesi değildir (NFA!). Her zaman kendi araştırmanı yap. 🔍"
+              },
+              {
+                "label": "Hizmetler \"Olduğu Gibi\":",
+                "text": "Kusursuz olmaya çalışıyoruz ama her şeyin %100 her zaman çalışacağına dair \"kusursuz sözler\" veremeyiz. 💫"
+              },
+              {
+                "label": "Kripto Maceraları:",
+                "text": "Kriptonun iniş çıkışları vardır, bilirsin. Attığın her adım senin sorumluluğundadır. 🎢"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "11. Eğer Bir Şeyler Ters Giderse 🤗",
+        "content": "Umarız hiç olmaz ama bir sorun çıkarsa, sorumluluğumuz yasaların izin verdiği ölçüde sınırlıdır. Dolaylı durumlardan sorumlu değiliz — gelin ortamı pozitif tutalım! ✨"
+      },
+      {
+        "title": "12. Kripto Gerçekleri (Ciddi Ama Dürüst Kısım) 🪙",
+        "content": "Tokenlar değer kaybedebilir, işlemler geri alınamaz ve ülkelerdeki kurallar değişebilir. YUMO bir yatırım bileti değil, bir fayda token'ıdır. Sadece blockchain dünyasının işleyişi seni rahat hissettiriyorsa eğlenceye katıl! 🌊"
+      },
+      {
+        "title": "13. Duraklatma veya Veda Etme",
+        "content": "Gerekirse hesapları durdurabilir veya kapatabiliriz (adil olmaya çalışacağız). Eğer bu olursa, talep edilmemiş ödüller de sana veda edebilir."
+      },
+      {
+        "title": "14. Yetişkinlerin Hukuk Bölümü",
+        "content": "Bu Koşullar [Örn: İngiltere ve Galler] yasalarına tabidir. Bir anlaşmazlık yaşarsak önce konuşmayı deneriz. Gerekirse [Örn: Singapur]'da arkadaşça bir tahkim yolu izleriz."
+      },
+      {
+        "title": "15. Bu Kuralları Güncelleyebiliriz",
+        "content": "Eğer değişiklik yaparsak sana haber veririz. Uygulamayı kullanmaya devam etmen, yeni versiyonla \"aran iyi\" demektir. ✅"
+      },
+      {
+        "title": "16. Sohbet Etmek İster misin?",
+        "content": "Biz çayı koyduk, gelirken çekirdek getirmeyi unutma. Bize info@yumoyumo.com adresinden ulaşabilirsin."
+      }
+    ],
+    "footer": "Yumo Yumo'nun bir parçası olduğun için teşekkürler — hadi gizli olanı açığa çıkaralım ve ortalığı karıştırarak biraz eğlenelim! 🫶✨"
+  },
+  "privacy": {
+    "title": "Yumo Yumo Gizlilik Politikası",
+    "lastUpdated": "Son Güncelleme: 19 Aralık 2025",
+    "intro": "Selam dostum! Gizliliğine gerçekten çok ama çok değer veriyoruz. Bu politika, bilgilerini olabilecek en nazik şekilde nasıl işlediğimizi açıklıyor. 🛡️✨",
+    "sections": [
+      {
+        "title": "1. Neler topluyoruz? (Sadece en gerekli olanları)",
+        "content": [
+          "Cüzdan Adresin: Bağlandığın zaman (Zaten blockchain üzerinde halka açıktır).",
+          "Yüklediğin Fişler: Sana o havalı içgörüleri sunabilmek için.",
+          "Temel Cihaz Bilgileri: Uygulamanın sorunsuz çalışması için hangi telefonu veya tarayıcıyı kullandığın.",
+          "Sohbetler: Bize ulaştığında kurduğumuz iletişimler.",
+          {
+            "type": "note",
+            "text": "Özel Not: Fişin üzerinde yanlışlıkla kalmadığı sürece hassas bilgilerini (sağlık bilgileri gibi) asla toplamayız. Lütfen bu tip detayları paylaşmamaya dikkat et, olur mu? 🤫"
+          }
+        ]
+      },
+      {
+        "title": "2. Bilgilerini nasıl kullanıyoruz?",
+        "content": [
+          "Gizli maliyetleri ve o tatlı harcama dökümlerini sana göstermek için.",
+          "Hak ettiğin ödülleri hesaplamak için.",
+          "Uygulamayı daha iyi hale getirmek için (Sadece anonim verilerle — kimse onun sen olduğunu bilmez).",
+          "Her şeyin güvenli ve tıkır tıkır işlemesini sağlamak için."
+        ]
+      },
+      {
+        "title": "3. Anonimleştirme — En sevdiğimiz sihirli numaramız! ✨",
+        "content": "Uygulamayı geliştirirken veya genel istatistikler oluştururken (örneğin: \"İstanbul'da yemek maliyetleri\"), seninle bağ kurulabilecek her şeyi silip atıyoruz. Fişlerin herkese yardımcı olur ama kimliğin hep gizli kalır."
+      },
+      {
+        "title": "4. Bilgilerini kimler görüyor?",
+        "content": [
+          "Neredeyse hiç kimse!",
+          "Güvenilir Yardımcılar: İyi davranacağına söz veren bulut servisleri ve analiz araçları.",
+          "Blockchain: Ödüller için — bu kısım tasarım gereği halka açıktır.",
+          "Sadece Yasalar İsterse: Çok nadir ve sıkıcı bir durum. Verilerini asla satmıyoruz. Serçe parmağımızla söz veriyoruz! 🤙💖"
+        ]
+      },
+      {
+        "title": "5. Blockchain sonsuzdur",
+        "content": "Ödüller zincire ulaştığında cüzdan adresin ve miktarlar halka açık hale gelir. Web3 dünyası böyle çalışır; süper şeffaf! ⛓️🔍"
+      },
+      {
+        "title": "6. Güvenliği sağlıyoruz",
+        "content": "Bilgilerini korumak için güçlü kilitler ve dikkatli alışkanlıklar kullanıyoruz. Hiçbir şey %100 kırılamaz değildir ama biz elimizden gelenin en iyisini yapıyoruz. 🔒"
+      },
+      {
+        "title": "7. Bilgileri ne kadar tutuyoruz?",
+        "content": "Sadece sana yardımcı olmak veya kurallara uymak için ihtiyacımız olduğu sürece. Bir şeylerin silinmesini mi istiyorsun? Sorman yeterli!"
+      },
+      {
+        "title": "8. Hakların (Kontrol sende!)",
+        "content": [
+          "Yaşadığın yere bağlı olarak şunları yapabilirsin:",
+          "Verilerini görebilirsin.",
+          "Düzeltilmesini veya silinmesini isteyebilirsin.",
+          "Belirli kullanımlara \"hayır, teşekkürler\" diyebilirsin. Bize bir mesaj atman yeterli — yüzümüzde bir gülümsemeyle hemen çözeriz. 😊"
+        ]
+      },
+      {
+        "title": "9. Bazen seyahat ediyoruz",
+        "content": "Verilerin başka ülkelerdeki sunucuları ziyaret edebilir ama her zaman sıkı gizlilik kurallarına uyduklarından emin oluruz. 🌍✈️"
+      },
+      {
+        "title": "10. Çocuklar için değil",
+        "content": "Uygulamamız sadece yetişkinler (18+) içindir. Çocuklardan bilgi toplamıyoruz."
+      },
+      {
+        "title": "11. Bu politikadaki güncellemeler",
+        "content": "Önemli bir şeyi değiştirirsek sana haber veririz. Uygulamayı kullanmaya devam etmen, yeni versiyonla \"okey\" olduğun anlamına gelir. ✅"
+      },
+      {
+        "title": "12. Sorular veya tatlı bir sohbet?",
+        "content": "Bize support@yumoyumo.com adresinden ulaşabilirsin. Senden haber almayı seviyoruz!"
+      }
+    ],
+    "footer": "Bize güvendiğin için teşekkürler. Para meselelerini daha az kafa karıştırıcı, daha çok ödüllendirici hale getirmek için buradayız — hem de gizliliğini sevgiyle koruyarak. Haydi gel sarılalım. 🤗✨"
+  },
+  "alerts": {
+    "auth": {
+      "termsRequired": "Lütfen Kullanım Koşulları ve Gizlilik Politikasını kabul et."
+    },
+    "dashboard": {
+      "fileSizeError": "Dosya boyutu 10MB'dan küçük olmalı",
+      "fileRequired": "Lütfen önce bir dosya seç"
+    },
+    "wallet": {
+      "signatureRequired": "Bağlanmak için imza gereklidir. Lütfen tekrar dene ve imza isteğini onayla.",
+      "connectionFailed": "Bağlantı başarısız oldu",
+      "pleaseTryAgain": "Lütfen tekrar dene."
+    },
+    "waitlist": {
+      "privacyNote": "Gizliliğine saygı duyuyoruz. Asla spam yapmıyoruz! 💕"
+    }
+  },
+  "support": {
+    "title": "Destek Merkezi",
+    "subtitle": "Bir sorunuz mu var veya yardıma mı ihtiyacınız var? Bir destek talebi gönderin, en kısa sürede size geri dönelim.",
+    "form": {
+      "username": "Kullanıcı Adı",
+      "usernamePlaceholder": "Kullanıcı adınız",
+      "email": "E-posta Adresi",
+      "emailPlaceholder": "eposta@adres.com",
+      "subject": "Konu",
+      "subjectPlaceholder": "Sorununuzun kısa açıklaması",
+      "description": "Açıklama",
+      "descriptionPlaceholder": "Lütfen sorununuz hakkında detaylı bilgi verin...",
+      "captcha": "Captcha Doğrulama",
+      "captchaPlaceholder": "Kodu girin",
+      "captchaHint": "Yukarıda gösterilen 4 haneli kodu girin",
+      "verify": "Doğrula",
+      "submit": "Destek Talebi Gönder",
+      "submitting": "Gönderiliyor..."
+    },
+    "success": {
+      "title": "Talep Başarıyla Gönderildi!",
+      "message": "Destek talebinizi aldık. Ekibimiz en kısa sürede size geri dönecektir."
+    },
+    "errors": {
+      "captchaRequired": "Lütfen önce captcha'yı doğrulayın.",
+      "fillAll": "Lütfen tüm alanları doldurun.",
+      "captchaIncorrect": "Captcha kodu yanlış. Lütfen tekrar deneyin."
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Hoş geldin! 👋",
+      "subtitle": "Hesabına giriş yap",
+      "emailLabel": "E-posta / Kullanıcı Adı",
+      "emailPlaceholder": "E-posta veya kullanıcı adı",
+      "passwordLabel": "Şifre",
+      "passwordPlaceholder": "Şifreni gir",
+      "submit": "Giriş Yap",
+      "toggle": "Hesabın yok mu?",
+      "toggleAction": "Kayıt Ol",
+      "googleError": "Google ile giriş başarısız oldu",
+      "twitterError": "X (Twitter) ile giriş başarısız oldu",
+      "unknownError": "Bilinmeyen hata"
+    },
+    "register": {
+      "title": "Yumo Dünyasına Katıl! 🎀",
+      "subtitle": "Hesabını oluştur ve ödül kazanmaya başla",
+      "walletLabel": "Cüzdan Adresi",
+      "usernameLabel": "Kullanıcı Adı",
+      "usernamePlaceholder": "Kullanıcı adın",
+      "emailLabel": "E-posta Adresi",
+      "emailPlaceholder": "email@ornek.com",
+      "passwordLabel": "Şifre",
+      "passwordPlaceholder": "Şifreni oluştur",
+      "passwordConfirmLabel": "Şifre Onayı",
+      "passwordConfirmPlaceholder": "Şifreni onayla",
+      "dateOfBirthLabel": "Doğum Tarihi",
+      "genderLabel": "Cinsiyet",
+      "genderOptional": "(Opsiyonel)",
+      "genderSelect": "Seç",
+      "countryLabel": "Ülke",
+      "countrySelect": "Ülke Seç",
+      "phoneLabel": "Telefon Numarası",
+      "phonePlaceholder": "+90 555 123 4567",
+      "termsText": "Kullanım Koşulları ve Gizlilik Politikası",
+      "termsAgree": "okudum ve kabul ediyorum",
+      "submit": "Kayıt Ol",
+      "toggle": "Zaten üye misin?",
+      "toggleAction": "Giriş Yap"
+    },
+    "social": {
+      "or": "veya"
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "navigation": {
+    "logo": "Yumo Yumo",
+    "home": "Ana Sayfa",
+    "whitepaper": "Ciddi Belge",
+    "roadmap": "Yol Haritası",
+    "tokenomics": "Tokenomik",
+    "faq": "SSS",
+    "signUp": "Kayıt Ol",
+    "goApp": "Uygulamaya Git",
+    "app": "Uygulama"
+  },
+  "hero": {
+    "title": "Yumbie'yi Besle.",
+    "subtitle": "Harcamaları ödüllere dönüştür.",
+    "description": "Fişlerinde değer gizli. Yumbie bunu açığa çıkarmana yardımcı olur.",
+    "cta": "Fiş Yükle",
+    "joinWaitlist": "Bekleme Listesine Katıl"
+  },
+  "loading": {
+    "analyzing": "Fiş analiz ediliyor...",
+    "extractingHiddenCosts": "Gizli masraflar çıkartılıyor...",
+    "revealingTruth": "Gerçekler gün yüzüne çıkarılıyor..."
+  },
+  "about": {
+    "title": "Yumo Yumo Hakkında",
+    "description": "Günlük harcamaları Proof of Expense (PoE) ile oyuna dönüştüren ilk Web3 projesi. Fiş yükle, Yumbie'ni besle ve eğlenerek ödül kazan!",
+    "description1": "Yumo Yumo, dünyanın ilk fiş-karşılığı-kazanç sağlayan oyunlaştırılmış platformudur. Günlük harcamalarını Yumbie'ni fişlerle besleyerek ödüllere dönüştür.",
+    "description2": "Eğlenirken $YUMO token kazanan binlerce kullanıcıya katıl. Her harcama önemlidir."
+  },
+  "footer": {
+    "description": "Fişlerini ödüllere dönüştür. Yumbie'yi besle, token kazan ve en sevimli Web3 devrimine katıl.",
+    "resources": "Kaynaklar",
+    "community": "Topluluk",
+    "followUs": "Bizi Takip Edin",
+    "terms": "Şartlar ve Koşullar",
+    "privacy": "Gizlilik Politikası",
+    "support": "Destek",
+    "copyright": "© 2025 Yumo Yumo. Tüm hakları saklıdır. Sevgi ve Yumbie'lerle yapıldı."
+  },
+  "howItWorks": {
+    "title": "Nasıl Çalışır",
+    "subtitle": "Yolculuğuna başlamak için üç basit adım",
+    "steps": [
+      {
+        "title": "Topluluğa Katıl",
+        "description": "Waitlist'e katıl ve Yumo Yumo ekosisteminin bir parçası ol."
+      },
+      {
+        "title": "Yumo'yu Keşfet",
+        "description": "Proof of Expense'in harcamalarını ödüllere nasıl dönüştürdüğünü öğren."
+      },
+      {
+        "title": "Ödül Kazan",
+        "description": "$YUMO token'ları kazan ve gamified platformumuza katıl."
+      }
+    ]
+  },
+  "tokenomics": {
+    "title": "Token Dağılımı",
+    "subtitle": "Yumo Nasıl Paylaşılır",
+    "totalSupply": "Toplam arz: 99 Milyar $YUMO token — eğlence, adalet ve büyüme için tasarlandı",
+    "distribution": [
+      {
+        "label": "Harcama Kanıtı (Madencilik)",
+        "description": "Fiş yükleyerek ve PoE sistemine katılarak kazanılır"
+      },
+      {
+        "label": "Staking ve Uzun Vadeli Teşvikler",
+        "description": "Uzun vadeli sahipler ve stake edenler için ödüller"
+      },
+      {
+        "label": "Eğlenceli Ödüller (Görevler, Galxe, Zealy)",
+        "description": "Oyunlaştırılmış görevler ve topluluk etkinlikleri aracılığıyla dağıtılır"
+      },
+      {
+        "label": "Genesis (Erken Katılım)",
+        "description": "Erken destekçiler ve topluluk oluşturucular için ayrıldı"
+      }
+    ],
+    "detailedLink": "Detaylı tokenomik için buraya tıklayın"
+  },
+  "papers": {
+    "title": "Belgelerimizi Oku",
+    "subtitle": "Yumo Yumo'nun vizyonu ve teknik detaylarına derinlemesine bak",
+    "funPaper": {
+      "title": "Eğlenceli Belge",
+      "subtitle": "Fişlerini Ödüllere Dönüştür",
+      "description": "Yumo Yumo'nun günlük harcamaları heyecan verici bir ödül macerasına nasıl dönüştürdüğünü keşfedin. Oyunlaştırılmış ekosistemimiz ve topluluk odaklı özelliklerimiz hakkında bilgi edinin.",
+      "tags": ["Oyunlaştırma", "Ödüller", "Topluluk"]
+    },
+    "seriousPaper": {
+      "title": "Ciddi Belge",
+      "subtitle": "Teknik Mimari ve Tokenomik",
+      "description": "Harcama Kanıtı konsensüsü, akıllı sözleşme mimarisi ve Yumo Yumo'nun arkasındaki tam ekonomik modeli kapsayan kapsamlı teknik dokümantasyon.",
+      "tags": ["Harcama-Kanıtı", "Akıllı Sözleşmeler", "Ekonomi"]
+    }
+  },
+  "funPaper": {
+    "sections": [
+      {
+        "title": "1. Peki... Yumo Yumo Nedir?",
+        "content": [
+          "Yumo Yumo, zaten her gün yaptığın bir şeyi yaparak token madenciliği yapmanı sağlayan bir Web3 projesidir:",
+          "Para harcamak.",
+          "Her fiyatın katmanları vardır.",
+          "Vergiler, kâr marjları, operasyonel maliyetler...",
+          "Hepsini her gün, hiç düşünmeden ödersin.",
+          "Yumo Yumo bu katmanlara bakar ve der ki:",
+          "\"Harika! Gel bunu madenciliğe (mining) dönüştürelim.\""
+        ]
+      },
+      {
+        "title": "2. Neden İnsanların Umurunda Olsun?",
+        "content": [
+          "Çünkü neredeyse tüm finans araçları şu sıkıcı soruyu sorar:",
+          "\"Ne kadar harcadın?\"",
+          "Yumo Yumo daha iyisini sorar:",
+          "\"O fiyatın içinde aslında neler vardı?\"",
+          "Fiyatlara bu gözle bakmaya başladığında, harcama yapmak pasif bir eylem olmaktan çıkar.",
+          "Veriye dönüşür.",
+          "Ve veri kazandırır."
+        ]
+      },
+      {
+        "title": "3. Harcama Kanıtı (Proof of Expense - PoE)",
+        "content": [
+          "PoE (Harcama Kanıtı) basit ve dürüsttür.",
+          "Gerçek bir fiş yüklersin.",
+          "Sistem fiyatın içindekileri analiz eder.",
+          "Gizli maliyetler gün yüzüne çıkar.",
+          "Gerçek dünya verisi sağladığın için token kazanırsın.",
+          "Sahte aksiyon yok.",
+          "Botlarla buton tıklamak yok.",
+          "\"Sadece hislerle\" gelen ödüller yok.",
+          "Eğer gerçek hayatta harcıyorsan, Yumo Yumo'da madencilik yapabilirsin."
+        ]
+      },
+      {
+        "title": "4. Madencilik, Ama Günlük Hayatın İçinde",
+        "content": [
+          "GPU'ları (ekran kartlarını) unut.",
+          "Makine dolu depoları unut.",
+          "Yumo Yumo'da fişlerin, senin madencilik cihazlarındır.",
+          "Her geçerli fiş, sisteme bir sinyal ekler.",
+          "Her sinyal, token üretir.",
+          "Döngü tertemizdir:",
+          "Harca → Yükle → Kaz → Kazan",
+          "Zaten birinci adımı her halükarda yapıyordun."
+        ]
+      },
+      {
+        "title": "5. Tokenlar Hakkında (Önce Topluluk)",
+        "content": [
+          "Net olalım:",
+          "Ekip tahsisi (allocation) yok.",
+          "Gizli zula yok.",
+          "Pazarlama için ayrılmış dev bütçeler yok.",
+          "İçeriden birilerinin önceden token basması yok.",
+          "Yumo Yumo, tokenların merkezi bir yapıya değil, katılımcılara akması için inşa edildi.",
+          "Katkı sağlarsan kazanırsın.",
+          "Sağlamazsan kazanamazsın.",
+          "Bu kadar."
+        ]
+      },
+      {
+        "title": "6. \"Peki Bu İş Nasıl Fonlanıyor?\"",
+        "content": [
+          "Alışılagelmiş yollarla fonlanmıyor.",
+          "Devasa pazarlama bütçeleri yok.",
+          "Parayla tutulmuş reklam makineleri yok.",
+          "Yapay bir talep yok.",
+          "Yumo Yumo, Web3 yoluyla büyür:",
+          "Katılım, katkı ve paylaşılan teşviklerle.",
+          "Değer, ekibin vaatlerinden değil, insanların yaptıklarından gelir."
+        ]
+      },
+      {
+        "title": "7. Neden Web3?",
+        "content": [
+          "Çünkü kurallar insanlardan daha önemlidir.",
+          "Web3 şunları garanti eder:",
+          "Ödüller önceden tanımlanmış bir mantığı takip eder.",
+          "Dağıtım manuel olarak değiştirilemez.",
+          "Perde arkasında kimse \"kimin ne alacağına\" karar veremez.",
+          "Harcamalar ortak bir sinyale dönüşür.",
+          "Tokenlar, o sinyali oluşturan insanlara geri akar.",
+          "Basit sistemler hayatta kalır.",
+          "Şeffaf olmayanlar ise elenir."
+        ]
+      },
+      {
+        "title": "8. Bu Aslında Kimin İçin?",
+        "content": [
+          "Para harcayan insanlar.",
+          "Madenciliği seven ama uykusunu da almak isteyenler.",
+          "Hikayeler yerine kuralları tercih edenler.",
+          "Trade yapmana gerek yok.",
+          "Kaldıraç kullanmana gerek yok.",
+          "Grafik tahmin etmene gerek yok.",
+          "Sadece fişleri yüklersin."
+        ]
+      },
+      {
+        "title": "9. Büyük Resim",
+        "content": [
+          "Yumo Yumo bir farkındalıkla başlar.",
+          "Zamanla bu farkındalık şuna dönüşür:",
+          "Daha derin içgörüler.",
+          "Daha akıllı finansal araçlar.",
+          "Gerçek harcama verileri üzerine kurulu, büyüyen bir ekosistem.",
+          "Hepsi, parayı asıl harcayan insanlar tarafından desteklenir."
+        ]
+      },
+      {
+        "title": "10. Son Düşünce",
+        "content": [
+          "Cüzdanından her gün zaten para çıkıyor.",
+          "Yumo Yumo bunu durdurmaya çalışmaz.",
+          "Sadece bu olurken madencilik yapmanı sağlar.",
+          "Döngü: Harca ➔ Yükle ➔ Kaz ➔ Kazan",
+          "İşte döngü bu."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "İşin mutfağına girmeye hazır mısın?",
+      "description": "Teknik özellikler, token ekonomisinin (tokenomics) matematiksel detayları ve uygulama süreçleri hakkında çok daha derin bir dalış yap.",
+      "button": "Teknik Dökümanları İncele ➔"
+    },
+    "loop": {
+      "title": "Döngü",
+      "steps": {
+        "spend": "Harca",
+        "upload": "Yükle",
+        "mine": "Kaz",
+        "earn": "Kazan"
+      }
+    }
+  },
+  "roadmap": {
+    "title": "Geliştirme Yol Haritası",
+    "subtitle": "Harcama ödüllerini devrimleştirme yolculuğumuz",
+    "items": [
+      {
+        "quarter": "P1",
+        "year": "🚀",
+        "title": "Faz 1 — Genesis\nFarkındalık Başlıyor",
+        "items": [
+          "Adil Lansman: Topluluk odaklı likidite ve fiyat keşfi",
+          "PoE Madenciliği: Fişlerden aYUMO kazan",
+          "Dijital Kimlik: Foundation NFT'ni al, seviyeni yükselt"
+        ]
+      },
+      {
+        "quarter": "P2",
+        "year": "📈",
+        "title": "Faz 2 — Genişleme\nVeriden Güce",
+        "items": [
+          "Akıllı Ajanlar: NFT'ler AI destekli yol arkadaşlarına dönüşür",
+          "Staking Açılışı: Erken katılanlar için yüksek APR",
+          "Merchant Matrix: Kategori bazlı ödül çarpanları"
+        ]
+      },
+      {
+        "quarter": "P3",
+        "year": "🌍",
+        "title": "Faz 3 — Zeka\nSistem Öğreniyor",
+        "items": [
+          "Gelişmiş İçgörüler: AI destekli finansal raporlar",
+          "HCI Endeksi: Global hidden cost panosu",
+          "Olgun Protokol: Tamamen veri destekli ekonomi"
+        ]
+      }
+    ]
+  },
+  "waitlist": {
+    "title": "Bekleme Listesine Katılın",
+    "subtitle": "Yumo Yumo'yu ilk deneyenler arasında ol! ✨",
+    "email": "E-posta Adresi",
+    "country": "Ülken",
+    "referralSource": "Bizim hakkımızda nasıl duydun?",
+    "selectCountry": "Ülkeni seç",
+    "selectOption": "Bir seçenek seçin",
+    "submit": "Bekleme Listesine Katıl",
+    "submitting": "Katılıyor...",
+    "success": "Başarılı! Listedesin 🎉",
+    "successTitle": "Listedesin! 🎉",
+    "successMessage": "Yumo Yumo başladığında sana bildireceğiz.",
+    "inboxMessage": "Gelen kutunu kontrol et! 💌",
+    "alreadyExists": "Zaten bekleme listesindesin! 🎉",
+    "error": "Lütfen tüm alanları doldur 💕",
+    "networkError": "Ağ hatası. Lütfen bağlantını kontrol et ve tekrar dene! 💫",
+    "connectionError": "Bağlantı hatası. Lütfen tekrar dene! 💫",
+    "unexpectedError": "Sunucudan beklenmeyen yanıt. Lütfen tekrar dene! 💫",
+    "genericError": "Bir şeyler ters gitti. Lütfen tekrar dene! 💫",
+    "sources": [
+      "Sosyal medya (X, TikTok, Discord, vb.)",
+      "Google Arama",
+      "Arkadaşlar veya Aile",
+      "YouTube / Etkileyici",
+      "Haberler / Blog Makalesi",
+      "Diğer"
+    ]
+  },
+  "faq": {
+    "title": "Yumo Yumo SSS",
+    "subtitle": "Soruların mı var? Cevaplarımız var! 😊",
+    "stillHaveQuestions": "Hala soruların mı var? 💬",
+    "contactText": "DM'ye gelin veya bir tweet atın — sohbet etmeyi seviyoruz! ❤️",
+    "readWhitepaper": "Whitepaper'ı Oku",
+    "contactUs": "Bize Ulaşın",
+    "items": [
+      {
+        "question": "Yumo Yumo neyle ilgili?",
+        "answer": "Alışveriş fişlerinde gerçekte neyin gizlendiğini nihayet gösteren arkadaşız biz! 🧾✨ Yumo Yumo günlük harcamaları eğlenceli içgörüler ve gerçek ödüllere dönüştürür. Bir fiş yükle, gizli maliyetleri ortaya çıkar (vergiler, fiyat artırımları, tüm o sinsi şeyler) ve paranla daha akıllı olurken YUMO token'ları kazan."
+      },
+      {
+        "question": "Bu gerçekten nasıl çalışıyor? Çok iyi geliyor!",
+        "answer": "Harcadıkça Kazanmak mı? Şöyle: 🚀\n\nBağlan: Cüzdanınla anında giriş yap.\n\nOkut: Fişin fotoğrafını gönder (Kahve, alışveriş, ne istersen).\n\nDoğrula: PoE teknolojimiz sihrini konuşturup veriyi işlesin.\n\nKazan: Hem dökümünü al hem de ödülleri topla. Bitti bile!"
+      },
+      {
+        "question": "Tamam, ama herkesin bahsettiği bu \"gizli maliyetler\" nedir?",
+        "answer": "Fiyat etiketinin arkasındaki gerçekleri gün yüzüne çıkarıyoruz: Devletin payı 🏛️, yol maliyeti 🚚, bitmek bilmeyen enflasyon 📈 ve marka kârları 💸. Yumo Yumo ile toplam tutarın hangi katmanlara bölündüğünü gör; \"Aynı burger neden orada daha ucuz?\" sorusuna kesin cevabı al!"
+      },
+      {
+        "question": "Bu finansal tavsiye mi? Hayatımı şimdi değiştirmeli miyim? 😅",
+        "answer": "Hayır! Burada sana ne yapacağını söylemek için değil, daha net görmene yardımcı olmak için bulunuyoruz. İçgörüler sadece merak ve farkındalık uyandırmak için eğitimli tahminlerdir — kesinlikle resmi finansal tavsiye değildir. Hala cüzdanının patronu sensin! 👑"
+      },
+      {
+        "question": "Ödülleri nasıl kazanırım? Eğlenceli kısmı anlat!",
+        "answer": "Kazanmanın İki Süper Yolu! ✨\n\naYUMO 🍪: Harcadıkça kazan! Gerçek hayat fişlerini yükle, harcamalarını ödüle dönüştür. Ne kadar çok alışveriş, o kadar çok kurabiye (aYUMO)!\n\nrYUMO 🎈: Paylaştıkça kazan! Görevleri tamamla, topluluğu büyüt ve eğlenceli misyonlarla rYUMO'ları topla.\n\nGerçek Değer: Her ikisi de YUMO token'a dönüşür. Boş vaatlere değil, gerçek harcamalarına ve katkına dayanan bir ekonomi! 🚀"
+      },
+      {
+        "question": "YUMO token nedir? Aya mı gidiyor? 🚀",
+        "answer": "YUMO bizim ekosistemin \"havalı\" para birimi. Staking mi istersin, özel ayrıcalıklar mı, yoksa \"benim de bir sesim olsun\" mu? Hepsi YUMO'da. 99 milyar sabit arz; kural belli, emisyon belli, komik şakalara gerek yok. 😎 Piyasa dalgalanabilir, moral bozmak yok; biz anlık \"pump\" peşinde koşanlardan değil, bu işin temelini sağlam atanlardanız. Uzun bir yolculuğa hazır mısın? 🗺️💎"
+      },
+      {
+        "question": "Hızlıca zengin olur muyum?",
+        "answer": "Spekülasyon rüzgarlarıyla değil, gerçek hayatın ritmiyle büyüyoruz. Yumo Yumo'da ödüller \"belki\"lerden değil, yüklediğin o gerçek fişlerden doğar. Her kahve alışında, her market turunda kendine bir ödül fırlat! Bu sadece bir \"teşekkür\" değil; harcama alışkanlıklarını bir varlığa dönüştüren yeni nesil bir ekonomik hareket. Oyunun kuralları değişti, sen hala sadece harcıyor musun? 🔥🛒"
+      },
+      {
+        "question": "Her şeyi nasıl adil ve sürdürülebilir tutuyorsunuz?",
+        "answer": "Projemizin bu kısmıyla gurur duyuyoruz çünkü burada her şey net. Gizli basım riskini sıfırladık, emisyonu topluluk büyümesine göre dengeledik. Kötüye kullanıma karşı geliştirdiğimiz zırhımız sayesinde ödüller botlara değil, gerçek kullanıcılara gider. Biz saman alevi gibi yanıp sönmeye değil, sürdürülebilir bir ekonomiyle kalıcı olmaya geldik! ♻️🚀"
+      },
+      {
+        "question": "Peki gizliliğim? Sen fişlerimi görüyorsun! 😳",
+        "answer": "Sana en iyi ödülleri ve analizleri sunmak için sadece gerekli olanı işliyoruz. Sistemimizi geliştirmek için kullandığımız her veri, kimliğini asla ele vermeyecek şekilde tamamen anonimleştirilmiştir. Cüzdan adresin blockchain üzerinde (doğal olarak) halka açıktır ama kişisel detayların bizimle özel kalır. Şeffaflık konusunda takıntılıyız; Gizlilik Politikamızı yanına en sevdiğin atıştırmalığı alıp keyifle okuyabilirsin! 🍿✨"
+      },
+      {
+        "question": "Kelimenin tam anlamıyla herkes katılabilir mi?",
+        "answer": "Ülkende yasal yaşta olduğun ve yaşadığın yerde kriptonun uygun olduğu sürece — evet! 🌍 (Yerel kurallar nedeniyle bazı özellikler belirli bölgelerde sınırlı olabilir — sıkıcı ama gerekli.)"
+      },
+      {
+        "question": "Airdrop? Ücretsiz token'lar? 🤑",
+        "answer": "\"Belki airdrop gelir\" diye beklemeye son! Biz ödülleri sadece gerçek aktiviteye sahip olanlara dağıtıyoruz. İster bir kahve fişiyle ister topluluğa bir yardımınla... Kazandığın her YUMO, senin bir emeğinin karşılığıdır. Bu hem sistemi botlardan koruyor hem de topluluğumuzu her zaman canlı ve dürüst tutuyor. Gerçek hayat, gerçek kazanç! 🌍💰"
+      },
+      {
+        "question": "Ne zaman kullanmaya başlayabilirim?",
+        "answer": "Uygulama fırında pişiyor! 🔥 Whitepaper şimdi çıktı, erken erişim yakında. En taze güncellemeler için bizi X'te takip et — hazır olduğunda bağıracağız!"
+      },
+      {
+        "question": "Neden bir pazarlama bütçesi yok?",
+        "answer": "Biz dev reklam ajanslarına servet ödemek yerine, enerjimizi ve ödüllerimizi seninle paylaşmayı seçiyoruz. Yumo Yumo, büyük şirketlerin yapay desteğiyle değil; senin gibi tutkulu kullanıcıların sevgisi ve paylaşımıyla büyüyor. Bize en başından inananları ve içerik üretenleri ödüllendirmek bizim için çok daha değerli. Daha sağlıklı, insan odaklı ve kesinlikle çok daha eğlenceli! 💖✨"
+      },
+      {
+        "question": "Ekip bir \"ekip tahsisi\" tutuyor mu?",
+        "answer": "Yumo Yumo'da gizli cepler, kapalı kapılar ardında ayrılmış \"zula\"lar göremezsin. Ekip olarak biz de tam olarak senin gibi kazanıyoruz: Sistemi inşa ederek, büyüterek ve gerçek değer üreterek. Eğer Yumo Yumo sana gerçek bir fayda sunmazsa, biz de kazanamayız. Ya birlikte büyüyoruz ya da hiç büyümüyoruz! Şeffaflık bizim kırmızı çizgimiz. 🤝✨"
+      },
+      {
+        "question": "Bekle—ekip ücretsiz mi çalışıyor?",
+        "answer": "Bizim başarı kriterimiz borsadaki grafikler değil, senin bu sistemi gerçekten benimsemendir. Geliştirdiğimiz her yeni özellik, ağı daha güçlü ve topluluğu daha mutlu etmek için. İnsanlar Yumo Yumo'yu kullanmayı seviyorsa, ekosistem zaten kendi kendine büyür. Hep beraber, severek kazanmanın tadını çıkarıyoruz! 💎🎈"
+      },
+      {
+        "question": "Daha fazla öğrenmek ve kafamdaki soru işaretleri ile vedalaşmak için ne yapmalıyım?",
+        "answer": "Daha Fazlasını Merak mı Ediyorsun? Gel Konuşalım! 💬✨\n\nWhitepaper: Detaylarda kaybolmak isteyenler için \"derin dalış\" burada.\n\nX (@yumohq): En taze haberler ve bolca sohbet için oradayız, mutlaka takıl!\n\nWeb Sitemiz: yumoyumo.com her zaman güncel.\n\nDiscord/Telegram: Çok yakında kapıları açıyoruz, beklemede kal!\n\nAklına takılan başka bir şey mi var? Hiç çekinme, DM kutumuza dal veya bize bir tweet fırlat. Sohbet etmeye bayılıyoruz! 🔥🙌"
+      }
+    ]
+  },
+  "terms": {
+    "title": "Yumo Yumo Kullanım Koşulları",
+    "lastUpdated": "Son Güncelleme: 19 Aralık 2025",
+    "intro": "Selam! Yumo Yumo'ya hoş geldin — burada olduğun için çok mutluyuz. ✨",
+    "introDescription": "Bu Koşullar, bizim küçük kulübümüzün arkadaşça kuralları gibidir. Uygulamamızı, web sitemizi veya hizmetlerimizi (hepsine birden \"Hizmetler\" diyoruz) kullanarak bu kurallara \"tamam!\" demiş oluyorsun. Eğer bir şeyler içine sinmiyorsa sorun değil; sadece Hizmetleri kullanmaman yeterli.",
+    "sections": [
+      {
+        "title": "1. Eğlenceye kimler katılabilir?",
+        "content": "En az 18 yaşında (veya yaşadığın yerdeki reşitlik yaşında) olman gerekiyor. Herkesin kendi kararlarını sorumlulukla alabilmesini istiyoruz. 🔞"
+      },
+      {
+        "title": "2. Hesabın ve Cüzdanın",
+        "content": "Web3 cüzdanını bağladığında onu güvenli tut; o senin evin anahtarı gibi! 🔑 İznin olmadan başkası tarafından kullanılması durumunda sorumluluk kabul edemiyoruz. Eğer bir gariplik sezerden bize hemen haber ver."
+      },
+      {
+        "title": "3. Burada neler yapabilirsin?",
+        "content": "Fişlerini yükleyebilir, \"Harcama Kanıtı\" (PoE) ile gizli maliyetleri keşfedebilir, harcama içgörülerini görebilir ve YUMO token'lara dönüşebilen aYUMO/rYUMO ödülleri kazanabilirsin. Amacımız günlük harcamaları biraz daha \"sihirli\" hale getirmek! ✨🍔"
+      },
+      {
+        "title": "4. Fişler ve Senin Paylaştıkların",
+        "content": "Fişlerini veya içeriklerini yüklediğinde, sana içgörü sağlamak ve uygulamayı herkes için daha iyi hale getirmek adına bunları (güvenli ve anonim bir şekilde) kullanmamıza izin vermiş olursun. Paylaştığın şeylerin sana ait olduğuna ve kimsenin kalbini kırmayacağına dair bize söz ver, olur mu? 🤗"
+      },
+      {
+        "title": "5. Ödüller ve YUMO Token'lar",
+        "content": [
+          "Gerçek hayat fişlerinden aYUMO, topluluğun büyümesine yardım ederek rYUMO kazanırsın. Bunlar, net ve adil kurallar çerçevesinde YUMO token'a dönüşebilir.",
+          "YUMO, uygulama içindeki havalı işler için bir \"fayda (utility) token'ıdır\" — bir yatırım aracı veya \"köşeyi dönme bileti\" değildir. Değeri, kripto dünyasında olduğu gibi inebilir veya çıkabilir.",
+          "Ödüller üzerindeki vergiler mi? O konu sende (maalesef, yetişkin olmanın zorlukları!). 💸"
+        ]
+      },
+      {
+        "title": "6. Lütfen Nazik Ol (Sevmediğimiz Şeyler)",
+        "content": [
+          "Sahte fiş yok, sistemi kandırmaya çalışmak yok, yasa dışı işler yok, zorbalık yok, hacklemek yok.",
+          "Eğer bir şeyler yanlış hissettirirse hesabını durdurabilir veya sana veda edebiliriz — ama biz herkesin nazikçe oynamasını tercih ederiz! 😇"
+        ]
+      },
+      {
+        "title": "7. Bizimkiler Bizde Kalır",
+        "content": "Uygulama tasarımı, kodlar ve fikirler bize (veya bize yardım eden dostlarımıza) aittir. Bunları kişisel eğlencen için kullanabilirsin ama kopyalamak veya satmak yok, lütfen. 🎨"
+      },
+      {
+        "title": "8. Gizlilik — Arkandayız!",
+        "content": "Gizliliğini ciddiye (ve tatlılıkla) alıyoruz. Her şey Gizlilik Politikamızda açıklandı — en sevdiğin içeceği yanına alıp bir göz at. 🥤📖"
+      },
+      {
+        "title": "9. Üçüncü Taraf Dostlar (Cüzdanlar, Blockchainler)",
+        "content": "Cüzdanlar ve blockchain gibi diğer araçlarla ekip çalışması yapıyoruz. Onlar harikalar ama her zaman kusursuz çalışacaklarının sözünü veremeyiz. Zincir üstündeki (on-chain) her şey kalıcı ve halka açıktır — blockchain dünyası böyle yürür! ⛓️"
+      },
+      {
+        "title": "10. Dikkat — Garanti Yok & Yatırım Tavsiyesi Değildir (NFA!) 🙈",
+        "content": [
+          "Her şeyi pürüzsüz ve doğru yapmak için elimizden geleni yapıyoruz ama:",
+          {
+            "type": "list",
+            "items": [
+              {
+                "label": "Sadece Arkadaşça Tahminler:",
+                "text": "Gizli maliyet tahminleri ve harcama içgörüleri, öğrenmene yardımcı olacak arkadaşça tahminlerdir. Finansal, yatırım veya hukuk tavsiyesi değildir (NFA!). Her zaman kendi araştırmanı yap. 🔍"
+              },
+              {
+                "label": "Hizmetler \"Olduğu Gibi\":",
+                "text": "Kusursuz olmaya çalışıyoruz ama her şeyin %100 her zaman çalışacağına dair \"kusursuz sözler\" veremeyiz. 💫"
+              },
+              {
+                "label": "Kripto Maceraları:",
+                "text": "Kriptonun iniş çıkışları vardır, bilirsin. Attığın her adım senin sorumluluğundadır. 🎢"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "11. Eğer Bir Şeyler Ters Giderse 🤗",
+        "content": "Umarız hiç olmaz ama bir sorun çıkarsa, sorumluluğumuz yasaların izin verdiği ölçüde sınırlıdır. Dolaylı durumlardan sorumlu değiliz — gelin ortamı pozitif tutalım! ✨"
+      },
+      {
+        "title": "12. Kripto Gerçekleri (Ciddi Ama Dürüst Kısım) 🪙",
+        "content": "Tokenlar değer kaybedebilir, işlemler geri alınamaz ve ülkelerdeki kurallar değişebilir. YUMO bir yatırım bileti değil, bir fayda token'ıdır. Sadece blockchain dünyasının işleyişi seni rahat hissettiriyorsa eğlenceye katıl! 🌊"
+      },
+      {
+        "title": "13. Duraklatma veya Veda Etme",
+        "content": "Gerekirse hesapları durdurabilir veya kapatabiliriz (adil olmaya çalışacağız). Eğer bu olursa, talep edilmemiş ödüller de sana veda edebilir."
+      },
+      {
+        "title": "14. Yetişkinlerin Hukuk Bölümü",
+        "content": "Bu Koşullar [Örn: İngiltere ve Galler] yasalarına tabidir. Bir anlaşmazlık yaşarsak önce konuşmayı deneriz. Gerekirse [Örn: Singapur]'da arkadaşça bir tahkim yolu izleriz."
+      },
+      {
+        "title": "15. Bu Kuralları Güncelleyebiliriz",
+        "content": "Eğer değişiklik yaparsak sana haber veririz. Uygulamayı kullanmaya devam etmen, yeni versiyonla \"aran iyi\" demektir. ✅"
+      },
+      {
+        "title": "16. Sohbet Etmek İster misin?",
+        "content": "Biz çayı koyduk, gelirken çekirdek getirmeyi unutma. Bize info@yumoyumo.com adresinden ulaşabilirsin."
+      }
+    ],
+    "footer": "Yumo Yumo'nun bir parçası olduğun için teşekkürler — hadi gizli olanı açığa çıkaralım ve ortalığı karıştırarak biraz eğlenelim! 🫶✨"
+  },
+  "privacy": {
+    "title": "Yumo Yumo Gizlilik Politikası",
+    "lastUpdated": "Son Güncelleme: 19 Aralık 2025",
+    "intro": "Selam dostum! Gizliliğine gerçekten çok ama çok değer veriyoruz. Bu politika, bilgilerini olabilecek en nazik şekilde nasıl işlediğimizi açıklıyor. 🛡️✨",
+    "sections": [
+      {
+        "title": "1. Neler topluyoruz? (Sadece en gerekli olanları)",
+        "content": [
+          "Cüzdan Adresin: Bağlandığın zaman (Zaten blockchain üzerinde halka açıktır).",
+          "Yüklediğin Fişler: Sana o havalı içgörüleri sunabilmek için.",
+          "Temel Cihaz Bilgileri: Uygulamanın sorunsuz çalışması için hangi telefonu veya tarayıcıyı kullandığın.",
+          "Sohbetler: Bize ulaştığında kurduğumuz iletişimler.",
+          {
+            "type": "note",
+            "text": "Özel Not: Fişin üzerinde yanlışlıkla kalmadığı sürece hassas bilgilerini (sağlık bilgileri gibi) asla toplamayız. Lütfen bu tip detayları paylaşmamaya dikkat et, olur mu? 🤫"
+          }
+        ]
+      },
+      {
+        "title": "2. Bilgilerini nasıl kullanıyoruz?",
+        "content": [
+          "Gizli maliyetleri ve o tatlı harcama dökümlerini sana göstermek için.",
+          "Hak ettiğin ödülleri hesaplamak için.",
+          "Uygulamayı daha iyi hale getirmek için (Sadece anonim verilerle — kimse onun sen olduğunu bilmez).",
+          "Her şeyin güvenli ve tıkır tıkır işlemesini sağlamak için."
+        ]
+      },
+      {
+        "title": "3. Anonimleştirme — En sevdiğimiz sihirli numaramız! ✨",
+        "content": "Uygulamayı geliştirirken veya genel istatistikler oluştururken (örneğin: \"İstanbul'da yemek maliyetleri\"), seninle bağ kurulabilecek her şeyi silip atıyoruz. Fişlerin herkese yardımcı olur ama kimliğin hep gizli kalır."
+      },
+      {
+        "title": "4. Bilgilerini kimler görüyor?",
+        "content": [
+          "Neredeyse hiç kimse!",
+          "Güvenilir Yardımcılar: İyi davranacağına söz veren bulut servisleri ve analiz araçları.",
+          "Blockchain: Ödüller için — bu kısım tasarım gereği halka açıktır.",
+          "Sadece Yasalar İsterse: Çok nadir ve sıkıcı bir durum. Verilerini asla satmıyoruz. Serçe parmağımızla söz veriyoruz! 🤙💖"
+        ]
+      },
+      {
+        "title": "5. Blockchain sonsuzdur",
+        "content": "Ödüller zincire ulaştığında cüzdan adresin ve miktarlar halka açık hale gelir. Web3 dünyası böyle çalışır; süper şeffaf! ⛓️🔍"
+      },
+      {
+        "title": "6. Güvenliği sağlıyoruz",
+        "content": "Bilgilerini korumak için güçlü kilitler ve dikkatli alışkanlıklar kullanıyoruz. Hiçbir şey %100 kırılamaz değildir ama biz elimizden gelenin en iyisini yapıyoruz. 🔒"
+      },
+      {
+        "title": "7. Bilgileri ne kadar tutuyoruz?",
+        "content": "Sadece sana yardımcı olmak veya kurallara uymak için ihtiyacımız olduğu sürece. Bir şeylerin silinmesini mi istiyorsun? Sorman yeterli!"
+      },
+      {
+        "title": "8. Hakların (Kontrol sende!)",
+        "content": [
+          "Yaşadığın yere bağlı olarak şunları yapabilirsin:",
+          "Verilerini görebilirsin.",
+          "Düzeltilmesini veya silinmesini isteyebilirsin.",
+          "Belirli kullanımlara \"hayır, teşekkürler\" diyebilirsin. Bize bir mesaj atman yeterli — yüzümüzde bir gülümsemeyle hemen çözeriz. 😊"
+        ]
+      },
+      {
+        "title": "9. Bazen seyahat ediyoruz",
+        "content": "Verilerin başka ülkelerdeki sunucuları ziyaret edebilir ama her zaman sıkı gizlilik kurallarına uyduklarından emin oluruz. 🌍✈️"
+      },
+      {
+        "title": "10. Çocuklar için değil",
+        "content": "Uygulamamız sadece yetişkinler (18+) içindir. Çocuklardan bilgi toplamıyoruz."
+      },
+      {
+        "title": "11. Bu politikadaki güncellemeler",
+        "content": "Önemli bir şeyi değiştirirsek sana haber veririz. Uygulamayı kullanmaya devam etmen, yeni versiyonla \"okey\" olduğun anlamına gelir. ✅"
+      },
+      {
+        "title": "12. Sorular veya tatlı bir sohbet?",
+        "content": "Bize support@yumoyumo.com adresinden ulaşabilirsin. Senden haber almayı seviyoruz!"
+      }
+    ],
+    "footer": "Bize güvendiğin için teşekkürler. Para meselelerini daha az kafa karıştırıcı, daha çok ödüllendirici hale getirmek için buradayız — hem de gizliliğini sevgiyle koruyarak. Haydi gel sarılalım. 🤗✨"
+  },
+  "alerts": {
+    "auth": {
+      "termsRequired": "Lütfen Kullanım Koşulları ve Gizlilik Politikasını kabul et."
+    },
+    "dashboard": {
+      "fileSizeError": "Dosya boyutu 10MB'dan küçük olmalı",
+      "fileRequired": "Lütfen önce bir dosya seç"
+    },
+    "wallet": {
+      "signatureRequired": "Bağlanmak için imza gereklidir. Lütfen tekrar dene ve imza isteğini onayla.",
+      "connectionFailed": "Bağlantı başarısız oldu",
+      "pleaseTryAgain": "Lütfen tekrar dene."
+    },
+    "waitlist": {
+      "privacyNote": "Gizliliğine saygı duyuyoruz. Asla spam yapmıyoruz! 💕"
+    }
+  },
+  "support": {
+    "title": "Destek Merkezi",
+    "subtitle": "Bir sorunuz mu var veya yardıma mı ihtiyacınız var? Bir destek talebi gönderin, en kısa sürede size geri dönelim.",
+    "form": {
+      "username": "Kullanıcı Adı",
+      "usernamePlaceholder": "Kullanıcı adınız",
+      "email": "E-posta Adresi",
+      "emailPlaceholder": "eposta@adres.com",
+      "subject": "Konu",
+      "subjectPlaceholder": "Sorununuzun kısa açıklaması",
+      "description": "Açıklama",
+      "descriptionPlaceholder": "Lütfen sorununuz hakkında detaylı bilgi verin...",
+      "captcha": "Captcha Doğrulama",
+      "captchaPlaceholder": "Kodu girin",
+      "captchaHint": "Yukarıda gösterilen 4 haneli kodu girin",
+      "verify": "Doğrula",
+      "submit": "Destek Talebi Gönder",
+      "submitting": "Gönderiliyor..."
+    },
+    "success": {
+      "title": "Talep Başarıyla Gönderildi!",
+      "message": "Destek talebinizi aldık. Ekibimiz en kısa sürede size geri dönecektir."
+    },
+    "errors": {
+      "captchaRequired": "Lütfen önce captcha'yı doğrulayın.",
+      "fillAll": "Lütfen tüm alanları doldurun.",
+      "captchaIncorrect": "Captcha kodu yanlış. Lütfen tekrar deneyin."
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Hoş geldin! 👋",
+      "subtitle": "Hesabına giriş yap",
+      "emailLabel": "E-posta / Kullanıcı Adı",
+      "emailPlaceholder": "E-posta veya kullanıcı adı",
+      "passwordLabel": "Şifre",
+      "passwordPlaceholder": "Şifreni gir",
+      "submit": "Giriş Yap",
+      "toggle": "Hesabın yok mu?",
+      "toggleAction": "Kayıt Ol",
+      "googleError": "Google ile giriş başarısız oldu",
+      "twitterError": "X (Twitter) ile giriş başarısız oldu",
+      "unknownError": "Bilinmeyen hata"
+    },
+    "register": {
+      "title": "Yumo Dünyasına Katıl! 🎀",
+      "subtitle": "Hesabını oluştur ve ödül kazanmaya başla",
+      "walletLabel": "Cüzdan Adresi",
+      "usernameLabel": "Kullanıcı Adı",
+      "usernamePlaceholder": "Kullanıcı adın",
+      "emailLabel": "E-posta Adresi",
+      "emailPlaceholder": "email@ornek.com",
+      "passwordLabel": "Şifre",
+      "passwordPlaceholder": "Şifreni oluştur",
+      "passwordConfirmLabel": "Şifre Onayı",
+      "passwordConfirmPlaceholder": "Şifreni onayla",
+      "dateOfBirthLabel": "Doğum Tarihi",
+      "genderLabel": "Cinsiyet",
+      "genderOptional": "(Opsiyonel)",
+      "genderSelect": "Seç",
+      "countryLabel": "Ülke",
+      "countrySelect": "Ülke Seç",
+      "phoneLabel": "Telefon Numarası",
+      "phonePlaceholder": "+90 555 123 4567",
+      "termsText": "Kullanım Koşulları ve Gizlilik Politikası",
+      "termsAgree": "okudum ve kabul ediyorum",
+      "submit": "Kayıt Ol",
+      "toggle": "Zaten üye misin?",
+      "toggleAction": "Giriş Yap"
+    },
+    "social": {
+      "or": "veya"
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "navigation": {
+    "logo": "Yumo Yumo",
+    "home": "Ana Sayfa",
+    "whitepaper": "Ciddi Belge",
+    "roadmap": "Yol Haritası",
+    "tokenomics": "Tokenomik",
+    "faq": "SSS",
+    "signUp": "Kayıt Ol",
+    "goApp": "Uygulamaya Git",
+    "app": "Uygulama"
+  },
+  "hero": {
+    "title": "Yumbie'yi Besle.",
+    "subtitle": "Harcamaları ödüllere dönüştür.",
+    "description": "Fişlerinde değer gizli. Yumbie bunu açığa çıkarmana yardımcı olur.",
+    "cta": "Fiş Yükle",
+    "joinWaitlist": "Bekleme Listesine Katıl"
+  },
+  "loading": {
+    "analyzing": "Fiş analiz ediliyor...",
+    "extractingHiddenCosts": "Gizli masraflar çıkartılıyor...",
+    "revealingTruth": "Gerçekler gün yüzüne çıkarılıyor..."
+  },
+  "about": {
+    "title": "Yumo Yumo Hakkında",
+    "description": "Günlük harcamaları Proof of Expense (PoE) ile oyuna dönüştüren ilk Web3 projesi. Fiş yükle, Yumbie'ni besle ve eğlenerek ödül kazan!",
+    "description1": "Yumo Yumo, dünyanın ilk fiş-karşılığı-kazanç sağlayan oyunlaştırılmış platformudur. Günlük harcamalarını Yumbie'ni fişlerle besleyerek ödüllere dönüştür.",
+    "description2": "Eğlenirken $YUMO token kazanan binlerce kullanıcıya katıl. Her harcama önemlidir."
+  },
+  "footer": {
+    "description": "Fişlerini ödüllere dönüştür. Yumbie'yi besle, token kazan ve en sevimli Web3 devrimine katıl.",
+    "resources": "Kaynaklar",
+    "community": "Topluluk",
+    "followUs": "Bizi Takip Edin",
+    "terms": "Şartlar ve Koşullar",
+    "privacy": "Gizlilik Politikası",
+    "support": "Destek",
+    "copyright": "© 2025 Yumo Yumo. Tüm hakları saklıdır. Sevgi ve Yumbie'lerle yapıldı."
+  },
+  "howItWorks": {
+    "title": "Nasıl Çalışır",
+    "subtitle": "Yolculuğuna başlamak için üç basit adım",
+    "steps": [
+      {
+        "title": "Topluluğa Katıl",
+        "description": "Waitlist'e katıl ve Yumo Yumo ekosisteminin bir parçası ol."
+      },
+      {
+        "title": "Yumo'yu Keşfet",
+        "description": "Proof of Expense'in harcamalarını ödüllere nasıl dönüştürdüğünü öğren."
+      },
+      {
+        "title": "Ödül Kazan",
+        "description": "$YUMO token'ları kazan ve gamified platformumuza katıl."
+      }
+    ]
+  },
+  "tokenomics": {
+    "title": "Token Dağılımı",
+    "subtitle": "Yumo Nasıl Paylaşılır",
+    "totalSupply": "Toplam arz: 99 Milyar $YUMO token — eğlence, adalet ve büyüme için tasarlandı",
+    "distribution": [
+      {
+        "label": "Harcama Kanıtı (Madencilik)",
+        "description": "Fiş yükleyerek ve PoE sistemine katılarak kazanılır"
+      },
+      {
+        "label": "Staking ve Uzun Vadeli Teşvikler",
+        "description": "Uzun vadeli sahipler ve stake edenler için ödüller"
+      },
+      {
+        "label": "Eğlenceli Ödüller (Görevler, Galxe, Zealy)",
+        "description": "Oyunlaştırılmış görevler ve topluluk etkinlikleri aracılığıyla dağıtılır"
+      },
+      {
+        "label": "Genesis (Erken Katılım)",
+        "description": "Erken destekçiler ve topluluk oluşturucular için ayrıldı"
+      }
+    ],
+    "detailedLink": "Detaylı tokenomik için buraya tıklayın"
+  },
+  "papers": {
+    "title": "Belgelerimizi Oku",
+    "subtitle": "Yumo Yumo'nun vizyonu ve teknik detaylarına derinlemesine bak",
+    "funPaper": {
+      "title": "Eğlenceli Belge",
+      "subtitle": "Fişlerini Ödüllere Dönüştür",
+      "description": "Yumo Yumo'nun günlük harcamaları heyecan verici bir ödül macerasına nasıl dönüştürdüğünü keşfedin. Oyunlaştırılmış ekosistemimiz ve topluluk odaklı özelliklerimiz hakkında bilgi edinin.",
+      "tags": ["Oyunlaştırma", "Ödüller", "Topluluk"]
+    },
+    "seriousPaper": {
+      "title": "Ciddi Belge",
+      "subtitle": "Teknik Mimari ve Tokenomik",
+      "description": "Harcama Kanıtı konsensüsü, akıllı sözleşme mimarisi ve Yumo Yumo'nun arkasındaki tam ekonomik modeli kapsayan kapsamlı teknik dokümantasyon.",
+      "tags": ["Harcama-Kanıtı", "Akıllı Sözleşmeler", "Ekonomi"]
+    }
+  },
+  "funPaper": {
+    "sections": [
+      {
+        "title": "1. Peki... Yumo Yumo Nedir?",
+        "content": [
+          "Yumo Yumo, zaten her gün yaptığın bir şeyi yaparak token madenciliği yapmanı sağlayan bir Web3 projesidir:",
+          "Para harcamak.",
+          "Her fiyatın katmanları vardır.",
+          "Vergiler, kâr marjları, operasyonel maliyetler...",
+          "Hepsini her gün, hiç düşünmeden ödersin.",
+          "Yumo Yumo bu katmanlara bakar ve der ki:",
+          "\"Harika! Gel bunu madenciliğe (mining) dönüştürelim.\""
+        ]
+      },
+      {
+        "title": "2. Neden İnsanların Umurunda Olsun?",
+        "content": [
+          "Çünkü neredeyse tüm finans araçları şu sıkıcı soruyu sorar:",
+          "\"Ne kadar harcadın?\"",
+          "Yumo Yumo daha iyisini sorar:",
+          "\"O fiyatın içinde aslında neler vardı?\"",
+          "Fiyatlara bu gözle bakmaya başladığında, harcama yapmak pasif bir eylem olmaktan çıkar.",
+          "Veriye dönüşür.",
+          "Ve veri kazandırır."
+        ]
+      },
+      {
+        "title": "3. Harcama Kanıtı (Proof of Expense - PoE)",
+        "content": [
+          "PoE (Harcama Kanıtı) basit ve dürüsttür.",
+          "Gerçek bir fiş yüklersin.",
+          "Sistem fiyatın içindekileri analiz eder.",
+          "Gizli maliyetler gün yüzüne çıkar.",
+          "Gerçek dünya verisi sağladığın için token kazanırsın.",
+          "Sahte aksiyon yok.",
+          "Botlarla buton tıklamak yok.",
+          "\"Sadece hislerle\" gelen ödüller yok.",
+          "Eğer gerçek hayatta harcıyorsan, Yumo Yumo'da madencilik yapabilirsin."
+        ]
+      },
+      {
+        "title": "4. Madencilik, Ama Günlük Hayatın İçinde",
+        "content": [
+          "GPU'ları (ekran kartlarını) unut.",
+          "Makine dolu depoları unut.",
+          "Yumo Yumo'da fişlerin, senin madencilik cihazlarındır.",
+          "Her geçerli fiş, sisteme bir sinyal ekler.",
+          "Her sinyal, token üretir.",
+          "Döngü tertemizdir:",
+          "Harca → Yükle → Kaz → Kazan",
+          "Zaten birinci adımı her halükarda yapıyordun."
+        ]
+      },
+      {
+        "title": "5. Tokenlar Hakkında (Önce Topluluk)",
+        "content": [
+          "Net olalım:",
+          "Ekip tahsisi (allocation) yok.",
+          "Gizli zula yok.",
+          "Pazarlama için ayrılmış dev bütçeler yok.",
+          "İçeriden birilerinin önceden token basması yok.",
+          "Yumo Yumo, tokenların merkezi bir yapıya değil, katılımcılara akması için inşa edildi.",
+          "Katkı sağlarsan kazanırsın.",
+          "Sağlamazsan kazanamazsın.",
+          "Bu kadar."
+        ]
+      },
+      {
+        "title": "6. \"Peki Bu İş Nasıl Fonlanıyor?\"",
+        "content": [
+          "Alışılagelmiş yollarla fonlanmıyor.",
+          "Devasa pazarlama bütçeleri yok.",
+          "Parayla tutulmuş reklam makineleri yok.",
+          "Yapay bir talep yok.",
+          "Yumo Yumo, Web3 yoluyla büyür:",
+          "Katılım, katkı ve paylaşılan teşviklerle.",
+          "Değer, ekibin vaatlerinden değil, insanların yaptıklarından gelir."
+        ]
+      },
+      {
+        "title": "7. Neden Web3?",
+        "content": [
+          "Çünkü kurallar insanlardan daha önemlidir.",
+          "Web3 şunları garanti eder:",
+          "Ödüller önceden tanımlanmış bir mantığı takip eder.",
+          "Dağıtım manuel olarak değiştirilemez.",
+          "Perde arkasında kimse \"kimin ne alacağına\" karar veremez.",
+          "Harcamalar ortak bir sinyale dönüşür.",
+          "Tokenlar, o sinyali oluşturan insanlara geri akar.",
+          "Basit sistemler hayatta kalır.",
+          "Şeffaf olmayanlar ise elenir."
+        ]
+      },
+      {
+        "title": "8. Bu Aslında Kimin İçin?",
+        "content": [
+          "Para harcayan insanlar.",
+          "Madenciliği seven ama uykusunu da almak isteyenler.",
+          "Hikayeler yerine kuralları tercih edenler.",
+          "Trade yapmana gerek yok.",
+          "Kaldıraç kullanmana gerek yok.",
+          "Grafik tahmin etmene gerek yok.",
+          "Sadece fişleri yüklersin."
+        ]
+      },
+      {
+        "title": "9. Büyük Resim",
+        "content": [
+          "Yumo Yumo bir farkındalıkla başlar.",
+          "Zamanla bu farkındalık şuna dönüşür:",
+          "Daha derin içgörüler.",
+          "Daha akıllı finansal araçlar.",
+          "Gerçek harcama verileri üzerine kurulu, büyüyen bir ekosistem.",
+          "Hepsi, parayı asıl harcayan insanlar tarafından desteklenir."
+        ]
+      },
+      {
+        "title": "10. Son Düşünce",
+        "content": [
+          "Cüzdanından her gün zaten para çıkıyor.",
+          "Yumo Yumo bunu durdurmaya çalışmaz.",
+          "Sadece bu olurken madencilik yapmanı sağlar.",
+          "Döngü: Harca ➔ Yükle ➔ Kaz ➔ Kazan",
+          "İşte döngü bu."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "İşin mutfağına girmeye hazır mısın?",
+      "description": "Teknik özellikler, token ekonomisinin (tokenomics) matematiksel detayları ve uygulama süreçleri hakkında çok daha derin bir dalış yap.",
+      "button": "Teknik Dökümanları İncele ➔"
+    },
+    "loop": {
+      "title": "Döngü",
+      "steps": {
+        "spend": "Harca",
+        "upload": "Yükle",
+        "mine": "Kaz",
+        "earn": "Kazan"
+      }
+    }
+  },
+  "roadmap": {
+    "title": "Geliştirme Yol Haritası",
+    "subtitle": "Harcama ödüllerini devrimleştirme yolculuğumuz",
+    "items": [
+      {
+        "quarter": "P1",
+        "year": "🚀",
+        "title": "Faz 1 — Genesis\nFarkındalık Başlıyor",
+        "items": [
+          "Adil Lansman: Topluluk odaklı likidite ve fiyat keşfi",
+          "PoE Madenciliği: Fişlerden aYUMO kazan",
+          "Dijital Kimlik: Foundation NFT'ni al, seviyeni yükselt"
+        ]
+      },
+      {
+        "quarter": "P2",
+        "year": "📈",
+        "title": "Faz 2 — Genişleme\nVeriden Güce",
+        "items": [
+          "Akıllı Ajanlar: NFT'ler AI destekli yol arkadaşlarına dönüşür",
+          "Staking Açılışı: Erken katılanlar için yüksek APR",
+          "Merchant Matrix: Kategori bazlı ödül çarpanları"
+        ]
+      },
+      {
+        "quarter": "P3",
+        "year": "🌍",
+        "title": "Faz 3 — Zeka\nSistem Öğreniyor",
+        "items": [
+          "Gelişmiş İçgörüler: AI destekli finansal raporlar",
+          "HCI Endeksi: Global hidden cost panosu",
+          "Olgun Protokol: Tamamen veri destekli ekonomi"
+        ]
+      }
+    ]
+  },
+  "waitlist": {
+    "title": "Bekleme Listesine Katılın",
+    "subtitle": "Yumo Yumo'yu ilk deneyenler arasında ol! ✨",
+    "email": "E-posta Adresi",
+    "country": "Ülken",
+    "referralSource": "Bizim hakkımızda nasıl duydun?",
+    "selectCountry": "Ülkeni seç",
+    "selectOption": "Bir seçenek seçin",
+    "submit": "Bekleme Listesine Katıl",
+    "submitting": "Katılıyor...",
+    "success": "Başarılı! Listedesin 🎉",
+    "successTitle": "Listedesin! 🎉",
+    "successMessage": "Yumo Yumo başladığında sana bildireceğiz.",
+    "inboxMessage": "Gelen kutunu kontrol et! 💌",
+    "alreadyExists": "Zaten bekleme listesindesin! 🎉",
+    "error": "Lütfen tüm alanları doldur 💕",
+    "networkError": "Ağ hatası. Lütfen bağlantını kontrol et ve tekrar dene! 💫",
+    "connectionError": "Bağlantı hatası. Lütfen tekrar dene! 💫",
+    "unexpectedError": "Sunucudan beklenmeyen yanıt. Lütfen tekrar dene! 💫",
+    "genericError": "Bir şeyler ters gitti. Lütfen tekrar dene! 💫",
+    "sources": [
+      "Sosyal medya (X, TikTok, Discord, vb.)",
+      "Google Arama",
+      "Arkadaşlar veya Aile",
+      "YouTube / Etkileyici",
+      "Haberler / Blog Makalesi",
+      "Diğer"
+    ]
+  },
+  "faq": {
+    "title": "Yumo Yumo SSS",
+    "subtitle": "Soruların mı var? Cevaplarımız var! 😊",
+    "stillHaveQuestions": "Hala soruların mı var? 💬",
+    "contactText": "DM'ye gelin veya bir tweet atın — sohbet etmeyi seviyoruz! ❤️",
+    "readWhitepaper": "Whitepaper'ı Oku",
+    "contactUs": "Bize Ulaşın",
+    "items": [
+      {
+        "question": "Yumo Yumo neyle ilgili?",
+        "answer": "Alışveriş fişlerinde gerçekte neyin gizlendiğini nihayet gösteren arkadaşız biz! 🧾✨ Yumo Yumo günlük harcamaları eğlenceli içgörüler ve gerçek ödüllere dönüştürür. Bir fiş yükle, gizli maliyetleri ortaya çıkar (vergiler, fiyat artırımları, tüm o sinsi şeyler) ve paranla daha akıllı olurken YUMO token'ları kazan."
+      },
+      {
+        "question": "Bu gerçekten nasıl çalışıyor? Çok iyi geliyor!",
+        "answer": "Harcadıkça Kazanmak mı? Şöyle: 🚀\n\nBağlan: Cüzdanınla anında giriş yap.\n\nOkut: Fişin fotoğrafını gönder (Kahve, alışveriş, ne istersen).\n\nDoğrula: PoE teknolojimiz sihrini konuşturup veriyi işlesin.\n\nKazan: Hem dökümünü al hem de ödülleri topla. Bitti bile!"
+      },
+      {
+        "question": "Tamam, ama herkesin bahsettiği bu \"gizli maliyetler\" nedir?",
+        "answer": "Fiyat etiketinin arkasındaki gerçekleri gün yüzüne çıkarıyoruz: Devletin payı 🏛️, yol maliyeti 🚚, bitmek bilmeyen enflasyon 📈 ve marka kârları 💸. Yumo Yumo ile toplam tutarın hangi katmanlara bölündüğünü gör; \"Aynı burger neden orada daha ucuz?\" sorusuna kesin cevabı al!"
+      },
+      {
+        "question": "Bu finansal tavsiye mi? Hayatımı şimdi değiştirmeli miyim? 😅",
+        "answer": "Hayır! Burada sana ne yapacağını söylemek için değil, daha net görmene yardımcı olmak için bulunuyoruz. İçgörüler sadece merak ve farkındalık uyandırmak için eğitimli tahminlerdir — kesinlikle resmi finansal tavsiye değildir. Hala cüzdanının patronu sensin! 👑"
+      },
+      {
+        "question": "Ödülleri nasıl kazanırım? Eğlenceli kısmı anlat!",
+        "answer": "Kazanmanın İki Süper Yolu! ✨\n\naYUMO 🍪: Harcadıkça kazan! Gerçek hayat fişlerini yükle, harcamalarını ödüle dönüştür. Ne kadar çok alışveriş, o kadar çok kurabiye (aYUMO)!\n\nrYUMO 🎈: Paylaştıkça kazan! Görevleri tamamla, topluluğu büyüt ve eğlenceli misyonlarla rYUMO'ları topla.\n\nGerçek Değer: Her ikisi de YUMO token'a dönüşür. Boş vaatlere değil, gerçek harcamalarına ve katkına dayanan bir ekonomi! 🚀"
+      },
+      {
+        "question": "YUMO token nedir? Aya mı gidiyor? 🚀",
+        "answer": "YUMO bizim ekosistemin \"havalı\" para birimi. Staking mi istersin, özel ayrıcalıklar mı, yoksa \"benim de bir sesim olsun\" mu? Hepsi YUMO'da. 99 milyar sabit arz; kural belli, emisyon belli, komik şakalara gerek yok. 😎 Piyasa dalgalanabilir, moral bozmak yok; biz anlık \"pump\" peşinde koşanlardan değil, bu işin temelini sağlam atanlardanız. Uzun bir yolculuğa hazır mısın? 🗺️💎"
+      },
+      {
+        "question": "Hızlıca zengin olur muyum?",
+        "answer": "Spekülasyon rüzgarlarıyla değil, gerçek hayatın ritmiyle büyüyoruz. Yumo Yumo'da ödüller \"belki\"lerden değil, yüklediğin o gerçek fişlerden doğar. Her kahve alışında, her market turunda kendine bir ödül fırlat! Bu sadece bir \"teşekkür\" değil; harcama alışkanlıklarını bir varlığa dönüştüren yeni nesil bir ekonomik hareket. Oyunun kuralları değişti, sen hala sadece harcıyor musun? 🔥🛒"
+      },
+      {
+        "question": "Her şeyi nasıl adil ve sürdürülebilir tutuyorsunuz?",
+        "answer": "Projemizin bu kısmıyla gurur duyuyoruz çünkü burada her şey net. Gizli basım riskini sıfırladık, emisyonu topluluk büyümesine göre dengeledik. Kötüye kullanıma karşı geliştirdiğimiz zırhımız sayesinde ödüller botlara değil, gerçek kullanıcılara gider. Biz saman alevi gibi yanıp sönmeye değil, sürdürülebilir bir ekonomiyle kalıcı olmaya geldik! ♻️🚀"
+      },
+      {
+        "question": "Peki gizliliğim? Sen fişlerimi görüyorsun! 😳",
+        "answer": "Sana en iyi ödülleri ve analizleri sunmak için sadece gerekli olanı işliyoruz. Sistemimizi geliştirmek için kullandığımız her veri, kimliğini asla ele vermeyecek şekilde tamamen anonimleştirilmiştir. Cüzdan adresin blockchain üzerinde (doğal olarak) halka açıktır ama kişisel detayların bizimle özel kalır. Şeffaflık konusunda takıntılıyız; Gizlilik Politikamızı yanına en sevdiğin atıştırmalığı alıp keyifle okuyabilirsin! 🍿✨"
+      },
+      {
+        "question": "Kelimenin tam anlamıyla herkes katılabilir mi?",
+        "answer": "Ülkende yasal yaşta olduğun ve yaşadığın yerde kriptonun uygun olduğu sürece — evet! 🌍 (Yerel kurallar nedeniyle bazı özellikler belirli bölgelerde sınırlı olabilir — sıkıcı ama gerekli.)"
+      },
+      {
+        "question": "Airdrop? Ücretsiz token'lar? 🤑",
+        "answer": "\"Belki airdrop gelir\" diye beklemeye son! Biz ödülleri sadece gerçek aktiviteye sahip olanlara dağıtıyoruz. İster bir kahve fişiyle ister topluluğa bir yardımınla... Kazandığın her YUMO, senin bir emeğinin karşılığıdır. Bu hem sistemi botlardan koruyor hem de topluluğumuzu her zaman canlı ve dürüst tutuyor. Gerçek hayat, gerçek kazanç! 🌍💰"
+      },
+      {
+        "question": "Ne zaman kullanmaya başlayabilirim?",
+        "answer": "Uygulama fırında pişiyor! 🔥 Whitepaper şimdi çıktı, erken erişim yakında. En taze güncellemeler için bizi X'te takip et — hazır olduğunda bağıracağız!"
+      },
+      {
+        "question": "Neden bir pazarlama bütçesi yok?",
+        "answer": "Biz dev reklam ajanslarına servet ödemek yerine, enerjimizi ve ödüllerimizi seninle paylaşmayı seçiyoruz. Yumo Yumo, büyük şirketlerin yapay desteğiyle değil; senin gibi tutkulu kullanıcıların sevgisi ve paylaşımıyla büyüyor. Bize en başından inananları ve içerik üretenleri ödüllendirmek bizim için çok daha değerli. Daha sağlıklı, insan odaklı ve kesinlikle çok daha eğlenceli! 💖✨"
+      },
+      {
+        "question": "Ekip bir \"ekip tahsisi\" tutuyor mu?",
+        "answer": "Yumo Yumo'da gizli cepler, kapalı kapılar ardında ayrılmış \"zula\"lar göremezsin. Ekip olarak biz de tam olarak senin gibi kazanıyoruz: Sistemi inşa ederek, büyüterek ve gerçek değer üreterek. Eğer Yumo Yumo sana gerçek bir fayda sunmazsa, biz de kazanamayız. Ya birlikte büyüyoruz ya da hiç büyümüyoruz! Şeffaflık bizim kırmızı çizgimiz. 🤝✨"
+      },
+      {
+        "question": "Bekle—ekip ücretsiz mi çalışıyor?",
+        "answer": "Bizim başarı kriterimiz borsadaki grafikler değil, senin bu sistemi gerçekten benimsemendir. Geliştirdiğimiz her yeni özellik, ağı daha güçlü ve topluluğu daha mutlu etmek için. İnsanlar Yumo Yumo'yu kullanmayı seviyorsa, ekosistem zaten kendi kendine büyür. Hep beraber, severek kazanmanın tadını çıkarıyoruz! 💎🎈"
+      },
+      {
+        "question": "Daha fazla öğrenmek ve kafamdaki soru işaretleri ile vedalaşmak için ne yapmalıyım?",
+        "answer": "Daha Fazlasını Merak mı Ediyorsun? Gel Konuşalım! 💬✨\n\nWhitepaper: Detaylarda kaybolmak isteyenler için \"derin dalış\" burada.\n\nX (@yumohq): En taze haberler ve bolca sohbet için oradayız, mutlaka takıl!\n\nWeb Sitemiz: yumoyumo.com her zaman güncel.\n\nDiscord/Telegram: Çok yakında kapıları açıyoruz, beklemede kal!\n\nAklına takılan başka bir şey mi var? Hiç çekinme, DM kutumuza dal veya bize bir tweet fırlat. Sohbet etmeye bayılıyoruz! 🔥🙌"
+      }
+    ]
+  },
+  "terms": {
+    "title": "Yumo Yumo Kullanım Koşulları",
+    "lastUpdated": "Son Güncelleme: 19 Aralık 2025",
+    "intro": "Selam! Yumo Yumo'ya hoş geldin — burada olduğun için çok mutluyuz. ✨",
+    "introDescription": "Bu Koşullar, bizim küçük kulübümüzün arkadaşça kuralları gibidir. Uygulamamızı, web sitemizi veya hizmetlerimizi (hepsine birden \"Hizmetler\" diyoruz) kullanarak bu kurallara \"tamam!\" demiş oluyorsun. Eğer bir şeyler içine sinmiyorsa sorun değil; sadece Hizmetleri kullanmaman yeterli.",
+    "sections": [
+      {
+        "title": "1. Eğlenceye kimler katılabilir?",
+        "content": "En az 18 yaşında (veya yaşadığın yerdeki reşitlik yaşında) olman gerekiyor. Herkesin kendi kararlarını sorumlulukla alabilmesini istiyoruz. 🔞"
+      },
+      {
+        "title": "2. Hesabın ve Cüzdanın",
+        "content": "Web3 cüzdanını bağladığında onu güvenli tut; o senin evin anahtarı gibi! 🔑 İznin olmadan başkası tarafından kullanılması durumunda sorumluluk kabul edemiyoruz. Eğer bir gariplik sezerden bize hemen haber ver."
+      },
+      {
+        "title": "3. Burada neler yapabilirsin?",
+        "content": "Fişlerini yükleyebilir, \"Harcama Kanıtı\" (PoE) ile gizli maliyetleri keşfedebilir, harcama içgörülerini görebilir ve YUMO token'lara dönüşebilen aYUMO/rYUMO ödülleri kazanabilirsin. Amacımız günlük harcamaları biraz daha \"sihirli\" hale getirmek! ✨🍔"
+      },
+      {
+        "title": "4. Fişler ve Senin Paylaştıkların",
+        "content": "Fişlerini veya içeriklerini yüklediğinde, sana içgörü sağlamak ve uygulamayı herkes için daha iyi hale getirmek adına bunları (güvenli ve anonim bir şekilde) kullanmamıza izin vermiş olursun. Paylaştığın şeylerin sana ait olduğuna ve kimsenin kalbini kırmayacağına dair bize söz ver, olur mu? 🤗"
+      },
+      {
+        "title": "5. Ödüller ve YUMO Token'lar",
+        "content": [
+          "Gerçek hayat fişlerinden aYUMO, topluluğun büyümesine yardım ederek rYUMO kazanırsın. Bunlar, net ve adil kurallar çerçevesinde YUMO token'a dönüşebilir.",
+          "YUMO, uygulama içindeki havalı işler için bir \"fayda (utility) token'ıdır\" — bir yatırım aracı veya \"köşeyi dönme bileti\" değildir. Değeri, kripto dünyasında olduğu gibi inebilir veya çıkabilir.",
+          "Ödüller üzerindeki vergiler mi? O konu sende (maalesef, yetişkin olmanın zorlukları!). 💸"
+        ]
+      },
+      {
+        "title": "6. Lütfen Nazik Ol (Sevmediğimiz Şeyler)",
+        "content": [
+          "Sahte fiş yok, sistemi kandırmaya çalışmak yok, yasa dışı işler yok, zorbalık yok, hacklemek yok.",
+          "Eğer bir şeyler yanlış hissettirirse hesabını durdurabilir veya sana veda edebiliriz — ama biz herkesin nazikçe oynamasını tercih ederiz! 😇"
+        ]
+      },
+      {
+        "title": "7. Bizimkiler Bizde Kalır",
+        "content": "Uygulama tasarımı, kodlar ve fikirler bize (veya bize yardım eden dostlarımıza) aittir. Bunları kişisel eğlencen için kullanabilirsin ama kopyalamak veya satmak yok, lütfen. 🎨"
+      },
+      {
+        "title": "8. Gizlilik — Arkandayız!",
+        "content": "Gizliliğini ciddiye (ve tatlılıkla) alıyoruz. Her şey Gizlilik Politikamızda açıklandı — en sevdiğin içeceği yanına alıp bir göz at. 🥤📖"
+      },
+      {
+        "title": "9. Üçüncü Taraf Dostlar (Cüzdanlar, Blockchainler)",
+        "content": "Cüzdanlar ve blockchain gibi diğer araçlarla ekip çalışması yapıyoruz. Onlar harikalar ama her zaman kusursuz çalışacaklarının sözünü veremeyiz. Zincir üstündeki (on-chain) her şey kalıcı ve halka açıktır — blockchain dünyası böyle yürür! ⛓️"
+      },
+      {
+        "title": "10. Dikkat — Garanti Yok & Yatırım Tavsiyesi Değildir (NFA!) 🙈",
+        "content": [
+          "Her şeyi pürüzsüz ve doğru yapmak için elimizden geleni yapıyoruz ama:",
+          {
+            "type": "list",
+            "items": [
+              {
+                "label": "Sadece Arkadaşça Tahminler:",
+                "text": "Gizli maliyet tahminleri ve harcama içgörüleri, öğrenmene yardımcı olacak arkadaşça tahminlerdir. Finansal, yatırım veya hukuk tavsiyesi değildir (NFA!). Her zaman kendi araştırmanı yap. 🔍"
+              },
+              {
+                "label": "Hizmetler \"Olduğu Gibi\":",
+                "text": "Kusursuz olmaya çalışıyoruz ama her şeyin %100 her zaman çalışacağına dair \"kusursuz sözler\" veremeyiz. 💫"
+              },
+              {
+                "label": "Kripto Maceraları:",
+                "text": "Kriptonun iniş çıkışları vardır, bilirsin. Attığın her adım senin sorumluluğundadır. 🎢"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "11. Eğer Bir Şeyler Ters Giderse 🤗",
+        "content": "Umarız hiç olmaz ama bir sorun çıkarsa, sorumluluğumuz yasaların izin verdiği ölçüde sınırlıdır. Dolaylı durumlardan sorumlu değiliz — gelin ortamı pozitif tutalım! ✨"
+      },
+      {
+        "title": "12. Kripto Gerçekleri (Ciddi Ama Dürüst Kısım) 🪙",
+        "content": "Tokenlar değer kaybedebilir, işlemler geri alınamaz ve ülkelerdeki kurallar değişebilir. YUMO bir yatırım bileti değil, bir fayda token'ıdır. Sadece blockchain dünyasının işleyişi seni rahat hissettiriyorsa eğlenceye katıl! 🌊"
+      },
+      {
+        "title": "13. Duraklatma veya Veda Etme",
+        "content": "Gerekirse hesapları durdurabilir veya kapatabiliriz (adil olmaya çalışacağız). Eğer bu olursa, talep edilmemiş ödüller de sana veda edebilir."
+      },
+      {
+        "title": "14. Yetişkinlerin Hukuk Bölümü",
+        "content": "Bu Koşullar [Örn: İngiltere ve Galler] yasalarına tabidir. Bir anlaşmazlık yaşarsak önce konuşmayı deneriz. Gerekirse [Örn: Singapur]'da arkadaşça bir tahkim yolu izleriz."
+      },
+      {
+        "title": "15. Bu Kuralları Güncelleyebiliriz",
+        "content": "Eğer değişiklik yaparsak sana haber veririz. Uygulamayı kullanmaya devam etmen, yeni versiyonla \"aran iyi\" demektir. ✅"
+      },
+      {
+        "title": "16. Sohbet Etmek İster misin?",
+        "content": "Biz çayı koyduk, gelirken çekirdek getirmeyi unutma. Bize info@yumoyumo.com adresinden ulaşabilirsin."
+      }
+    ],
+    "footer": "Yumo Yumo'nun bir parçası olduğun için teşekkürler — hadi gizli olanı açığa çıkaralım ve ortalığı karıştırarak biraz eğlenelim! 🫶✨"
+  },
+  "privacy": {
+    "title": "Yumo Yumo Gizlilik Politikası",
+    "lastUpdated": "Son Güncelleme: 19 Aralık 2025",
+    "intro": "Selam dostum! Gizliliğine gerçekten çok ama çok değer veriyoruz. Bu politika, bilgilerini olabilecek en nazik şekilde nasıl işlediğimizi açıklıyor. 🛡️✨",
+    "sections": [
+      {
+        "title": "1. Neler topluyoruz? (Sadece en gerekli olanları)",
+        "content": [
+          "Cüzdan Adresin: Bağlandığın zaman (Zaten blockchain üzerinde halka açıktır).",
+          "Yüklediğin Fişler: Sana o havalı içgörüleri sunabilmek için.",
+          "Temel Cihaz Bilgileri: Uygulamanın sorunsuz çalışması için hangi telefonu veya tarayıcıyı kullandığın.",
+          "Sohbetler: Bize ulaştığında kurduğumuz iletişimler.",
+          {
+            "type": "note",
+            "text": "Özel Not: Fişin üzerinde yanlışlıkla kalmadığı sürece hassas bilgilerini (sağlık bilgileri gibi) asla toplamayız. Lütfen bu tip detayları paylaşmamaya dikkat et, olur mu? 🤫"
+          }
+        ]
+      },
+      {
+        "title": "2. Bilgilerini nasıl kullanıyoruz?",
+        "content": [
+          "Gizli maliyetleri ve o tatlı harcama dökümlerini sana göstermek için.",
+          "Hak ettiğin ödülleri hesaplamak için.",
+          "Uygulamayı daha iyi hale getirmek için (Sadece anonim verilerle — kimse onun sen olduğunu bilmez).",
+          "Her şeyin güvenli ve tıkır tıkır işlemesini sağlamak için."
+        ]
+      },
+      {
+        "title": "3. Anonimleştirme — En sevdiğimiz sihirli numaramız! ✨",
+        "content": "Uygulamayı geliştirirken veya genel istatistikler oluştururken (örneğin: \"İstanbul'da yemek maliyetleri\"), seninle bağ kurulabilecek her şeyi silip atıyoruz. Fişlerin herkese yardımcı olur ama kimliğin hep gizli kalır."
+      },
+      {
+        "title": "4. Bilgilerini kimler görüyor?",
+        "content": [
+          "Neredeyse hiç kimse!",
+          "Güvenilir Yardımcılar: İyi davranacağına söz veren bulut servisleri ve analiz araçları.",
+          "Blockchain: Ödüller için — bu kısım tasarım gereği halka açıktır.",
+          "Sadece Yasalar İsterse: Çok nadir ve sıkıcı bir durum. Verilerini asla satmıyoruz. Serçe parmağımızla söz veriyoruz! 🤙💖"
+        ]
+      },
+      {
+        "title": "5. Blockchain sonsuzdur",
+        "content": "Ödüller zincire ulaştığında cüzdan adresin ve miktarlar halka açık hale gelir. Web3 dünyası böyle çalışır; süper şeffaf! ⛓️🔍"
+      },
+      {
+        "title": "6. Güvenliği sağlıyoruz",
+        "content": "Bilgilerini korumak için güçlü kilitler ve dikkatli alışkanlıklar kullanıyoruz. Hiçbir şey %100 kırılamaz değildir ama biz elimizden gelenin en iyisini yapıyoruz. 🔒"
+      },
+      {
+        "title": "7. Bilgileri ne kadar tutuyoruz?",
+        "content": "Sadece sana yardımcı olmak veya kurallara uymak için ihtiyacımız olduğu sürece. Bir şeylerin silinmesini mi istiyorsun? Sorman yeterli!"
+      },
+      {
+        "title": "8. Hakların (Kontrol sende!)",
+        "content": [
+          "Yaşadığın yere bağlı olarak şunları yapabilirsin:",
+          "Verilerini görebilirsin.",
+          "Düzeltilmesini veya silinmesini isteyebilirsin.",
+          "Belirli kullanımlara \"hayır, teşekkürler\" diyebilirsin. Bize bir mesaj atman yeterli — yüzümüzde bir gülümsemeyle hemen çözeriz. 😊"
+        ]
+      },
+      {
+        "title": "9. Bazen seyahat ediyoruz",
+        "content": "Verilerin başka ülkelerdeki sunucuları ziyaret edebilir ama her zaman sıkı gizlilik kurallarına uyduklarından emin oluruz. 🌍✈️"
+      },
+      {
+        "title": "10. Çocuklar için değil",
+        "content": "Uygulamamız sadece yetişkinler (18+) içindir. Çocuklardan bilgi toplamıyoruz."
+      },
+      {
+        "title": "11. Bu politikadaki güncellemeler",
+        "content": "Önemli bir şeyi değiştirirsek sana haber veririz. Uygulamayı kullanmaya devam etmen, yeni versiyonla \"okey\" olduğun anlamına gelir. ✅"
+      },
+      {
+        "title": "12. Sorular veya tatlı bir sohbet?",
+        "content": "Bize support@yumoyumo.com adresinden ulaşabilirsin. Senden haber almayı seviyoruz!"
+      }
+    ],
+    "footer": "Bize güvendiğin için teşekkürler. Para meselelerini daha az kafa karıştırıcı, daha çok ödüllendirici hale getirmek için buradayız — hem de gizliliğini sevgiyle koruyarak. Haydi gel sarılalım. 🤗✨"
+  },
+  "alerts": {
+    "auth": {
+      "termsRequired": "Lütfen Kullanım Koşulları ve Gizlilik Politikasını kabul et."
+    },
+    "dashboard": {
+      "fileSizeError": "Dosya boyutu 10MB'dan küçük olmalı",
+      "fileRequired": "Lütfen önce bir dosya seç"
+    },
+    "wallet": {
+      "signatureRequired": "Bağlanmak için imza gereklidir. Lütfen tekrar dene ve imza isteğini onayla.",
+      "connectionFailed": "Bağlantı başarısız oldu",
+      "pleaseTryAgain": "Lütfen tekrar dene."
+    },
+    "waitlist": {
+      "privacyNote": "Gizliliğine saygı duyuyoruz. Asla spam yapmıyoruz! 💕"
+    }
+  },
+  "support": {
+    "title": "Destek Merkezi",
+    "subtitle": "Bir sorunuz mu var veya yardıma mı ihtiyacınız var? Bir destek talebi gönderin, en kısa sürede size geri dönelim.",
+    "form": {
+      "username": "Kullanıcı Adı",
+      "usernamePlaceholder": "Kullanıcı adınız",
+      "email": "E-posta Adresi",
+      "emailPlaceholder": "eposta@adres.com",
+      "subject": "Konu",
+      "subjectPlaceholder": "Sorununuzun kısa açıklaması",
+      "description": "Açıklama",
+      "descriptionPlaceholder": "Lütfen sorununuz hakkında detaylı bilgi verin...",
+      "captcha": "Captcha Doğrulama",
+      "captchaPlaceholder": "Kodu girin",
+      "captchaHint": "Yukarıda gösterilen 4 haneli kodu girin",
+      "verify": "Doğrula",
+      "submit": "Destek Talebi Gönder",
+      "submitting": "Gönderiliyor..."
+    },
+    "success": {
+      "title": "Talep Başarıyla Gönderildi!",
+      "message": "Destek talebinizi aldık. Ekibimiz en kısa sürede size geri dönecektir."
+    },
+    "errors": {
+      "captchaRequired": "Lütfen önce captcha'yı doğrulayın.",
+      "fillAll": "Lütfen tüm alanları doldurun.",
+      "captchaIncorrect": "Captcha kodu yanlış. Lütfen tekrar deneyin."
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Hoş geldin! 👋",
+      "subtitle": "Hesabına giriş yap",
+      "emailLabel": "E-posta / Kullanıcı Adı",
+      "emailPlaceholder": "E-posta veya kullanıcı adı",
+      "passwordLabel": "Şifre",
+      "passwordPlaceholder": "Şifreni gir",
+      "submit": "Giriş Yap",
+      "toggle": "Hesabın yok mu?",
+      "toggleAction": "Kayıt Ol",
+      "googleError": "Google ile giriş başarısız oldu",
+      "twitterError": "X (Twitter) ile giriş başarısız oldu",
+      "unknownError": "Bilinmeyen hata"
+    },
+    "register": {
+      "title": "Yumo Dünyasına Katıl! 🎀",
+      "subtitle": "Hesabını oluştur ve ödül kazanmaya başla",
+      "walletLabel": "Cüzdan Adresi",
+      "usernameLabel": "Kullanıcı Adı",
+      "usernamePlaceholder": "Kullanıcı adın",
+      "emailLabel": "E-posta Adresi",
+      "emailPlaceholder": "email@ornek.com",
+      "passwordLabel": "Şifre",
+      "passwordPlaceholder": "Şifreni oluştur",
+      "passwordConfirmLabel": "Şifre Onayı",
+      "passwordConfirmPlaceholder": "Şifreni onayla",
+      "dateOfBirthLabel": "Doğum Tarihi",
+      "genderLabel": "Cinsiyet",
+      "genderOptional": "(Opsiyonel)",
+      "genderSelect": "Seç",
+      "countryLabel": "Ülke",
+      "countrySelect": "Ülke Seç",
+      "phoneLabel": "Telefon Numarası",
+      "phonePlaceholder": "+90 555 123 4567",
+      "termsText": "Kullanım Koşulları ve Gizlilik Politikası",
+      "termsAgree": "okudum ve kabul ediyorum",
+      "submit": "Kayıt Ol",
+      "toggle": "Zaten üye misin?",
+      "toggleAction": "Giriş Yap"
+    },
+    "social": {
+      "or": "veya"
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

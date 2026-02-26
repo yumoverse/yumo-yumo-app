@@ -1,0 +1,2703 @@
+{
+  "navigation": {
+    "logo": "Yumo Yumo",
+    "home": "Home",
+    "whitepaper": "Whitepaper",
+    "roadmap": "Roadmap",
+    "tokenomics": "Tokenomics",
+    "faq": "FAQ",
+    "signUp": "Sign up",
+    "goApp": "Go App",
+    "app": "App"
+  },
+  "hero": {
+    "title": "Feed the Yumbie.",
+    "subtitle": "Turn spending into rewards.",
+    "description": "Your receipts hide value. Yumbie helps you unlock it.",
+    "cta": "Upload Receipt",
+    "joinWaitlist": "Join the Waitlist"
+  },
+  "loading": {
+    "analyzing": "Analyzing receipt...",
+    "extractingHiddenCosts": "Extracting hidden costs...",
+    "revealingTruth": "Revealing the truth..."
+  },
+  "about": {
+    "title": "About Yumo Yumo",
+    "description": "The first Web3 project that gamifies everyday spending through Proof of Expense (PoE). Upload receipts, feed your Yumbie, and earn rewards while having fun!",
+    "description1": "Yumo Yumo is the world's first receipt-to-earn gamified platform. Turn your everyday spending into rewards by feeding your Yumbie with receipts.",
+    "description2": "Join thousands of users who are already earning $YUMO tokens while having fun. Every purchase counts."
+  },
+  "footer": {
+    "description": "Turn your receipts into rewards. Feed the Yumbie, earn tokens, and join the cutest Web3 revolution.",
+    "resources": "Resources",
+    "community": "Community",
+    "followUs": "Follow Us",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "support": "Support",
+    "copyright": "© 2025 Yumo Yumo. All rights reserved. Built with love and Yumbies."
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Three simple steps to start your journey",
+    "steps": [
+      {
+        "title": "Join the Community",
+        "description": "Join our waitlist and become part of the Yumo Yumo ecosystem."
+      },
+      {
+        "title": "Learn About Yumo",
+        "description": "Discover how Proof of Expense turns your spending into rewards."
+      },
+      {
+        "title": "Earn Rewards",
+        "description": "Earn $YUMO tokens and participate in our gamified platform."
+      }
+    ]
+  },
+  "tokenomics": {
+    "title": "Token Distribution",
+    "subtitle": "How Yumo is Shared",
+    "totalSupply": "Total supply: 99 Billion $YUMO tokens — designed for fun, fairness, and growth",
+    "distribution": [
+      {
+        "label": "Proof of Expense (Mining)",
+        "description": "Earned by uploading receipts and participating in the PoE system"
+      },
+      {
+        "label": "Staking & Long-term Incentives",
+        "description": "Rewards for long-term holders and stakers"
+      },
+      {
+        "label": "Fun Rewards (Quests, Galxe, Zealy)",
+        "description": "Distributed through gamified quests and community activities"
+      },
+      {
+        "label": "Genesis (Early Participation)",
+        "description": "Reserved for early adopters and community builders"
+      }
+    ],
+    "detailedLink": "Click here for detailed tokenomics"
+  },
+  "papers": {
+    "title": "Read Our Papers",
+    "subtitle": "Deep dive into Yumo Yumo's vision and technical details",
+    "funPaper": {
+      "title": "Fun Paper",
+      "subtitle": "Turn Your Receipts Into Rewards",
+      "description": "Discover how Yumo Yumo transforms everyday spending into an exciting reward adventure. Learn about our gamified ecosystem and community-driven features.",
+      "tags": ["Gamification", "Rewards", "Community"]
+    },
+    "seriousPaper": {
+      "title": "Serious Paper",
+      "subtitle": "Technical Architecture & Tokenomics",
+      "description": "Comprehensive technical documentation covering Proof-of-Expense consensus, smart contract architecture, and the complete economic model behind Yumo Yumo.",
+      "tags": ["Proof-of-Expense", "Smart Contracts", "Economics"]
+    }
+  },
+  "roadmap": {
+    "title": "Development Roadmap",
+    "subtitle": "Our journey to revolutionize spending rewards",
+    "items": [
+      {
+        "quarter": "P1",
+        "year": "🚀",
+        "title": "Phase 1 — Genesis\nAwareness Begins",
+        "items": [
+          "Fair Launch: Community-led liquidity & price discovery",
+          "PoE Mining: Turn receipts into aYUMO rewards",
+          "Digital Identity: Claim your Foundation NFT & start leveling"
+        ]
+      },
+      {
+        "quarter": "P2",
+        "year": "📈",
+        "title": "Phase 2 — Expansion\nFrom Data to Power",
+        "items": [
+          "Smart Agents: NFTs evolve into AI-powered companions",
+          "Staking Unlocks: High-APR pools for early believers",
+          "Merchant Matrix: Category-based reward multipliers"
+        ]
+      },
+      {
+        "quarter": "P3",
+        "year": "🌍",
+        "title": "Phase 3 — Intelligence\nThe System Thinks",
+        "items": [
+          "Advanced Insights: AI-driven financial reports",
+          "HCI Index: Global hidden cost dashboard",
+          "Protocol Maturity: Fully data-backed economy"
+        ]
+      }
+    ]
+  },
+  "waitlist": {
+    "title": "Join the Waitlist",
+    "subtitle": "Be among the first to experience Yumo Yumo! ✨",
+    "email": "Email Address",
+    "country": "Your Country",
+    "referralSource": "How did you hear about us?",
+    "selectCountry": "Select your country",
+    "selectOption": "Select an option",
+    "submit": "Join the Waitlist",
+    "submitting": "Joining...",
+    "success": "Success! You're on the list 🎉",
+    "successTitle": "You're on the list! 🎉",
+    "successMessage": "We'll notify you when Yumo Yumo launches.",
+    "inboxMessage": "Keep an eye on your inbox! 💌",
+    "alreadyExists": "You're already on the waitlist! 🎉",
+    "error": "Please fill in all fields 💕",
+    "networkError": "Network error. Please check your connection and try again! 💫",
+    "connectionError": "Connection error. Please try again! 💫",
+    "unexpectedError": "Unexpected response from server. Please try again! 💫",
+    "genericError": "Something went wrong. Please try again! 💫",
+    "sources": [
+      "Social media (X, TikTok, Discord, etc)",
+      "Google Search",
+      "Friends or Family",
+      "YouTube / Influencer",
+      "News / Blog Article",
+      "Other"
+    ]
+  },
+  "faq": {
+    "title": "Yumo Yumo FAQ",
+    "subtitle": "Got questions? We've got answers! 😊",
+    "stillHaveQuestions": "Still have questions? 💬",
+    "contactText": "Slide into our DMs or tweet us — we love chatting! ❤️",
+    "readWhitepaper": "Read Whitepaper",
+    "contactUs": "Contact Us",
+    "items": [
+      {
+        "question": "What's Yumo Yumo all about?",
+        "answer": "We're the friend who finally shows you what's really hiding in your shopping receipts! 🧾✨ Yumo Yumo turns everyday spending into fun insights and real rewards. Upload a receipt, uncover hidden costs (taxes, markups, all that sneaky stuff), and earn YUMO tokens while becoming smarter with your money."
+      },
+      {
+        "question": "How does it actually work? Sounds too good!",
+        "answer": "Super simple — promise! 1. Connect your wallet (no complicated sign-up). 2. Snap a photo of any receipt (coffee, groceries, online shopping…). 3. Our Proof of Expense (PoE) magic reveals the hidden layers. 4. You get a cute breakdown + earn rewards. That's it! 🎉"
+      },
+      {
+        "question": "Okay, but what are these \"hidden costs\" everyone keeps talking about?",
+        "answer": "Think of them as the invisible extras baked into every price: Taxes & duties 🏛️, Logistics and shipping 🚚, Inflation vibes 📈, Brand & market markups 💸. We show you roughly how much of your total goes to these — so you finally understand why that burger costs more here than there!"
+      },
+      {
+        "question": "Is this financial advice? Should I change my life now? 😅",
+        "answer": "Nope! We're here to help you see clearer, not tell you what to do. The insights are just educated estimates to spark curiosity and awareness — definitely not official financial advice. You're still the boss of your wallet! 👑"
+      },
+      {
+        "question": "How do I earn rewards? Tell me the fun part!",
+        "answer": "Two super sweet ways: aYUMO 🍪 → Earned from real-life receipts (the more you live, the more you earn!). rYUMO 🎈 → Earned by helping the community grow (quests, sharing, fun missions). Both turn into YUMO tokens — real utility, not just hype."
+      },
+      {
+        "question": "What's YUMO token? Is it going to the moon? 🚀",
+        "answer": "YUMO is our utility token for cool stuff inside the ecosystem (staking, extras, future governance). Fixed supply of 99 billion, super fair and rule-based emission — no funny business. Value can go up and down (like everything in crypto), but we're building for the long haul, not quick pumps."
+      },
+      {
+        "question": "Will I get rich quick?",
+        "answer": "Let's be real — no promises of moonshots here. 😌 Rewards come from real activity, not speculation. Think of it as getting a little thank-you every time you spend money you were already spending."
+      },
+      {
+        "question": "How do you keep everything fair and sustainable?",
+        "answer": "We're kinda proud of this part! Everything is rule-based (no secret minting). Emissions slow down as more people join. Anti-abuse safeguards everywhere. It grows with real use, not farming bots. Sustainable vibes only ♻️"
+      },
+      {
+        "question": "What about my privacy? You're seeing my receipts! 😳",
+        "answer": "We care a lot about this! We only process what's needed to give you insights and rewards. Anything used to improve the system is fully anonymized. Your wallet address is public on-chain (normal for Web3), but personal details stay private. Full transparency in our Privacy Policy — feel free to read it with your favorite snack."
+      },
+      {
+        "question": "Can literally anyone join?",
+        "answer": "As long as you're of legal age in your country and crypto is okay where you live — yes! 🌍 (Some features might be limited in certain regions because of local rules — boring but necessary.)"
+      },
+      {
+        "question": "Airdrop? Free tokens? 🤑",
+        "answer": "No speculative airdrops or freebies. We believe rewards should come from real actions — like uploading receipts or helping the community. Keeps everything genuine and fun!"
+      },
+      {
+        "question": "When can I start using it?",
+        "answer": "App is cooking in the oven! 🔥 Whitepaper is out now, early access coming soon. Follow us on X for the freshest updates — we'll shout when it's ready!"
+      },
+      {
+        "question": "Why isn't there a marketing budget?",
+        "answer": "Yumo Yumo doesn't grow by dumping money into boring ads! 🙅‍♂️ It grows because friends like you use it and share the love. We'd rather reward our early helpers and creators than pay big corporations. It's healthier, human-driven, and way more fun! 💖"
+      },
+      {
+        "question": "Does the team keep a \"team allocation\"?",
+        "answer": "Nope! There are no secret pockets or hidden stashes here. 🙅‍♀️ The team earns exactly like you do—by building, running, and improving the system. If Yumo Yumo doesn't deliver real value, nobody earns. We grow together or not at all! 🤝✨"
+      },
+      {
+        "question": "Wait—is the team working for free?",
+        "answer": "Not exactly! 😸 We work for the real-world adoption of tools people actually want to use. Our rewards are tied to shipping useful features and keeping the network happy. If people love using it, we all win! 🍎✨"
+      },
+      {
+        "question": "Where can I learn more or ask silly questions?",
+        "answer": "Whitepaper (deep dive), X (@yumohq) — we're super chatty there, Website: yumoyumo.com, Discord/Telegram coming soon! Got a question that's not here? Slide into our DMs or tweet us — we love chatting! 💬❤️"
+      }
+    ]
+  },
+  "funPaper": {
+    "sections": [
+      {
+        "title": "1. So… what is Yumo Yumo?",
+        "content": [
+          "Yumo Yumo is a Web3 project that lets you mine tokens by doing something you already do every day:",
+          "Spending money.",
+          "Every price has layers.",
+          "Taxes, profit margins, operational costs...",
+          "You pay all of them every day, without thinking.",
+          "Yumo Yumo looks at these layers and says:",
+          "\"Great! Let's turn this into mining.\""
+        ]
+      },
+      {
+        "title": "2. Why should anyone care?",
+        "content": [
+          "Because almost all financial tools ask this boring question:",
+          "\"How much did you spend?\"",
+          "Yumo Yumo asks something better:",
+          "\"What was actually inside that price?\"",
+          "Once you start looking at prices this way, spending stops being a passive action.",
+          "It becomes data.",
+          "And data earns."
+        ]
+      },
+      {
+        "title": "3. Proof of Expense (PoE)",
+        "content": [
+          "PoE (Proof of Expense) is simple and honest.",
+          "You upload a real receipt.",
+          "The system analyzes what's inside the price.",
+          "Hidden costs come to light.",
+          "You earn tokens because you provided real-world data.",
+          "No fake actions.",
+          "No button clicking with bots.",
+          "No rewards that come \"just from feelings\".",
+          "If you spend in real life, you can mine on Yumo Yumo."
+        ]
+      },
+      {
+        "title": "4. Mining, but make it normal life",
+        "content": [
+          "Forget GPUs.",
+          "Forget warehouses full of machines.",
+          "In Yumo Yumo, your receipts are your mining devices.",
+          "Every valid receipt adds a signal to the system.",
+          "Every signal generates tokens.",
+          "The cycle is clean:",
+          "Spend → Upload → Mine → Earn",
+          "You were already doing step one anyway."
+        ]
+      },
+      {
+        "title": "5. About tokens (community first)",
+        "content": [
+          "Let's be clear:",
+          "No team allocation.",
+          "No hidden stash.",
+          "No massive budgets set aside for marketing.",
+          "No pre-minting tokens for insiders.",
+          "Yumo Yumo was built so tokens flow to participants, not a central structure.",
+          "If you contribute, you earn.",
+          "If you don't, you don't.",
+          "That's it."
+        ]
+      },
+      {
+        "title": "6. \"But how is this funded?\"",
+        "content": [
+          "It's not funded the usual way.",
+          "No massive marketing budgets.",
+          "No paid advertising machines.",
+          "No artificial demand.",
+          "Yumo Yumo grows through the Web3 way:",
+          "Through participation, contribution, and shared incentives.",
+          "Value comes from what people do, not from team promises."
+        ]
+      },
+      {
+        "title": "7. Why Web3 at all?",
+        "content": [
+          "Because rules matter more than people.",
+          "Web3 guarantees:",
+          "Rewards follow predefined logic.",
+          "Distribution cannot be changed manually.",
+          "No one behind the curtain can decide \"who gets what\".",
+          "Spending becomes a shared signal.",
+          "Tokens flow back to the people who create that signal.",
+          "Simple systems survive.",
+          "Non-transparent ones get eliminated."
+        ]
+      },
+      {
+        "title": "8. Who is this actually for?",
+        "content": [
+          "People who spend money.",
+          "Those who love mining but also want to sleep.",
+          "Those who prefer rules over stories.",
+          "You don't need to trade.",
+          "You don't need to use leverage.",
+          "You don't need to predict charts.",
+          "Just upload receipts."
+        ]
+      },
+      {
+        "title": "9. The bigger picture",
+        "content": [
+          "Yumo Yumo starts with awareness.",
+          "Over time, this awareness becomes:",
+          "Deeper insights.",
+          "Smarter financial tools.",
+          "A growing ecosystem built on real spending data.",
+          "All supported by the people who actually spend the money."
+        ]
+      },
+      {
+        "title": "10. Final thought",
+        "content": [
+          "Money already leaves your wallet every day.",
+          "Yumo Yumo doesn't try to stop that.",
+          "It just lets you mine while it happens.",
+          "The cycle: Spend ➔ Upload ➔ Mine ➔ Earn",
+          "That's the cycle."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Ready to get into the kitchen?",
+      "description": "Take a much deeper dive into technical specifications, mathematical details of tokenomics, and implementation processes.",
+      "button": "Read the Technical Documents ➔"
+    },
+    "loop": {
+      "title": "The Cycle",
+      "steps": {
+        "spend": "Spend",
+        "upload": "Upload",
+        "mine": "Mine",
+        "earn": "Earn"
+      }
+    }
+  },
+  "terms": {
+    "title": "Yumo Yumo Terms and Conditions",
+    "lastUpdated": "Last Updated: December 19, 2025",
+    "intro": "Hey there! Welcome to Yumo Yumo — we're super happy you're here.",
+    "introDescription": "These Terms are like the friendly rules of our little clubhouse. By using our app, website, or services (we call them all \"Services\"), you're saying \"okay!\" to these rules. If something doesn't feel right, no worries — just don't use the Services.",
+    "sections": [
+      {
+        "title": "1. Who can join the fun?",
+        "content": "You need to be at least 18 (or the grown-up age where you live). We want everyone to be able to make their own choices responsibly."
+      },
+      {
+        "title": "2. Your account & wallet",
+        "content": "When you connect your Web3 wallet, keep it safe — it's like your house key! 🔑\n\nWe're not responsible if someone else uses it without your permission. If something seems off, tell us right away."
+      },
+      {
+        "title": "3. What can you do here?",
+        "content": "Upload receipts, discover hidden costs with Proof of Expense (PoE), see cute spending insights, and earn aYUMO/rYUMO rewards that can turn into YUMO tokens. It's all about making everyday spending a bit more magical."
+      },
+      {
+        "title": "4. Receipts & your stuff",
+        "content": "When you upload receipts or other content, you're letting us use it (in a safe, anonymized way) to give you insights and make the app better for everyone.\n\nPromise us they're yours to share and don't break any rules or hurt anyone's feelings, okay?"
+      },
+      {
+        "title": "5. Rewards & YUMO tokens",
+        "content": [
+          "You earn aYUMO from real-life receipts and rYUMO from helping the community grow.",
+          "These can become YUMO tokens following clear, fair rules.",
+          "YUMO is a utility token for fun stuff inside the app — not an investment or \"get rich quick\" ticket. Its value can go up and down, just like the crypto world.",
+          "Any taxes on rewards? That's on you (sorry, adulting!)."
+        ]
+      },
+      {
+        "title": "6. Please be kind (things we don't like)",
+        "content": [
+          "No fake receipts, no trying to game the system, no illegal stuff, no bullying, no hacking.",
+          "If something feels wrong, we might pause or say goodbye to your account — but we'd rather everyone plays nicely!"
+        ]
+      },
+      {
+        "title": "7. Our stuff stays ours",
+        "content": "The app design, code, and ideas belong to us (or our friends who helped). You get to use them for personal fun, but no copying or selling, pretty please."
+      },
+      {
+        "title": "8. Privacy — we've got your back",
+        "content": "We take your privacy seriously (and cutely). Everything is explained in our Privacy Policy — give it a read with your favorite drink."
+      },
+      {
+        "title": "9. Third-party friends (wallets, blockchains)",
+        "content": "We team up with other tools (like wallets and blockchains). They're awesome, but we can't promise they'll always work perfectly. On-chain stuff is forever and public — that's just how blockchain rolls."
+      },
+      {
+        "title": "10. Heads up — no guarantees & NFA 🙈",
+        "content": [
+          "We do our best to make everything smooth and accurate, but:",
+          {
+            "type": "list",
+            "items": [
+              {
+                "label": "Friendly Guesses Only:",
+                "text": "Hidden cost estimates and spending insights are friendly guesses to help you learn. They are not financial, investment, or legal advice (NFA!). Always do your own research. 🔍"
+              },
+              {
+                "label": "Services are \"as is\":",
+                "text": "We try to be perfect, but we can't make \"perfect promises\" about everything working 100% of the time. 💫"
+              },
+              {
+                "label": "Crypto Adventures:",
+                "text": "Crypto has ups and downs — you know the drill. Any moves you make are your own responsibility. 🎢"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "11. If something goes wrong 🤗",
+        "content": "We really hope nothing does, but if there's an issue, our responsibility is limited (to the max the law allows). We're not liable for indirect stuff — let's keep things positive! ✨"
+      },
+      {
+        "title": "12. Crypto realities (the serious but honest part) 🪙",
+        "content": "Tokens can lose value, transactions can't be undone, and rules can change in different countries. YUMO is a utility token, not an investment ticket. Join the fun only if you're comfy with how blockchain rolls! 🌊"
+      },
+      {
+        "title": "13. Pausing or saying goodbye",
+        "content": "We might pause or close accounts if needed (we'll try to be fair). If that happens, unclaimed rewards might wave goodbye too."
+      },
+      {
+        "title": "14. The grown-up legal bit",
+        "content": "These Terms follow the laws of [e.g., England and Wales]. If we ever have a disagreement, we'll try chatting first. If needed, we'll use friendly arbitration in [e.g., Singapore]."
+      },
+      {
+        "title": "15. We might update these rules",
+        "content": "If we make changes, we'll let you know. Keep using the app = you're cool with the new version."
+      },
+      {
+        "title": "16. Want to chat?",
+        "content": "Questions, hugs, or high-fives? Reach us at info@yumoyumo.com."
+      }
+    ],
+    "footer": "Thanks for being part of Yumo Yumo — let's uncover the hidden and have fun doing it! 🫶✨"
+  },
+  "privacy": {
+    "title": "Yumo Yumo Privacy Policy",
+    "lastUpdated": "Last Updated: December 19, 2025",
+    "intro": "Hi friend! We really care about your privacy — like, a lot. This policy explains how we handle your info in the gentlest way possible.",
+    "sections": [
+      {
+        "title": "1. What we collect (only the necessities)",
+        "content": [
+          "Your wallet address (when you connect — it's public on blockchain anyway).",
+          "Receipts you upload (to give you those cool insights).",
+          "Basic device stuff (like which phone or browser you're using) so the app works smoothly.",
+          "Chats if you reach out to us.",
+          "We don't grab sensitive stuff unless it accidentally sneaks onto a receipt (please don't share things like health info!)."
+        ]
+      },
+      {
+        "title": "2. How we use your info",
+        "content": [
+          "To show you hidden costs and cute spending breakdowns.",
+          "To calculate your well-deserved rewards.",
+          "To make the app better (using anonymized data only — no one knows it's you).",
+          "To keep everything safe and running."
+        ]
+      },
+      {
+        "title": "3. Anonymization — our favorite magic trick",
+        "content": "When we improve the app or create general stats (like \"dining costs in Bangkok\"), we strip away anything that could point to you. Your receipts help everyone, but stay private."
+      },
+      {
+        "title": "4. Who sees your info?",
+        "content": [
+          "Almost nobody!",
+          "Trusted helpers (cloud services, analytics) who promise to be good.",
+          "Blockchain (for rewards — that part is public by design).",
+          "Only if the law asks (very rare and boring).",
+          "We never sell your data. Pinky promise."
+        ]
+      },
+      {
+        "title": "5. Blockchain is forever",
+        "content": "Once rewards hit the chain, they're public (wallet address + amounts). That's just how Web3 works — super transparent!"
+      },
+      {
+        "title": "6. Keeping things safe",
+        "content": "We use strong locks and careful habits to protect your info. Nothing is 100% unbreakable, but we try our very best."
+      },
+      {
+        "title": "7. How long we keep stuff",
+        "content": "Only as long as we need it to help you or follow rules. Want something deleted? Just ask!"
+      },
+      {
+        "title": "8. Your rights (you're in control)",
+        "content": [
+          "Depending on where you live, you can:",
+          "See your data",
+          "Correct or delete it",
+          "Say \"no thanks\" to certain uses",
+          "Just ping us — we'll sort it with a smile."
+        ]
+      },
+      {
+        "title": "9. We travel sometimes",
+        "content": "Your data might visit servers in other countries, but we always make sure they follow strict privacy rules."
+      },
+      {
+        "title": "10. No kids allowed",
+        "content": "Our app is for grown-ups only (18+). We don't collect info from kids."
+      },
+      {
+        "title": "11. Updates to this policy",
+        "content": "If we change anything important, we'll give you a heads-up. Keep using the app = you're okay with the new version."
+      },
+      {
+        "title": "12. Questions or cozy chats?",
+        "content": "Reach us at support@yumoyumo.com. We love hearing from you!"
+      }
+    ],
+    "footer": "Thank you for trusting us. We're here to make money stuff less confusing and more rewarding — all while keeping your privacy safe and sound. Big hug! 🤗✨"
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome! 👋",
+      "subtitle": "Sign in to your account",
+      "emailLabel": "Email / Username",
+      "emailPlaceholder": "Email or username",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "submit": "Sign In",
+      "toggle": "Don't have an account?",
+      "toggleAction": "Sign Up",
+      "error": "Invalid credentials",
+      "googleError": "Failed to sign in with Google",
+      "twitterError": "Failed to sign in with X (Twitter)",
+      "unknownError": "Unknown error"
+    },
+    "register": {
+      "title": "Join the Yumo World! 🎀",
+      "subtitle": "Create your account and start earning rewards",
+      "walletLabel": "Wallet Address",
+      "usernameLabel": "Username",
+      "usernamePlaceholder": "Your username",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "email@example.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Create your password",
+      "passwordConfirmLabel": "Password Confirm",
+      "passwordConfirmPlaceholder": "Confirm your password",
+      "dateOfBirthLabel": "Date of Birth",
+      "genderLabel": "Gender",
+      "genderOptional": "Optional",
+      "genderSelect": "Select",
+      "countryLabel": "Country",
+      "countrySelect": "Select Country",
+      "phoneLabel": "Phone Number",
+      "phonePlaceholder": "+1 555 123 4567",
+      "termsText": "Terms and Conditions and Privacy Policy",
+      "termsAgree": "and I agree",
+      "submit": "Sign Up",
+      "toggle": "Already a member?",
+      "toggleAction": "Sign In",
+      "error": "Registration failed"
+    },
+    "social": {
+      "or": "or"
+    }
+  },
+  "alerts": {
+    "auth": {
+      "termsRequired": "Please accept the Terms and Conditions and Privacy Policy."
+    },
+    "dashboard": {
+      "fileSizeError": "File size must be less than 10MB",
+      "fileRequired": "Please select a file first"
+    },
+    "wallet": {
+      "signatureRequired": "Signature required to connect. Please try again and approve the signature request.",
+      "connectionFailed": "Connection failed",
+      "pleaseTryAgain": "Please try again."
+    },
+    "waitlist": {
+      "privacyNote": "We respect your privacy. No spam, ever! 💕"
+    }
+  },
+  "support": {
+    "title": "Support Center",
+    "subtitle": "Have a question or need help? Submit a support ticket and we'll get back to you as soon as possible.",
+    "form": {
+      "username": "Username",
+      "usernamePlaceholder": "Your username",
+      "email": "Email Address",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Brief description of your issue",
+      "description": "Description",
+      "descriptionPlaceholder": "Please provide detailed information about your issue...",
+      "captcha": "Captcha Verification",
+      "captchaPlaceholder": "Enter code",
+      "captchaHint": "Enter the 4-digit code shown above",
+      "verify": "Verify",
+      "submit": "Submit Support Ticket",
+      "submitting": "Submitting Ticket..."
+    },
+    "success": {
+      "title": "Ticket Submitted Successfully!",
+      "message": "We've received your support request. Our team will get back to you soon."
+    },
+    "errors": {
+      "captchaRequired": "Please verify the captcha first.",
+      "fillAll": "Please fill in all fields.",
+      "captchaIncorrect": "Captcha code is incorrect. Please try again."
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "navigation": {
+    "logo": "Yumo Yumo",
+    "home": "Home",
+    "whitepaper": "Whitepaper",
+    "roadmap": "Roadmap",
+    "tokenomics": "Tokenomics",
+    "faq": "FAQ",
+    "signUp": "Sign up",
+    "goApp": "Go App",
+    "app": "App"
+  },
+  "hero": {
+    "title": "Feed the Yumbie.",
+    "subtitle": "Turn spending into rewards.",
+    "description": "Your receipts hide value. Yumbie helps you unlock it.",
+    "cta": "Upload Receipt",
+    "joinWaitlist": "Join the Waitlist"
+  },
+  "loading": {
+    "analyzing": "Analyzing receipt...",
+    "extractingHiddenCosts": "Extracting hidden costs...",
+    "revealingTruth": "Revealing the truth..."
+  },
+  "about": {
+    "title": "About Yumo Yumo",
+    "description": "The first Web3 project that gamifies everyday spending through Proof of Expense (PoE). Upload receipts, feed your Yumbie, and earn rewards while having fun!",
+    "description1": "Yumo Yumo is the world's first receipt-to-earn gamified platform. Turn your everyday spending into rewards by feeding your Yumbie with receipts.",
+    "description2": "Join thousands of users who are already earning $YUMO tokens while having fun. Every purchase counts."
+  },
+  "footer": {
+    "description": "Turn your receipts into rewards. Feed the Yumbie, earn tokens, and join the cutest Web3 revolution.",
+    "resources": "Resources",
+    "community": "Community",
+    "followUs": "Follow Us",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "support": "Support",
+    "copyright": "© 2025 Yumo Yumo. All rights reserved. Built with love and Yumbies."
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Three simple steps to start your journey",
+    "steps": [
+      {
+        "title": "Join the Community",
+        "description": "Join our waitlist and become part of the Yumo Yumo ecosystem."
+      },
+      {
+        "title": "Learn About Yumo",
+        "description": "Discover how Proof of Expense turns your spending into rewards."
+      },
+      {
+        "title": "Earn Rewards",
+        "description": "Earn $YUMO tokens and participate in our gamified platform."
+      }
+    ]
+  },
+  "tokenomics": {
+    "title": "Token Distribution",
+    "subtitle": "How Yumo is Shared",
+    "totalSupply": "Total supply: 99 Billion $YUMO tokens — designed for fun, fairness, and growth",
+    "distribution": [
+      {
+        "label": "Proof of Expense (Mining)",
+        "description": "Earned by uploading receipts and participating in the PoE system"
+      },
+      {
+        "label": "Staking & Long-term Incentives",
+        "description": "Rewards for long-term holders and stakers"
+      },
+      {
+        "label": "Fun Rewards (Quests, Galxe, Zealy)",
+        "description": "Distributed through gamified quests and community activities"
+      },
+      {
+        "label": "Genesis (Early Participation)",
+        "description": "Reserved for early adopters and community builders"
+      }
+    ],
+    "detailedLink": "Click here for detailed tokenomics"
+  },
+  "papers": {
+    "title": "Read Our Papers",
+    "subtitle": "Deep dive into Yumo Yumo's vision and technical details",
+    "funPaper": {
+      "title": "Fun Paper",
+      "subtitle": "Turn Your Receipts Into Rewards",
+      "description": "Discover how Yumo Yumo transforms everyday spending into an exciting reward adventure. Learn about our gamified ecosystem and community-driven features.",
+      "tags": ["Gamification", "Rewards", "Community"]
+    },
+    "seriousPaper": {
+      "title": "Serious Paper",
+      "subtitle": "Technical Architecture & Tokenomics",
+      "description": "Comprehensive technical documentation covering Proof-of-Expense consensus, smart contract architecture, and the complete economic model behind Yumo Yumo.",
+      "tags": ["Proof-of-Expense", "Smart Contracts", "Economics"]
+    }
+  },
+  "roadmap": {
+    "title": "Development Roadmap",
+    "subtitle": "Our journey to revolutionize spending rewards",
+    "items": [
+      {
+        "quarter": "P1",
+        "year": "🚀",
+        "title": "Phase 1 — Genesis\nAwareness Begins",
+        "items": [
+          "Fair Launch: Community-led liquidity & price discovery",
+          "PoE Mining: Turn receipts into aYUMO rewards",
+          "Digital Identity: Claim your Foundation NFT & start leveling"
+        ]
+      },
+      {
+        "quarter": "P2",
+        "year": "📈",
+        "title": "Phase 2 — Expansion\nFrom Data to Power",
+        "items": [
+          "Smart Agents: NFTs evolve into AI-powered companions",
+          "Staking Unlocks: High-APR pools for early believers",
+          "Merchant Matrix: Category-based reward multipliers"
+        ]
+      },
+      {
+        "quarter": "P3",
+        "year": "🌍",
+        "title": "Phase 3 — Intelligence\nThe System Thinks",
+        "items": [
+          "Advanced Insights: AI-driven financial reports",
+          "HCI Index: Global hidden cost dashboard",
+          "Protocol Maturity: Fully data-backed economy"
+        ]
+      }
+    ]
+  },
+  "waitlist": {
+    "title": "Join the Waitlist",
+    "subtitle": "Be among the first to experience Yumo Yumo! ✨",
+    "email": "Email Address",
+    "country": "Your Country",
+    "referralSource": "How did you hear about us?",
+    "selectCountry": "Select your country",
+    "selectOption": "Select an option",
+    "submit": "Join the Waitlist",
+    "submitting": "Joining...",
+    "success": "Success! You're on the list 🎉",
+    "successTitle": "You're on the list! 🎉",
+    "successMessage": "We'll notify you when Yumo Yumo launches.",
+    "inboxMessage": "Keep an eye on your inbox! 💌",
+    "alreadyExists": "You're already on the waitlist! 🎉",
+    "error": "Please fill in all fields 💕",
+    "networkError": "Network error. Please check your connection and try again! 💫",
+    "connectionError": "Connection error. Please try again! 💫",
+    "unexpectedError": "Unexpected response from server. Please try again! 💫",
+    "genericError": "Something went wrong. Please try again! 💫",
+    "sources": [
+      "Social media (X, TikTok, Discord, etc)",
+      "Google Search",
+      "Friends or Family",
+      "YouTube / Influencer",
+      "News / Blog Article",
+      "Other"
+    ]
+  },
+  "faq": {
+    "title": "Yumo Yumo FAQ",
+    "subtitle": "Got questions? We've got answers! 😊",
+    "stillHaveQuestions": "Still have questions? 💬",
+    "contactText": "Slide into our DMs or tweet us — we love chatting! ❤️",
+    "readWhitepaper": "Read Whitepaper",
+    "contactUs": "Contact Us",
+    "items": [
+      {
+        "question": "What's Yumo Yumo all about?",
+        "answer": "We're the friend who finally shows you what's really hiding in your shopping receipts! 🧾✨ Yumo Yumo turns everyday spending into fun insights and real rewards. Upload a receipt, uncover hidden costs (taxes, markups, all that sneaky stuff), and earn YUMO tokens while becoming smarter with your money."
+      },
+      {
+        "question": "How does it actually work? Sounds too good!",
+        "answer": "Super simple — promise! 1. Connect your wallet (no complicated sign-up). 2. Snap a photo of any receipt (coffee, groceries, online shopping…). 3. Our Proof of Expense (PoE) magic reveals the hidden layers. 4. You get a cute breakdown + earn rewards. That's it! 🎉"
+      },
+      {
+        "question": "Okay, but what are these \"hidden costs\" everyone keeps talking about?",
+        "answer": "Think of them as the invisible extras baked into every price: Taxes & duties 🏛️, Logistics and shipping 🚚, Inflation vibes 📈, Brand & market markups 💸. We show you roughly how much of your total goes to these — so you finally understand why that burger costs more here than there!"
+      },
+      {
+        "question": "Is this financial advice? Should I change my life now? 😅",
+        "answer": "Nope! We're here to help you see clearer, not tell you what to do. The insights are just educated estimates to spark curiosity and awareness — definitely not official financial advice. You're still the boss of your wallet! 👑"
+      },
+      {
+        "question": "How do I earn rewards? Tell me the fun part!",
+        "answer": "Two super sweet ways: aYUMO 🍪 → Earned from real-life receipts (the more you live, the more you earn!). rYUMO 🎈 → Earned by helping the community grow (quests, sharing, fun missions). Both turn into YUMO tokens — real utility, not just hype."
+      },
+      {
+        "question": "What's YUMO token? Is it going to the moon? 🚀",
+        "answer": "YUMO is our utility token for cool stuff inside the ecosystem (staking, extras, future governance). Fixed supply of 99 billion, super fair and rule-based emission — no funny business. Value can go up and down (like everything in crypto), but we're building for the long haul, not quick pumps."
+      },
+      {
+        "question": "Will I get rich quick?",
+        "answer": "Let's be real — no promises of moonshots here. 😌 Rewards come from real activity, not speculation. Think of it as getting a little thank-you every time you spend money you were already spending."
+      },
+      {
+        "question": "How do you keep everything fair and sustainable?",
+        "answer": "We're kinda proud of this part! Everything is rule-based (no secret minting). Emissions slow down as more people join. Anti-abuse safeguards everywhere. It grows with real use, not farming bots. Sustainable vibes only ♻️"
+      },
+      {
+        "question": "What about my privacy? You're seeing my receipts! 😳",
+        "answer": "We care a lot about this! We only process what's needed to give you insights and rewards. Anything used to improve the system is fully anonymized. Your wallet address is public on-chain (normal for Web3), but personal details stay private. Full transparency in our Privacy Policy — feel free to read it with your favorite snack."
+      },
+      {
+        "question": "Can literally anyone join?",
+        "answer": "As long as you're of legal age in your country and crypto is okay where you live — yes! 🌍 (Some features might be limited in certain regions because of local rules — boring but necessary.)"
+      },
+      {
+        "question": "Airdrop? Free tokens? 🤑",
+        "answer": "No speculative airdrops or freebies. We believe rewards should come from real actions — like uploading receipts or helping the community. Keeps everything genuine and fun!"
+      },
+      {
+        "question": "When can I start using it?",
+        "answer": "App is cooking in the oven! 🔥 Whitepaper is out now, early access coming soon. Follow us on X for the freshest updates — we'll shout when it's ready!"
+      },
+      {
+        "question": "Why isn't there a marketing budget?",
+        "answer": "Yumo Yumo doesn't grow by dumping money into boring ads! 🙅‍♂️ It grows because friends like you use it and share the love. We'd rather reward our early helpers and creators than pay big corporations. It's healthier, human-driven, and way more fun! 💖"
+      },
+      {
+        "question": "Does the team keep a \"team allocation\"?",
+        "answer": "Nope! There are no secret pockets or hidden stashes here. 🙅‍♀️ The team earns exactly like you do—by building, running, and improving the system. If Yumo Yumo doesn't deliver real value, nobody earns. We grow together or not at all! 🤝✨"
+      },
+      {
+        "question": "Wait—is the team working for free?",
+        "answer": "Not exactly! 😸 We work for the real-world adoption of tools people actually want to use. Our rewards are tied to shipping useful features and keeping the network happy. If people love using it, we all win! 🍎✨"
+      },
+      {
+        "question": "Where can I learn more or ask silly questions?",
+        "answer": "Whitepaper (deep dive), X (@yumohq) — we're super chatty there, Website: yumoyumo.com, Discord/Telegram coming soon! Got a question that's not here? Slide into our DMs or tweet us — we love chatting! 💬❤️"
+      }
+    ]
+  },
+  "funPaper": {
+    "sections": [
+      {
+        "title": "1. So… what is Yumo Yumo?",
+        "content": [
+          "Yumo Yumo is a Web3 project that lets you mine tokens by doing something you already do every day:",
+          "Spending money.",
+          "Every price has layers.",
+          "Taxes, profit margins, operational costs...",
+          "You pay all of them every day, without thinking.",
+          "Yumo Yumo looks at these layers and says:",
+          "\"Great! Let's turn this into mining.\""
+        ]
+      },
+      {
+        "title": "2. Why should anyone care?",
+        "content": [
+          "Because almost all financial tools ask this boring question:",
+          "\"How much did you spend?\"",
+          "Yumo Yumo asks something better:",
+          "\"What was actually inside that price?\"",
+          "Once you start looking at prices this way, spending stops being a passive action.",
+          "It becomes data.",
+          "And data earns."
+        ]
+      },
+      {
+        "title": "3. Proof of Expense (PoE)",
+        "content": [
+          "PoE (Proof of Expense) is simple and honest.",
+          "You upload a real receipt.",
+          "The system analyzes what's inside the price.",
+          "Hidden costs come to light.",
+          "You earn tokens because you provided real-world data.",
+          "No fake actions.",
+          "No button clicking with bots.",
+          "No rewards that come \"just from feelings\".",
+          "If you spend in real life, you can mine on Yumo Yumo."
+        ]
+      },
+      {
+        "title": "4. Mining, but make it normal life",
+        "content": [
+          "Forget GPUs.",
+          "Forget warehouses full of machines.",
+          "In Yumo Yumo, your receipts are your mining devices.",
+          "Every valid receipt adds a signal to the system.",
+          "Every signal generates tokens.",
+          "The cycle is clean:",
+          "Spend → Upload → Mine → Earn",
+          "You were already doing step one anyway."
+        ]
+      },
+      {
+        "title": "5. About tokens (community first)",
+        "content": [
+          "Let's be clear:",
+          "No team allocation.",
+          "No hidden stash.",
+          "No massive budgets set aside for marketing.",
+          "No pre-minting tokens for insiders.",
+          "Yumo Yumo was built so tokens flow to participants, not a central structure.",
+          "If you contribute, you earn.",
+          "If you don't, you don't.",
+          "That's it."
+        ]
+      },
+      {
+        "title": "6. \"But how is this funded?\"",
+        "content": [
+          "It's not funded the usual way.",
+          "No massive marketing budgets.",
+          "No paid advertising machines.",
+          "No artificial demand.",
+          "Yumo Yumo grows through the Web3 way:",
+          "Through participation, contribution, and shared incentives.",
+          "Value comes from what people do, not from team promises."
+        ]
+      },
+      {
+        "title": "7. Why Web3 at all?",
+        "content": [
+          "Because rules matter more than people.",
+          "Web3 guarantees:",
+          "Rewards follow predefined logic.",
+          "Distribution cannot be changed manually.",
+          "No one behind the curtain can decide \"who gets what\".",
+          "Spending becomes a shared signal.",
+          "Tokens flow back to the people who create that signal.",
+          "Simple systems survive.",
+          "Non-transparent ones get eliminated."
+        ]
+      },
+      {
+        "title": "8. Who is this actually for?",
+        "content": [
+          "People who spend money.",
+          "Those who love mining but also want to sleep.",
+          "Those who prefer rules over stories.",
+          "You don't need to trade.",
+          "You don't need to use leverage.",
+          "You don't need to predict charts.",
+          "Just upload receipts."
+        ]
+      },
+      {
+        "title": "9. The bigger picture",
+        "content": [
+          "Yumo Yumo starts with awareness.",
+          "Over time, this awareness becomes:",
+          "Deeper insights.",
+          "Smarter financial tools.",
+          "A growing ecosystem built on real spending data.",
+          "All supported by the people who actually spend the money."
+        ]
+      },
+      {
+        "title": "10. Final thought",
+        "content": [
+          "Money already leaves your wallet every day.",
+          "Yumo Yumo doesn't try to stop that.",
+          "It just lets you mine while it happens.",
+          "The cycle: Spend ➔ Upload ➔ Mine ➔ Earn",
+          "That's the cycle."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Ready to get into the kitchen?",
+      "description": "Take a much deeper dive into technical specifications, mathematical details of tokenomics, and implementation processes.",
+      "button": "Read the Technical Documents ➔"
+    },
+    "loop": {
+      "title": "The Cycle",
+      "steps": {
+        "spend": "Spend",
+        "upload": "Upload",
+        "mine": "Mine",
+        "earn": "Earn"
+      }
+    }
+  },
+  "terms": {
+    "title": "Yumo Yumo Terms and Conditions",
+    "lastUpdated": "Last Updated: December 19, 2025",
+    "intro": "Hey there! Welcome to Yumo Yumo — we're super happy you're here.",
+    "introDescription": "These Terms are like the friendly rules of our little clubhouse. By using our app, website, or services (we call them all \"Services\"), you're saying \"okay!\" to these rules. If something doesn't feel right, no worries — just don't use the Services.",
+    "sections": [
+      {
+        "title": "1. Who can join the fun?",
+        "content": "You need to be at least 18 (or the grown-up age where you live). We want everyone to be able to make their own choices responsibly."
+      },
+      {
+        "title": "2. Your account & wallet",
+        "content": "When you connect your Web3 wallet, keep it safe — it's like your house key! 🔑\n\nWe're not responsible if someone else uses it without your permission. If something seems off, tell us right away."
+      },
+      {
+        "title": "3. What can you do here?",
+        "content": "Upload receipts, discover hidden costs with Proof of Expense (PoE), see cute spending insights, and earn aYUMO/rYUMO rewards that can turn into YUMO tokens. It's all about making everyday spending a bit more magical."
+      },
+      {
+        "title": "4. Receipts & your stuff",
+        "content": "When you upload receipts or other content, you're letting us use it (in a safe, anonymized way) to give you insights and make the app better for everyone.\n\nPromise us they're yours to share and don't break any rules or hurt anyone's feelings, okay?"
+      },
+      {
+        "title": "5. Rewards & YUMO tokens",
+        "content": [
+          "You earn aYUMO from real-life receipts and rYUMO from helping the community grow.",
+          "These can become YUMO tokens following clear, fair rules.",
+          "YUMO is a utility token for fun stuff inside the app — not an investment or \"get rich quick\" ticket. Its value can go up and down, just like the crypto world.",
+          "Any taxes on rewards? That's on you (sorry, adulting!)."
+        ]
+      },
+      {
+        "title": "6. Please be kind (things we don't like)",
+        "content": [
+          "No fake receipts, no trying to game the system, no illegal stuff, no bullying, no hacking.",
+          "If something feels wrong, we might pause or say goodbye to your account — but we'd rather everyone plays nicely!"
+        ]
+      },
+      {
+        "title": "7. Our stuff stays ours",
+        "content": "The app design, code, and ideas belong to us (or our friends who helped). You get to use them for personal fun, but no copying or selling, pretty please."
+      },
+      {
+        "title": "8. Privacy — we've got your back",
+        "content": "We take your privacy seriously (and cutely). Everything is explained in our Privacy Policy — give it a read with your favorite drink."
+      },
+      {
+        "title": "9. Third-party friends (wallets, blockchains)",
+        "content": "We team up with other tools (like wallets and blockchains). They're awesome, but we can't promise they'll always work perfectly. On-chain stuff is forever and public — that's just how blockchain rolls."
+      },
+      {
+        "title": "10. Heads up — no guarantees & NFA 🙈",
+        "content": [
+          "We do our best to make everything smooth and accurate, but:",
+          {
+            "type": "list",
+            "items": [
+              {
+                "label": "Friendly Guesses Only:",
+                "text": "Hidden cost estimates and spending insights are friendly guesses to help you learn. They are not financial, investment, or legal advice (NFA!). Always do your own research. 🔍"
+              },
+              {
+                "label": "Services are \"as is\":",
+                "text": "We try to be perfect, but we can't make \"perfect promises\" about everything working 100% of the time. 💫"
+              },
+              {
+                "label": "Crypto Adventures:",
+                "text": "Crypto has ups and downs — you know the drill. Any moves you make are your own responsibility. 🎢"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "11. If something goes wrong 🤗",
+        "content": "We really hope nothing does, but if there's an issue, our responsibility is limited (to the max the law allows). We're not liable for indirect stuff — let's keep things positive! ✨"
+      },
+      {
+        "title": "12. Crypto realities (the serious but honest part) 🪙",
+        "content": "Tokens can lose value, transactions can't be undone, and rules can change in different countries. YUMO is a utility token, not an investment ticket. Join the fun only if you're comfy with how blockchain rolls! 🌊"
+      },
+      {
+        "title": "13. Pausing or saying goodbye",
+        "content": "We might pause or close accounts if needed (we'll try to be fair). If that happens, unclaimed rewards might wave goodbye too."
+      },
+      {
+        "title": "14. The grown-up legal bit",
+        "content": "These Terms follow the laws of [e.g., England and Wales]. If we ever have a disagreement, we'll try chatting first. If needed, we'll use friendly arbitration in [e.g., Singapore]."
+      },
+      {
+        "title": "15. We might update these rules",
+        "content": "If we make changes, we'll let you know. Keep using the app = you're cool with the new version."
+      },
+      {
+        "title": "16. Want to chat?",
+        "content": "Questions, hugs, or high-fives? Reach us at info@yumoyumo.com."
+      }
+    ],
+    "footer": "Thanks for being part of Yumo Yumo — let's uncover the hidden and have fun doing it! 🫶✨"
+  },
+  "privacy": {
+    "title": "Yumo Yumo Privacy Policy",
+    "lastUpdated": "Last Updated: December 19, 2025",
+    "intro": "Hi friend! We really care about your privacy — like, a lot. This policy explains how we handle your info in the gentlest way possible.",
+    "sections": [
+      {
+        "title": "1. What we collect (only the necessities)",
+        "content": [
+          "Your wallet address (when you connect — it's public on blockchain anyway).",
+          "Receipts you upload (to give you those cool insights).",
+          "Basic device stuff (like which phone or browser you're using) so the app works smoothly.",
+          "Chats if you reach out to us.",
+          "We don't grab sensitive stuff unless it accidentally sneaks onto a receipt (please don't share things like health info!)."
+        ]
+      },
+      {
+        "title": "2. How we use your info",
+        "content": [
+          "To show you hidden costs and cute spending breakdowns.",
+          "To calculate your well-deserved rewards.",
+          "To make the app better (using anonymized data only — no one knows it's you).",
+          "To keep everything safe and running."
+        ]
+      },
+      {
+        "title": "3. Anonymization — our favorite magic trick",
+        "content": "When we improve the app or create general stats (like \"dining costs in Bangkok\"), we strip away anything that could point to you. Your receipts help everyone, but stay private."
+      },
+      {
+        "title": "4. Who sees your info?",
+        "content": [
+          "Almost nobody!",
+          "Trusted helpers (cloud services, analytics) who promise to be good.",
+          "Blockchain (for rewards — that part is public by design).",
+          "Only if the law asks (very rare and boring).",
+          "We never sell your data. Pinky promise."
+        ]
+      },
+      {
+        "title": "5. Blockchain is forever",
+        "content": "Once rewards hit the chain, they're public (wallet address + amounts). That's just how Web3 works — super transparent!"
+      },
+      {
+        "title": "6. Keeping things safe",
+        "content": "We use strong locks and careful habits to protect your info. Nothing is 100% unbreakable, but we try our very best."
+      },
+      {
+        "title": "7. How long we keep stuff",
+        "content": "Only as long as we need it to help you or follow rules. Want something deleted? Just ask!"
+      },
+      {
+        "title": "8. Your rights (you're in control)",
+        "content": [
+          "Depending on where you live, you can:",
+          "See your data",
+          "Correct or delete it",
+          "Say \"no thanks\" to certain uses",
+          "Just ping us — we'll sort it with a smile."
+        ]
+      },
+      {
+        "title": "9. We travel sometimes",
+        "content": "Your data might visit servers in other countries, but we always make sure they follow strict privacy rules."
+      },
+      {
+        "title": "10. No kids allowed",
+        "content": "Our app is for grown-ups only (18+). We don't collect info from kids."
+      },
+      {
+        "title": "11. Updates to this policy",
+        "content": "If we change anything important, we'll give you a heads-up. Keep using the app = you're okay with the new version."
+      },
+      {
+        "title": "12. Questions or cozy chats?",
+        "content": "Reach us at support@yumoyumo.com. We love hearing from you!"
+      }
+    ],
+    "footer": "Thank you for trusting us. We're here to make money stuff less confusing and more rewarding — all while keeping your privacy safe and sound. Big hug! 🤗✨"
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome! 👋",
+      "subtitle": "Sign in to your account",
+      "emailLabel": "Email / Username",
+      "emailPlaceholder": "Email or username",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "submit": "Sign In",
+      "toggle": "Don't have an account?",
+      "toggleAction": "Sign Up",
+      "error": "Invalid credentials",
+      "googleError": "Failed to sign in with Google",
+      "twitterError": "Failed to sign in with X (Twitter)",
+      "unknownError": "Unknown error"
+    },
+    "register": {
+      "title": "Join the Yumo World! 🎀",
+      "subtitle": "Create your account and start earning rewards",
+      "walletLabel": "Wallet Address",
+      "usernameLabel": "Username",
+      "usernamePlaceholder": "Your username",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "email@example.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Create your password",
+      "passwordConfirmLabel": "Password Confirm",
+      "passwordConfirmPlaceholder": "Confirm your password",
+      "dateOfBirthLabel": "Date of Birth",
+      "genderLabel": "Gender",
+      "genderOptional": "Optional",
+      "genderSelect": "Select",
+      "countryLabel": "Country",
+      "countrySelect": "Select Country",
+      "phoneLabel": "Phone Number",
+      "phonePlaceholder": "+1 555 123 4567",
+      "termsText": "Terms and Conditions and Privacy Policy",
+      "termsAgree": "and I agree",
+      "submit": "Sign Up",
+      "toggle": "Already a member?",
+      "toggleAction": "Sign In",
+      "error": "Registration failed"
+    },
+    "social": {
+      "or": "or"
+    }
+  },
+  "alerts": {
+    "auth": {
+      "termsRequired": "Please accept the Terms and Conditions and Privacy Policy."
+    },
+    "dashboard": {
+      "fileSizeError": "File size must be less than 10MB",
+      "fileRequired": "Please select a file first"
+    },
+    "wallet": {
+      "signatureRequired": "Signature required to connect. Please try again and approve the signature request.",
+      "connectionFailed": "Connection failed",
+      "pleaseTryAgain": "Please try again."
+    },
+    "waitlist": {
+      "privacyNote": "We respect your privacy. No spam, ever! 💕"
+    }
+  },
+  "support": {
+    "title": "Support Center",
+    "subtitle": "Have a question or need help? Submit a support ticket and we'll get back to you as soon as possible.",
+    "form": {
+      "username": "Username",
+      "usernamePlaceholder": "Your username",
+      "email": "Email Address",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Brief description of your issue",
+      "description": "Description",
+      "descriptionPlaceholder": "Please provide detailed information about your issue...",
+      "captcha": "Captcha Verification",
+      "captchaPlaceholder": "Enter code",
+      "captchaHint": "Enter the 4-digit code shown above",
+      "verify": "Verify",
+      "submit": "Submit Support Ticket",
+      "submitting": "Submitting Ticket..."
+    },
+    "success": {
+      "title": "Ticket Submitted Successfully!",
+      "message": "We've received your support request. Our team will get back to you soon."
+    },
+    "errors": {
+      "captchaRequired": "Please verify the captcha first.",
+      "fillAll": "Please fill in all fields.",
+      "captchaIncorrect": "Captcha code is incorrect. Please try again."
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "navigation": {
+    "logo": "Yumo Yumo",
+    "home": "Home",
+    "whitepaper": "Whitepaper",
+    "roadmap": "Roadmap",
+    "tokenomics": "Tokenomics",
+    "faq": "FAQ",
+    "signUp": "Sign up",
+    "goApp": "Go App",
+    "app": "App"
+  },
+  "hero": {
+    "title": "Feed the Yumbie.",
+    "subtitle": "Turn spending into rewards.",
+    "description": "Your receipts hide value. Yumbie helps you unlock it.",
+    "cta": "Upload Receipt",
+    "joinWaitlist": "Join the Waitlist"
+  },
+  "loading": {
+    "analyzing": "Analyzing receipt...",
+    "extractingHiddenCosts": "Extracting hidden costs...",
+    "revealingTruth": "Revealing the truth..."
+  },
+  "about": {
+    "title": "About Yumo Yumo",
+    "description": "The first Web3 project that gamifies everyday spending through Proof of Expense (PoE). Upload receipts, feed your Yumbie, and earn rewards while having fun!",
+    "description1": "Yumo Yumo is the world's first receipt-to-earn gamified platform. Turn your everyday spending into rewards by feeding your Yumbie with receipts.",
+    "description2": "Join thousands of users who are already earning $YUMO tokens while having fun. Every purchase counts."
+  },
+  "footer": {
+    "description": "Turn your receipts into rewards. Feed the Yumbie, earn tokens, and join the cutest Web3 revolution.",
+    "resources": "Resources",
+    "community": "Community",
+    "followUs": "Follow Us",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "support": "Support",
+    "copyright": "© 2025 Yumo Yumo. All rights reserved. Built with love and Yumbies."
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Three simple steps to start your journey",
+    "steps": [
+      {
+        "title": "Join the Community",
+        "description": "Join our waitlist and become part of the Yumo Yumo ecosystem."
+      },
+      {
+        "title": "Learn About Yumo",
+        "description": "Discover how Proof of Expense turns your spending into rewards."
+      },
+      {
+        "title": "Earn Rewards",
+        "description": "Earn $YUMO tokens and participate in our gamified platform."
+      }
+    ]
+  },
+  "tokenomics": {
+    "title": "Token Distribution",
+    "subtitle": "How Yumo is Shared",
+    "totalSupply": "Total supply: 99 Billion $YUMO tokens — designed for fun, fairness, and growth",
+    "distribution": [
+      {
+        "label": "Proof of Expense (Mining)",
+        "description": "Earned by uploading receipts and participating in the PoE system"
+      },
+      {
+        "label": "Staking & Long-term Incentives",
+        "description": "Rewards for long-term holders and stakers"
+      },
+      {
+        "label": "Fun Rewards (Quests, Galxe, Zealy)",
+        "description": "Distributed through gamified quests and community activities"
+      },
+      {
+        "label": "Genesis (Early Participation)",
+        "description": "Reserved for early adopters and community builders"
+      }
+    ],
+    "detailedLink": "Click here for detailed tokenomics"
+  },
+  "papers": {
+    "title": "Read Our Papers",
+    "subtitle": "Deep dive into Yumo Yumo's vision and technical details",
+    "funPaper": {
+      "title": "Fun Paper",
+      "subtitle": "Turn Your Receipts Into Rewards",
+      "description": "Discover how Yumo Yumo transforms everyday spending into an exciting reward adventure. Learn about our gamified ecosystem and community-driven features.",
+      "tags": ["Gamification", "Rewards", "Community"]
+    },
+    "seriousPaper": {
+      "title": "Serious Paper",
+      "subtitle": "Technical Architecture & Tokenomics",
+      "description": "Comprehensive technical documentation covering Proof-of-Expense consensus, smart contract architecture, and the complete economic model behind Yumo Yumo.",
+      "tags": ["Proof-of-Expense", "Smart Contracts", "Economics"]
+    }
+  },
+  "roadmap": {
+    "title": "Development Roadmap",
+    "subtitle": "Our journey to revolutionize spending rewards",
+    "items": [
+      {
+        "quarter": "P1",
+        "year": "🚀",
+        "title": "Phase 1 — Genesis\nAwareness Begins",
+        "items": [
+          "Fair Launch: Community-led liquidity & price discovery",
+          "PoE Mining: Turn receipts into aYUMO rewards",
+          "Digital Identity: Claim your Foundation NFT & start leveling"
+        ]
+      },
+      {
+        "quarter": "P2",
+        "year": "📈",
+        "title": "Phase 2 — Expansion\nFrom Data to Power",
+        "items": [
+          "Smart Agents: NFTs evolve into AI-powered companions",
+          "Staking Unlocks: High-APR pools for early believers",
+          "Merchant Matrix: Category-based reward multipliers"
+        ]
+      },
+      {
+        "quarter": "P3",
+        "year": "🌍",
+        "title": "Phase 3 — Intelligence\nThe System Thinks",
+        "items": [
+          "Advanced Insights: AI-driven financial reports",
+          "HCI Index: Global hidden cost dashboard",
+          "Protocol Maturity: Fully data-backed economy"
+        ]
+      }
+    ]
+  },
+  "waitlist": {
+    "title": "Join the Waitlist",
+    "subtitle": "Be among the first to experience Yumo Yumo! ✨",
+    "email": "Email Address",
+    "country": "Your Country",
+    "referralSource": "How did you hear about us?",
+    "selectCountry": "Select your country",
+    "selectOption": "Select an option",
+    "submit": "Join the Waitlist",
+    "submitting": "Joining...",
+    "success": "Success! You're on the list 🎉",
+    "successTitle": "You're on the list! 🎉",
+    "successMessage": "We'll notify you when Yumo Yumo launches.",
+    "inboxMessage": "Keep an eye on your inbox! 💌",
+    "alreadyExists": "You're already on the waitlist! 🎉",
+    "error": "Please fill in all fields 💕",
+    "networkError": "Network error. Please check your connection and try again! 💫",
+    "connectionError": "Connection error. Please try again! 💫",
+    "unexpectedError": "Unexpected response from server. Please try again! 💫",
+    "genericError": "Something went wrong. Please try again! 💫",
+    "sources": [
+      "Social media (X, TikTok, Discord, etc)",
+      "Google Search",
+      "Friends or Family",
+      "YouTube / Influencer",
+      "News / Blog Article",
+      "Other"
+    ]
+  },
+  "faq": {
+    "title": "Yumo Yumo FAQ",
+    "subtitle": "Got questions? We've got answers! 😊",
+    "stillHaveQuestions": "Still have questions? 💬",
+    "contactText": "Slide into our DMs or tweet us — we love chatting! ❤️",
+    "readWhitepaper": "Read Whitepaper",
+    "contactUs": "Contact Us",
+    "items": [
+      {
+        "question": "What's Yumo Yumo all about?",
+        "answer": "We're the friend who finally shows you what's really hiding in your shopping receipts! 🧾✨ Yumo Yumo turns everyday spending into fun insights and real rewards. Upload a receipt, uncover hidden costs (taxes, markups, all that sneaky stuff), and earn YUMO tokens while becoming smarter with your money."
+      },
+      {
+        "question": "How does it actually work? Sounds too good!",
+        "answer": "Super simple — promise! 1. Connect your wallet (no complicated sign-up). 2. Snap a photo of any receipt (coffee, groceries, online shopping…). 3. Our Proof of Expense (PoE) magic reveals the hidden layers. 4. You get a cute breakdown + earn rewards. That's it! 🎉"
+      },
+      {
+        "question": "Okay, but what are these \"hidden costs\" everyone keeps talking about?",
+        "answer": "Think of them as the invisible extras baked into every price: Taxes & duties 🏛️, Logistics and shipping 🚚, Inflation vibes 📈, Brand & market markups 💸. We show you roughly how much of your total goes to these — so you finally understand why that burger costs more here than there!"
+      },
+      {
+        "question": "Is this financial advice? Should I change my life now? 😅",
+        "answer": "Nope! We're here to help you see clearer, not tell you what to do. The insights are just educated estimates to spark curiosity and awareness — definitely not official financial advice. You're still the boss of your wallet! 👑"
+      },
+      {
+        "question": "How do I earn rewards? Tell me the fun part!",
+        "answer": "Two super sweet ways: aYUMO 🍪 → Earned from real-life receipts (the more you live, the more you earn!). rYUMO 🎈 → Earned by helping the community grow (quests, sharing, fun missions). Both turn into YUMO tokens — real utility, not just hype."
+      },
+      {
+        "question": "What's YUMO token? Is it going to the moon? 🚀",
+        "answer": "YUMO is our utility token for cool stuff inside the ecosystem (staking, extras, future governance). Fixed supply of 99 billion, super fair and rule-based emission — no funny business. Value can go up and down (like everything in crypto), but we're building for the long haul, not quick pumps."
+      },
+      {
+        "question": "Will I get rich quick?",
+        "answer": "Let's be real — no promises of moonshots here. 😌 Rewards come from real activity, not speculation. Think of it as getting a little thank-you every time you spend money you were already spending."
+      },
+      {
+        "question": "How do you keep everything fair and sustainable?",
+        "answer": "We're kinda proud of this part! Everything is rule-based (no secret minting). Emissions slow down as more people join. Anti-abuse safeguards everywhere. It grows with real use, not farming bots. Sustainable vibes only ♻️"
+      },
+      {
+        "question": "What about my privacy? You're seeing my receipts! 😳",
+        "answer": "We care a lot about this! We only process what's needed to give you insights and rewards. Anything used to improve the system is fully anonymized. Your wallet address is public on-chain (normal for Web3), but personal details stay private. Full transparency in our Privacy Policy — feel free to read it with your favorite snack."
+      },
+      {
+        "question": "Can literally anyone join?",
+        "answer": "As long as you're of legal age in your country and crypto is okay where you live — yes! 🌍 (Some features might be limited in certain regions because of local rules — boring but necessary.)"
+      },
+      {
+        "question": "Airdrop? Free tokens? 🤑",
+        "answer": "No speculative airdrops or freebies. We believe rewards should come from real actions — like uploading receipts or helping the community. Keeps everything genuine and fun!"
+      },
+      {
+        "question": "When can I start using it?",
+        "answer": "App is cooking in the oven! 🔥 Whitepaper is out now, early access coming soon. Follow us on X for the freshest updates — we'll shout when it's ready!"
+      },
+      {
+        "question": "Why isn't there a marketing budget?",
+        "answer": "Yumo Yumo doesn't grow by dumping money into boring ads! 🙅‍♂️ It grows because friends like you use it and share the love. We'd rather reward our early helpers and creators than pay big corporations. It's healthier, human-driven, and way more fun! 💖"
+      },
+      {
+        "question": "Does the team keep a \"team allocation\"?",
+        "answer": "Nope! There are no secret pockets or hidden stashes here. 🙅‍♀️ The team earns exactly like you do—by building, running, and improving the system. If Yumo Yumo doesn't deliver real value, nobody earns. We grow together or not at all! 🤝✨"
+      },
+      {
+        "question": "Wait—is the team working for free?",
+        "answer": "Not exactly! 😸 We work for the real-world adoption of tools people actually want to use. Our rewards are tied to shipping useful features and keeping the network happy. If people love using it, we all win! 🍎✨"
+      },
+      {
+        "question": "Where can I learn more or ask silly questions?",
+        "answer": "Whitepaper (deep dive), X (@yumohq) — we're super chatty there, Website: yumoyumo.com, Discord/Telegram coming soon! Got a question that's not here? Slide into our DMs or tweet us — we love chatting! 💬❤️"
+      }
+    ]
+  },
+  "funPaper": {
+    "sections": [
+      {
+        "title": "1. So… what is Yumo Yumo?",
+        "content": [
+          "Yumo Yumo is a Web3 project that lets you mine tokens by doing something you already do every day:",
+          "Spending money.",
+          "Every price has layers.",
+          "Taxes, profit margins, operational costs...",
+          "You pay all of them every day, without thinking.",
+          "Yumo Yumo looks at these layers and says:",
+          "\"Great! Let's turn this into mining.\""
+        ]
+      },
+      {
+        "title": "2. Why should anyone care?",
+        "content": [
+          "Because almost all financial tools ask this boring question:",
+          "\"How much did you spend?\"",
+          "Yumo Yumo asks something better:",
+          "\"What was actually inside that price?\"",
+          "Once you start looking at prices this way, spending stops being a passive action.",
+          "It becomes data.",
+          "And data earns."
+        ]
+      },
+      {
+        "title": "3. Proof of Expense (PoE)",
+        "content": [
+          "PoE (Proof of Expense) is simple and honest.",
+          "You upload a real receipt.",
+          "The system analyzes what's inside the price.",
+          "Hidden costs come to light.",
+          "You earn tokens because you provided real-world data.",
+          "No fake actions.",
+          "No button clicking with bots.",
+          "No rewards that come \"just from feelings\".",
+          "If you spend in real life, you can mine on Yumo Yumo."
+        ]
+      },
+      {
+        "title": "4. Mining, but make it normal life",
+        "content": [
+          "Forget GPUs.",
+          "Forget warehouses full of machines.",
+          "In Yumo Yumo, your receipts are your mining devices.",
+          "Every valid receipt adds a signal to the system.",
+          "Every signal generates tokens.",
+          "The cycle is clean:",
+          "Spend → Upload → Mine → Earn",
+          "You were already doing step one anyway."
+        ]
+      },
+      {
+        "title": "5. About tokens (community first)",
+        "content": [
+          "Let's be clear:",
+          "No team allocation.",
+          "No hidden stash.",
+          "No massive budgets set aside for marketing.",
+          "No pre-minting tokens for insiders.",
+          "Yumo Yumo was built so tokens flow to participants, not a central structure.",
+          "If you contribute, you earn.",
+          "If you don't, you don't.",
+          "That's it."
+        ]
+      },
+      {
+        "title": "6. \"But how is this funded?\"",
+        "content": [
+          "It's not funded the usual way.",
+          "No massive marketing budgets.",
+          "No paid advertising machines.",
+          "No artificial demand.",
+          "Yumo Yumo grows through the Web3 way:",
+          "Through participation, contribution, and shared incentives.",
+          "Value comes from what people do, not from team promises."
+        ]
+      },
+      {
+        "title": "7. Why Web3 at all?",
+        "content": [
+          "Because rules matter more than people.",
+          "Web3 guarantees:",
+          "Rewards follow predefined logic.",
+          "Distribution cannot be changed manually.",
+          "No one behind the curtain can decide \"who gets what\".",
+          "Spending becomes a shared signal.",
+          "Tokens flow back to the people who create that signal.",
+          "Simple systems survive.",
+          "Non-transparent ones get eliminated."
+        ]
+      },
+      {
+        "title": "8. Who is this actually for?",
+        "content": [
+          "People who spend money.",
+          "Those who love mining but also want to sleep.",
+          "Those who prefer rules over stories.",
+          "You don't need to trade.",
+          "You don't need to use leverage.",
+          "You don't need to predict charts.",
+          "Just upload receipts."
+        ]
+      },
+      {
+        "title": "9. The bigger picture",
+        "content": [
+          "Yumo Yumo starts with awareness.",
+          "Over time, this awareness becomes:",
+          "Deeper insights.",
+          "Smarter financial tools.",
+          "A growing ecosystem built on real spending data.",
+          "All supported by the people who actually spend the money."
+        ]
+      },
+      {
+        "title": "10. Final thought",
+        "content": [
+          "Money already leaves your wallet every day.",
+          "Yumo Yumo doesn't try to stop that.",
+          "It just lets you mine while it happens.",
+          "The cycle: Spend ➔ Upload ➔ Mine ➔ Earn",
+          "That's the cycle."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Ready to get into the kitchen?",
+      "description": "Take a much deeper dive into technical specifications, mathematical details of tokenomics, and implementation processes.",
+      "button": "Read the Technical Documents ➔"
+    },
+    "loop": {
+      "title": "The Cycle",
+      "steps": {
+        "spend": "Spend",
+        "upload": "Upload",
+        "mine": "Mine",
+        "earn": "Earn"
+      }
+    }
+  },
+  "terms": {
+    "title": "Yumo Yumo Terms and Conditions",
+    "lastUpdated": "Last Updated: December 19, 2025",
+    "intro": "Hey there! Welcome to Yumo Yumo — we're super happy you're here.",
+    "introDescription": "These Terms are like the friendly rules of our little clubhouse. By using our app, website, or services (we call them all \"Services\"), you're saying \"okay!\" to these rules. If something doesn't feel right, no worries — just don't use the Services.",
+    "sections": [
+      {
+        "title": "1. Who can join the fun?",
+        "content": "You need to be at least 18 (or the grown-up age where you live). We want everyone to be able to make their own choices responsibly."
+      },
+      {
+        "title": "2. Your account & wallet",
+        "content": "When you connect your Web3 wallet, keep it safe — it's like your house key! 🔑\n\nWe're not responsible if someone else uses it without your permission. If something seems off, tell us right away."
+      },
+      {
+        "title": "3. What can you do here?",
+        "content": "Upload receipts, discover hidden costs with Proof of Expense (PoE), see cute spending insights, and earn aYUMO/rYUMO rewards that can turn into YUMO tokens. It's all about making everyday spending a bit more magical."
+      },
+      {
+        "title": "4. Receipts & your stuff",
+        "content": "When you upload receipts or other content, you're letting us use it (in a safe, anonymized way) to give you insights and make the app better for everyone.\n\nPromise us they're yours to share and don't break any rules or hurt anyone's feelings, okay?"
+      },
+      {
+        "title": "5. Rewards & YUMO tokens",
+        "content": [
+          "You earn aYUMO from real-life receipts and rYUMO from helping the community grow.",
+          "These can become YUMO tokens following clear, fair rules.",
+          "YUMO is a utility token for fun stuff inside the app — not an investment or \"get rich quick\" ticket. Its value can go up and down, just like the crypto world.",
+          "Any taxes on rewards? That's on you (sorry, adulting!)."
+        ]
+      },
+      {
+        "title": "6. Please be kind (things we don't like)",
+        "content": [
+          "No fake receipts, no trying to game the system, no illegal stuff, no bullying, no hacking.",
+          "If something feels wrong, we might pause or say goodbye to your account — but we'd rather everyone plays nicely!"
+        ]
+      },
+      {
+        "title": "7. Our stuff stays ours",
+        "content": "The app design, code, and ideas belong to us (or our friends who helped). You get to use them for personal fun, but no copying or selling, pretty please."
+      },
+      {
+        "title": "8. Privacy — we've got your back",
+        "content": "We take your privacy seriously (and cutely). Everything is explained in our Privacy Policy — give it a read with your favorite drink."
+      },
+      {
+        "title": "9. Third-party friends (wallets, blockchains)",
+        "content": "We team up with other tools (like wallets and blockchains). They're awesome, but we can't promise they'll always work perfectly. On-chain stuff is forever and public — that's just how blockchain rolls."
+      },
+      {
+        "title": "10. Heads up — no guarantees & NFA 🙈",
+        "content": [
+          "We do our best to make everything smooth and accurate, but:",
+          {
+            "type": "list",
+            "items": [
+              {
+                "label": "Friendly Guesses Only:",
+                "text": "Hidden cost estimates and spending insights are friendly guesses to help you learn. They are not financial, investment, or legal advice (NFA!). Always do your own research. 🔍"
+              },
+              {
+                "label": "Services are \"as is\":",
+                "text": "We try to be perfect, but we can't make \"perfect promises\" about everything working 100% of the time. 💫"
+              },
+              {
+                "label": "Crypto Adventures:",
+                "text": "Crypto has ups and downs — you know the drill. Any moves you make are your own responsibility. 🎢"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "11. If something goes wrong 🤗",
+        "content": "We really hope nothing does, but if there's an issue, our responsibility is limited (to the max the law allows). We're not liable for indirect stuff — let's keep things positive! ✨"
+      },
+      {
+        "title": "12. Crypto realities (the serious but honest part) 🪙",
+        "content": "Tokens can lose value, transactions can't be undone, and rules can change in different countries. YUMO is a utility token, not an investment ticket. Join the fun only if you're comfy with how blockchain rolls! 🌊"
+      },
+      {
+        "title": "13. Pausing or saying goodbye",
+        "content": "We might pause or close accounts if needed (we'll try to be fair). If that happens, unclaimed rewards might wave goodbye too."
+      },
+      {
+        "title": "14. The grown-up legal bit",
+        "content": "These Terms follow the laws of [e.g., England and Wales]. If we ever have a disagreement, we'll try chatting first. If needed, we'll use friendly arbitration in [e.g., Singapore]."
+      },
+      {
+        "title": "15. We might update these rules",
+        "content": "If we make changes, we'll let you know. Keep using the app = you're cool with the new version."
+      },
+      {
+        "title": "16. Want to chat?",
+        "content": "Questions, hugs, or high-fives? Reach us at info@yumoyumo.com."
+      }
+    ],
+    "footer": "Thanks for being part of Yumo Yumo — let's uncover the hidden and have fun doing it! 🫶✨"
+  },
+  "privacy": {
+    "title": "Yumo Yumo Privacy Policy",
+    "lastUpdated": "Last Updated: December 19, 2025",
+    "intro": "Hi friend! We really care about your privacy — like, a lot. This policy explains how we handle your info in the gentlest way possible.",
+    "sections": [
+      {
+        "title": "1. What we collect (only the necessities)",
+        "content": [
+          "Your wallet address (when you connect — it's public on blockchain anyway).",
+          "Receipts you upload (to give you those cool insights).",
+          "Basic device stuff (like which phone or browser you're using) so the app works smoothly.",
+          "Chats if you reach out to us.",
+          "We don't grab sensitive stuff unless it accidentally sneaks onto a receipt (please don't share things like health info!)."
+        ]
+      },
+      {
+        "title": "2. How we use your info",
+        "content": [
+          "To show you hidden costs and cute spending breakdowns.",
+          "To calculate your well-deserved rewards.",
+          "To make the app better (using anonymized data only — no one knows it's you).",
+          "To keep everything safe and running."
+        ]
+      },
+      {
+        "title": "3. Anonymization — our favorite magic trick",
+        "content": "When we improve the app or create general stats (like \"dining costs in Bangkok\"), we strip away anything that could point to you. Your receipts help everyone, but stay private."
+      },
+      {
+        "title": "4. Who sees your info?",
+        "content": [
+          "Almost nobody!",
+          "Trusted helpers (cloud services, analytics) who promise to be good.",
+          "Blockchain (for rewards — that part is public by design).",
+          "Only if the law asks (very rare and boring).",
+          "We never sell your data. Pinky promise."
+        ]
+      },
+      {
+        "title": "5. Blockchain is forever",
+        "content": "Once rewards hit the chain, they're public (wallet address + amounts). That's just how Web3 works — super transparent!"
+      },
+      {
+        "title": "6. Keeping things safe",
+        "content": "We use strong locks and careful habits to protect your info. Nothing is 100% unbreakable, but we try our very best."
+      },
+      {
+        "title": "7. How long we keep stuff",
+        "content": "Only as long as we need it to help you or follow rules. Want something deleted? Just ask!"
+      },
+      {
+        "title": "8. Your rights (you're in control)",
+        "content": [
+          "Depending on where you live, you can:",
+          "See your data",
+          "Correct or delete it",
+          "Say \"no thanks\" to certain uses",
+          "Just ping us — we'll sort it with a smile."
+        ]
+      },
+      {
+        "title": "9. We travel sometimes",
+        "content": "Your data might visit servers in other countries, but we always make sure they follow strict privacy rules."
+      },
+      {
+        "title": "10. No kids allowed",
+        "content": "Our app is for grown-ups only (18+). We don't collect info from kids."
+      },
+      {
+        "title": "11. Updates to this policy",
+        "content": "If we change anything important, we'll give you a heads-up. Keep using the app = you're okay with the new version."
+      },
+      {
+        "title": "12. Questions or cozy chats?",
+        "content": "Reach us at support@yumoyumo.com. We love hearing from you!"
+      }
+    ],
+    "footer": "Thank you for trusting us. We're here to make money stuff less confusing and more rewarding — all while keeping your privacy safe and sound. Big hug! 🤗✨"
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome! 👋",
+      "subtitle": "Sign in to your account",
+      "emailLabel": "Email / Username",
+      "emailPlaceholder": "Email or username",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "submit": "Sign In",
+      "toggle": "Don't have an account?",
+      "toggleAction": "Sign Up",
+      "error": "Invalid credentials",
+      "googleError": "Failed to sign in with Google",
+      "twitterError": "Failed to sign in with X (Twitter)",
+      "unknownError": "Unknown error"
+    },
+    "register": {
+      "title": "Join the Yumo World! 🎀",
+      "subtitle": "Create your account and start earning rewards",
+      "walletLabel": "Wallet Address",
+      "usernameLabel": "Username",
+      "usernamePlaceholder": "Your username",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "email@example.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Create your password",
+      "passwordConfirmLabel": "Password Confirm",
+      "passwordConfirmPlaceholder": "Confirm your password",
+      "dateOfBirthLabel": "Date of Birth",
+      "genderLabel": "Gender",
+      "genderOptional": "Optional",
+      "genderSelect": "Select",
+      "countryLabel": "Country",
+      "countrySelect": "Select Country",
+      "phoneLabel": "Phone Number",
+      "phonePlaceholder": "+1 555 123 4567",
+      "termsText": "Terms and Conditions and Privacy Policy",
+      "termsAgree": "and I agree",
+      "submit": "Sign Up",
+      "toggle": "Already a member?",
+      "toggleAction": "Sign In",
+      "error": "Registration failed"
+    },
+    "social": {
+      "or": "or"
+    }
+  },
+  "alerts": {
+    "auth": {
+      "termsRequired": "Please accept the Terms and Conditions and Privacy Policy."
+    },
+    "dashboard": {
+      "fileSizeError": "File size must be less than 10MB",
+      "fileRequired": "Please select a file first"
+    },
+    "wallet": {
+      "signatureRequired": "Signature required to connect. Please try again and approve the signature request.",
+      "connectionFailed": "Connection failed",
+      "pleaseTryAgain": "Please try again."
+    },
+    "waitlist": {
+      "privacyNote": "We respect your privacy. No spam, ever! 💕"
+    }
+  },
+  "support": {
+    "title": "Support Center",
+    "subtitle": "Have a question or need help? Submit a support ticket and we'll get back to you as soon as possible.",
+    "form": {
+      "username": "Username",
+      "usernamePlaceholder": "Your username",
+      "email": "Email Address",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Brief description of your issue",
+      "description": "Description",
+      "descriptionPlaceholder": "Please provide detailed information about your issue...",
+      "captcha": "Captcha Verification",
+      "captchaPlaceholder": "Enter code",
+      "captchaHint": "Enter the 4-digit code shown above",
+      "verify": "Verify",
+      "submit": "Submit Support Ticket",
+      "submitting": "Submitting Ticket..."
+    },
+    "success": {
+      "title": "Ticket Submitted Successfully!",
+      "message": "We've received your support request. Our team will get back to you soon."
+    },
+    "errors": {
+      "captchaRequired": "Please verify the captcha first.",
+      "fillAll": "Please fill in all fields.",
+      "captchaIncorrect": "Captcha code is incorrect. Please try again."
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "navigation": {
+    "logo": "Yumo Yumo",
+    "home": "Home",
+    "whitepaper": "Whitepaper",
+    "roadmap": "Roadmap",
+    "tokenomics": "Tokenomics",
+    "faq": "FAQ",
+    "signUp": "Sign up",
+    "goApp": "Go App",
+    "app": "App"
+  },
+  "hero": {
+    "title": "Feed the Yumbie.",
+    "subtitle": "Turn spending into rewards.",
+    "description": "Your receipts hide value. Yumbie helps you unlock it.",
+    "cta": "Upload Receipt",
+    "joinWaitlist": "Join the Waitlist"
+  },
+  "loading": {
+    "analyzing": "Analyzing receipt...",
+    "extractingHiddenCosts": "Extracting hidden costs...",
+    "revealingTruth": "Revealing the truth..."
+  },
+  "about": {
+    "title": "About Yumo Yumo",
+    "description": "The first Web3 project that gamifies everyday spending through Proof of Expense (PoE). Upload receipts, feed your Yumbie, and earn rewards while having fun!",
+    "description1": "Yumo Yumo is the world's first receipt-to-earn gamified platform. Turn your everyday spending into rewards by feeding your Yumbie with receipts.",
+    "description2": "Join thousands of users who are already earning $YUMO tokens while having fun. Every purchase counts."
+  },
+  "footer": {
+    "description": "Turn your receipts into rewards. Feed the Yumbie, earn tokens, and join the cutest Web3 revolution.",
+    "resources": "Resources",
+    "community": "Community",
+    "followUs": "Follow Us",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "support": "Support",
+    "copyright": "© 2025 Yumo Yumo. All rights reserved. Built with love and Yumbies."
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Three simple steps to start your journey",
+    "steps": [
+      {
+        "title": "Join the Community",
+        "description": "Join our waitlist and become part of the Yumo Yumo ecosystem."
+      },
+      {
+        "title": "Learn About Yumo",
+        "description": "Discover how Proof of Expense turns your spending into rewards."
+      },
+      {
+        "title": "Earn Rewards",
+        "description": "Earn $YUMO tokens and participate in our gamified platform."
+      }
+    ]
+  },
+  "tokenomics": {
+    "title": "Token Distribution",
+    "subtitle": "How Yumo is Shared",
+    "totalSupply": "Total supply: 99 Billion $YUMO tokens — designed for fun, fairness, and growth",
+    "distribution": [
+      {
+        "label": "Proof of Expense (Mining)",
+        "description": "Earned by uploading receipts and participating in the PoE system"
+      },
+      {
+        "label": "Staking & Long-term Incentives",
+        "description": "Rewards for long-term holders and stakers"
+      },
+      {
+        "label": "Fun Rewards (Quests, Galxe, Zealy)",
+        "description": "Distributed through gamified quests and community activities"
+      },
+      {
+        "label": "Genesis (Early Participation)",
+        "description": "Reserved for early adopters and community builders"
+      }
+    ],
+    "detailedLink": "Click here for detailed tokenomics"
+  },
+  "papers": {
+    "title": "Read Our Papers",
+    "subtitle": "Deep dive into Yumo Yumo's vision and technical details",
+    "funPaper": {
+      "title": "Fun Paper",
+      "subtitle": "Turn Your Receipts Into Rewards",
+      "description": "Discover how Yumo Yumo transforms everyday spending into an exciting reward adventure. Learn about our gamified ecosystem and community-driven features.",
+      "tags": ["Gamification", "Rewards", "Community"]
+    },
+    "seriousPaper": {
+      "title": "Serious Paper",
+      "subtitle": "Technical Architecture & Tokenomics",
+      "description": "Comprehensive technical documentation covering Proof-of-Expense consensus, smart contract architecture, and the complete economic model behind Yumo Yumo.",
+      "tags": ["Proof-of-Expense", "Smart Contracts", "Economics"]
+    }
+  },
+  "roadmap": {
+    "title": "Development Roadmap",
+    "subtitle": "Our journey to revolutionize spending rewards",
+    "items": [
+      {
+        "quarter": "P1",
+        "year": "🚀",
+        "title": "Phase 1 — Genesis\nAwareness Begins",
+        "items": [
+          "Fair Launch: Community-led liquidity & price discovery",
+          "PoE Mining: Turn receipts into aYUMO rewards",
+          "Digital Identity: Claim your Foundation NFT & start leveling"
+        ]
+      },
+      {
+        "quarter": "P2",
+        "year": "📈",
+        "title": "Phase 2 — Expansion\nFrom Data to Power",
+        "items": [
+          "Smart Agents: NFTs evolve into AI-powered companions",
+          "Staking Unlocks: High-APR pools for early believers",
+          "Merchant Matrix: Category-based reward multipliers"
+        ]
+      },
+      {
+        "quarter": "P3",
+        "year": "🌍",
+        "title": "Phase 3 — Intelligence\nThe System Thinks",
+        "items": [
+          "Advanced Insights: AI-driven financial reports",
+          "HCI Index: Global hidden cost dashboard",
+          "Protocol Maturity: Fully data-backed economy"
+        ]
+      }
+    ]
+  },
+  "waitlist": {
+    "title": "Join the Waitlist",
+    "subtitle": "Be among the first to experience Yumo Yumo! ✨",
+    "email": "Email Address",
+    "country": "Your Country",
+    "referralSource": "How did you hear about us?",
+    "selectCountry": "Select your country",
+    "selectOption": "Select an option",
+    "submit": "Join the Waitlist",
+    "submitting": "Joining...",
+    "success": "Success! You're on the list 🎉",
+    "successTitle": "You're on the list! 🎉",
+    "successMessage": "We'll notify you when Yumo Yumo launches.",
+    "inboxMessage": "Keep an eye on your inbox! 💌",
+    "alreadyExists": "You're already on the waitlist! 🎉",
+    "error": "Please fill in all fields 💕",
+    "networkError": "Network error. Please check your connection and try again! 💫",
+    "connectionError": "Connection error. Please try again! 💫",
+    "unexpectedError": "Unexpected response from server. Please try again! 💫",
+    "genericError": "Something went wrong. Please try again! 💫",
+    "sources": [
+      "Social media (X, TikTok, Discord, etc)",
+      "Google Search",
+      "Friends or Family",
+      "YouTube / Influencer",
+      "News / Blog Article",
+      "Other"
+    ]
+  },
+  "faq": {
+    "title": "Yumo Yumo FAQ",
+    "subtitle": "Got questions? We've got answers! 😊",
+    "stillHaveQuestions": "Still have questions? 💬",
+    "contactText": "Slide into our DMs or tweet us — we love chatting! ❤️",
+    "readWhitepaper": "Read Whitepaper",
+    "contactUs": "Contact Us",
+    "items": [
+      {
+        "question": "What's Yumo Yumo all about?",
+        "answer": "We're the friend who finally shows you what's really hiding in your shopping receipts! 🧾✨ Yumo Yumo turns everyday spending into fun insights and real rewards. Upload a receipt, uncover hidden costs (taxes, markups, all that sneaky stuff), and earn YUMO tokens while becoming smarter with your money."
+      },
+      {
+        "question": "How does it actually work? Sounds too good!",
+        "answer": "Super simple — promise! 1. Connect your wallet (no complicated sign-up). 2. Snap a photo of any receipt (coffee, groceries, online shopping…). 3. Our Proof of Expense (PoE) magic reveals the hidden layers. 4. You get a cute breakdown + earn rewards. That's it! 🎉"
+      },
+      {
+        "question": "Okay, but what are these \"hidden costs\" everyone keeps talking about?",
+        "answer": "Think of them as the invisible extras baked into every price: Taxes & duties 🏛️, Logistics and shipping 🚚, Inflation vibes 📈, Brand & market markups 💸. We show you roughly how much of your total goes to these — so you finally understand why that burger costs more here than there!"
+      },
+      {
+        "question": "Is this financial advice? Should I change my life now? 😅",
+        "answer": "Nope! We're here to help you see clearer, not tell you what to do. The insights are just educated estimates to spark curiosity and awareness — definitely not official financial advice. You're still the boss of your wallet! 👑"
+      },
+      {
+        "question": "How do I earn rewards? Tell me the fun part!",
+        "answer": "Two super sweet ways: aYUMO 🍪 → Earned from real-life receipts (the more you live, the more you earn!). rYUMO 🎈 → Earned by helping the community grow (quests, sharing, fun missions). Both turn into YUMO tokens — real utility, not just hype."
+      },
+      {
+        "question": "What's YUMO token? Is it going to the moon? 🚀",
+        "answer": "YUMO is our utility token for cool stuff inside the ecosystem (staking, extras, future governance). Fixed supply of 99 billion, super fair and rule-based emission — no funny business. Value can go up and down (like everything in crypto), but we're building for the long haul, not quick pumps."
+      },
+      {
+        "question": "Will I get rich quick?",
+        "answer": "Let's be real — no promises of moonshots here. 😌 Rewards come from real activity, not speculation. Think of it as getting a little thank-you every time you spend money you were already spending."
+      },
+      {
+        "question": "How do you keep everything fair and sustainable?",
+        "answer": "We're kinda proud of this part! Everything is rule-based (no secret minting). Emissions slow down as more people join. Anti-abuse safeguards everywhere. It grows with real use, not farming bots. Sustainable vibes only ♻️"
+      },
+      {
+        "question": "What about my privacy? You're seeing my receipts! 😳",
+        "answer": "We care a lot about this! We only process what's needed to give you insights and rewards. Anything used to improve the system is fully anonymized. Your wallet address is public on-chain (normal for Web3), but personal details stay private. Full transparency in our Privacy Policy — feel free to read it with your favorite snack."
+      },
+      {
+        "question": "Can literally anyone join?",
+        "answer": "As long as you're of legal age in your country and crypto is okay where you live — yes! 🌍 (Some features might be limited in certain regions because of local rules — boring but necessary.)"
+      },
+      {
+        "question": "Airdrop? Free tokens? 🤑",
+        "answer": "No speculative airdrops or freebies. We believe rewards should come from real actions — like uploading receipts or helping the community. Keeps everything genuine and fun!"
+      },
+      {
+        "question": "When can I start using it?",
+        "answer": "App is cooking in the oven! 🔥 Whitepaper is out now, early access coming soon. Follow us on X for the freshest updates — we'll shout when it's ready!"
+      },
+      {
+        "question": "Why isn't there a marketing budget?",
+        "answer": "Yumo Yumo doesn't grow by dumping money into boring ads! 🙅‍♂️ It grows because friends like you use it and share the love. We'd rather reward our early helpers and creators than pay big corporations. It's healthier, human-driven, and way more fun! 💖"
+      },
+      {
+        "question": "Does the team keep a \"team allocation\"?",
+        "answer": "Nope! There are no secret pockets or hidden stashes here. 🙅‍♀️ The team earns exactly like you do—by building, running, and improving the system. If Yumo Yumo doesn't deliver real value, nobody earns. We grow together or not at all! 🤝✨"
+      },
+      {
+        "question": "Wait—is the team working for free?",
+        "answer": "Not exactly! 😸 We work for the real-world adoption of tools people actually want to use. Our rewards are tied to shipping useful features and keeping the network happy. If people love using it, we all win! 🍎✨"
+      },
+      {
+        "question": "Where can I learn more or ask silly questions?",
+        "answer": "Whitepaper (deep dive), X (@yumohq) — we're super chatty there, Website: yumoyumo.com, Discord/Telegram coming soon! Got a question that's not here? Slide into our DMs or tweet us — we love chatting! 💬❤️"
+      }
+    ]
+  },
+  "funPaper": {
+    "sections": [
+      {
+        "title": "1. So… what is Yumo Yumo?",
+        "content": [
+          "Yumo Yumo is a Web3 project that lets you mine tokens by doing something you already do every day:",
+          "Spending money.",
+          "Every price has layers.",
+          "Taxes, profit margins, operational costs...",
+          "You pay all of them every day, without thinking.",
+          "Yumo Yumo looks at these layers and says:",
+          "\"Great! Let's turn this into mining.\""
+        ]
+      },
+      {
+        "title": "2. Why should anyone care?",
+        "content": [
+          "Because almost all financial tools ask this boring question:",
+          "\"How much did you spend?\"",
+          "Yumo Yumo asks something better:",
+          "\"What was actually inside that price?\"",
+          "Once you start looking at prices this way, spending stops being a passive action.",
+          "It becomes data.",
+          "And data earns."
+        ]
+      },
+      {
+        "title": "3. Proof of Expense (PoE)",
+        "content": [
+          "PoE (Proof of Expense) is simple and honest.",
+          "You upload a real receipt.",
+          "The system analyzes what's inside the price.",
+          "Hidden costs come to light.",
+          "You earn tokens because you provided real-world data.",
+          "No fake actions.",
+          "No button clicking with bots.",
+          "No rewards that come \"just from feelings\".",
+          "If you spend in real life, you can mine on Yumo Yumo."
+        ]
+      },
+      {
+        "title": "4. Mining, but make it normal life",
+        "content": [
+          "Forget GPUs.",
+          "Forget warehouses full of machines.",
+          "In Yumo Yumo, your receipts are your mining devices.",
+          "Every valid receipt adds a signal to the system.",
+          "Every signal generates tokens.",
+          "The cycle is clean:",
+          "Spend → Upload → Mine → Earn",
+          "You were already doing step one anyway."
+        ]
+      },
+      {
+        "title": "5. About tokens (community first)",
+        "content": [
+          "Let's be clear:",
+          "No team allocation.",
+          "No hidden stash.",
+          "No massive budgets set aside for marketing.",
+          "No pre-minting tokens for insiders.",
+          "Yumo Yumo was built so tokens flow to participants, not a central structure.",
+          "If you contribute, you earn.",
+          "If you don't, you don't.",
+          "That's it."
+        ]
+      },
+      {
+        "title": "6. \"But how is this funded?\"",
+        "content": [
+          "It's not funded the usual way.",
+          "No massive marketing budgets.",
+          "No paid advertising machines.",
+          "No artificial demand.",
+          "Yumo Yumo grows through the Web3 way:",
+          "Through participation, contribution, and shared incentives.",
+          "Value comes from what people do, not from team promises."
+        ]
+      },
+      {
+        "title": "7. Why Web3 at all?",
+        "content": [
+          "Because rules matter more than people.",
+          "Web3 guarantees:",
+          "Rewards follow predefined logic.",
+          "Distribution cannot be changed manually.",
+          "No one behind the curtain can decide \"who gets what\".",
+          "Spending becomes a shared signal.",
+          "Tokens flow back to the people who create that signal.",
+          "Simple systems survive.",
+          "Non-transparent ones get eliminated."
+        ]
+      },
+      {
+        "title": "8. Who is this actually for?",
+        "content": [
+          "People who spend money.",
+          "Those who love mining but also want to sleep.",
+          "Those who prefer rules over stories.",
+          "You don't need to trade.",
+          "You don't need to use leverage.",
+          "You don't need to predict charts.",
+          "Just upload receipts."
+        ]
+      },
+      {
+        "title": "9. The bigger picture",
+        "content": [
+          "Yumo Yumo starts with awareness.",
+          "Over time, this awareness becomes:",
+          "Deeper insights.",
+          "Smarter financial tools.",
+          "A growing ecosystem built on real spending data.",
+          "All supported by the people who actually spend the money."
+        ]
+      },
+      {
+        "title": "10. Final thought",
+        "content": [
+          "Money already leaves your wallet every day.",
+          "Yumo Yumo doesn't try to stop that.",
+          "It just lets you mine while it happens.",
+          "The cycle: Spend ➔ Upload ➔ Mine ➔ Earn",
+          "That's the cycle."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Ready to get into the kitchen?",
+      "description": "Take a much deeper dive into technical specifications, mathematical details of tokenomics, and implementation processes.",
+      "button": "Read the Technical Documents ➔"
+    },
+    "loop": {
+      "title": "The Cycle",
+      "steps": {
+        "spend": "Spend",
+        "upload": "Upload",
+        "mine": "Mine",
+        "earn": "Earn"
+      }
+    }
+  },
+  "terms": {
+    "title": "Yumo Yumo Terms and Conditions",
+    "lastUpdated": "Last Updated: December 19, 2025",
+    "intro": "Hey there! Welcome to Yumo Yumo — we're super happy you're here.",
+    "introDescription": "These Terms are like the friendly rules of our little clubhouse. By using our app, website, or services (we call them all \"Services\"), you're saying \"okay!\" to these rules. If something doesn't feel right, no worries — just don't use the Services.",
+    "sections": [
+      {
+        "title": "1. Who can join the fun?",
+        "content": "You need to be at least 18 (or the grown-up age where you live). We want everyone to be able to make their own choices responsibly."
+      },
+      {
+        "title": "2. Your account & wallet",
+        "content": "When you connect your Web3 wallet, keep it safe — it's like your house key! 🔑\n\nWe're not responsible if someone else uses it without your permission. If something seems off, tell us right away."
+      },
+      {
+        "title": "3. What can you do here?",
+        "content": "Upload receipts, discover hidden costs with Proof of Expense (PoE), see cute spending insights, and earn aYUMO/rYUMO rewards that can turn into YUMO tokens. It's all about making everyday spending a bit more magical."
+      },
+      {
+        "title": "4. Receipts & your stuff",
+        "content": "When you upload receipts or other content, you're letting us use it (in a safe, anonymized way) to give you insights and make the app better for everyone.\n\nPromise us they're yours to share and don't break any rules or hurt anyone's feelings, okay?"
+      },
+      {
+        "title": "5. Rewards & YUMO tokens",
+        "content": [
+          "You earn aYUMO from real-life receipts and rYUMO from helping the community grow.",
+          "These can become YUMO tokens following clear, fair rules.",
+          "YUMO is a utility token for fun stuff inside the app — not an investment or \"get rich quick\" ticket. Its value can go up and down, just like the crypto world.",
+          "Any taxes on rewards? That's on you (sorry, adulting!)."
+        ]
+      },
+      {
+        "title": "6. Please be kind (things we don't like)",
+        "content": [
+          "No fake receipts, no trying to game the system, no illegal stuff, no bullying, no hacking.",
+          "If something feels wrong, we might pause or say goodbye to your account — but we'd rather everyone plays nicely!"
+        ]
+      },
+      {
+        "title": "7. Our stuff stays ours",
+        "content": "The app design, code, and ideas belong to us (or our friends who helped). You get to use them for personal fun, but no copying or selling, pretty please."
+      },
+      {
+        "title": "8. Privacy — we've got your back",
+        "content": "We take your privacy seriously (and cutely). Everything is explained in our Privacy Policy — give it a read with your favorite drink."
+      },
+      {
+        "title": "9. Third-party friends (wallets, blockchains)",
+        "content": "We team up with other tools (like wallets and blockchains). They're awesome, but we can't promise they'll always work perfectly. On-chain stuff is forever and public — that's just how blockchain rolls."
+      },
+      {
+        "title": "10. Heads up — no guarantees & NFA 🙈",
+        "content": [
+          "We do our best to make everything smooth and accurate, but:",
+          {
+            "type": "list",
+            "items": [
+              {
+                "label": "Friendly Guesses Only:",
+                "text": "Hidden cost estimates and spending insights are friendly guesses to help you learn. They are not financial, investment, or legal advice (NFA!). Always do your own research. 🔍"
+              },
+              {
+                "label": "Services are \"as is\":",
+                "text": "We try to be perfect, but we can't make \"perfect promises\" about everything working 100% of the time. 💫"
+              },
+              {
+                "label": "Crypto Adventures:",
+                "text": "Crypto has ups and downs — you know the drill. Any moves you make are your own responsibility. 🎢"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "11. If something goes wrong 🤗",
+        "content": "We really hope nothing does, but if there's an issue, our responsibility is limited (to the max the law allows). We're not liable for indirect stuff — let's keep things positive! ✨"
+      },
+      {
+        "title": "12. Crypto realities (the serious but honest part) 🪙",
+        "content": "Tokens can lose value, transactions can't be undone, and rules can change in different countries. YUMO is a utility token, not an investment ticket. Join the fun only if you're comfy with how blockchain rolls! 🌊"
+      },
+      {
+        "title": "13. Pausing or saying goodbye",
+        "content": "We might pause or close accounts if needed (we'll try to be fair). If that happens, unclaimed rewards might wave goodbye too."
+      },
+      {
+        "title": "14. The grown-up legal bit",
+        "content": "These Terms follow the laws of [e.g., England and Wales]. If we ever have a disagreement, we'll try chatting first. If needed, we'll use friendly arbitration in [e.g., Singapore]."
+      },
+      {
+        "title": "15. We might update these rules",
+        "content": "If we make changes, we'll let you know. Keep using the app = you're cool with the new version."
+      },
+      {
+        "title": "16. Want to chat?",
+        "content": "Questions, hugs, or high-fives? Reach us at info@yumoyumo.com."
+      }
+    ],
+    "footer": "Thanks for being part of Yumo Yumo — let's uncover the hidden and have fun doing it! 🫶✨"
+  },
+  "privacy": {
+    "title": "Yumo Yumo Privacy Policy",
+    "lastUpdated": "Last Updated: December 19, 2025",
+    "intro": "Hi friend! We really care about your privacy — like, a lot. This policy explains how we handle your info in the gentlest way possible.",
+    "sections": [
+      {
+        "title": "1. What we collect (only the necessities)",
+        "content": [
+          "Your wallet address (when you connect — it's public on blockchain anyway).",
+          "Receipts you upload (to give you those cool insights).",
+          "Basic device stuff (like which phone or browser you're using) so the app works smoothly.",
+          "Chats if you reach out to us.",
+          "We don't grab sensitive stuff unless it accidentally sneaks onto a receipt (please don't share things like health info!)."
+        ]
+      },
+      {
+        "title": "2. How we use your info",
+        "content": [
+          "To show you hidden costs and cute spending breakdowns.",
+          "To calculate your well-deserved rewards.",
+          "To make the app better (using anonymized data only — no one knows it's you).",
+          "To keep everything safe and running."
+        ]
+      },
+      {
+        "title": "3. Anonymization — our favorite magic trick",
+        "content": "When we improve the app or create general stats (like \"dining costs in Bangkok\"), we strip away anything that could point to you. Your receipts help everyone, but stay private."
+      },
+      {
+        "title": "4. Who sees your info?",
+        "content": [
+          "Almost nobody!",
+          "Trusted helpers (cloud services, analytics) who promise to be good.",
+          "Blockchain (for rewards — that part is public by design).",
+          "Only if the law asks (very rare and boring).",
+          "We never sell your data. Pinky promise."
+        ]
+      },
+      {
+        "title": "5. Blockchain is forever",
+        "content": "Once rewards hit the chain, they're public (wallet address + amounts). That's just how Web3 works — super transparent!"
+      },
+      {
+        "title": "6. Keeping things safe",
+        "content": "We use strong locks and careful habits to protect your info. Nothing is 100% unbreakable, but we try our very best."
+      },
+      {
+        "title": "7. How long we keep stuff",
+        "content": "Only as long as we need it to help you or follow rules. Want something deleted? Just ask!"
+      },
+      {
+        "title": "8. Your rights (you're in control)",
+        "content": [
+          "Depending on where you live, you can:",
+          "See your data",
+          "Correct or delete it",
+          "Say \"no thanks\" to certain uses",
+          "Just ping us — we'll sort it with a smile."
+        ]
+      },
+      {
+        "title": "9. We travel sometimes",
+        "content": "Your data might visit servers in other countries, but we always make sure they follow strict privacy rules."
+      },
+      {
+        "title": "10. No kids allowed",
+        "content": "Our app is for grown-ups only (18+). We don't collect info from kids."
+      },
+      {
+        "title": "11. Updates to this policy",
+        "content": "If we change anything important, we'll give you a heads-up. Keep using the app = you're okay with the new version."
+      },
+      {
+        "title": "12. Questions or cozy chats?",
+        "content": "Reach us at support@yumoyumo.com. We love hearing from you!"
+      }
+    ],
+    "footer": "Thank you for trusting us. We're here to make money stuff less confusing and more rewarding — all while keeping your privacy safe and sound. Big hug! 🤗✨"
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome! 👋",
+      "subtitle": "Sign in to your account",
+      "emailLabel": "Email / Username",
+      "emailPlaceholder": "Email or username",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "submit": "Sign In",
+      "toggle": "Don't have an account?",
+      "toggleAction": "Sign Up",
+      "error": "Invalid credentials",
+      "googleError": "Failed to sign in with Google",
+      "twitterError": "Failed to sign in with X (Twitter)",
+      "unknownError": "Unknown error"
+    },
+    "register": {
+      "title": "Join the Yumo World! 🎀",
+      "subtitle": "Create your account and start earning rewards",
+      "walletLabel": "Wallet Address",
+      "usernameLabel": "Username",
+      "usernamePlaceholder": "Your username",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "email@example.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Create your password",
+      "passwordConfirmLabel": "Password Confirm",
+      "passwordConfirmPlaceholder": "Confirm your password",
+      "dateOfBirthLabel": "Date of Birth",
+      "genderLabel": "Gender",
+      "genderOptional": "Optional",
+      "genderSelect": "Select",
+      "countryLabel": "Country",
+      "countrySelect": "Select Country",
+      "phoneLabel": "Phone Number",
+      "phonePlaceholder": "+1 555 123 4567",
+      "termsText": "Terms and Conditions and Privacy Policy",
+      "termsAgree": "and I agree",
+      "submit": "Sign Up",
+      "toggle": "Already a member?",
+      "toggleAction": "Sign In",
+      "error": "Registration failed"
+    },
+    "social": {
+      "or": "or"
+    }
+  },
+  "alerts": {
+    "auth": {
+      "termsRequired": "Please accept the Terms and Conditions and Privacy Policy."
+    },
+    "dashboard": {
+      "fileSizeError": "File size must be less than 10MB",
+      "fileRequired": "Please select a file first"
+    },
+    "wallet": {
+      "signatureRequired": "Signature required to connect. Please try again and approve the signature request.",
+      "connectionFailed": "Connection failed",
+      "pleaseTryAgain": "Please try again."
+    },
+    "waitlist": {
+      "privacyNote": "We respect your privacy. No spam, ever! 💕"
+    }
+  },
+  "support": {
+    "title": "Support Center",
+    "subtitle": "Have a question or need help? Submit a support ticket and we'll get back to you as soon as possible.",
+    "form": {
+      "username": "Username",
+      "usernamePlaceholder": "Your username",
+      "email": "Email Address",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Brief description of your issue",
+      "description": "Description",
+      "descriptionPlaceholder": "Please provide detailed information about your issue...",
+      "captcha": "Captcha Verification",
+      "captchaPlaceholder": "Enter code",
+      "captchaHint": "Enter the 4-digit code shown above",
+      "verify": "Verify",
+      "submit": "Submit Support Ticket",
+      "submitting": "Submitting Ticket..."
+    },
+    "success": {
+      "title": "Ticket Submitted Successfully!",
+      "message": "We've received your support request. Our team will get back to you soon."
+    },
+    "errors": {
+      "captchaRequired": "Please verify the captcha first.",
+      "fillAll": "Please fill in all fields.",
+      "captchaIncorrect": "Captcha code is incorrect. Please try again."
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
