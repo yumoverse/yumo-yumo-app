@@ -13,6 +13,7 @@ const securityHeaders = [
 ]
 
 const nextConfig: NextConfig = {
+  productionBrowserSourceMaps: false,
   // Vercel deployment - output: 'standalone' kaldırıldı (Vercel otomatik halleder)
   async headers() {
     return [
@@ -30,6 +31,10 @@ const nextConfig: NextConfig = {
       ...config.resolve.alias,
       canvas: false,
     }
+    config.ignoreWarnings = [
+      { module: /node_modules/ },
+      { message: /Invalid source mapURL|Could not parse source map/ },
+    ]
     return config
   },
   // API route'ları için timeout ayarı (Google Vision/LLM için)

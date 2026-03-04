@@ -41,6 +41,12 @@ jobs:
             --exclude='.env.local' \
             --exclude='.env*.local' \
             --exclude='.secrets' \
+            --exclude='.cursorrules' \
+            --exclude='.cursorignore' \
+            --exclude='.npmrc' \
+            --exclude='tsconfig.tsbuildinfo' \
+            --exclude='taxonomy_insert.sql' \
+            --exclude='yumo-contracts/' \
             \
             --exclude='lib/fraud/' \
             --exclude='lib/mining/' \

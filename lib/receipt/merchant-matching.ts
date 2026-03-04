@@ -17,6 +17,9 @@ const LAYER1_CONFIDENCE = 0.98;
 const MAX_FUZZY_CANDIDATES = 300;
 const FUZZY_SIMILARITY_MIN = 0.6;
 
+/** Only candidate/verified merchants can be used for matching. Unverified = admin not yet approved. */
+const TIER_MATCHABLE = ["candidate", "verified"] as const;
+
 export type MerchantTier = "verified" | "candidate" | "unverified";
 
 export interface MatchInput {
@@ -84,8 +87,8 @@ async function layer1Vkn(
   if (isDatabaseAvailable()) {
     try {
       const rows = await db.query<MerchantRow>(
-        "SELECT id, canonical_name, display_name, category, tier, country_code FROM merchants WHERE vkn = $1 LIMIT 1",
-        [normalized]
+        `SELECT id, canonical_name, display_name, category, tier, country_code FROM merchants WHERE vkn = $1 AND tier = ANY($2) LIMIT 1`,
+        [normalized, TIER_MATCHABLE]
       );
       if (rows.rows.length > 0) {
         const m = rows.rows[0];
@@ -111,8 +114,8 @@ async function layer1Vkn(
   const merchantId = getMerchantIdByVkn(normalized);
   if (!merchantId) return null;
   const rows = await db.query<MerchantRow>(
-    "SELECT id, canonical_name, display_name, category, tier, country_code FROM merchants WHERE id = $1",
-    [merchantId]
+    "SELECT id, canonical_name, display_name, category, tier, country_code FROM merchants WHERE id = $1 AND tier = ANY($2)",
+    [merchantId, TIER_MATCHABLE]
   );
   if (rows.rows.length === 0) return null;
   const m = rows.rows[0];
@@ -142,7 +145,7 @@ async function layer2Pattern(
     SELECT mp.merchant_id, mp.confidence_score,
            LENGTH(LOWER(TRIM(COALESCE(mp.normalized_pattern, mp.pattern)))) AS pattern_len
     FROM merchant_patterns mp
-    JOIN merchants m ON m.id = mp.merchant_id
+    JOIN merchants m ON m.id = mp.merchant_id AND m.tier = ANY($3)
     WHERE (LOWER(TRIM(COALESCE(mp.normalized_pattern, mp.pattern))) = $1
            OR ($1 <> '' AND POSITION(LOWER(TRIM(COALESCE(mp.normalized_pattern, mp.pattern))) IN $1) > 0
                AND LENGTH(LOWER(TRIM(COALESCE(mp.normalized_pattern, mp.pattern)))) >= 3))
@@ -156,6 +159,7 @@ async function layer2Pattern(
   const patternRows = await db.query<PatternRowWithLen>(patternQuery, [
     normalized,
     countryParam,
+    TIER_MATCHABLE,
   ]);
   if (patternRows.rows.length === 0) return [];
   // One result per merchant: keep highest pattern_len per merchant_id
@@ -209,6 +213,7 @@ async function layer3Location(
     FROM merchants m
     JOIN merchant_locations ml ON ml.merchant_id = m.id
     WHERE LOWER(TRIM(m.category)) = $1
+      AND m.tier = ANY($4)
       AND (m.country_code = $2 OR m.country_code IS NULL OR $2 IS NULL)
       AND ($3 = '' OR LOWER(TRIM(ml.city)) = $3 OR $3 = ANY(
         SELECT LOWER(TRIM(unnest(ml.address_keywords))) FROM merchant_locations ml2 WHERE ml2.merchant_id = m.id
@@ -219,6 +224,7 @@ async function layer3Location(
     category.trim().toLowerCase(),
     countryCode,
     cityNorm,
+    TIER_MATCHABLE,
   ]);
   return rows.rows;
 }
@@ -278,14 +284,18 @@ async function autoCreateMerchant(
     );
     if (existing.rows.length > 0) {
       await addPatternIfMissing(existing.rows[0].id, name, normalized);
-      const row = (await db.query<{ id: string, vkn: string | null }>(
-        "SELECT id, vkn FROM merchants WHERE id = $1",
+      const row = (await db.query<{ id: string, vkn: string | null, tier: string }>(
+        "SELECT id, vkn, tier FROM merchants WHERE id = $1",
         [existing.rows[0].id]
       )).rows[0];
       
       if (taxIdStr && !row.vkn) {
         await db.query("UPDATE merchants SET vkn = $1 WHERE id = $2", [taxIdStr, existing.rows[0].id]);
         console.log(`[autoCreateMerchant] Updated existing merchant with VKN: ${taxIdStr}`);
+      }
+      // Do not return unverified merchants - admin must approve first
+      if (!TIER_MATCHABLE.includes(row.tier as (typeof TIER_MATCHABLE)[number])) {
+        return null;
       }
       
       const m = await db.query<MerchantRow>(

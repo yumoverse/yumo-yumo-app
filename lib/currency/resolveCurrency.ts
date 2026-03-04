@@ -533,18 +533,27 @@ export function resolveCurrency(
   // PRIORITY 0: OCR'da açıkça currency kodu varsa (en yüksek öncelik - confidence 0.95)
   // İstisna: İngilizce olmayan fişte USD/EUR/GBP fişte yoksa OCR'ın yabancı para tahmini kabul edilmez → yerel para
   const ocrResult = detectCurrencyFromOCR(ocrText, ocrLines, countryConfig);
-  const hasTurkishReceiptIndicators =
-    /\b(saat|tarih|tckn|a101|fiş\s*no|top_am|top\s*am|kdv|topkdv|topkov|topkdy|topldv|topdv|topv|topkdi|topodv|topkda)\b/i.test(lowerText) || /\bt0pkdv\b/i.test(lowerText);
-  const hasExplicitForeignInText = /\busd\b|\$\s*\d|\b(eur|euro|€)\b|\b(gbp|£)\b/i.test(lowerText);
+  
+  // Ülkelere özgü yerel fiş göstergeleri
+  const isTurkishReceipt =
+    detectedCountry === 'TR' || /\b(saat|tarih|tckn|a101|fiş\s*no|top_am|top\s*am|kdv|topkdv|topkov|topkdy|topldv|topdv|topv|topkdi|topodv|topkda)\b/i.test(lowerText) || /\bt0pkdv\b/i.test(lowerText);
+  const isMalaysianReceipt =
+    detectedCountry === 'MY' || /\b(sst|ssm|resit|cukai|jumlah)\b/i.test(lowerText);
+  const isThaiReceipt =
+    detectedCountry === 'TH' || /[\u0E00-\u0E7F]/.test(lowerText);
+  const isIndonesianReceipt =
+    detectedCountry === 'ID' || /\b(npwp|ppn|pajak|struk)\b/i.test(lowerText);
+
+  const isLocalReceipt = isTurkishReceipt || isMalaysianReceipt || isThaiReceipt || isIndonesianReceipt;
+  
+  // Sadece sembollere ($, €, £) değil, kelime olarak döviz geçiyor mu?
+  const hasExplicitForeignInText = /\b(usd|eur|euro|gbp)\b/i.test(lowerText);
+  const isForeignOcrResult = ocrResult.currency === "USD" || ocrResult.currency === "EUR" || ocrResult.currency === "GBP";
 
   if (ocrResult.currency && ocrResult.confidence >= 0.6) {
-    // İngilizce olmayan fiş (ör. Türkçe) ve fişte USD/EUR/GBP yoksa OCR'ın USD vb. sonucunu kullanma
-    if (
-      hasTurkishReceiptIndicators &&
-      !hasExplicitForeignInText &&
-      (ocrResult.currency === "USD" || ocrResult.currency === "EUR" || ocrResult.currency === "GBP")
-    ) {
-      // Fall through to Rule 1/2/5b → TRY or other local currency
+    // Yerel bir fişse ve fişte açıkça (kelime olarak) döviz birimi yazmıyorsa, OCR'ın $ vb. sembollere dayalı döviz tahminini yoksay
+    if (isLocalReceipt && !hasExplicitForeignInText && isForeignOcrResult) {
+      // Fall through to Rule 1/2/5b → yerel para birimi (TRY, MYR vs.)
     } else {
       const explicitCurrencyPatterns = [
         /\b(USD|US\s*Dollar|United\s*States\s*Dollar)\b/i,
@@ -556,7 +565,12 @@ export function resolveCurrency(
         /\bdue.*USD/i,
       ];
       const hasExplicitCurrency = explicitCurrencyPatterns.some((p) => p.test(ocrText));
-      if (hasExplicitCurrency || ocrResult.confidence >= 0.65) {
+      
+      // Yabancı para birimiyse (USD, EUR, GBP), açıkça yazıldığından (hasExplicitCurrency) emin olalım.
+      // Yerel para birimiyse OCR güveninin yüksek olması (>= 0.65) doğrudan kabul için yeterli.
+      const isOverrideValid = isForeignOcrResult ? hasExplicitCurrency : (ocrResult.confidence >= 0.65);
+
+      if (isOverrideValid) {
         reasons.push(`currencyFromExplicitOCR=${ocrResult.currency} (overriding country-based detection)`);
         return {
           currency: ocrResult.currency,

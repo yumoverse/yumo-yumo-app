@@ -419,8 +419,16 @@ export function parseLooseNumber(token: string, countryConfig?: CountryConfig): 
     // only dot or only digits: keep as-is
   }
 
-  const v = parseFloat(s);
+  let v = parseFloat(s);
   if (!isFinite(v)) return null;
+
+  // Turkish 100x heuristic: "1.700,00" -> OCR "170000" (missing thousand separator)
+  if (v > 10_000 && v % 100 === 0) {
+    const corrected = v / 100;
+    if (corrected >= 1 && corrected <= 1_000_000) {
+      return corrected;
+    }
+  }
   return v;
 }
 
@@ -797,7 +805,16 @@ export interface ExtractTotalRobustOpts {
   isPosSlip?: boolean;
 }
 
-/** Parse TOPKDV amount from TR receipt lines (same line or next 2 lines after TOPKDV header). */
+/** Snap VAT rate to valid Turkish rates; reject if too far from [0, 0.01, 0.10, 0.20]. */
+function snapVatRate(rate: number): number | undefined {
+  const VALID_VAT_RATES = [0, 0.01, 0.10, 0.20];
+  const closest = VALID_VAT_RATES.reduce((a, b) =>
+    Math.abs(a - rate) < Math.abs(b - rate) ? a : b
+  );
+  return Math.abs(closest - rate) < 0.005 ? closest : undefined;
+}
+
+/** Parse TOPKDV amount from TR receipt lines (same line or immediately next 1 line after TOPKDV header). */
 function parseTopkdvFromLines(lines: OCRLine[], countryConfig?: CountryConfig): number | null {
   const topkdvHeader = /topkdv|top\s*kdv|topkov|top\s*kov|topkow|topkdw|topkdy|top\s*kdy|topldv|top\s*ldv|topdv|topv|topkdi|t0pkdv|topodv|topkda|toplam\s*kdv|kdv\s*toplam|pkdv|p\s*kdv/i;
   for (let i = 0; i < lines.length; i++) {
@@ -808,8 +825,9 @@ function parseTopkdvFromLines(lines: OCRLine[], countryConfig?: CountryConfig): 
       const v = parseLooseNumber(sameLine[1], countryConfig);
       if (v != null && v > 0.5 && v < 100000) return v;
     }
-    for (let j = 1; j <= 2 && i + j < lines.length; j++) {
-      const nextLine = lines[i + j].text;
+    // Only next 1 line (stricter: avoid wrong line like 108.50 vs 48)
+    if (i + 1 < lines.length) {
+      const nextLine = lines[i + 1].text;
       const m = nextLine.match(/\*?\s*(\d{1,3}(?:[.,]\d{3})*[.,]\d{2}|\d+[.,]\d{2})/);
       if (m?.[1]) {
         const v = parseLooseNumber(m[1], countryConfig);
@@ -839,7 +857,15 @@ export function extractTotalRobust(
   const branchIds = extractBranchIds(processedLines);
 
   // Pass countryConfig to generateAmountCandidates for country-specific number parsing
-  const candidates = generateAmountCandidates(processedLines, countryConfig);
+  let candidates = generateAmountCandidates(processedLines, countryConfig);
+
+  // EXCLUDE: KDV/TOPKDV/% lines — these are VAT amounts, never receipt totals
+  const VAT_TOTAL_EXCLUDE_PATTERN = /kdv|topkdv|toplam\s*kdv|kdv\s*toplam|topkdw|topkdy|topldv|pkdv|%\s*\d|\d\s*%/i;
+  candidates = candidates.filter((c) => {
+    const { prev, current, next } = c.contextWindow;
+    const combined = [prev, current, next].filter(Boolean).join(" ");
+    return !VAT_TOTAL_EXCLUDE_PATTERN.test(combined);
+  });
 
   // Use config total keywords if available, otherwise use defaults
   const totalKeywords = countryConfig?.labels.total || TOTAL_STRONG_KEYS;
@@ -998,9 +1024,12 @@ export function extractVATRobust(
       if (match) {
         const r = parseFloat(match[1]);
         if (!isNaN(r) && r > 0 && r <= 25) {
-          vatRate = r / 100;
-          rateLineNo = line.lineNo;
-          notes.push(`vatRateFound=${vatRate} at line=${rateLineNo}`);
+          const rawRate = r / 100;
+          vatRate = snapVatRate(rawRate);
+          if (vatRate != null) {
+            rateLineNo = line.lineNo;
+            notes.push(`vatRateFound=${vatRate} at line=${rateLineNo}`);
+          }
           break;
         }
       }

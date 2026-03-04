@@ -7,4 +7,6 @@ export interface DuplicateCheckResult {
   existingReceiptId?: string;
   existingUsername?: string;
   duplicateType?: "file" | "visual" | "content";
+  /** For visual duplicates: Hamming distance (0 = exact pixel match). */
+  hammingDistance?: number;
 }

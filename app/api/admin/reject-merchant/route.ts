@@ -39,6 +39,13 @@ export async function POST(req: Request) {
       );
     }
 
+    // receipts.merchant_id references merchants(id) without ON DELETE CASCADE.
+    // Nullify receipts first so the DELETE can succeed.
+    await db.query(
+      `UPDATE receipts SET merchant_id = NULL WHERE merchant_id = $1`,
+      [merchantId]
+    );
+
     const deleted = await db.query<{ id: string }>(
       `DELETE FROM merchants WHERE id = $1 AND tier = 'unverified' RETURNING id`,
       [merchantId]
