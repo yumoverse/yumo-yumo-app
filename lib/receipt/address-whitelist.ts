@@ -45,9 +45,9 @@ export const ADDRESS_TERMS = new Set([
   "bulvar", "bulvarı", "bulvari", "blv", "blv.", "bulv",
   "yol", "yolu", "yy", "yy.",
   "no", "no.", "numara", "num", "apt", "apartman", "kat", "daire", "d",
-  "blok", "bina", "site", "merkez", "avm", "plaza", "konak",
-  "iş", "is", "merkezi", "şube", "sube", "şubesi", "subesi",
-  "vergi", "vergi dairesi", "vd", "vd.", "mersis", "ticaret", "tic.", "sicil", "sicil no",
+  "blok", "bina", "site",
+  "iş", "is", "merkezi",
+  "vergi dairesi", "vd", "vd.", "mersis", "sicil no",
   "ilçe", "ilce", "il", "semt", "bölge", "bolge", "belde", "köy", "koy",
 ]);
 
@@ -97,7 +97,7 @@ export function containsAddressTerm(text: string): boolean {
   const words = normalized.split(/\s+/).map((w) => w.replace(/[.,;:!?/]+$/, ""));
   for (const word of words) {
     if (word.length < 2) continue;
-    if (ADDRESS_TERMS.has(word) || TURKEY_CITIES.has(word) || TURKEY_DISTRICTS.has(word))
+    if (ADDRESS_TERMS.has(word))
       return true;
   }
   return false;
