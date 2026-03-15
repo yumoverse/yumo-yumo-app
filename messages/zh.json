@@ -11,8 +11,8 @@
     "app": "应用"
   },
   "hero": {
-    "title": "喂养 Yumbie。",
-    "subtitle": "将消费变成奖励。",
+    "title": "解码你的收据。",
+    "subtitle": "揭示隐藏成本。",
     "description": "你的收据隐藏着价值。Yumbie 帮你解锁它。",
     "cta": "上传收据",
     "joinWaitlist": "加入候补名单"
@@ -631,8 +631,8 @@
     "app": "应用"
   },
   "hero": {
-    "title": "喂养 Yumbie。",
-    "subtitle": "将消费变成奖励。",
+    "title": "解码你的收据。",
+    "subtitle": "揭示隐藏成本。",
     "description": "你的收据隐藏着价值。Yumbie 帮你解锁它。",
     "cta": "上传收据",
     "joinWaitlist": "加入候补名单"
@@ -1251,8 +1251,8 @@
     "app": "应用"
   },
   "hero": {
-    "title": "喂养 Yumbie。",
-    "subtitle": "将消费变成奖励。",
+    "title": "解码你的收据。",
+    "subtitle": "揭示隐藏成本。",
     "description": "你的收据隐藏着价值。Yumbie 帮你解锁它。",
     "cta": "上传收据",
     "joinWaitlist": "加入候补名单"
@@ -1871,8 +1871,8 @@
     "app": "应用"
   },
   "hero": {
-    "title": "喂养 Yumbie。",
-    "subtitle": "将消费变成奖励。",
+    "title": "解码你的收据。",
+    "subtitle": "揭示隐藏成本。",
     "description": "你的收据隐藏着价值。Yumbie 帮你解锁它。",
     "cta": "上传收据",
     "joinWaitlist": "加入候补名单"
@@ -2462,34 +2462,3 @@
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

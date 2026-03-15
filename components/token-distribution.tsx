@@ -4,10 +4,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from "recharts"
 
 const data = [
-  { name: "Mining (Proof of Expense)", value: 70, color: "oklch(0.65 0.24 264)" },
+  { name: "Data Contribution (Proof of Expense)", value: 70, color: "oklch(0.65 0.24 264)" },
   { name: "Staking & Incentives", value: 15, color: "oklch(0.55 0.20 180)" },
   { name: "Fun Rewards", value: 10, color: "oklch(0.70 0.18 120)" },
-  { name: "Genesis Participation", value: 5, color: "oklch(0.60 0.22 300)" },
+  { name: "Early Data Contributors", value: 5, color: "oklch(0.60 0.22 300)" },
 ]
 
 export function TokenDistribution() {

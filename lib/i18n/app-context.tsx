@@ -232,7 +232,7 @@ const translations: Record<AppLocale, Record<string, string>> = {
     'mine.upload': 'Upload',
     'mine.scan': 'Scan',
     'mine.review': 'Review',
-    'mine.mining': 'Mining',
+    'mine.mining': 'Data Contribution',
     'mine.breakdown': 'Breakdown',
     'mine.verify': 'Verify',
     'mine.uploadReceipt': 'Upload Receipt',
@@ -289,8 +289,8 @@ const translations: Record<AppLocale, Record<string, string>> = {
     'breakdown.stateLayerDesc': 'VAT and government fees',
     'breakdown.total': 'Total',
     
-    // Mining Progress
-    'mining.title': 'Mining Receipt',
+    // Mining Progress (UI label: Data Contribution)
+    'mining.title': 'Data Contribution',
     'mining.step.extracting': 'Extracting Data',
     'mining.step.extractingDesc': 'Analyzing receipt structure',
     'mining.step.calculating': 'Calculating Hidden Costs',
@@ -300,10 +300,10 @@ const translations: Record<AppLocale, Record<string, string>> = {
     'mining.step.generating': 'Generating Receipt',
     'mining.step.generatingDesc': 'Creating blockchain-ready receipt',
     'mining.step.finalizing': 'Finalizing',
-    'mining.step.finalizingDesc': 'Completing mining process',
+    'mining.step.finalizingDesc': 'Completing data contribution process',
     
     // Mining Modal
-    'mining.modal.title': 'Mining Receipt',
+    'mining.modal.title': 'Data Contribution',
     'mining.modal.description': 'Processing your receipt on the server...',
     'mining.modal.progress': 'Progress',
     'mining.modal.uploading': 'Uploading Receipt',
@@ -1086,7 +1086,7 @@ const translations: Record<AppLocale, Record<string, string>> = {
     'mine.upload': 'Yükle',
     'mine.scan': 'Tara',
     'mine.review': 'İncele',
-    'mine.mining': 'Kazı',
+    'mine.mining': 'Veri Katkısı',
     'mine.breakdown': 'Dağılım',
     'mine.verify': 'Doğrula',
     'mine.uploadReceipt': 'Fiş Yükle',
@@ -1144,7 +1144,7 @@ const translations: Record<AppLocale, Record<string, string>> = {
     'breakdown.total': 'Toplam',
     
     // Mining Progress
-    'mining.title': 'Fiş Kazıma',
+    'mining.title': 'Veri Katkısı',
     'mining.step.extracting': 'Veri Çıkarma',
     'mining.step.extractingDesc': 'Fiş yapısını analiz ediliyor',
     'mining.step.calculating': 'Gizli Maliyetleri Hesaplama',
@@ -1154,10 +1154,10 @@ const translations: Record<AppLocale, Record<string, string>> = {
     'mining.step.generating': 'Fiş Oluşturma',
     'mining.step.generatingDesc': 'Blockchain\'e hazır fiş oluşturuluyor',
     'mining.step.finalizing': 'Sonlandırma',
-    'mining.step.finalizingDesc': 'Kazıma işlemi tamamlanıyor',
+    'mining.step.finalizingDesc': 'Veri katkısı işlemi tamamlanıyor',
     
     // Mining Modal
-    'mining.modal.title': 'Fiş Kazıma',
+    'mining.modal.title': 'Veri Katkısı',
     'mining.modal.description': 'Fişiniz sunucuda işleniyor...',
     'mining.modal.progress': 'İlerleme',
     'mining.modal.uploading': 'Fiş Yükleniyor',

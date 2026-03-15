@@ -102,7 +102,7 @@ export function ProfileCard({
                     color: "var(--app-gold, #C9A84C)",
                   }}
                 >
-                  Genesis
+                  Early Data Contributors
                 </span>
                 <span
                   className="text-[11px] font-medium"

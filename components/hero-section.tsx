@@ -57,8 +57,8 @@ export function HeroSection({ onSignUp }: HeroSectionProps) {
   const heroContent: Record<string, any> = {
     en: {
       badge: "World's First Receipt-to-Earn Platform",
-      title: "Earn from Every Receipt",
-      subtitle: "Turn spending into rewards.",
+      title: "Decode your receipts.",
+      subtitle: "Reveal hidden costs.",
       description: "",
       buttonGoApp: "Go App",
       buttonWaitlist: "Join the Waitlist",
@@ -70,8 +70,8 @@ export function HeroSection({ onSignUp }: HeroSectionProps) {
     },
     ru: {
       badge: "Первая в мире платформа Receipt-to-Earn",
-      title: "Зарабатывай с каждого чека",
-      subtitle: "Преврати траты в награды.",
+      title: "Расшифруй свои чеки.",
+      subtitle: "Раскрой скрытые затраты.",
       description: "",
       buttonGoApp: "В приложение",
       buttonWaitlist: "Присоединиться",
@@ -83,8 +83,8 @@ export function HeroSection({ onSignUp }: HeroSectionProps) {
     },
     tr: {
       badge: "Dünyanın İlk Fiş-Kazan Platformu",
-      title: "Her Fişten Kazan",
-      subtitle: "Harcamaları ödüllere dönüştür.",
+      title: "Fişlerini deşifre et.",
+      subtitle: "Gizli maliyetleri açığa çıkar.",
       description: "",
       buttonGoApp: "Uygulamaya Git",
       buttonWaitlist: "Bekleme Listesine Katıl",
@@ -96,8 +96,8 @@ export function HeroSection({ onSignUp }: HeroSectionProps) {
     },
     th: {
       badge: "แพลตฟอร์ม Receipt-to-Earn แห่งแรกของโลก",
-      title: "รับรางวัลจากทุกใบเสร็จ",
-      subtitle: "เปลี่ยนการใช้จ่ายเป็นรางวัล",
+      title: "ถอดรหัสใบเสร็จของคุณ",
+      subtitle: "เปิดเผยต้นทุนที่ซ่อนอยู่",
       description: "",
       buttonGoApp: "ไปที่แอป",
       buttonWaitlist: "เข้าร่วมรายชื่อรอ",
@@ -109,8 +109,8 @@ export function HeroSection({ onSignUp }: HeroSectionProps) {
     },
     zh: {
       badge: "全球首个收据赚取平台",
-      title: "每张收据都能赚钱",
-      subtitle: "将消费转化为奖励。",
+      title: "解码你的收据。",
+      subtitle: "揭示隐藏成本。",
       description: "",
       buttonGoApp: "进入应用",
       buttonWaitlist: "加入候补名单",
@@ -122,8 +122,8 @@ export function HeroSection({ onSignUp }: HeroSectionProps) {
     },
     es: {
       badge: "La Primera Plataforma Receipt-to-Earn del Mundo",
-      title: "Gana con cada recibo",
-      subtitle: "Convierte tus gastos en recompensas.",
+      title: "Decodifica tus recibos.",
+      subtitle: "Revela los costos ocultos.",
       description: "",
       buttonGoApp: "Ir a la App",
       buttonWaitlist: "Únete a la Lista",
@@ -300,7 +300,7 @@ export function HeroSection({ onSignUp }: HeroSectionProps) {
               className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.85] text-center"
             >
               <motion.span
-                className="block text-white text-center"
+                className="block text-white text-center pb-4"
                 style={{
                   textShadow: '0 0 80px rgba(255, 122, 26, 0.5)',
                 }}
@@ -316,7 +316,7 @@ export function HeroSection({ onSignUp }: HeroSectionProps) {
                 {content.title}
               </motion.span>
               <motion.span
-                className="block mt-6 md:mt-8 text-center"
+                className="block mt-6 md:mt-8 text-center pb-6"
                 style={{
                   background: 'linear-gradient(135deg, #ff7a1a 0%, #ec4899 50%, #ff7a1a 100%)',
                   backgroundSize: '200% auto',

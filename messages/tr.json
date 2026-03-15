@@ -11,8 +11,8 @@
     "app": "Uygulama"
   },
   "hero": {
-    "title": "Yumbie'yi Besle.",
-    "subtitle": "Harcamaları ödüllere dönüştür.",
+    "title": "Fişlerini deşifre et.",
+    "subtitle": "Gizli maliyetleri açığa çıkar.",
     "description": "Fişlerinde değer gizli. Yumbie bunu açığa çıkarmana yardımcı olur.",
     "cta": "Fiş Yükle",
     "joinWaitlist": "Bekleme Listesine Katıl"
@@ -62,7 +62,7 @@
     "totalSupply": "Toplam arz: 99 Milyar $YUMO token — eğlence, adalet ve büyüme için tasarlandı",
     "distribution": [
       {
-        "label": "Harcama Kanıtı (Madencilik)",
+        "label": "Harcama Kanıtı (Veri Katkısı)",
         "description": "Fiş yükleyerek ve PoE sistemine katılarak kazanılır"
       },
       {
@@ -74,7 +74,7 @@
         "description": "Oyunlaştırılmış görevler ve topluluk etkinlikleri aracılığıyla dağıtılır"
       },
       {
-        "label": "Genesis (Erken Katılım)",
+        "label": "Erken Veri Sağlayıcıları (Erken Katılım)",
         "description": "Erken destekçiler ve topluluk oluşturucular için ayrıldı"
       }
     ],
@@ -107,7 +107,7 @@
           "Vergiler, kâr marjları, operasyonel maliyetler...",
           "Hepsini her gün, hiç düşünmeden ödersin.",
           "Yumo Yumo bu katmanlara bakar ve der ki:",
-          "\"Harika! Gel bunu madenciliğe (mining) dönüştürelim.\""
+          "\"Harika! Gel bunu veri katkısına dönüştürelim.\""
         ]
       },
       {
@@ -133,15 +133,15 @@
           "Sahte aksiyon yok.",
           "Botlarla buton tıklamak yok.",
           "\"Sadece hislerle\" gelen ödüller yok.",
-          "Eğer gerçek hayatta harcıyorsan, Yumo Yumo'da madencilik yapabilirsin."
+          "Eğer gerçek hayatta harcıyorsan, Yumo Yumo'da veri katkısı yapabilirsin."
         ]
       },
       {
-        "title": "4. Madencilik, Ama Günlük Hayatın İçinde",
+        "title": "4. Veri Katkısı, Ama Günlük Hayatın İçinde",
         "content": [
           "GPU'ları (ekran kartlarını) unut.",
           "Makine dolu depoları unut.",
-          "Yumo Yumo'da fişlerin, senin madencilik cihazlarındır.",
+          "Yumo Yumo'da fişlerin, senin veri katkısıdır.",
           "Her geçerli fiş, sisteme bir sinyal ekler.",
           "Her sinyal, token üretir.",
           "Döngü tertemizdir:",
@@ -193,7 +193,7 @@
         "title": "8. Bu Aslında Kimin İçin?",
         "content": [
           "Para harcayan insanlar.",
-          "Madenciliği seven ama uykusunu da almak isteyenler.",
+          "Veri katkısı yapmayı seven ama uykusunu da almak isteyenler.",
           "Hikayeler yerine kuralları tercih edenler.",
           "Trade yapmana gerek yok.",
           "Kaldıraç kullanmana gerek yok.",
@@ -217,7 +217,7 @@
         "content": [
           "Cüzdanından her gün zaten para çıkıyor.",
           "Yumo Yumo bunu durdurmaya çalışmaz.",
-          "Sadece bu olurken madencilik yapmanı sağlar.",
+          "Sadece bu olurken veri katkısı yapmanı sağlar.",
           "Döngü: Harca ➔ Yükle ➔ Kaz ➔ Kazan",
           "İşte döngü bu."
         ]
@@ -245,7 +245,7 @@
       {
         "quarter": "P1",
         "year": "🚀",
-        "title": "Faz 1 — Genesis\nFarkındalık Başlıyor",
+        "title": "Faz 1 — Erken Veri Sağlayıcıları\nFarkındalık Başlıyor",
         "items": [
           "Adil Lansman: Topluluk odaklı likidite ve fiyat keşfi",
           "PoE Madenciliği: Fişlerden aYUMO kazan",
@@ -681,8 +681,8 @@
     "app": "Uygulama"
   },
   "hero": {
-    "title": "Yumbie'yi Besle.",
-    "subtitle": "Harcamaları ödüllere dönüştür.",
+    "title": "Fişlerini deşifre et.",
+    "subtitle": "Gizli maliyetleri açığa çıkar.",
     "description": "Fişlerinde değer gizli. Yumbie bunu açığa çıkarmana yardımcı olur.",
     "cta": "Fiş Yükle",
     "joinWaitlist": "Bekleme Listesine Katıl"
@@ -732,7 +732,7 @@
     "totalSupply": "Toplam arz: 99 Milyar $YUMO token — eğlence, adalet ve büyüme için tasarlandı",
     "distribution": [
       {
-        "label": "Harcama Kanıtı (Madencilik)",
+        "label": "Harcama Kanıtı (Veri Katkısı)",
         "description": "Fiş yükleyerek ve PoE sistemine katılarak kazanılır"
       },
       {
@@ -744,7 +744,7 @@
         "description": "Oyunlaştırılmış görevler ve topluluk etkinlikleri aracılığıyla dağıtılır"
       },
       {
-        "label": "Genesis (Erken Katılım)",
+        "label": "Erken Veri Sağlayıcıları (Erken Katılım)",
         "description": "Erken destekçiler ve topluluk oluşturucular için ayrıldı"
       }
     ],
@@ -777,7 +777,7 @@
           "Vergiler, kâr marjları, operasyonel maliyetler...",
           "Hepsini her gün, hiç düşünmeden ödersin.",
           "Yumo Yumo bu katmanlara bakar ve der ki:",
-          "\"Harika! Gel bunu madenciliğe (mining) dönüştürelim.\""
+          "\"Harika! Gel bunu veri katkısına dönüştürelim.\""
         ]
       },
       {
@@ -803,15 +803,15 @@
           "Sahte aksiyon yok.",
           "Botlarla buton tıklamak yok.",
           "\"Sadece hislerle\" gelen ödüller yok.",
-          "Eğer gerçek hayatta harcıyorsan, Yumo Yumo'da madencilik yapabilirsin."
+          "Eğer gerçek hayatta harcıyorsan, Yumo Yumo'da veri katkısı yapabilirsin."
         ]
       },
       {
-        "title": "4. Madencilik, Ama Günlük Hayatın İçinde",
+        "title": "4. Veri Katkısı, Ama Günlük Hayatın İçinde",
         "content": [
           "GPU'ları (ekran kartlarını) unut.",
           "Makine dolu depoları unut.",
-          "Yumo Yumo'da fişlerin, senin madencilik cihazlarındır.",
+          "Yumo Yumo'da fişlerin, senin veri katkısıdır.",
           "Her geçerli fiş, sisteme bir sinyal ekler.",
           "Her sinyal, token üretir.",
           "Döngü tertemizdir:",
@@ -863,7 +863,7 @@
         "title": "8. Bu Aslında Kimin İçin?",
         "content": [
           "Para harcayan insanlar.",
-          "Madenciliği seven ama uykusunu da almak isteyenler.",
+          "Veri katkısı yapmayı seven ama uykusunu da almak isteyenler.",
           "Hikayeler yerine kuralları tercih edenler.",
           "Trade yapmana gerek yok.",
           "Kaldıraç kullanmana gerek yok.",
@@ -887,7 +887,7 @@
         "content": [
           "Cüzdanından her gün zaten para çıkıyor.",
           "Yumo Yumo bunu durdurmaya çalışmaz.",
-          "Sadece bu olurken madencilik yapmanı sağlar.",
+          "Sadece bu olurken veri katkısı yapmanı sağlar.",
           "Döngü: Harca ➔ Yükle ➔ Kaz ➔ Kazan",
           "İşte döngü bu."
         ]
@@ -915,7 +915,7 @@
       {
         "quarter": "P1",
         "year": "🚀",
-        "title": "Faz 1 — Genesis\nFarkındalık Başlıyor",
+        "title": "Faz 1 — Erken Veri Sağlayıcıları\nFarkındalık Başlıyor",
         "items": [
           "Adil Lansman: Topluluk odaklı likidite ve fiyat keşfi",
           "PoE Madenciliği: Fişlerden aYUMO kazan",
@@ -1351,8 +1351,8 @@
     "app": "Uygulama"
   },
   "hero": {
-    "title": "Yumbie'yi Besle.",
-    "subtitle": "Harcamaları ödüllere dönüştür.",
+    "title": "Fişlerini deşifre et.",
+    "subtitle": "Gizli maliyetleri açığa çıkar.",
     "description": "Fişlerinde değer gizli. Yumbie bunu açığa çıkarmana yardımcı olur.",
     "cta": "Fiş Yükle",
     "joinWaitlist": "Bekleme Listesine Katıl"
@@ -1402,7 +1402,7 @@
     "totalSupply": "Toplam arz: 99 Milyar $YUMO token — eğlence, adalet ve büyüme için tasarlandı",
     "distribution": [
       {
-        "label": "Harcama Kanıtı (Madencilik)",
+        "label": "Harcama Kanıtı (Veri Katkısı)",
         "description": "Fiş yükleyerek ve PoE sistemine katılarak kazanılır"
       },
       {
@@ -1414,7 +1414,7 @@
         "description": "Oyunlaştırılmış görevler ve topluluk etkinlikleri aracılığıyla dağıtılır"
       },
       {
-        "label": "Genesis (Erken Katılım)",
+        "label": "Erken Veri Sağlayıcıları (Erken Katılım)",
         "description": "Erken destekçiler ve topluluk oluşturucular için ayrıldı"
       }
     ],
@@ -1447,7 +1447,7 @@
           "Vergiler, kâr marjları, operasyonel maliyetler...",
           "Hepsini her gün, hiç düşünmeden ödersin.",
           "Yumo Yumo bu katmanlara bakar ve der ki:",
-          "\"Harika! Gel bunu madenciliğe (mining) dönüştürelim.\""
+          "\"Harika! Gel bunu veri katkısına dönüştürelim.\""
         ]
       },
       {
@@ -1473,15 +1473,15 @@
           "Sahte aksiyon yok.",
           "Botlarla buton tıklamak yok.",
           "\"Sadece hislerle\" gelen ödüller yok.",
-          "Eğer gerçek hayatta harcıyorsan, Yumo Yumo'da madencilik yapabilirsin."
+          "Eğer gerçek hayatta harcıyorsan, Yumo Yumo'da veri katkısı yapabilirsin."
         ]
       },
       {
-        "title": "4. Madencilik, Ama Günlük Hayatın İçinde",
+        "title": "4. Veri Katkısı, Ama Günlük Hayatın İçinde",
         "content": [
           "GPU'ları (ekran kartlarını) unut.",
           "Makine dolu depoları unut.",
-          "Yumo Yumo'da fişlerin, senin madencilik cihazlarındır.",
+          "Yumo Yumo'da fişlerin, senin veri katkısıdır.",
           "Her geçerli fiş, sisteme bir sinyal ekler.",
           "Her sinyal, token üretir.",
           "Döngü tertemizdir:",
@@ -1533,7 +1533,7 @@
         "title": "8. Bu Aslında Kimin İçin?",
         "content": [
           "Para harcayan insanlar.",
-          "Madenciliği seven ama uykusunu da almak isteyenler.",
+          "Veri katkısı yapmayı seven ama uykusunu da almak isteyenler.",
           "Hikayeler yerine kuralları tercih edenler.",
           "Trade yapmana gerek yok.",
           "Kaldıraç kullanmana gerek yok.",
@@ -1557,7 +1557,7 @@
         "content": [
           "Cüzdanından her gün zaten para çıkıyor.",
           "Yumo Yumo bunu durdurmaya çalışmaz.",
-          "Sadece bu olurken madencilik yapmanı sağlar.",
+          "Sadece bu olurken veri katkısı yapmanı sağlar.",
           "Döngü: Harca ➔ Yükle ➔ Kaz ➔ Kazan",
           "İşte döngü bu."
         ]
@@ -1585,7 +1585,7 @@
       {
         "quarter": "P1",
         "year": "🚀",
-        "title": "Faz 1 — Genesis\nFarkındalık Başlıyor",
+        "title": "Faz 1 — Erken Veri Sağlayıcıları\nFarkındalık Başlıyor",
         "items": [
           "Adil Lansman: Topluluk odaklı likidite ve fiyat keşfi",
           "PoE Madenciliği: Fişlerden aYUMO kazan",
@@ -2021,8 +2021,8 @@
     "app": "Uygulama"
   },
   "hero": {
-    "title": "Yumbie'yi Besle.",
-    "subtitle": "Harcamaları ödüllere dönüştür.",
+    "title": "Fişlerini deşifre et.",
+    "subtitle": "Gizli maliyetleri açığa çıkar.",
     "description": "Fişlerinde değer gizli. Yumbie bunu açığa çıkarmana yardımcı olur.",
     "cta": "Fiş Yükle",
     "joinWaitlist": "Bekleme Listesine Katıl"
@@ -2072,7 +2072,7 @@
     "totalSupply": "Toplam arz: 99 Milyar $YUMO token — eğlence, adalet ve büyüme için tasarlandı",
     "distribution": [
       {
-        "label": "Harcama Kanıtı (Madencilik)",
+        "label": "Harcama Kanıtı (Veri Katkısı)",
         "description": "Fiş yükleyerek ve PoE sistemine katılarak kazanılır"
       },
       {
@@ -2084,7 +2084,7 @@
         "description": "Oyunlaştırılmış görevler ve topluluk etkinlikleri aracılığıyla dağıtılır"
       },
       {
-        "label": "Genesis (Erken Katılım)",
+        "label": "Erken Veri Sağlayıcıları (Erken Katılım)",
         "description": "Erken destekçiler ve topluluk oluşturucular için ayrıldı"
       }
     ],
@@ -2117,7 +2117,7 @@
           "Vergiler, kâr marjları, operasyonel maliyetler...",
           "Hepsini her gün, hiç düşünmeden ödersin.",
           "Yumo Yumo bu katmanlara bakar ve der ki:",
-          "\"Harika! Gel bunu madenciliğe (mining) dönüştürelim.\""
+          "\"Harika! Gel bunu veri katkısına dönüştürelim.\""
         ]
       },
       {
@@ -2143,15 +2143,15 @@
           "Sahte aksiyon yok.",
           "Botlarla buton tıklamak yok.",
           "\"Sadece hislerle\" gelen ödüller yok.",
-          "Eğer gerçek hayatta harcıyorsan, Yumo Yumo'da madencilik yapabilirsin."
+          "Eğer gerçek hayatta harcıyorsan, Yumo Yumo'da veri katkısı yapabilirsin."
         ]
       },
       {
-        "title": "4. Madencilik, Ama Günlük Hayatın İçinde",
+        "title": "4. Veri Katkısı, Ama Günlük Hayatın İçinde",
         "content": [
           "GPU'ları (ekran kartlarını) unut.",
           "Makine dolu depoları unut.",
-          "Yumo Yumo'da fişlerin, senin madencilik cihazlarındır.",
+          "Yumo Yumo'da fişlerin, senin veri katkısıdır.",
           "Her geçerli fiş, sisteme bir sinyal ekler.",
           "Her sinyal, token üretir.",
           "Döngü tertemizdir:",
@@ -2203,7 +2203,7 @@
         "title": "8. Bu Aslında Kimin İçin?",
         "content": [
           "Para harcayan insanlar.",
-          "Madenciliği seven ama uykusunu da almak isteyenler.",
+          "Veri katkısı yapmayı seven ama uykusunu da almak isteyenler.",
           "Hikayeler yerine kuralları tercih edenler.",
           "Trade yapmana gerek yok.",
           "Kaldıraç kullanmana gerek yok.",
@@ -2227,7 +2227,7 @@
         "content": [
           "Cüzdanından her gün zaten para çıkıyor.",
           "Yumo Yumo bunu durdurmaya çalışmaz.",
-          "Sadece bu olurken madencilik yapmanı sağlar.",
+          "Sadece bu olurken veri katkısı yapmanı sağlar.",
           "Döngü: Harca ➔ Yükle ➔ Kaz ➔ Kazan",
           "İşte döngü bu."
         ]
@@ -2255,7 +2255,7 @@
       {
         "quarter": "P1",
         "year": "🚀",
-        "title": "Faz 1 — Genesis\nFarkındalık Başlıyor",
+        "title": "Faz 1 — Erken Veri Sağlayıcıları\nFarkındalık Başlıyor",
         "items": [
           "Adil Lansman: Topluluk odaklı likidite ve fiyat keşfi",
           "PoE Madenciliği: Fişlerden aYUMO kazan",

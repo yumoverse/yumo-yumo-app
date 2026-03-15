@@ -60,7 +60,7 @@ export default function FunpaperPage() {
       sections: [
         {
           title: "1. So… what is Yumo Yumo?",
-          content: "Yumo Yumo is a Web3 project that lets you mine tokens by doing something you already do every day:\n\nSpending money.\n\nEvery price has layers.\n\nTaxes, profit margins, operational costs...\n\nYou pay all of them every day, without thinking.\n\nYumo Yumo looks at these layers and says:\n\n\"Great! Let's turn this into mining.\""
+          content: "Yumo Yumo is a Web3 project that lets you earn tokens by doing something you already do every day:\n\nSpending money.\n\nEvery price has layers.\n\nTaxes, profit margins, operational costs...\n\nYou pay all of them every day, without thinking.\n\nYumo Yumo looks at these layers and says:\n\n\"Great! Let's turn this into data contribution.\""
         },
         {
           title: "2. Why should anyone care?",
@@ -68,11 +68,11 @@ export default function FunpaperPage() {
         },
         {
           title: "3. Proof of Expense (PoE)",
-          content: "PoE (Proof of Expense) is simple and honest.\n\n• You upload a real receipt.\n• The system analyzes what's inside the price.\n• Hidden costs come to light.\n• You earn tokens because you provided real-world data.\n\nNo fake actions.\n\nNo button clicking with bots.\n\nNo rewards that come \"just from feelings\".\n\nIf you spend in real life, you can mine on Yumo Yumo."
+          content: "PoE (Proof of Expense) is simple and honest.\n\n• You upload a real receipt.\n• The system analyzes what's inside the price.\n• Hidden costs come to light.\n• You earn tokens because you provided real-world data.\n\nNo fake actions.\n\nNo button clicking with bots.\n\nNo rewards that come \"just from feelings\".\n\nIf you spend in real life, you can contribute data on Yumo Yumo."
         },
         {
-          title: "4. Mining, but make it normal life",
-          content: "Forget GPUs.\n\nForget warehouses full of machines.\n\nIn Yumo Yumo, your receipts are your mining devices.\n\nEvery valid receipt adds a signal to the system.\n\nEvery signal generates tokens.\n\nThe cycle is clean:\n\nSpend → Upload → Mine → Earn\n\nYou were already doing step one anyway."
+          title: "4. Data Contribution, but make it normal life",
+          content: "Forget GPUs.\n\nForget warehouses full of machines.\n\nIn Yumo Yumo, your receipts are your data contribution.\n\nEvery valid receipt adds a signal to the system.\n\nEvery signal generates tokens.\n\nThe cycle is clean:\n\nSpend → Upload → Contribute → Earn\n\nYou were already doing step one anyway."
         },
         {
           title: "5. About tokens (community first)",
@@ -88,7 +88,7 @@ export default function FunpaperPage() {
         },
         {
           title: "8. Who is this actually for?",
-          content: "• People who spend money.\n• Those who love mining but also want to sleep.\n• Those who prefer rules over stories.\n\nYou don't need to trade.\n\nYou don't need to use leverage.\n\nYou don't need to predict charts.\n\nJust upload receipts."
+          content: "• People who spend money.\n• Those who love contributing data but also want to sleep.\n• Those who prefer rules over stories.\n\nYou don't need to trade.\n\nYou don't need to use leverage.\n\nYou don't need to predict charts.\n\nJust upload receipts."
         },
         {
           title: "9. The bigger picture",
@@ -96,7 +96,7 @@ export default function FunpaperPage() {
         },
         {
           title: "10. Final thought",
-          content: "Money already leaves your wallet every day.\n\nYumo Yumo doesn't try to stop that.\n\nIt just lets you mine while it happens."
+          content: "Money already leaves your wallet every day.\n\nYumo Yumo doesn't try to stop that.\n\nIt just lets you contribute data while it happens."
         },
         {
           title: "The Cycle",
@@ -110,7 +110,7 @@ export default function FunpaperPage() {
       sections: [
         {
           title: "1. Peki... Yumo Yumo Nedir?",
-          content: "Yumo Yumo, zaten her gün yaptığın bir şeyi yaparak token madenciliği yapmanı sağlayan bir Web3 projesidir:\n\nPara harcamak.\n\nHer fiyatın katmanları vardır.\n\nVergiler, kâr marjları, operasyonel maliyetler...\n\nHepsini her gün, hiç düşünmeden ödersin.\n\nYumo Yumo bu katmanlara bakar ve der ki:\n\n\"Harika! Gel bunu madenciliğe (mining) dönüştürelim.\""
+          content: "Yumo Yumo, zaten her gün yaptığın bir şeyi yaparak token kazanmanı sağlayan bir Web3 projesidir:\n\nPara harcamak.\n\nHer fiyatın katmanları vardır.\n\nVergiler, kâr marjları, operasyonel maliyetler...\n\nHepsini her gün, hiç düşünmeden ödersin.\n\nYumo Yumo bu katmanlara bakar ve der ki:\n\n\"Harika! Gel bunu veri katkısına dönüştürelim.\""
         },
         {
           title: "2. Neden İnsanların Umurunda Olsun?",
@@ -118,11 +118,11 @@ export default function FunpaperPage() {
         },
         {
           title: "3. Harcama Kanıtı (Proof of Expense - PoE)",
-          content: "PoE (Harcama Kanıtı) basit ve dürüsttür.\n\n• Gerçek bir fiş yüklersin.\n• Sistem fiyatın içindekileri analiz eder.\n• Gizli maliyetler gün yüzüne çıkar.\n• Gerçek dünya verisi sağladığın için token kazanırsın.\n\nSahte aksiyon yok.\n\nBotlarla buton tıklamak yok.\n\n\"Sadece hislerle\" gelen ödüller yok.\n\nEğer gerçek hayatta harcıyorsan, Yumo Yumo'da madencilik yapabilirsin."
+          content: "PoE (Harcama Kanıtı) basit ve dürüsttür.\n\n• Gerçek bir fiş yüklersin.\n• Sistem fiyatın içindekileri analiz eder.\n• Gizli maliyetler gün yüzüne çıkar.\n• Gerçek dünya verisi sağladığın için token kazanırsın.\n\nSahte aksiyon yok.\n\nBotlarla buton tıklamak yok.\n\n\"Sadece hislerle\" gelen ödüller yok.\n\nEğer gerçek hayatta harcıyorsan, Yumo Yumo'da veri katkısı yapabilirsin."
         },
         {
-          title: "4. Madencilik, Ama Günlük Hayatın İçinde",
-          content: "GPU'ları (ekran kartlarını) unut.\n\nMakine dolu depoları unut.\n\nYumo Yumo'da fişlerin, senin madencilik cihazlarındır.\n\nHer geçerli fiş, sisteme bir sinyal ekler.\n\nHer sinyal, token üretir.\n\nDöngü tertemizdir:\n\nHarca → Yükle → Kaz → Kazan\n\nZaten birinci adımı her halükarda yapıyordun."
+          title: "4. Veri Katkısı, Ama Günlük Hayatın İçinde",
+          content: "GPU'ları (ekran kartlarını) unut.\n\nMakine dolu depoları unut.\n\nYumo Yumo'da fişlerin, senin veri katkındır.\n\nHer geçerli fiş, sisteme bir sinyal ekler.\n\nHer sinyal, token üretir.\n\nDöngü tertemizdir:\n\nHarca → Yükle → Katkı → Kazan\n\nZaten birinci adımı her halükarda yapıyordun."
         },
         {
           title: "5. Tokenlar Hakkında (Önce Topluluk)",
@@ -138,7 +138,7 @@ export default function FunpaperPage() {
         },
         {
           title: "8. Bu Aslında Kimin İçin?",
-          content: "• Para harcayan insanlar.\n• Madenciliği seven ama uykusunu da almak isteyenler.\n• Hikayeler yerine kuralları tercih edenler.\n\nTrade yapmana gerek yok.\n\nKaldıraç kullanmana gerek yok.\n\nGrafik tahmin etmene gerek yok.\n\nSadece fişleri yüklersin."
+          content: "• Para harcayan insanlar.\n• Veri katkısı yapmayı seven ama uykusunu da almak isteyenler.\n• Hikayeler yerine kuralları tercih edenler.\n\nTrade yapmana gerek yok.\n\nKaldıraç kullanmana gerek yok.\n\nGrafik tahmin etmene gerek yok.\n\nSadece fişleri yüklersin."
         },
         {
           title: "9. Büyük Resim",
@@ -146,11 +146,11 @@ export default function FunpaperPage() {
         },
         {
           title: "10. Son Düşünce",
-          content: "Cüzdanından her gün zaten para çıkıyor.\n\nYumo Yumo bunu durdurmaya çalışmaz.\n\nSadece bu olurken madencilik yapmanı sağlar."
+          content: "Cüzdanından her gün zaten para çıkıyor.\n\nYumo Yumo bunu durdurmaya çalışmaz.\n\nSadece bu olurken veri katkısı yapmanı sağlar."
         },
         {
           title: "Döngü",
-          content: "Harca\n\nYükle\n\nKaz\n\nKazan\n\nİşte döngü bu."
+          content: "Harca\n\nYükle\n\nKatkı\n\nKazan\n\nİşte döngü bu."
         }
       ],
       whitepaperLink: "https://yumo-yumo.gitbook.io/whitepaper",
@@ -260,7 +260,7 @@ export default function FunpaperPage() {
       sections: [
         {
           title: "1. Entonces... ¿qué es Yumo Yumo?",
-          content: "Yumo Yumo es un proyecto Web3 que te permite minar tokens haciendo algo que ya haces todos los días:\n\nGastar dinero.\n\nCada precio tiene capas ocultas: impuestos, márgenes de beneficio, costos operativos...\n\nLos pagas a diario sin pensarlo.\n\nYumo Yumo analiza esas capas y dice:\n\n\"¡Genial! Convirtamos este gasto en minería\"."
+          content: "Yumo Yumo es un proyecto Web3 que te permite ganar tokens haciendo algo que ya haces todos los días:\n\nGastar dinero.\n\nCada precio tiene capas ocultas: impuestos, márgenes de beneficio, costos operativos...\n\nLos pagas a diario sin pensarlo.\n\nYumo Yumo analiza esas capas y dice:\n\n\"¡Genial! Convirtamos este gasto en contribución de datos\"."
         },
         {
           title: "2. ¿Por qué debería importarte?",
@@ -268,11 +268,11 @@ export default function FunpaperPage() {
         },
         {
           title: "3. Proof of Expense (PoE): Simple y Honesto",
-          content: "El sistema PoE es transparente:\n\n• Subes un recibo real.\n• El sistema desglosa los costos ocultos.\n• Ganas tokens por aportar datos del mundo real.\n• Sin bots, sin acciones falsas, sin recompensas basadas en \"humo\".\n\nSi gastas en la vida real, minas en Yumo Yumo."
+          content: "El sistema PoE es transparente:\n\n• Subes un recibo real.\n• El sistema desglosa los costos ocultos.\n• Ganas tokens por aportar datos del mundo real.\n• Sin bots, sin acciones falsas, sin recompensas basadas en \"humo\".\n\nSi gastas en la vida real, contribuyes datos en Yumo Yumo."
         },
         {
-          title: "4. Minería para la vida normal",
-          content: "Olvida las tarjetas gráficas costosas y los almacenes llenos de máquinas.\n\nEn Yumo Yumo, tus recibos son tus nodos de minería.\n\nCada tique válido envía una señal al sistema y genera tokens.\n\nEl ciclo es perfecto:\n\nGasta → Sube → Mina → Gana\n\nYa estabas haciendo el paso uno de todos modos.\n\n¿Por qué no ganar con ello?"
+          title: "4. Contribución de datos para la vida normal",
+          content: "Olvida las tarjetas gráficas costosas y los almacenes llenos de máquinas.\n\nEn Yumo Yumo, tus recibos son tu contribución de datos.\n\nCada tique válido envía una señal al sistema y genera tokens.\n\nEl ciclo es perfecto:\n\nGasta → Sube → Contribuye → Gana\n\nYa estabas haciendo el paso uno de todos modos.\n\n¿Por qué no ganar con ello?"
         },
         {
           title: "5. Tokenomics: La comunidad es lo primero",
@@ -288,7 +288,7 @@ export default function FunpaperPage() {
         },
         {
           title: "8. ¿Para quién es esto realmente?",
-          content: "• Para quienes gastan dinero (o sea, todos).\n• Para quienes aman la minería pero también quieren dormir tranquilos.\n• Para quienes prefieren reglas claras antes que historias bonitas.\n\nNo necesitas hacer trading ni entender gráficos complejos.\n\nSolo sube tus recibos."
+          content: "• Para quienes gastan dinero (o sea, todos).\n• Para quienes aman contribuir datos pero también quieren dormir tranquilos.\n• Para quienes prefieren reglas claras antes que historias bonitas.\n\nNo necesitas hacer trading ni entender gráficos complejos.\n\nSolo sube tus recibos."
         },
         {
           title: "9. La visión global",
@@ -296,11 +296,11 @@ export default function FunpaperPage() {
         },
         {
           title: "10. Reflexión final",
-          content: "El dinero ya sale de tu bolsillo cada día.\n\nYumo Yumo no intenta detener eso; simplemente te permite minar mientras sucede."
+          content: "El dinero ya sale de tu bolsillo cada día.\n\nYumo Yumo no intenta detener eso; simplemente te permite contribuir datos mientras sucede."
         },
         {
           title: "El Ciclo",
-          content: "Gastar\n\nSubir\n\nMinar\n\nGanar"
+          content: "Gastar\n\nSubir\n\nContribuir\n\nGanar"
         }
       ],
       whitepaperLink: "https://yumo-yumo.gitbook.io/whitepaper",

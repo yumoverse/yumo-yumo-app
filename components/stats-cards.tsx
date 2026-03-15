@@ -12,7 +12,7 @@ const stats = [
     description: "Tracked by the community",
   },
   {
-    label: "Mining Phase",
+    label: "Data Contribution Phase",
     value: "Active",
     icon: Zap,
     color: "from-blue-500 to-cyan-500",

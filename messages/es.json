@@ -11,8 +11,8 @@
     "app": "Aplicación"
   },
   "hero": {
-    "title": "Alimenta al Yumbie.",
-    "subtitle": "Convierte tus gastos en recompensas.",
+    "title": "Decodifica tus recibos.",
+    "subtitle": "Revela los costos ocultos.",
     "description": "Tus recibos ocultan valor. Yumbie te ayuda a descubrirlo.",
     "cta": "Subir Recibo",
     "joinWaitlist": "Únete a la Lista de Espera"
@@ -62,7 +62,7 @@
     "totalSupply": "Suministro Total: 99.000 Millones de $YUMO",
     "distribution": [
       {
-        "label": "1. Proof of Expense (Minería PoE)",
+        "label": "1. Proof of Expense (Contribución de Datos PoE)",
         "description": "Recompensas generadas al alimentar a tu Yumbie y participar en el ecosistema."
       },
       {
@@ -106,7 +106,7 @@
         "title": "Fase 1: Génesis — El Despertar de la Conciencia\nEl viaje comienza",
         "items": [
           "Lanzamiento Justo (Fair Launch): Descubrimiento de precio y liquidez impulsados 100% por la comunidad.",
-          "Minería PoE: Empieza a transformar tus recibos en recompensas de datos aYUMO.",
+          "Contribución de Datos PoE: Empieza a transformar tus recibos en recompensas de datos aYUMO.",
           "Identidad Digital: Reclama tu Foundation NFT y asegura tu lugar en el origen del ecosistema."
         ]
       },
@@ -240,12 +240,12 @@
       {
         "title": "1. Entonces... ¿qué es Yumo Yumo?",
         "content": [
-          "Yumo Yumo es un proyecto Web3 que te permite minar tokens haciendo algo que ya haces todos los días:",
+          "Yumo Yumo es un proyecto Web3 que te permite ganar tokens haciendo algo que ya haces todos los días:",
           "Gastar dinero.",
           "Cada precio tiene capas ocultas: impuestos, márgenes de beneficio, costos operativos...",
           "Los pagas a diario sin pensarlo.",
           "Yumo Yumo analiza esas capas y dice:",
-          "\"¡Genial! Convirtamos este gasto en minería\"."
+          "\"¡Genial! Convirtamos este gasto en contribución de datos\"."
         ]
       },
       {
@@ -271,10 +271,10 @@
         ]
       },
       {
-        "title": "4. Minería para la vida normal",
+        "title": "4. Contribución de datos para la vida normal",
         "content": [
           "Olvida las tarjetas gráficas costosas y los almacenes llenos de máquinas.",
-          "En Yumo Yumo, tus recibos son tus nodos de minería.",
+          "En Yumo Yumo, tus recibos son tus contribución de datos.",
           "Cada tique válido envía una señal al sistema y genera tokens.",
           "El ciclo es perfecto:",
           "Gasta → Sube → Mina → Gana",
@@ -315,7 +315,7 @@
         "title": "8. ¿Para quién es esto realmente?",
         "content": [
           "Para quienes gastan dinero (o sea, todos).",
-          "Para quienes aman la minería pero también quieren dormir tranquilos.",
+          "Para quienes aman contribuir datos pero también quieren dormir tranquilos.",
           "Para quienes prefieren reglas claras antes que historias bonitas.",
           "No necesitas hacer trading ni entender gráficos complejos.",
           "Solo sube tus recibos."
@@ -331,7 +331,7 @@
         "title": "10. Reflexión final",
         "content": [
           "El dinero ya sale de tu bolsillo cada día.",
-          "Yumo Yumo no intenta detener eso; simplemente te permite minar mientras sucede.",
+          "Yumo Yumo no intenta detener eso; simplemente te permite contribuir datos mientras sucede.",
           "El ciclo: Gastar → Sube → Mina → Gana",
           "Ese es el ciclo.",
           "¿Listo para entrar en la cocina?"
@@ -348,7 +348,7 @@
       "steps": {
         "spend": "Gastar",
         "upload": "Subir",
-        "mine": "Minar",
+        "mine": "Contribuir",
         "earn": "Ganar"
       }
     }
@@ -591,8 +591,8 @@
     "app": "Aplicación"
   },
   "hero": {
-    "title": "Alimenta al Yumbie.",
-    "subtitle": "Convierte tus gastos en recompensas.",
+    "title": "Decodifica tus recibos.",
+    "subtitle": "Revela los costos ocultos.",
     "description": "Tus recibos ocultan valor. Yumbie te ayuda a descubrirlo.",
     "cta": "Subir Recibo",
     "joinWaitlist": "Únete a la Lista de Espera"
@@ -642,7 +642,7 @@
     "totalSupply": "Suministro Total: 99.000 Millones de $YUMO",
     "distribution": [
       {
-        "label": "1. Proof of Expense (Minería PoE)",
+        "label": "1. Proof of Expense (Contribución de Datos PoE)",
         "description": "Recompensas generadas al alimentar a tu Yumbie y participar en el ecosistema."
       },
       {
@@ -686,7 +686,7 @@
         "title": "Fase 1: Génesis — El Despertar de la Conciencia\nEl viaje comienza",
         "items": [
           "Lanzamiento Justo (Fair Launch): Descubrimiento de precio y liquidez impulsados 100% por la comunidad.",
-          "Minería PoE: Empieza a transformar tus recibos en recompensas de datos aYUMO.",
+          "Contribución de Datos PoE: Empieza a transformar tus recibos en recompensas de datos aYUMO.",
           "Identidad Digital: Reclama tu Foundation NFT y asegura tu lugar en el origen del ecosistema."
         ]
       },
@@ -820,12 +820,12 @@
       {
         "title": "1. Entonces... ¿qué es Yumo Yumo?",
         "content": [
-          "Yumo Yumo es un proyecto Web3 que te permite minar tokens haciendo algo que ya haces todos los días:",
+          "Yumo Yumo es un proyecto Web3 que te permite ganar tokens haciendo algo que ya haces todos los días:",
           "Gastar dinero.",
           "Cada precio tiene capas ocultas: impuestos, márgenes de beneficio, costos operativos...",
           "Los pagas a diario sin pensarlo.",
           "Yumo Yumo analiza esas capas y dice:",
-          "\"¡Genial! Convirtamos este gasto en minería\"."
+          "\"¡Genial! Convirtamos este gasto en contribución de datos\"."
         ]
       },
       {
@@ -851,10 +851,10 @@
         ]
       },
       {
-        "title": "4. Minería para la vida normal",
+        "title": "4. Contribución de datos para la vida normal",
         "content": [
           "Olvida las tarjetas gráficas costosas y los almacenes llenos de máquinas.",
-          "En Yumo Yumo, tus recibos son tus nodos de minería.",
+          "En Yumo Yumo, tus recibos son tus contribución de datos.",
           "Cada tique válido envía una señal al sistema y genera tokens.",
           "El ciclo es perfecto:",
           "Gasta → Sube → Mina → Gana",
@@ -895,7 +895,7 @@
         "title": "8. ¿Para quién es esto realmente?",
         "content": [
           "Para quienes gastan dinero (o sea, todos).",
-          "Para quienes aman la minería pero también quieren dormir tranquilos.",
+          "Para quienes aman contribuir datos pero también quieren dormir tranquilos.",
           "Para quienes prefieren reglas claras antes que historias bonitas.",
           "No necesitas hacer trading ni entender gráficos complejos.",
           "Solo sube tus recibos."
@@ -911,7 +911,7 @@
         "title": "10. Reflexión final",
         "content": [
           "El dinero ya sale de tu bolsillo cada día.",
-          "Yumo Yumo no intenta detener eso; simplemente te permite minar mientras sucede.",
+          "Yumo Yumo no intenta detener eso; simplemente te permite contribuir datos mientras sucede.",
           "El ciclo: Gastar → Sube → Mina → Gana",
           "Ese es el ciclo.",
           "¿Listo para entrar en la cocina?"
@@ -928,7 +928,7 @@
       "steps": {
         "spend": "Gastar",
         "upload": "Subir",
-        "mine": "Minar",
+        "mine": "Contribuir",
         "earn": "Ganar"
       }
     }
@@ -1171,8 +1171,8 @@
     "app": "Aplicación"
   },
   "hero": {
-    "title": "Alimenta al Yumbie.",
-    "subtitle": "Convierte tus gastos en recompensas.",
+    "title": "Decodifica tus recibos.",
+    "subtitle": "Revela los costos ocultos.",
     "description": "Tus recibos ocultan valor. Yumbie te ayuda a descubrirlo.",
     "cta": "Subir Recibo",
     "joinWaitlist": "Únete a la Lista de Espera"
@@ -1222,7 +1222,7 @@
     "totalSupply": "Suministro Total: 99.000 Millones de $YUMO",
     "distribution": [
       {
-        "label": "1. Proof of Expense (Minería PoE)",
+        "label": "1. Proof of Expense (Contribución de Datos PoE)",
         "description": "Recompensas generadas al alimentar a tu Yumbie y participar en el ecosistema."
       },
       {
@@ -1266,7 +1266,7 @@
         "title": "Fase 1: Génesis — El Despertar de la Conciencia\nEl viaje comienza",
         "items": [
           "Lanzamiento Justo (Fair Launch): Descubrimiento de precio y liquidez impulsados 100% por la comunidad.",
-          "Minería PoE: Empieza a transformar tus recibos en recompensas de datos aYUMO.",
+          "Contribución de Datos PoE: Empieza a transformar tus recibos en recompensas de datos aYUMO.",
           "Identidad Digital: Reclama tu Foundation NFT y asegura tu lugar en el origen del ecosistema."
         ]
       },
@@ -1400,12 +1400,12 @@
       {
         "title": "1. Entonces... ¿qué es Yumo Yumo?",
         "content": [
-          "Yumo Yumo es un proyecto Web3 que te permite minar tokens haciendo algo que ya haces todos los días:",
+          "Yumo Yumo es un proyecto Web3 que te permite ganar tokens haciendo algo que ya haces todos los días:",
           "Gastar dinero.",
           "Cada precio tiene capas ocultas: impuestos, márgenes de beneficio, costos operativos...",
           "Los pagas a diario sin pensarlo.",
           "Yumo Yumo analiza esas capas y dice:",
-          "\"¡Genial! Convirtamos este gasto en minería\"."
+          "\"¡Genial! Convirtamos este gasto en contribución de datos\"."
         ]
       },
       {
@@ -1431,10 +1431,10 @@
         ]
       },
       {
-        "title": "4. Minería para la vida normal",
+        "title": "4. Contribución de datos para la vida normal",
         "content": [
           "Olvida las tarjetas gráficas costosas y los almacenes llenos de máquinas.",
-          "En Yumo Yumo, tus recibos son tus nodos de minería.",
+          "En Yumo Yumo, tus recibos son tus contribución de datos.",
           "Cada tique válido envía una señal al sistema y genera tokens.",
           "El ciclo es perfecto:",
           "Gasta → Sube → Mina → Gana",
@@ -1475,7 +1475,7 @@
         "title": "8. ¿Para quién es esto realmente?",
         "content": [
           "Para quienes gastan dinero (o sea, todos).",
-          "Para quienes aman la minería pero también quieren dormir tranquilos.",
+          "Para quienes aman contribuir datos pero también quieren dormir tranquilos.",
           "Para quienes prefieren reglas claras antes que historias bonitas.",
           "No necesitas hacer trading ni entender gráficos complejos.",
           "Solo sube tus recibos."
@@ -1491,7 +1491,7 @@
         "title": "10. Reflexión final",
         "content": [
           "El dinero ya sale de tu bolsillo cada día.",
-          "Yumo Yumo no intenta detener eso; simplemente te permite minar mientras sucede.",
+          "Yumo Yumo no intenta detener eso; simplemente te permite contribuir datos mientras sucede.",
           "El ciclo: Gastar → Sube → Mina → Gana",
           "Ese es el ciclo.",
           "¿Listo para entrar en la cocina?"
@@ -1508,7 +1508,7 @@
       "steps": {
         "spend": "Gastar",
         "upload": "Subir",
-        "mine": "Minar",
+        "mine": "Contribuir",
         "earn": "Ganar"
       }
     }
@@ -1751,8 +1751,8 @@
     "app": "Aplicación"
   },
   "hero": {
-    "title": "Alimenta al Yumbie.",
-    "subtitle": "Convierte tus gastos en recompensas.",
+    "title": "Decodifica tus recibos.",
+    "subtitle": "Revela los costos ocultos.",
     "description": "Tus recibos ocultan valor. Yumbie te ayuda a descubrirlo.",
     "cta": "Subir Recibo",
     "joinWaitlist": "Únete a la Lista de Espera"
@@ -1802,7 +1802,7 @@
     "totalSupply": "Suministro Total: 99.000 Millones de $YUMO",
     "distribution": [
       {
-        "label": "1. Proof of Expense (Minería PoE)",
+        "label": "1. Proof of Expense (Contribución de Datos PoE)",
         "description": "Recompensas generadas al alimentar a tu Yumbie y participar en el ecosistema."
       },
       {
@@ -1846,7 +1846,7 @@
         "title": "Fase 1: Génesis — El Despertar de la Conciencia\nEl viaje comienza",
         "items": [
           "Lanzamiento Justo (Fair Launch): Descubrimiento de precio y liquidez impulsados 100% por la comunidad.",
-          "Minería PoE: Empieza a transformar tus recibos en recompensas de datos aYUMO.",
+          "Contribución de Datos PoE: Empieza a transformar tus recibos en recompensas de datos aYUMO.",
           "Identidad Digital: Reclama tu Foundation NFT y asegura tu lugar en el origen del ecosistema."
         ]
       },
@@ -1980,12 +1980,12 @@
       {
         "title": "1. Entonces... ¿qué es Yumo Yumo?",
         "content": [
-          "Yumo Yumo es un proyecto Web3 que te permite minar tokens haciendo algo que ya haces todos los días:",
+          "Yumo Yumo es un proyecto Web3 que te permite ganar tokens haciendo algo que ya haces todos los días:",
           "Gastar dinero.",
           "Cada precio tiene capas ocultas: impuestos, márgenes de beneficio, costos operativos...",
           "Los pagas a diario sin pensarlo.",
           "Yumo Yumo analiza esas capas y dice:",
-          "\"¡Genial! Convirtamos este gasto en minería\"."
+          "\"¡Genial! Convirtamos este gasto en contribución de datos\"."
         ]
       },
       {
@@ -2011,10 +2011,10 @@
         ]
       },
       {
-        "title": "4. Minería para la vida normal",
+        "title": "4. Contribución de datos para la vida normal",
         "content": [
           "Olvida las tarjetas gráficas costosas y los almacenes llenos de máquinas.",
-          "En Yumo Yumo, tus recibos son tus nodos de minería.",
+          "En Yumo Yumo, tus recibos son tus contribución de datos.",
           "Cada tique válido envía una señal al sistema y genera tokens.",
           "El ciclo es perfecto:",
           "Gasta → Sube → Mina → Gana",
@@ -2055,7 +2055,7 @@
         "title": "8. ¿Para quién es esto realmente?",
         "content": [
           "Para quienes gastan dinero (o sea, todos).",
-          "Para quienes aman la minería pero también quieren dormir tranquilos.",
+          "Para quienes aman contribuir datos pero también quieren dormir tranquilos.",
           "Para quienes prefieren reglas claras antes que historias bonitas.",
           "No necesitas hacer trading ni entender gráficos complejos.",
           "Solo sube tus recibos."
@@ -2071,7 +2071,7 @@
         "title": "10. Reflexión final",
         "content": [
           "El dinero ya sale de tu bolsillo cada día.",
-          "Yumo Yumo no intenta detener eso; simplemente te permite minar mientras sucede.",
+          "Yumo Yumo no intenta detener eso; simplemente te permite contribuir datos mientras sucede.",
           "El ciclo: Gastar → Sube → Mina → Gana",
           "Ese es el ciclo.",
           "¿Listo para entrar en la cocina?"
@@ -2088,7 +2088,7 @@
       "steps": {
         "spend": "Gastar",
         "upload": "Subir",
-        "mine": "Minar",
+        "mine": "Contribuir",
         "earn": "Ganar"
       }
     }

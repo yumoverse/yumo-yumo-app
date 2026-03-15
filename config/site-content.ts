@@ -21,8 +21,8 @@ export const siteContent = {
     copyright: "© 2025 Yumo Yumo. All rights reserved.",
   },
   hero: {
-    title: "Feed the Yumbie.",
-    subtitle: "Turn spending into rewards.",
+    title: "Decode your receipts.",
+    subtitle: "Reveal hidden costs.",
     description: "Your receipts hide value. Yumbie helps you unlock it.",
     cta: "Upload Receipt",
   },
@@ -64,7 +64,7 @@ export const siteContent = {
     distribution: [
       {
         percentage: "70%",
-        label: "Proof of Expense (Mining)",
+        label: "Proof of Expense (Data Contribution)",
         description: "Earned by users through receipt uploads",
       },
       {
@@ -79,7 +79,7 @@ export const siteContent = {
       },
       {
         percentage: "5%",
-        label: "Genesis (Early Participation)",
+        label: "Early Data Contributors (Early Participation)",
         description: "Reserved for early adopters and contributors",
       },
     ],
