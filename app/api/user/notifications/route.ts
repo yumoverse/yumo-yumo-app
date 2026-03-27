@@ -38,6 +38,8 @@ export async function GET() {
       SELECT id, type, title, body, payload, receipt_id, read_at, created_at
       FROM user_notifications
       WHERE username = ${username}
+        AND type <> 'extra_hidden_cost'
+        AND type <> 'receipt_ready_to_claim'
       ORDER BY created_at DESC
       LIMIT ${LIMIT}
     `;
@@ -69,7 +71,7 @@ export async function GET() {
   }
 }
 
-/** PATCH: mark one notification or all as read. Body: { id?: number, markAll?: boolean }. */
+/** PATCH: delete one notification by id, or mark all as read. Body: { id?: number, markAll?: boolean }. */
 export async function PATCH(req: Request) {
   try {
     const username = await getSessionUsername();
@@ -98,8 +100,7 @@ export async function PATCH(req: Request) {
 
     if (typeof id === "number" && Number.isInteger(id)) {
       await sql`
-        UPDATE user_notifications
-        SET read_at = now()
+        DELETE FROM user_notifications
         WHERE username = ${username} AND id = ${id}
       `;
       return NextResponse.json({ success: true });

@@ -203,7 +203,8 @@ function getSeedUsersFromEnv(): { username: string; password: string }[] | null 
 const LOGIN_CACHE_TTL_MS = 5 * 60 * 1000;
 const loginCache = new Map<string, { hash: string; expiry: number }>();
 
-const DB_TIMEOUT_MS = 2000;
+// Login must tolerate cold Neon / slow local networks; 2s caused false "invalid password" (see DB_TIMEOUT in logs).
+const DB_TIMEOUT_MS = 15_000;
 const BCRYPT_ROUNDS = 8;
 
 async function rehashToCost8InBackground(

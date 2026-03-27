@@ -1,0 +1,589 @@
+{
+  "generatedAt": "2026-03-27T09:20:28.023Z",
+  "project": "yumoyumo",
+  "summary": {
+    "totalRoutes": 34,
+    "landingRoutes": 6,
+    "appRoutes": 16,
+    "adminRoutes": 12
+  },
+  "navigation": {
+    "mobileBottomNav": [
+      "/app",
+      "/app/receipts",
+      "/app/mine",
+      "/app/leaderboard",
+      "/app/profile"
+    ],
+    "desktopSidebarPrimary": [
+      "/app/dashboard",
+      "/app/receipts",
+      "/app/leaderboard",
+      "/app/profile"
+    ],
+    "desktopSidebarAdmin": [
+      "/app/upload",
+      "/app/admin/merchants",
+      "/app/admin/scraped-products",
+      "/app/admin/receipt-line-items",
+      "/app/admin/approvals",
+      "/app/admin/bulk-upload",
+      "/app/admin/analyze-file",
+      "/app/admin/feedback",
+      "/app/admin/rejected",
+      "/app/admin/blob-download",
+      "/app/admin/log-download",
+      "/app/admin/ocr-download",
+      "/app/admin/quest-test"
+    ]
+  },
+  "layouts": {
+    "rootLayout": {
+      "sourceFile": "app/layout.tsx",
+      "providers": [
+        "GoogleTranslateBlocker",
+        "DOMErrorHandler",
+        "WalletProviderWrapper",
+        "ErrorBoundary",
+        "Toaster"
+      ]
+    },
+    "appLayout": {
+      "sourceFile": "app/app/layout.tsx",
+      "providers": [
+        "AppI18nProvider",
+        "AppQueryProvider",
+        "ThemeProvider",
+        "AppProfileProvider"
+      ]
+    },
+    "appShell": {
+      "sourceFile": "components/app/app-shell.tsx",
+      "sharedUi": [
+        "ThemeBg",
+        "DesktopSidebar",
+        "Topbar",
+        "BottomNav",
+        "ProfileModal"
+      ]
+    }
+  },
+  "routes": [
+    {
+      "route": "/",
+      "kind": "landing",
+      "sourceFile": "app/(landing)/page.tsx",
+      "uiComponents": [
+        "@/components/hero-section",
+        "@/components/how-it-works",
+        "@/components/roadmap-section",
+        "@/components/tokenomics-section",
+        "@/components/papers-section",
+        "@/components/waitlist-modal"
+      ],
+      "appLibDependencies": []
+    },
+    {
+      "route": "/app",
+      "kind": "app",
+      "sourceFile": "app/app/page.tsx",
+      "uiComponents": [],
+      "appLibDependencies": []
+    },
+    {
+      "route": "/app/admin/analyze-file",
+      "kind": "admin",
+      "sourceFile": "app/app/admin/analyze-file/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/ui/button",
+        "@/components/ui/tabs"
+      ],
+      "appLibDependencies": [
+        "@/lib/app/profile-context"
+      ]
+    },
+    {
+      "route": "/app/admin/approvals",
+      "kind": "admin",
+      "sourceFile": "app/app/admin/approvals/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/app/data-table",
+        "@/components/app/empty-state",
+        "@/components/app/error-state",
+        "@/components/app/status-badge",
+        "@/components/ui/button"
+      ],
+      "appLibDependencies": [
+        "@/lib/mock/types",
+        "@/lib/i18n/app-context",
+        "@/lib/app/profile-context"
+      ]
+    },
+    {
+      "route": "/app/admin/blob-download",
+      "kind": "admin",
+      "sourceFile": "app/app/admin/blob-download/page.tsx",
+      "uiComponents": [
+        "@/components/ui/button",
+        "@/components/ui/input",
+        "@/components/ui/select"
+      ],
+      "appLibDependencies": [
+        "@/lib/i18n/app-context"
+      ]
+    },
+    {
+      "route": "/app/admin/bulk-upload",
+      "kind": "admin",
+      "sourceFile": "app/app/admin/bulk-upload/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/ui/button"
+      ],
+      "appLibDependencies": [
+        "@/lib/i18n/app-context",
+        "@/lib/app/profile-context"
+      ]
+    },
+    {
+      "route": "/app/admin/feedback",
+      "kind": "admin",
+      "sourceFile": "app/app/admin/feedback/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/app/data-table",
+        "@/components/app/empty-state",
+        "@/components/app/error-state",
+        "@/components/ui/button",
+        "@/components/ui/badge"
+      ],
+      "appLibDependencies": [
+        "@/lib/i18n/app-context",
+        "@/lib/app/profile-context"
+      ]
+    },
+    {
+      "route": "/app/admin/log-download",
+      "kind": "admin",
+      "sourceFile": "app/app/admin/log-download/page.tsx",
+      "uiComponents": [
+        "@/components/ui/button",
+        "@/components/ui/select"
+      ],
+      "appLibDependencies": [
+        "@/lib/i18n/app-context"
+      ]
+    },
+    {
+      "route": "/app/admin/merchants",
+      "kind": "admin",
+      "sourceFile": "app/app/admin/merchants/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/app/data-table",
+        "@/components/app/empty-state",
+        "@/components/app/error-state",
+        "@/components/ui/button"
+      ],
+      "appLibDependencies": [
+        "@/lib/i18n/app-context",
+        "@/lib/app/profile-context"
+      ]
+    },
+    {
+      "route": "/app/admin/ocr-download",
+      "kind": "admin",
+      "sourceFile": "app/app/admin/ocr-download/page.tsx",
+      "uiComponents": [
+        "@/components/ui/button",
+        "@/components/ui/select"
+      ],
+      "appLibDependencies": [
+        "@/lib/i18n/app-context"
+      ]
+    },
+    {
+      "route": "/app/admin/quest-test",
+      "kind": "admin",
+      "sourceFile": "app/app/admin/quest-test/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/ui/button",
+        "@/components/ui/card"
+      ],
+      "appLibDependencies": []
+    },
+    {
+      "route": "/app/admin/receipt-line-items",
+      "kind": "admin",
+      "sourceFile": "app/app/admin/receipt-line-items/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell"
+      ],
+      "appLibDependencies": [
+        "@/lib/app/profile-context"
+      ]
+    },
+    {
+      "route": "/app/admin/rejected",
+      "kind": "admin",
+      "sourceFile": "app/app/admin/rejected/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/app/data-table",
+        "@/components/app/empty-state",
+        "@/components/app/error-state",
+        "@/components/app/status-badge",
+        "@/components/ui/button"
+      ],
+      "appLibDependencies": [
+        "@/lib/mock/types",
+        "@/lib/i18n/app-context",
+        "@/lib/app/profile-context"
+      ]
+    },
+    {
+      "route": "/app/admin/scraped-products",
+      "kind": "admin",
+      "sourceFile": "app/app/admin/scraped-products/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/app/data-table",
+        "@/components/app/empty-state",
+        "@/components/app/error-state",
+        "@/components/ui/button",
+        "@/components/ui/input"
+      ],
+      "appLibDependencies": [
+        "@/lib/app/profile-context"
+      ]
+    },
+    {
+      "route": "/app/claim/[id]",
+      "kind": "app",
+      "sourceFile": "app/app/claim/[id]/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/app/receipt-pipeline-steps"
+      ],
+      "appLibDependencies": [
+        "@/lib/mock/types",
+        "@/lib/receipt/types",
+        "@/lib/i18n/app-context",
+        "@/lib/app/profile-context"
+      ]
+    },
+    {
+      "route": "/app/coming-soon",
+      "kind": "app",
+      "sourceFile": "app/app/coming-soon/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/app/theme-card"
+      ],
+      "appLibDependencies": [
+        "@/lib/app/profile-context",
+        "@/lib/i18n/app-context"
+      ]
+    },
+    {
+      "route": "/app/dashboard",
+      "kind": "app",
+      "sourceFile": "app/app/dashboard/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/app/error-state",
+        "@/components/app/home/hero-total",
+        "@/components/app/home/quick-actions",
+        "@/components/app/home/streak-row",
+        "@/components/app/home/token-cards",
+        "@/components/app/quests-screen"
+      ],
+      "appLibDependencies": [
+        "@/lib/i18n/app-context",
+        "@/lib/app/profile-context"
+      ]
+    },
+    {
+      "route": "/app/insights",
+      "kind": "app",
+      "sourceFile": "app/app/insights/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/app/empty-state",
+        "@/components/app/error-state",
+        "@/components/app/theme-card",
+        "@/components/insights/truth-metric-hero",
+        "@/components/insights/money-flow-breakdown",
+        "@/components/insights/what-if-simulator",
+        "@/components/insights/filters-bar"
+      ],
+      "appLibDependencies": [
+        "@/lib/i18n/app-context",
+        "@/lib/app/profile-context",
+        "@/lib/insights/compute",
+        "@/lib/insights/types"
+      ]
+    },
+    {
+      "route": "/app/leaderboard",
+      "kind": "app",
+      "sourceFile": "app/app/leaderboard/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/app/error-state",
+        "@/components/app/theme-card"
+      ],
+      "appLibDependencies": [
+        "@/lib/theme/theme-context",
+        "@/lib/utils",
+        "@/lib/mock/types",
+        "@/lib/i18n/app-context",
+        "@/lib/app/profile-context"
+      ]
+    },
+    {
+      "route": "/app/login",
+      "kind": "app",
+      "sourceFile": "app/app/login/page.tsx",
+      "uiComponents": [
+        "@/components/ui/card",
+        "@/components/ui/button",
+        "@/components/ui/input",
+        "@/components/ui/label",
+        "@/components/ui/select"
+      ],
+      "appLibDependencies": [
+        "@/lib/shared/countries",
+        "@/lib/i18n/app-context",
+        "@/lib/i18n/app-context"
+      ]
+    },
+    {
+      "route": "/app/menu",
+      "kind": "app",
+      "sourceFile": "app/app/menu/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/app/theme-toggle"
+      ],
+      "appLibDependencies": [
+        "@/lib/theme/modules",
+        "@/lib/theme/theme-context",
+        "@/lib/app/profile-context",
+        "@/lib/i18n/app-context",
+        "@/lib/hooks/use-is-desktop",
+        "@/lib/utils"
+      ]
+    },
+    {
+      "route": "/app/mine",
+      "kind": "app",
+      "sourceFile": "app/app/mine/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/app/desktop-upload-message",
+        "@/components/app/receipt-scanner",
+        "@/components/app/receipt-pipeline-steps",
+        "@/components/app/time-picker-modal",
+        "@/components/app/quality-issues-modal"
+      ],
+      "appLibDependencies": [
+        "@/lib/hooks/use-is-desktop",
+        "@/lib/app/profile-context",
+        "@/lib/app/query-keys",
+        "@/lib/mock/types",
+        "@/lib/receipt/types",
+        "@/lib/receipt/receipt-converter",
+        "@/lib/receipt/synthetic-receipt",
+        "@/lib/i18n/app-context",
+        "@/lib/utils/image-quality-check",
+        "@/lib/utils/image-quality-check",
+        "@/lib/utils/efatura-exempt"
+      ]
+    },
+    {
+      "route": "/app/profile",
+      "kind": "app",
+      "sourceFile": "app/app/profile/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/app/theme-card",
+        "@/components/app/home/yumo-logo"
+      ],
+      "appLibDependencies": [
+        "@/lib/theme/theme-context",
+        "@/lib/app/profile-context",
+        "@/lib/i18n/app-context",
+        "@/lib/utils"
+      ]
+    },
+    {
+      "route": "/app/receipts",
+      "kind": "app",
+      "sourceFile": "app/app/receipts/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/app/theme-card",
+        "@/components/app/error-state",
+        "@/components/app/status-badge",
+        "@/components/app/pagination"
+      ],
+      "appLibDependencies": [
+        "@/lib/theme/theme-context",
+        "@/lib/utils",
+        "@/lib/mock/types",
+        "@/lib/i18n/app-context",
+        "@/lib/app/profile-context"
+      ]
+    },
+    {
+      "route": "/app/receipts/[id]",
+      "kind": "app",
+      "sourceFile": "app/app/receipts/[id]/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/app/receipt-detail-hero",
+        "@/components/app/receipt-viewer",
+        "@/components/app/evidence-panel",
+        "@/components/app/breakdown-donut",
+        "@/components/app/breakdown-stacked-bar",
+        "@/components/app/theme-card",
+        "@/components/app/error-state",
+        "@/components/app/economics-banner",
+        "@/components/ui/tabs",
+        "@/components/app/report-bug-modal"
+      ],
+      "appLibDependencies": [
+        "@/lib/app/profile-context",
+        "@/lib/mock/types",
+        "@/lib/receipt/synthetic-receipt",
+        "@/lib/i18n/app-context"
+      ]
+    },
+    {
+      "route": "/app/rewards",
+      "kind": "app",
+      "sourceFile": "app/app/rewards/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/ui/card",
+        "@/components/ui/button"
+      ],
+      "appLibDependencies": [
+        "@/lib/utils",
+        "@/lib/mock/types",
+        "@/lib/i18n/app-context",
+        "@/lib/app/profile-context"
+      ]
+    },
+    {
+      "route": "/app/settings",
+      "kind": "app",
+      "sourceFile": "app/app/settings/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/app/theme-card",
+        "@/components/wallet-connect-button",
+        "@/components/ui/button",
+        "@/components/ui/input",
+        "@/components/ui/label",
+        "@/components/ui/select",
+        "@/components/ui/dialog",
+        "@/components/ui/calendar",
+        "@/components/ui/popover",
+        "@/components/app/theme-toggle",
+        "@/components/ui/switch",
+        "@/components/ui/slider"
+      ],
+      "appLibDependencies": [
+        "@/lib/utils",
+        "@/lib/i18n/app-context",
+        "@/lib/app/profile-context",
+        "@/lib/design-tokens",
+        "@/lib/audio/sound-context"
+      ]
+    },
+    {
+      "route": "/app/tasks",
+      "kind": "app",
+      "sourceFile": "app/app/tasks/page.tsx",
+      "uiComponents": [
+        "@/components/app/app-shell",
+        "@/components/app/quests-screen"
+      ],
+      "appLibDependencies": [
+        "@/lib/app/profile-context"
+      ]
+    },
+    {
+      "route": "/app/upload",
+      "kind": "app",
+      "sourceFile": "app/app/upload/page.tsx",
+      "uiComponents": [
+        "@/components/wallet-connect-button",
+        "@/components/ui/button",
+        "@/components/ui/stepper",
+        "@/components/app/desktop-upload-message",
+        "@/components/app/app-shell",
+        "@/components/app/theme-card",
+        "@/components/app/theme-bg",
+        "@/components/ui/dialog"
+      ],
+      "appLibDependencies": [
+        "@/lib/hooks/use-is-desktop",
+        "@/lib/receipt/types",
+        "@/lib/receipt/calculations",
+        "@/lib/i18n/app-context",
+        "@/lib/app/profile-context"
+      ]
+    },
+    {
+      "route": "/faq",
+      "kind": "landing",
+      "sourceFile": "app/(landing)/faq/page.tsx",
+      "uiComponents": [],
+      "appLibDependencies": [
+        "@/lib/i18n/context"
+      ]
+    },
+    {
+      "route": "/funpaper",
+      "kind": "landing",
+      "sourceFile": "app/(landing)/funpaper/page.tsx",
+      "uiComponents": [],
+      "appLibDependencies": [
+        "@/lib/i18n/context"
+      ]
+    },
+    {
+      "route": "/privacy",
+      "kind": "landing",
+      "sourceFile": "app/(landing)/privacy/page.tsx",
+      "uiComponents": [],
+      "appLibDependencies": [
+        "@/lib/i18n/context"
+      ]
+    },
+    {
+      "route": "/support",
+      "kind": "landing",
+      "sourceFile": "app/(landing)/support/page.tsx",
+      "uiComponents": [],
+      "appLibDependencies": [
+        "@/lib/i18n/context"
+      ]
+    },
+    {
+      "route": "/terms",
+      "kind": "landing",
+      "sourceFile": "app/(landing)/terms/page.tsx",
+      "uiComponents": [],
+      "appLibDependencies": [
+        "@/lib/i18n/context"
+      ]
+    }
+  ]
+}

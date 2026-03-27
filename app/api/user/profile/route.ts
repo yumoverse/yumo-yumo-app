@@ -67,14 +67,14 @@ export async function GET() {
         SELECT COALESCE(SUM(r.hidden_cost_core), 0)::float as ayumo
         FROM receipts r
         WHERE r.username = ${username}
-          AND (r.status = 'analyzed' OR r.status = 'verified')
+          AND LOWER(COALESCE(r.status, '')) IN ('analyzed', 'verified')
       `.then((r) => toRows(r)[0] ?? null).catch(() => ({ ayumo: 0 })),
       sql`
         SELECT COALESCE(SUM(rr.ryumo_bonus_amount), 0)::float as ryumo_receipts
         FROM receipts r
         LEFT JOIN receipt_rewards rr ON r.receipt_id = rr.receipt_id
         WHERE r.username = ${username}
-          AND (r.status = 'analyzed' OR r.status = 'verified')
+          AND LOWER(COALESCE(r.status, '')) IN ('analyzed', 'verified')
       `.then((r) => toRows(r)[0] ?? null).catch(() => ({ ryumo_receipts: 0 })),
       sql`
         SELECT id, season_number, name, start_at, end_at
@@ -212,6 +212,5 @@ export async function POST(req: Request) {
     );
   }
 }
-
 
 

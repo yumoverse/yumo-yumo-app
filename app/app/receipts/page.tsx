@@ -1,105 +1,134 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/app/app-shell";
 import { ThemeCard } from "@/components/app/theme-card";
 import { ErrorState } from "@/components/app/error-state";
 import { StatusBadge } from "@/components/app/status-badge";
 import { useTier } from "@/lib/theme/theme-context";
-import { cn } from "@/lib/utils";
 import type { Receipt, ReceiptFilters } from "@/lib/mock/types";
 import { useAppLocale, translateApiError } from "@/lib/i18n/app-context";
 import { useAppProfile } from "@/lib/app/profile-context";
 import { Pagination } from "@/components/app/pagination";
+import { RECEIPTS_QUERY_KEY } from "@/lib/app/query-keys";
 import { Search, ReceiptText, Trash2, ChevronRight } from "lucide-react";
 
+
+// ── Fetch fonksiyonu (React Query queryFn)
+async function fetchReceipts(params: {
+  page: number;
+  pageSize: number;
+  search?: string;
+  statusFilter?: string;
+  dateFrom?: string;
+  dateTo?: string;
+}): Promise<{ receipts: Receipt[]; pagination: { totalPages: number; total: number; page: number } }> {
+  const urlParams = new URLSearchParams({
+    page: params.page.toString(),
+    pageSize: params.pageSize.toString(),
+  });
+  if (params.search) urlParams.set("search", params.search);
+  if (params.statusFilter) urlParams.set("statusFilter", params.statusFilter);
+
+  const res = await fetch(`/api/receipts?${urlParams.toString()}`);
+  if (res.status === 401) throw Object.assign(new Error("401"), { status: 401 });
+  if (!res.ok) throw new Error("load");
+
+  const data = await res.json();
+  let list: Receipt[] = [];
+  if (data.receipts && Array.isArray(data.receipts)) {
+    const { convertReceiptAnalysisToReceipt } = await import(
+      "@/lib/receipt/receipt-converter"
+    );
+    list = data.receipts
+      .map((a: any) => {
+        try { return convertReceiptAnalysisToReceipt(a); } catch { return null; }
+      })
+      .filter((r: Receipt | null): r is Receipt => r !== null);
+    if (params.dateFrom) list = list.filter((r) => r.date >= params.dateFrom!);
+    if (params.dateTo) list = list.filter((r) => r.date <= params.dateTo!);
+  }
+  return {
+    receipts: list,
+    pagination: {
+      totalPages: data.pagination?.totalPages ?? 1,
+      total: data.pagination?.total ?? 0,
+      page: data.pagination?.page ?? params.page,
+    },
+  };
+}
 
 export default function ReceiptsPage() {
   const router = useRouter();
   const { t, locale } = useAppLocale();
   const { profile } = useAppProfile();
+  const queryClient = useQueryClient();
   const accountLevel = profile?.accountLevel ?? 1;
   const tier = useTier(accountLevel);
   const acc = tier.accent;
+  const isAdmin = profile?.isAdmin ?? false;
 
-  const [receipts, setReceipts] = useState<Receipt[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
   const [filters, setFilters] = useState<ReceiptFilters>({});
-  const [isAdmin, setIsAdmin] = useState(false);
+  const [statusUpdatingId, setStatusUpdatingId] = useState<string | null>(null);
   const [deletingId, setDeletingId] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
-  const [totalCount, setTotalCount] = useState(0);
   const pageSize = 10;
+  const isLocalDev = process.env.NODE_ENV === "development";
 
-  useEffect(() => {
-    setIsAdmin(!!profile?.isAdmin);
+  const queryParams = {
+    page: currentPage,
+    pageSize,
+    search: filters.search?.trim() || undefined,
+    statusFilter: filters.verifiedOnly
+      ? "verifiedOnly"
+      : filters.status || undefined,
+    dateFrom: filters.dateFrom,
+    dateTo: filters.dateTo,
+  };
+
+  const {
+    data: receiptsData,
+    isLoading,
+    isError,
+    error: queryError,
+  } = useQuery({
+    queryKey: RECEIPTS_QUERY_KEY(queryParams),
+    queryFn: () => fetchReceipts(queryParams),
+    staleTime: 60_000,          // 1 dakika taze — tab geçişinde anında göster
+    placeholderData: (prev) => prev, // sayfa/filtre değişirken eski listeyi tut
+  });
+
+  const receipts = receiptsData?.receipts ?? [];
+  const totalPages = receiptsData?.pagination.totalPages ?? 1;
+  const totalCount = receiptsData?.pagination.total ?? 0;
+
+  const errorMessage = isError
+    ? ((queryError as any)?.status === 401
+        ? t("receipts.error.login") + " (401)"
+        : t("receipts.error.load"))
+    : null;
+
+  const toDbStatus = (status: Receipt["status"]): string => {
+    if (status === "VERIFIED") return "verified";
+    if (status === "REJECTED") return "rejected";
+    if (status === "PENDING") return "pending";
+    return String(status).toLowerCase();
+  };
+
+  const toUiStatus = (status: string): Receipt["status"] => {
+    if (status === "verified") return "VERIFIED";
+    if (status === "rejected") return "REJECTED";
+    if (status === "pending") return "PENDING";
+    if (status === "analyzed") return "analyzed";
+    return "scanned";
+  };
+
+  // Filtre değişince sayfayı 1'e sıfırla
+  const handleFilterChange = (next: ReceiptFilters) => {
+    setFilters(next);
     setCurrentPage(1);
-  }, [filters, profile?.isAdmin]);
-
-  useEffect(() => {
-    loadReceipts();
-  }, [currentPage, filters]);
-
-  const loadReceipts = async () => {
-    try {
-      setIsLoading(true);
-      setError(null);
-      const params = new URLSearchParams({
-        page: currentPage.toString(),
-        pageSize: pageSize.toString(),
-      });
-      if (filters.search?.trim()) params.set("search", filters.search.trim());
-      if (filters.verifiedOnly) {
-        params.set("statusFilter", "verifiedOnly");
-      } else if (filters.status) {
-        params.set("statusFilter", filters.status);
-      }
-      const res = await fetch(`/api/receipts?${params.toString()}`, { cache: "no-store" });
-
-      if (!res.ok) {
-        if (res.status === 401) setError(t("receipts.error.login") + " (401)");
-        else setError(t("receipts.error.load"));
-        setReceipts([]);
-        return;
-      }
-
-      const data = await res.json();
-      if (data.pagination) {
-        setTotalPages(data.pagination.totalPages || 1);
-        setTotalCount(data.pagination.total || 0);
-        setCurrentPage(data.pagination.page || 1);
-      }
-
-      let list: Receipt[] = [];
-      if (data.receipts && Array.isArray(data.receipts)) {
-        const { convertReceiptAnalysisToReceipt } = await import("@/lib/receipt/receipt-converter");
-        list = data.receipts
-          .map((a: any) => {
-            try {
-              return convertReceiptAnalysisToReceipt(a);
-            } catch {
-              return null;
-            }
-          })
-          .filter((r: Receipt | null): r is Receipt => r !== null);
-
-        if (filters.dateFrom) list = list.filter((r) => r.date >= filters.dateFrom!);
-        if (filters.dateTo) list = list.filter((r) => r.date <= filters.dateTo!);
-      }
-      setReceipts(list);
-    } catch (err: any) {
-      if (err?.message?.includes("Failed to fetch") || err?.name === "TypeError") {
-        setError(t("receipts.error.network"));
-      } else {
-        setError(t("receipts.error.load"));
-      }
-      setReceipts([]);
-    } finally {
-      setIsLoading(false);
-    }
   };
 
   const handleDelete = async (receiptId: string, e: React.MouseEvent) => {
@@ -112,7 +141,18 @@ export default function ReceiptsPage() {
         const err = await response.json();
         throw new Error(err.error || t("receipts.error.delete"));
       }
-      setReceipts((prev) => prev.filter((r) => r.id !== receiptId));
+      // Optimistic update: cache'den sil, tekrar fetch etme
+      queryClient.setQueryData(
+        RECEIPTS_QUERY_KEY(queryParams),
+        (old: typeof receiptsData) =>
+          old
+            ? {
+                ...old,
+                receipts: old.receipts.filter((r) => r.id !== receiptId),
+                pagination: { ...old.pagination, total: old.pagination.total - 1 },
+              }
+            : old
+      );
     } catch (err: any) {
       alert(translateApiError(err.message, t) || t("receipts.error.delete"));
     } finally {
@@ -120,12 +160,53 @@ export default function ReceiptsPage() {
     }
   };
 
+  const handleAdminStatusChange = async (
+    receiptId: string,
+    nextStatus: string,
+    e: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    e.stopPropagation();
+    try {
+      setStatusUpdatingId(receiptId);
+      const res = await fetch("/api/admin/receipts/status", {
+        method: "POST",
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ receiptId, status: nextStatus }),
+      });
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body?.error || t("receipts.error.load"));
+      }
+      // Optimistic update: status'u cache'de güncelle
+      queryClient.setQueryData(
+        RECEIPTS_QUERY_KEY(queryParams),
+        (old: typeof receiptsData) =>
+          old
+            ? {
+                ...old,
+                receipts: old.receipts.map((r) =>
+                  r.id === receiptId ? { ...r, status: toUiStatus(nextStatus) } : r
+                ),
+              }
+            : old
+      );
+    } catch (err: any) {
+      alert(translateApiError(err?.message, t) || t("receipts.error.load"));
+    } finally {
+      setStatusUpdatingId(null);
+    }
+  };
+
   const hasActiveFilters = filters.search || filters.status || filters.verifiedOnly;
 
-  if (error) {
+  if (errorMessage) {
     return (
       <AppShell>
-        <ErrorState message={error} onRetry={loadReceipts} />
+        <ErrorState
+          message={errorMessage}
+          onRetry={() => queryClient.invalidateQueries({ queryKey: RECEIPTS_QUERY_KEY(queryParams) })}
+        />
       </AppShell>
     );
   }
@@ -165,7 +246,7 @@ export default function ReceiptsPage() {
                 type="text"
                 placeholder={t("filter.search.placeholder")}
                 value={filters.search || ""}
-                onChange={(e) => setFilters({ ...filters, search: e.target.value || undefined })}
+                onChange={(e) => handleFilterChange({ ...filters, search: e.target.value || undefined })}
                 className="w-full rounded-lg border pl-8 pr-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary"
                 style={{ background: "var(--app-bg-elevated)", borderColor: "var(--app-border)", color: "var(--app-text-primary)" }}
               />
@@ -173,7 +254,7 @@ export default function ReceiptsPage() {
             <select
               value={filters.status || ""}
               onChange={(e) =>
-                setFilters({
+                handleFilterChange({
                   ...filters,
                   status: (e.target.value as ReceiptFilters["status"]) || undefined,
                 })
@@ -191,7 +272,7 @@ export default function ReceiptsPage() {
               <input
                 type="checkbox"
                 checked={filters.verifiedOnly || false}
-                onChange={(e) => setFilters({ ...filters, verifiedOnly: e.target.checked || undefined })}
+                onChange={(e) => handleFilterChange({ ...filters, verifiedOnly: e.target.checked || undefined })}
                 className="rounded border-white/20 bg-white/5"
               />
               {t("filter.verifiedOnly")}
@@ -200,7 +281,7 @@ export default function ReceiptsPage() {
               <button
                 type="button"
                 onClick={() =>
-                  setFilters({
+                  handleFilterChange({
                     ...filters,
                     search: undefined,
                     status: undefined,
@@ -314,6 +395,42 @@ export default function ReceiptsPage() {
                         </div>
                         <div className="flex items-center gap-2 mt-2 flex-wrap">
                           <StatusBadge status={r.status} />
+                          {r.status === "scanned" && (
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                router.push(`/app/claim/${r.id}`);
+                              }}
+                              className="text-[11px] rounded-md px-2 py-1 border"
+                              style={{
+                                borderColor: "var(--app-border)",
+                                color: "var(--app-text-primary)",
+                                background: "var(--app-bg-elevated)",
+                              }}
+                            >
+                              Fişi Onayla
+                            </button>
+                          )}
+                          {isAdmin && isLocalDev && (
+                            <select
+                              value={toDbStatus(r.status)}
+                              onClick={(e) => e.stopPropagation()}
+                              onChange={(e) => handleAdminStatusChange(r.id, e.target.value, e)}
+                              disabled={statusUpdatingId === r.id}
+                              className="text-[11px] rounded-md px-2 py-1 border bg-transparent"
+                              style={{
+                                borderColor: "var(--app-border)",
+                                color: "var(--app-text-primary)",
+                              }}
+                            >
+                              <option value="scanned">scanned</option>
+                              <option value="pending">pending</option>
+                              <option value="analyzed">analyzed</option>
+                              <option value="verified">verified</option>
+                              <option value="rejected">rejected</option>
+                            </select>
+                          )}
                           <span className="font-mono text-xs tabular-nums" style={{ color: tier.accent2 }}>
                             +{r.reward.amount.toFixed(2)} {r.reward.symbol}
                           </span>

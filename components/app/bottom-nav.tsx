@@ -56,11 +56,11 @@ export function BottomNav({ accountLevel = 1, className }: BottomNavProps) {
   return (
     <nav
       className={cn(
-        "fixed bottom-0 left-0 right-0 z-50 flex items-center justify-around pt-3 pb-6 safe-area-pb backdrop-blur-[20px] transition-[border-color,background] duration-[.6s]",
+        "fixed bottom-0 left-0 right-0 z-50 flex items-center justify-around pt-[clamp(0.35rem,1.2vh,0.55rem)] pb-[clamp(0.7rem,2.2vh,1rem)] safe-area-pb backdrop-blur-[20px] transition-[border-color,background] duration-[.6s]",
         className
       )}
       style={{
-        height: 72,
+        height: "clamp(56px, 9.2svh, 66px)",
         background: navBg,
         borderTop: `1px solid ${navBorder}`,
       }}
@@ -80,16 +80,16 @@ export function BottomNav({ accountLevel = 1, className }: BottomNavProps) {
               className="flex-1 flex flex-col items-center justify-center gap-0.5 cursor-pointer"
             >
               <div
-                className="w-11 h-11 rounded-[14px] flex items-center justify-center transition-all duration-[.6s] shrink-0 -mt-5"
+                className="w-[clamp(2.2rem,9.5vw,2.6rem)] h-[clamp(2.2rem,9.5vw,2.6rem)] rounded-[12px] flex items-center justify-center transition-all duration-[.6s] shrink-0 -mt-[clamp(0.6rem,1.7vh,1rem)]"
                 style={{
                   background: `linear-gradient(135deg, ${acc}, ${tier.accent2 ?? acc}99)`,
                   border: `1px solid ${acc}55`,
                   boxShadow: `0 4px 16px ${acc}40`,
                 }}
               >
-                <NavIcon name={item.icon} size={19} color="#0a0a0a" />
+                <NavIcon name={item.icon} size={16} color="#0a0a0a" />
               </div>
-              <span className="text-[8px] font-medium uppercase tracking-[.06em]" style={{ color: c }}>{t(item.labelKey)}</span>
+              <span className="text-[clamp(6px,1.7vw,8px)] font-medium uppercase tracking-[.06em]" style={{ color: c }}>{t(item.labelKey)}</span>
             </Link>
           );
         }
@@ -100,8 +100,8 @@ export function BottomNav({ accountLevel = 1, className }: BottomNavProps) {
             href={item.href}
             className="flex-1 flex flex-col items-center justify-center gap-0.5 cursor-pointer"
           >
-            <NavIcon name={item.icon} size={19} color={c} stroke={isActive ? 2 : 1.5} />
-            <span className="text-[8px] font-medium uppercase tracking-[.06em]" style={{ color: c }}>{t(item.labelKey)}</span>
+            <NavIcon name={item.icon} size={16} color={c} stroke={isActive ? 2 : 1.5} />
+            <span className="text-[clamp(6px,1.7vw,8px)] font-medium uppercase tracking-[.06em]" style={{ color: c }}>{t(item.labelKey)}</span>
             {isActive && (
               <div
                 className="w-0.5 h-0.5 rounded-full"

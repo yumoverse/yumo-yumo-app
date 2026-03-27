@@ -180,6 +180,20 @@ export interface ReceiptSource {
   captureType?: string; // How the receipt was captured (e.g., "camera", "upload", "api")
 }
 
+/** Deterministic validation of LLM extraction (Zod + line-total cross-check). */
+export interface ExtractionValidationResult {
+  status: "accepted" | "rejected" | "needs_review";
+  reason?: string;
+  zodErrors?: string[];
+  details?: {
+    linesSum: number;
+    totalAmount: number;
+    delta: number;
+    tolerance: number;
+    linesWithQtyUnitPrice: number;
+  };
+}
+
 export interface ReceiptAnalysis {
   receiptId: string;
   status: ReceiptStatus;
@@ -209,6 +223,17 @@ export interface ReceiptAnalysis {
   pipelineLog?: string; // Pipeline/terminal logs for admin evidence (no extra API cost)
   /** Google Vision raw JSON (responses[0]) for post-process; stored in receipt_vision_raw. */
   visionRawJson?: unknown;
+  /**
+   * Gemini vision line items (name, qty, prices) for Faz-2 canonical extraction; stored in receipt_data.
+   */
+  geminiLineItems?: Array<{
+    name: string;
+    quantity?: number;
+    unitType?: "adet" | "kg" | "g" | "l" | "ml" | null;
+    unitPrice?: number;
+    totalPrice?: number;
+    vatRate?: number;
+  }>;
   /** Honor/quality result when USE_HONOR_FOR_VALIDATION is enabled */
   qualityHonor?: {
     level: string;
@@ -242,6 +267,23 @@ export interface ReceiptAnalysis {
   blobFilename?: string | null;
   /** Admin-only: Blob storage URL. */
   blobUrl?: string | null;
+  /** Zod + math gate result when structured LLM line items exist. */
+  extractionValidation?: ExtractionValidationResult;
+  /**
+   * When set, written to receipts.post_process_state instead of default "pending".
+   * E.g. needs_review after line-total mismatch; validation_rejected after Zod failure.
+   */
+  postProcessState?: string;
+  /**
+   * Merchant address fields extracted by Gemini Vision or GPT-4o fallback.
+   * Stored at top level so receipt_data JSONB fallback in admin queries work correctly.
+   */
+  merchantAddress?: string | null;
+  branchInfo?: string | null;
+  addressCity?: string | null;
+  addressDistrict?: string | null;
+  addressNeighborhood?: string | null;
+  addressStreet?: string | null;
 }
 
 export interface ReceiptStorage {

@@ -1,0 +1,9 @@
+{
+	"id": "pw8OU8L3CNpUrz6",
+	"json": "{\"id\":\"pw8OU8L3CNpUrz6\",\"url\":\"https://www.starbucks.com.tr/menu/yiyecekler/muffin-cookie\",\"loadedUrl\":\"https://www.starbucks.com.tr/en/menu\",\"uniqueKey\":\"https://www.starbucks.com.tr/menu/yiyecekler/muffin-cookie\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-03-16T08:19:14.789Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.starbucks.com.tr/menu/yiyecekler/muffin-cookie",
+	"url": "https://www.starbucks.com.tr/menu/yiyecekler/muffin-cookie"
+}

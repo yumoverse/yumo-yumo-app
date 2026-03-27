@@ -10,6 +10,7 @@ import type { FraudDetectionResult } from "@/lib/fraud/fraud-detection";
 export function convertReceiptAnalysisToReceipt(analysis: ReceiptAnalysis, imageUrl?: string): Receipt {
   const blobUrl = (analysis as any).blobUrl as string | undefined;
   const resolvedImageUrl = imageUrl ?? blobUrl;
+  const normalizedStatus = String(analysis.status || "").toLowerCase();
   // Convert OCR lines
   const ocrLines: OCRLine[] = (analysis.ocr?.lines || []).map((line) => ({
     lineNo: line.lineNo,
@@ -83,16 +84,16 @@ export function convertReceiptAnalysisToReceipt(analysis: ReceiptAnalysis, image
   const reward: Reward = {
     amount: analysis.reward?.final ?? analysis.rewards?.ayumo_amount ?? 0,
     symbol: analysis.reward?.token || "aYUMO",
-    claimable: analysis.status === "verified" || analysis.status === "saved",
+    claimable: normalizedStatus === "verified" || normalizedStatus === "saved",
     ryumo: analysis.rewards?.ryumo_bonus_amount ?? analysis.reward?.ryumo ?? undefined,
   };
 
   // Convert status
   const status: "PENDING" | "VERIFIED" | "REJECTED" | "analyzed" | "scanned" = 
-    analysis.status === "verified" || analysis.status === "saved" ? "VERIFIED" :
-    analysis.status === "rejected" ? "REJECTED" :
-    analysis.status === "analyzed" ? "analyzed" :
-    analysis.status === "scanned" ? "scanned" :
+    normalizedStatus === "verified" || normalizedStatus === "saved" ? "VERIFIED" :
+    normalizedStatus === "rejected" ? "REJECTED" :
+    normalizedStatus === "analyzed" ? "analyzed" :
+    normalizedStatus === "scanned" ? "scanned" :
     "PENDING";
 
   return {
@@ -167,4 +168,3 @@ export function convertReceiptAnalysisToReceipt(analysis: ReceiptAnalysis, image
       : undefined,
   };
 }
-

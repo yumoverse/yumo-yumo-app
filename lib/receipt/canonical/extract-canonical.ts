@@ -1,9 +1,29 @@
 /**
- * Canonical extractor: Vision JSON + receipt context -> CanonicalPayload.
- * Used in post-process to produce product-level observations for hidden cost calculation.
+ * Canonical extractor: structured LLM line items (Gemini / GPT-4o fallback) → CanonicalPayload.
+ * Vision OCR regex fallback removed; lines must come from persisted geminiLineItems.
  */
 
 import type { CanonicalPayload, CanonicalMerchant, CanonicalObservation } from "../canonical-types";
+
+const NOW_ISO = () => new Date().toISOString();
+
+/** Birim — Gemini çıktısı ve `receipt_data.geminiLineItems` ile uyumlu */
+export type GeminiStructuredLineUnitType = "adet" | "kg" | "g" | "l" | "ml";
+
+/** One line from Gemini receipt JSON (same shape as gemini-vision-service lineItems). */
+export type GeminiStructuredLineItem = {
+  name: string;
+  brand?: string | null;              // Marka adı — Gemini'nin ayrıştırdığı (ör. "Ülker", "Pınar")
+  quantity?: number;
+  unitType?: GeminiStructuredLineUnitType;
+  unitPrice?: number;
+  totalPrice?: number;
+  vatRate?: number;
+  /** Ana ürün kategorisi (Türkçe). Örn: "Süt & Süt Ürünleri", "Meyve & Sebze" */
+  category?: string | null;
+  /** Alt kategori. Örn: "Peynir", "Taze Meyve" */
+  subcategory?: string | null;
+};
 
 export interface ExtractCanonicalContext {
   receiptId?: string;
@@ -14,6 +34,8 @@ export interface ExtractCanonicalContext {
   currency?: string;
   /** Receipt-level category from analyze (e.g. groceries_fmcg) for fallback */
   category?: string;
+  /** From analyze pipeline (Gemini or GPT-4o OCR fallback); persisted in receipt_data for Faz-2 */
+  geminiLineItems?: GeminiStructuredLineItem[];
 }
 
 /** Vision API response: responses[0] with fullTextAnnotation or textAnnotations */
@@ -30,108 +52,215 @@ export interface VisionResponseLike {
 }
 
 /**
- * Extract plain text from Vision API response.
+ * Read geminiLineItems saved inside receipts.receipt_data JSON.
  */
-function getTextFromVision(vision: VisionResponseLike): string {
-  const full = vision.fullTextAnnotation;
-  if (full?.text && full.text.trim().length > 0) {
-    return full.text.trim();
+export function parseGeminiLineItemsFromReceiptData(receiptData: unknown): GeminiStructuredLineItem[] | undefined {
+  if (receiptData == null) return undefined;
+  let data: Record<string, unknown>;
+  try {
+    data = typeof receiptData === "string" ? (JSON.parse(receiptData) as Record<string, unknown>) : (receiptData as Record<string, unknown>);
+  } catch {
+    return undefined;
   }
-  if (full?.pages?.length) {
-    const lines: string[] = [];
-    for (const page of full.pages) {
-      for (const block of page.blocks || []) {
-        for (const line of block.lines || []) {
-          if (line.text?.trim()) lines.push(line.text.trim());
-        }
-      }
-    }
-    if (lines.length > 0) return lines.join("\n");
+  const items = data.geminiLineItems;
+  if (!Array.isArray(items) || items.length === 0) return undefined;
+  const out: GeminiStructuredLineItem[] = [];
+  for (const it of items) {
+    if (!it || typeof it !== "object") continue;
+    const o = it as Record<string, unknown>;
+    const name = typeof o.name === "string" ? o.name.trim() : "";
+    if (!name) continue;
+    const q = o.quantity;
+    const up = o.unitPrice;
+    const tp = o.totalPrice;
+    const vr = o.vatRate;
+    const unitType = parseStoredGeminiUnitType(o.unitType);
+    const brand = typeof o.brand === "string" && o.brand.trim() ? o.brand.trim() : null;
+    const category = typeof o.category === "string" && o.category.trim() ? o.category.trim() : null;
+    const subcategory = typeof o.subcategory === "string" && o.subcategory.trim() ? o.subcategory.trim() : null;
+    out.push({
+      name,
+      brand,
+      quantity: typeof q === "number" && q > 0 ? q : undefined,
+      unitType,
+      unitPrice: typeof up === "number" && Number.isFinite(up) ? up : undefined,
+      totalPrice: typeof tp === "number" && Number.isFinite(tp) ? tp : undefined,
+      vatRate: typeof vr === "number" && Number.isFinite(vr) ? vr : undefined,
+      category,
+      subcategory,
+    });
   }
-  const first = vision.textAnnotations?.[0]?.description;
-  if (first && first.trim().length > 0) return first.trim();
-  return "";
+  return out.length > 0 ? out : undefined;
+}
+
+/** GPT-4o full-receipt fallback: context'te kalıyordu ama API yanıtına eklenmediği için DB'de eksik kalan kayıtlar. */
+function parseGptFullLineItemsFromReceiptData(receiptData: unknown): GeminiStructuredLineItem[] | undefined {
+  let data: Record<string, unknown>;
+  try {
+    data =
+      typeof receiptData === "string"
+        ? (JSON.parse(receiptData) as Record<string, unknown>)
+        : ((receiptData as Record<string, unknown>) ?? {});
+  } catch {
+    return undefined;
+  }
+  const gpt = data.gptFullReceiptResult;
+  if (!gpt || typeof gpt !== "object") return undefined;
+  const lineItems = (gpt as Record<string, unknown>).lineItems;
+  if (!Array.isArray(lineItems) || lineItems.length === 0) return undefined;
+  const out: GeminiStructuredLineItem[] = [];
+  for (const li of lineItems) {
+    if (!li || typeof li !== "object") continue;
+    const o = li as Record<string, unknown>;
+    const name = typeof o.name === "string" ? o.name.trim() : "";
+    if (!name) continue;
+    const ut = o.unitType;
+    const unitType =
+      ut === "adet" || ut === "kg" || ut === "g" || ut === "l" || ut === "ml" ? ut : undefined;
+    const q = o.quantity;
+    const up = o.unitPrice;
+    const tp = o.totalPrice;
+    let vr = o.vatRate;
+    if (typeof vr === "number" && Number.isFinite(vr) && vr > 1 && vr <= 100) vr = vr / 100;
+    const cat = typeof o.category === "string" && o.category.trim() ? o.category.trim() : null;
+    const subcat = typeof o.subcategory === "string" && o.subcategory.trim() ? o.subcategory.trim() : null;
+    out.push({
+      name,
+      quantity: typeof q === "number" && q > 0 ? q : undefined,
+      unitType,
+      unitPrice: typeof up === "number" && Number.isFinite(up) ? up : undefined,
+      totalPrice: typeof tp === "number" && Number.isFinite(tp) ? tp : undefined,
+      vatRate: typeof vr === "number" && Number.isFinite(vr) && vr >= 0 && vr <= 1 ? vr : undefined,
+      category: cat,
+      subcategory: subcat,
+    });
+  }
+  return out.length > 0 ? out : undefined;
 }
 
 /**
- * Parse a line that may end with a numeric amount (Turkish: 12,99 or 12.99 or 12 99 TL).
- * Returns { rawName, amount } or null if no amount found.
+ * Faz-2 girişi: önce receipt_data.geminiLineItems, yoksa gptFullReceiptResult.lineItems.
  */
-function parseLineWithAmount(line: string): { rawName: string; amount: number } | null {
-  const trimmed = line.trim();
-  if (!trimmed) return null;
-  // Match trailing number: optional spaces, then number with , or . decimal, optional TL/₺
-  const match = trimmed.match(
-    /^(.+?)\s+(\d{1,3}(?:[.,]\d{3})*(?:[.,]\d{2})?|\d+(?:[.,]\d+)?)\s*(?:TL|₺|tl|TRY)?\s*$/i
+export function parseStructuredLineItemsFromReceiptData(
+  receiptData: unknown
+): GeminiStructuredLineItem[] | undefined {
+  const fromGemini = parseGeminiLineItemsFromReceiptData(receiptData);
+  if (fromGemini && fromGemini.length > 0) return fromGemini;
+  return parseGptFullLineItemsFromReceiptData(receiptData);
+}
+
+/**
+ * Bazı LLM çıktılarında sadece ürün adı var; geminiLineToObservation fiyat ister.
+ * paidExTax > 0 ise kalan tutarı miktar ağırlığıyla satırlara böler (gösterim + gizli maliyet için).
+ */
+export function allocateLinePricesWhenMissing(
+  items: GeminiStructuredLineItem[],
+  paidExTax: number
+): GeminiStructuredLineItem[] {
+  if (!items.length || paidExTax <= 0) return items;
+  const anyMissing = items.some(
+    (i) =>
+      !(
+        (i.unitPrice != null && i.unitPrice > 0) ||
+        (i.totalPrice != null && i.totalPrice > 0)
+      )
   );
-  if (match) {
-    const rawName = match[1].trim();
-    const amountStr = match[2].replace(/\s/g, "").replace(",", ".");
-    const amount = parseFloat(amountStr);
-    if (Number.isFinite(amount) && amount >= 0 && rawName.length > 0) {
-      return { rawName, amount };
-    }
+  if (!anyMissing) return items;
+  const weights = items.map((i) =>
+    Math.max(1e-6, i.quantity != null && i.quantity > 0 ? i.quantity : 1)
+  );
+  const totalW = weights.reduce((a, b) => a + b, 0);
+  return items.map((item, idx) => {
+    const hasU = item.unitPrice != null && item.unitPrice > 0;
+    const hasT = item.totalPrice != null && item.totalPrice > 0;
+    if (hasU || hasT) return item;
+    const share = (weights[idx] / totalW) * paidExTax;
+    const q = item.quantity != null && item.quantity > 0 ? item.quantity : 1;
+    return { ...item, totalPrice: share, unitPrice: share / q };
+  });
+}
+
+/** receipt_data / API'den gelen serbest değeri izinli birime çevir; geçersiz → undefined (observation'da adet). */
+function parseStoredGeminiUnitType(raw: unknown): GeminiStructuredLineUnitType | undefined {
+  if (raw == null || raw === "") return undefined;
+  const s = String(raw).trim().toLowerCase();
+  if (s === "adet" || s === "kg" || s === "g" || s === "l" || s === "ml") return s;
+  if (s === "lt") return "l";
+  return undefined;
+}
+
+function geminiLineToObservation(
+  item: GeminiStructuredLineItem,
+  context: ExtractCanonicalContext
+): CanonicalObservation | null {
+  const name = item.name.trim();
+  if (!name) return null;
+
+  const qty =
+    item.quantity != null && Number.isFinite(item.quantity) && item.quantity > 0 ? item.quantity : 1;
+
+  let unitP = item.unitPrice;
+  let totalP = item.totalPrice;
+  const uOk = unitP != null && Number.isFinite(unitP) && unitP > 0;
+  const tOk = totalP != null && Number.isFinite(totalP) && totalP > 0;
+
+  if (uOk && tOk) {
+    /* keep both */
+  } else if (uOk && !tOk) {
+    totalP = unitP! * qty;
+  } else if (!uOk && tOk) {
+    unitP = totalP! / qty;
+  } else {
+    return null;
   }
-  // Fallback: last token as number
-  const parts = trimmed.split(/\s+/);
-  if (parts.length >= 2) {
-    const last = parts[parts.length - 1].replace(",", ".");
-    const amount = parseFloat(last);
-    if (Number.isFinite(amount) && amount >= 0 && amount < 1e6) {
-      const rawName = parts.slice(0, -1).join(" ").trim();
-      if (rawName.length > 0) return { rawName, amount };
-    }
-  }
-  return null;
+
+  return {
+    raw_name: name,
+    canonical_name: name,
+    brand: item.brand ?? null,
+    pack_size: null,
+    // GPT'den gelen ürün kategorisi önce kullanılır; yoksa merchant kategorisi fallback
+    category_lvl1: (item.category?.trim() || null) ?? context.category ?? null,
+    category_lvl2: item.subcategory?.trim() || null,
+    unit_type: item.unitType ?? "adet",
+    quantity: qty,
+    unit_price_gross: unitP!,
+    line_total_gross: totalP!,
+    discount_amount: 0,
+    vat_rate: item.vatRate != null && Number.isFinite(item.vatRate) ? item.vatRate : null,
+    last_price_update: NOW_ISO(),
+    confidence_score: 0.9,
+  };
 }
 
 /**
- * Filter out lines that are likely headers, footers, or totals (not product lines).
- */
-function isLikelyProductLine(rawName: string, amount: number): boolean {
-  const lower = rawName.toLowerCase();
-  const totalLike = /\b(toplam|total|tutar|genel|ara\s+toplam|subtotal|kdv|vat|vergi)\b/i;
-  if (totalLike.test(lower)) return false;
-  if (lower.length < 2) return false;
-  if (amount <= 0) return false;
-  return true;
-}
-
-const NOW_ISO = () => new Date().toISOString();
-
-/**
- * Build CanonicalPayload from Vision JSON and receipt context.
- * Uses rule-based line parsing; can be extended with LLM later.
+ * Build CanonicalPayload from structured LLM line items only (no OCR line regex).
  */
 export function extractCanonicalFromVision(
-  visionJson: VisionResponseLike,
+  visionJson: VisionResponseLike | null | undefined,
   context: ExtractCanonicalContext
 ): CanonicalPayload {
-  const text = getTextFromVision(visionJson);
-  const lines = text.split(/\n/).map((l) => l.trim()).filter(Boolean);
+  const vision = visionJson ?? {};
 
-  const observations: CanonicalObservation[] = [];
-  for (const line of lines) {
-    const parsed = parseLineWithAmount(line);
-    if (!parsed) continue;
-    const { rawName, amount } = parsed;
-    if (!isLikelyProductLine(rawName, amount)) continue;
-    observations.push({
-      raw_name: rawName,
-      canonical_name: rawName,
-      brand: null,
-      pack_size: null,
-      category_lvl1: context.category || null,
-      category_lvl2: null,
-      unit_type: "adet",
-      quantity: 1,
-      unit_price_gross: amount,
-      line_total_gross: amount,
-      discount_amount: 0,
-      vat_rate: null,
-      last_price_update: NOW_ISO(),
-      confidence_score: 0.8,
-    });
+  let observations: CanonicalObservation[] = [];
+  if (context.geminiLineItems && context.geminiLineItems.length > 0) {
+    for (const item of context.geminiLineItems) {
+      const obs = geminiLineToObservation(item, context);
+      if (obs) observations.push(obs);
+    }
+  }
+
+  if (observations.length === 0) {
+    const hasVisionText =
+      Boolean(vision.fullTextAnnotation?.text?.trim()) ||
+      Boolean(vision.textAnnotations && vision.textAnnotations.length > 0);
+    if (hasVisionText) {
+      console.warn(
+        "[extractCanonicalFromVision] No structured line items; OCR regex fallback disabled — observations empty."
+      );
+    } else {
+      console.warn("[extractCanonicalFromVision] No structured line items and no Vision text; observations empty.");
+    }
   }
 
   const dateStr = context.date ?? new Date().toISOString().slice(0, 10);
@@ -143,11 +272,12 @@ export function extractCanonicalFromVision(
     last_update: NOW_ISO(),
   };
 
-  const totalGross = context.totalPaid ?? context.paidExTax ?? (observations.length > 0
-    ? observations.reduce((s, o) => s + o.line_total_gross, 0)
-    : undefined);
+  const totalGross =
+    context.totalPaid ??
+    context.paidExTax ??
+    (observations.length > 0 ? observations.reduce((s, o) => s + o.line_total_gross, 0) : undefined);
 
-  const payload: CanonicalPayload = {
+  return {
     receipt_file: context.receiptId ?? "",
     date: dateStr,
     currency,
@@ -155,5 +285,4 @@ export function extractCanonicalFromVision(
     merchant,
     observations,
   };
-  return payload;
 }

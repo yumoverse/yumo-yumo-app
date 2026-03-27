@@ -31,8 +31,6 @@ export async function getAllReceipts(
     }
     if (statusValues.length > 0) {
       filtered = filtered.filter(r => statusValues.includes(r.status ?? ""));
-    } else {
-      filtered = filtered.filter(r => r.status !== "scanned");
     }
     
     return filtered.slice(offset, offset + limit);
@@ -80,7 +78,6 @@ export async function getAllReceipts(
           SELECT receipt_data, username
           FROM receipts 
           WHERE username = ${username}
-            AND status != 'scanned'
             AND (
               receipt_id ILIKE ${searchPattern}
               OR merchant_name ILIKE ${searchPattern}
@@ -95,7 +92,6 @@ export async function getAllReceipts(
           SELECT receipt_data, username
           FROM receipts 
           WHERE username = ${username}
-            AND status != 'scanned'
           ORDER BY created_at DESC
           LIMIT ${limit}
           OFFSET ${offset}
@@ -152,8 +148,6 @@ export async function getReceiptCount(username: string, search: string = "", sta
     }
     if (statusValues.length > 0) {
       filtered = filtered.filter(r => statusValues.includes(r.status ?? ""));
-    } else {
-      filtered = filtered.filter(r => r.status !== "scanned");
     }
     
     return filtered.length;
@@ -191,7 +185,6 @@ export async function getReceiptCount(username: string, search: string = "", sta
         SELECT COUNT(*) as count
         FROM receipts 
         WHERE username = ${username}
-          AND status != 'scanned'
           AND (
             receipt_id ILIKE ${searchPattern}
             OR merchant_name ILIKE ${searchPattern}
@@ -202,7 +195,6 @@ export async function getReceiptCount(username: string, search: string = "", sta
         SELECT COUNT(*) as count
         FROM receipts 
         WHERE username = ${username}
-          AND status != 'scanned'
       `;
     }
     
@@ -221,8 +213,6 @@ export async function getReceiptCount(username: string, search: string = "", sta
     }
     if (statusValues.length > 0) {
       filtered = filtered.filter(r => statusValues.includes(r.status ?? ""));
-    } else {
-      filtered = filtered.filter(r => r.status !== "scanned");
     }
     
     return filtered.length;

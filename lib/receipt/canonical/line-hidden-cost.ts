@@ -68,6 +68,7 @@ export interface LineHiddenCostResult {
    *   fallback_rate      — sabit oran (hiçbir veri yok)
    */
   calc_method:
+    | "scraped_market_price"
     | "tuik_official"
     | "taxonomy_weighted"
     | "weighted_index"
@@ -118,6 +119,11 @@ export interface ComputeLineHiddenCostInput {
    * bkz. fetchTaxonomyBulk()
    */
   taxonomyByName?: Map<string, TaxonomyRow>;
+  /**
+   * Pre-fetched scraped_product_prices: canonical_name → price_tl (en güncel, bu market için).
+   * En yüksek öncelik: TÜİK ve taxonomy'den önce kullanılır. bkz. fetchScrapedPricesBulk()
+   */
+  scrapedPrices?: Map<string, number>;
 }
 
 /**
@@ -224,6 +230,7 @@ export function computeLineHiddenCosts(input: ComputeLineHiddenCostInput): {
     economicMultipliers,
     tuikPrices,
     taxonomyByName,
+    scrapedPrices,
   } = input;
 
   const receiptCategory = payload.merchant?.category_lvl1 ?? undefined;
@@ -251,6 +258,29 @@ export function computeLineHiddenCosts(input: ComputeLineHiddenCostInput): {
     let calc_method: LineHiddenCostResult["calc_method"];
     let tuik_match: LineHiddenCostResult["tuik_match"] | undefined;
     let taxonomy_match: LineHiddenCostResult["taxonomy_match"] | undefined;
+
+    // ── Öncelik -1: Scraped market fiyatı (aynı market, son 30 gün) ─────────
+    if (scrapedPrices && scrapedPrices.size > 0) {
+      const productKey = (obs.canonical_name || obs.raw_name || "").toLowerCase().trim();
+      const scrapedPrice = productKey ? scrapedPrices.get(productKey) : undefined;
+      if (scrapedPrice != null && scrapedPrice > 0) {
+        const qty = obs.quantity && obs.quantity > 0 ? obs.quantity : 1;
+        const scrapedLineRef = scrapedPrice * qty;
+        if (scrapedLineRef <= lineTotal * 3) {
+          reference = scrapedLineRef;
+          calc_method = "scraped_market_price";
+          const hidden = Math.max(0, lineTotal - reference);
+          results.push({
+            observation: obs,
+            reference_price: Math.round(reference * 100) / 100,
+            hidden_cost_line: Math.round(hidden * 100) / 100,
+            calc_method,
+            model_type: modelType,
+          });
+          continue;
+        }
+      }
+    }
 
     // ── Yol 0: TÜİK resmi ortalama fiyat (her model için en önce denenir) ───
     if (tuikPrices && tuikPrices.size > 0) {
@@ -640,6 +670,52 @@ export async function fetchTaxonomyBulk(
   } catch (e) {
     console.warn(
       "[line-hidden-cost] fetchTaxonomyBulk failed:",
+      (e as Error)?.message
+    );
+  }
+  return map;
+}
+
+// ─────────────────────────────────────────────
+// DB fetch: fetchScrapedPricesBulk
+// ─────────────────────────────────────────────
+
+/**
+ * scraped_product_prices (v_basket_price_comparison) üzerinden bu market için
+ * verilen canonical_name listesinin en güncel fiyatlarını döner.
+ * Fiş hidden-cost hesaplamasında 1. öncelik: gerçek market fiyatı.
+ */
+export async function fetchScrapedPricesBulk(
+  merchantCanonicalName: string,
+  canonicalNames: (string | null | undefined)[]
+): Promise<Map<string, number>> {
+  const map = new Map<string, number>();
+  const keys = canonicalNames
+    .map((n) => (n ?? "").toLowerCase().trim())
+    .filter(Boolean);
+  if (!keys.length || !merchantCanonicalName.trim()) return map;
+
+  const { getSql } = await import("@/lib/db/client");
+  const sql = getSql();
+  if (!sql) return map;
+
+  try {
+    const rows = await sql`
+      SELECT canonical_name, price_tl
+      FROM v_basket_price_comparison
+      WHERE merchant_canonical_name = ${merchantCanonicalName.trim()}
+        AND canonical_name = ANY(${keys})
+    `;
+    for (const r of rows as Array<{ canonical_name: string; price_tl: number }>) {
+      const key = (r.canonical_name ?? "").toLowerCase().trim();
+      if (key && r.price_tl != null) map.set(key, Number(r.price_tl));
+    }
+    if (map.size > 0) {
+      console.log(`[fetchScrapedPricesBulk] ${map.size}/${keys.length} scraped fiyat (${merchantCanonicalName})`);
+    }
+  } catch (e) {
+    console.warn(
+      "[line-hidden-cost] fetchScrapedPricesBulk failed:",
       (e as Error)?.message
     );
   }

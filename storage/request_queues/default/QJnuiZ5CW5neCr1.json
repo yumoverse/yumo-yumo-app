@@ -1,0 +1,9 @@
+{
+	"id": "QJnuiZ5CW5neCr1",
+	"json": "{\"id\":\"QJnuiZ5CW5neCr1\",\"url\":\"https://www.starbucks.com.tr/menu/yiyecekler/kahvaltilik-urunler\",\"loadedUrl\":\"https://www.starbucks.com.tr/en/menu\",\"uniqueKey\":\"https://www.starbucks.com.tr/menu/yiyecekler/kahvaltilik-urunler\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-03-16T08:19:18.175Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.starbucks.com.tr/menu/yiyecekler/kahvaltilik-urunler",
+	"url": "https://www.starbucks.com.tr/menu/yiyecekler/kahvaltilik-urunler"
+}

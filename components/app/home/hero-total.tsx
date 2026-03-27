@@ -1,6 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { DASHBOARD_QUERY_KEY } from "@/lib/app/query-keys";
 import { useTier } from "@/lib/theme/theme-context";
 import { useAppLocale } from "@/lib/i18n/app-context";
 import Link from "next/link";
@@ -54,6 +56,12 @@ function AnimatedAmount({ amount, symbol = "₺" }: { amount: number; symbol?: s
   );
 }
 
+async function fetchDashboard(period: string): Promise<DashboardData> {
+  const res = await fetch(`/api/receipts/dashboard?period=${period}`);
+  if (!res.ok) throw new Error("Dashboard fetch failed");
+  return res.json();
+}
+
 export function HeroTotal({
   receiptCount = 0,
   accountLevel = 1,
@@ -62,25 +70,14 @@ export function HeroTotal({
 }: HeroTotalProps) {
   const tier = useTier(accountLevel);
   const { t } = useAppLocale();
-  const [data, setData] = useState<DashboardData | null>(null);
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    let cancelled = false;
-    setLoading(true);
-    fetch("/api/receipts/dashboard?period=monthly")
-      .then((r) => r.json())
-      .then((d) => {
-        if (!cancelled) {
-          setData(d);
-          setLoading(false);
-        }
-      })
-      .catch(() => {
-        if (!cancelled) setLoading(false);
-      });
-    return () => { cancelled = true; };
-  }, [refreshKey]);
+  const { data, isLoading: loading } = useQuery({
+    queryKey: DASHBOARD_QUERY_KEY("monthly"),
+    queryFn: () => fetchDashboard("monthly"),
+    staleTime: 120_000,          // 2 dakika taze — tab geçişinde anında göster
+    refetchOnWindowFocus: false,
+    placeholderData: (prev) => prev, // sayfa değişirken eski veriyi tut
+  });
 
   const totalCount = data?.totalReceiptCount ?? receiptCount;
   const monthlyReceipts = data?.receipts ?? [];

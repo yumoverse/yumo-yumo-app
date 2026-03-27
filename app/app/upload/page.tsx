@@ -15,7 +15,7 @@ import { BreakdownCard } from "../components/breakdown-card";
 import { RewardCard } from "../components/reward-card";
 import { EvidenceDrawer } from "../components/evidence-drawer";
 import { EvidenceModal } from "../components/evidence-modal";
-import { MiningModal, type MiningStep } from "../components/mining-modal";
+import { MiningModal } from "../components/mining-modal";
 import { StyledReceipt } from "../components/styled-receipt";
 import { ThemeCard } from "@/components/app/theme-card";
 import { ThemeBg } from "@/components/app/theme-bg";
@@ -49,12 +49,20 @@ export default function UploadPage() {
   const [receiptId, setReceiptId] = useState<string | null>(null);
   const [analysis, setAnalysis] = useState<ReceiptAnalysis | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [isSaving, setIsSaving] = useState(false);
-  const [miningStep, setMiningStep] = useState<MiningStep>("uploading");
+  const [miningStep, setMiningStep] = useState<
+    "uploading" | "ocr" | "extraction" | "merchant" | "calculation" | "verification" | "complete"
+  >("uploading");
   const [showMiningModal, setShowMiningModal] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
   const [showEvidenceModal, setShowEvidenceModal] = useState(false);
   const [showThankYouModal, setShowThankYouModal] = useState(false);
   const [thankYouSummary, setThankYouSummary] = useState<{ receiptId: string; merchantName?: string; ayumo?: number; ryumo?: number } | null>(null);
+  const [queuedReceiptId, setQueuedReceiptId] = useState<string | null>(null);
+  const [uploadNotice, setUploadNotice] = useState<{
+    tone: "success" | "error";
+    title: string;
+    description: string;
+  } | null>(null);
 
   useEffect(() => {
     setIsAdmin(!!profile?.isAdmin);
@@ -69,6 +77,8 @@ export default function UploadPage() {
   }
 
   const handleFileUpload = async (file: File) => {
+    setQueuedReceiptId(null);
+    setUploadNotice(null);
     console.log('[upload] 📤 Starting upload for:', file.name, (file.size / 1024 / 1024).toFixed(2), 'MB');
 
     let fileToUpload = file;
@@ -83,8 +93,11 @@ export default function UploadPage() {
         console.log("[upload] PDF converted to image on client-side");
       } catch (pdfError: any) {
         console.error("[upload] PDF conversion error:", pdfError);
-        alert(t("errors.upload.pdfFailed"));
-        setShowMiningModal(false);
+        setUploadNotice({
+          tone: "error",
+          title: t("errors.upload.uploadFailed"),
+          description: t("errors.upload.pdfFailed"),
+        });
         return;
       }
     }
@@ -93,14 +106,14 @@ export default function UploadPage() {
     
     // Set the file to display (use converted image if PDF was converted)
     setUploadedFile(convertedImageFile || file);
-    setShowMiningModal(true);
-    setMiningStep("uploading");
+    
     
     const formData = new FormData();
     formData.append("file", fileToUpload);
 
     try {
       setMiningStep("uploading");
+      setShowMiningModal(true);
       const response = await fetch("/api/receipt/upload", {
         method: "POST",
         body: formData,
@@ -119,14 +132,98 @@ export default function UploadPage() {
       }
       
       setReceiptId(data.receiptId);
-      
-      // Automatically start analysis after upload (pass marginViolation and original size if available)
-      await handleAnalyze(data.receiptId, data.marginViolation, data.size);
+      setQueuedReceiptId(data.receiptId);
+      setCurrentStep(0);
+      setAnalysis(null);
+
+      // Trigger analyze in background (do not block UI)
+      void triggerBackgroundAnalyze(data.receiptId, data.marginViolation, data.size);
+
+      setShowMiningModal(false);
+      setUploadedFile(null);
+      setUploadNotice({
+        tone: "success",
+        title: "Receipt successfully uploaded",
+        description: `You can close this window. We will notify you once it is completed. Receipt ID: ${data.receiptId}`,
+      });
+      return;
     } catch (error: any) {
       console.error("Upload failed:", error);
       const msg = translateApiError(error?.message, t) || t("errors.upload.unknown");
-      alert(`${t("errors.upload.uploadFailed")}: ${msg}`);
       setShowMiningModal(false);
+      setUploadNotice({
+        tone: "error",
+        title: t("errors.upload.uploadFailed"),
+        description: msg,
+      });
+      return;
+    }
+  };
+
+  const triggerBackgroundAnalyze = async (
+    id: string,
+    marginViolation?: unknown,
+    originalFileSizeBytes?: number
+  ) => {
+    const analyzeBody: Record<string, unknown> = { receiptId: id, marginViolation, stream: false };
+    if (typeof originalFileSizeBytes === "number" && originalFileSizeBytes > 0) {
+      analyzeBody.originalFileSizeBytes = originalFileSizeBytes;
+    }
+
+    try {
+      const response = await fetch("/api/receipt/analyze", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(analyzeBody),
+        keepalive: true,
+      });
+
+      if (!response.ok) {
+        const raw = await response.text().catch(() => "");
+        let parsed: any = null;
+        try {
+          parsed = raw ? JSON.parse(raw) : null;
+        } catch {
+          parsed = null;
+        }
+
+        const rejected = parsed?.rejected === true;
+        const rejectionReason =
+          Array.isArray(parsed?.rejectionReasons) && parsed.rejectionReasons.length > 0
+            ? parsed.rejectionReasons[0]
+            : parsed?.error;
+
+        if (response.status === 400 && rejected) {
+          const friendly =
+            translateApiError(rejectionReason, t) ||
+            rejectionReason ||
+            t("errors.api.analyzeFailed");
+          setQueuedReceiptId(null);
+          setUploadNotice({
+            tone: "error",
+            title: t("errors.upload.uploadFailed"),
+            description: friendly,
+          });
+          console.warn("[upload] Background analyze rejected:", response.status, rejectionReason);
+          return;
+        }
+
+        const fallbackMessage =
+          translateApiError(parsed?.error || raw, t) || t("errors.api.analyzeFailed");
+        setUploadNotice({
+          tone: "error",
+          title: t("errors.api.analyzeFailed"),
+          description: fallbackMessage,
+        });
+        console.warn("[upload] Background analyze non-ok:", response.status, parsed?.error || raw);
+      }
+    } catch (error) {
+      console.warn("[upload] Background analyze request failed:", error);
+      setUploadNotice({
+        tone: "error",
+        title: t("errors.api.analyzeFailed"),
+        description: t("errors.upload.unknown"),
+      });
     }
   };
 
@@ -187,7 +284,37 @@ export default function UploadPage() {
           
           throw new Error(`${errorMessage}${confidenceInfo}\n\nPlease try uploading a clearer image or a different receipt.`);
         } else if (response.status === 409) {
-          // Duplicate receipt
+          // Duplicate: backend zaten orijinal fiş id'sini verir; yeni analiz yapılmaz.
+          const existingId =
+            typeof errorData.existingReceiptId === "string" ? errorData.existingReceiptId.trim() : "";
+          const existingUser =
+            typeof errorData.existingUsername === "string" ? errorData.existingUsername : "";
+          if (profile?.isAdmin && existingId) {
+            let reprocessSummary = "";
+            try {
+              const rp = await fetch("/api/admin/receipt-line-items/reprocess", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ receiptId: existingId }),
+              });
+              const j = (await rp.json()) as { ok?: boolean; state?: string; error?: string };
+              reprocessSummary =
+                rp.ok && j.ok
+                  ? `Post-process tamam (state=${j.state ?? "?"}). receipt_line_items yenilendi.`
+                  : `Post-process: ${j.error || `HTTP ${rp.status}`}`;
+            } catch (e) {
+              reprocessSummary = `Post-process isteği: ${(e as Error).message}`;
+            }
+            setShowMiningModal(false);
+            setIsAnalyzing(false);
+            alert(
+              `Duplicate — orijinal kayıtla eşleşti.\nFiş ID: ${existingId}${existingUser ? `\nKayıtlı kullanıcı: ${existingUser}` : ""}\n\n${reprocessSummary}\n\nDetay: /app/receipts/${encodeURIComponent(existingId)}`
+            );
+            setUploadedFile(null);
+            setReceiptId(null);
+            setAnalysis(null);
+            return;
+          }
           throw new Error(`${errorMessage}\n\nThis receipt has already been processed.`);
         } else if (response.status === 404) {
           // Receipt file not found
@@ -203,7 +330,22 @@ export default function UploadPage() {
       }
       
       const data = await response.json();
-      
+
+      // Duplicate → orijinal kayıt sunucuda dolduruldu (analyze route)
+      if (profile?.isAdmin && data && data.duplicateResolved === true) {
+        setShowMiningModal(false);
+        setIsAnalyzing(false);
+        const fu = Array.isArray(data.fieldsUpdated) ? data.fieldsUpdated.join(", ") : "—";
+        const ppOk = data.postProcessOk === true;
+        alert(
+          `Orijinal fiş güncellendi (duplicate eşleşmesi).\nFiş ID: ${data.existingReceiptId}\nGüncellenen: ${fu}\nPost-process: ${ppOk ? "tamam" : data.postProcessError || "kontrol et"}\n\n/app/receipts/${encodeURIComponent(String(data.existingReceiptId || ""))}`
+        );
+        setUploadedFile(null);
+        setReceiptId(null);
+        setAnalysis(null);
+        return;
+      }
+
       // Step 5: Verification
       setMiningStep("verification");
       await new Promise(resolve => setTimeout(resolve, 500));
@@ -333,11 +475,7 @@ export default function UploadPage() {
       <div className="space-y-6">
         <Stepper steps={STEPS} currentStep={currentStep} className="mb-6" />
 
-        {/* Mining Modal */}
-        <MiningModal 
-          open={showMiningModal} 
-          currentStep={miningStep}
-        />
+        <MiningModal open={showMiningModal} currentStep={miningStep} />
 
         {/* Evidence Modal - Shows automatically after analysis */}
         {analysis && (
@@ -401,6 +539,7 @@ export default function UploadPage() {
                   setAnalysis(null);
                   setUploadedFile(null);
                   setReceiptId(null);
+                  setQueuedReceiptId(null);
                   setShowMiningModal(false);
                 }}
               >
@@ -414,6 +553,44 @@ export default function UploadPage() {
         {/* Step 0: Upload */}
         {currentStep === 0 && (
           <div className="space-y-4">
+            {uploadNotice && (
+              <ThemeCard
+                accountLevel={accountLevel}
+                className={
+                  uploadNotice.tone === "success"
+                    ? "p-4 border-emerald-500/40 bg-emerald-500/10"
+                    : "p-4 border-red-500/40 bg-red-500/10"
+                }
+              >
+                <div className="space-y-1">
+                  <p className="text-sm font-semibold" style={{ color: "var(--app-text-primary)" }}>
+                    {uploadNotice.title}
+                  </p>
+                  <p className="text-xs" style={{ color: "var(--app-text-muted)" }}>
+                    {uploadNotice.description}
+                  </p>
+                </div>
+              </ThemeCard>
+            )}
+            {queuedReceiptId && (
+              <ThemeCard accountLevel={accountLevel} className="p-4 border-[var(--app-border)]">
+                <div className="space-y-2">
+                  <p className="text-sm font-medium" style={{ color: "var(--app-text-primary)" }}>
+                    Fişiniz arka planda analiz ediliyor.
+                  </p>
+                  <p className="text-xs" style={{ color: "var(--app-text-muted)" }}>
+                    Analiz tamamlandığında bildirim alacaksınız. Fiş ID: {queuedReceiptId}
+                  </p>
+                  <Button
+                    variant="outline"
+                    className="border-[var(--app-border)]"
+                    onClick={() => router.push("/app/receipts")}
+                  >
+                    Fiş Listesine Git
+                  </Button>
+                </div>
+              </ThemeCard>
+            )}
             <ReceiptUploadCard
               accountLevel={accountLevel}
               onUpload={handleFileUpload}
@@ -421,6 +598,7 @@ export default function UploadPage() {
               onRemove={() => {
                 setUploadedFile(null);
                 setReceiptId(null);
+                setQueuedReceiptId(null);
                 setAnalysis(null);
                 setShowMiningModal(false);
               }}
@@ -516,7 +694,7 @@ export default function UploadPage() {
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Geri
               </Button>
-              <Button variant="outline" onClick={() => { setCurrentStep(0); setAnalysis(null); setUploadedFile(null); setReceiptId(null); setShowMiningModal(false); }} className="flex-1 min-w-[100px] border-[var(--app-border)]">
+              <Button variant="outline" onClick={() => { setCurrentStep(0); setAnalysis(null); setUploadedFile(null); setReceiptId(null); setQueuedReceiptId(null); setShowMiningModal(false); }} className="flex-1 min-w-[100px] border-[var(--app-border)]">
                 İptal
               </Button>
               <Button onClick={handleSave} disabled={isSaving} className="flex-1 min-w-[100px]">

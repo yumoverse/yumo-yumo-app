@@ -1,0 +1,9 @@
+{
+	"id": "x4NlOBLEm0y8LyV",
+	"json": "{\"id\":\"x4NlOBLEm0y8LyV\",\"url\":\"https://www.starbucks.com.tr/menu/yiyecekler/atistirmaliklar\",\"loadedUrl\":\"https://www.starbucks.com.tr/en/menu\",\"uniqueKey\":\"https://www.starbucks.com.tr/menu/yiyecekler/atistirmaliklar\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-03-16T08:19:18.563Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.starbucks.com.tr/menu/yiyecekler/atistirmaliklar",
+	"url": "https://www.starbucks.com.tr/menu/yiyecekler/atistirmaliklar"
+}

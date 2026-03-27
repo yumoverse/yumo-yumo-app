@@ -1,5 +1,16 @@
-export { extractCanonicalFromVision } from "./extract-canonical";
-export type { ExtractCanonicalContext, VisionResponseLike } from "./extract-canonical";
+export {
+  extractCanonicalFromVision,
+  parseGeminiLineItemsFromReceiptData,
+  parseStructuredLineItemsFromReceiptData,
+  allocateLinePricesWhenMissing,
+} from "./extract-canonical";
+export { resolveCanonicalObservations } from "./resolve-canonical-product";
+export type {
+  ExtractCanonicalContext,
+  GeminiStructuredLineItem,
+  GeminiStructuredLineUnitType,
+  VisionResponseLike,
+} from "./extract-canonical";
 export {
   computeLineHiddenCosts,
   fetchProductionCostWeights,

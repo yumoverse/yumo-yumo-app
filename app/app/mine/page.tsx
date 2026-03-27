@@ -101,6 +101,8 @@ export default function MinePage() {
   const [pipelineLabel, setPipelineLabel] = useState<string>("");
   const [displayPipelineStep, setDisplayPipelineStep] = useState<number>(0);
   const [warmupProgress, setWarmupProgress] = useState<number>(0);
+  const [canLeaveAnalyzeScreen, setCanLeaveAnalyzeScreen] = useState(false);
+  const isAnalyzeScreen = currentStep === 1;
   const analyzeRunIdRef = useRef(0);
   const uploadAnalyzeInFlightRef = useRef(false);
 
@@ -204,6 +206,7 @@ export default function MinePage() {
     }
     
     setMiningProgress(100);
+    setCanLeaveAnalyzeScreen(false);
     setCurrentStep(2); // Analiz bitti → Sonuç adımına geç
   };
   
@@ -290,6 +293,7 @@ export default function MinePage() {
       setCurrentStep(1);
       setIsMining(true);
       setMiningProgress(null);
+      setCanLeaveAnalyzeScreen(false);
       setError(null);
       setIsProcessing(false);
 
@@ -340,6 +344,7 @@ export default function MinePage() {
 
           const receiptNum = `REC-${Date.now().toString(36).toUpperCase()}-${Math.random().toString(36).substring(2, 8).toUpperCase()}`;
           setReceiptNumber(receiptNum);
+          setCanLeaveAnalyzeScreen(true);
 
           // Use location when ready (max 3s wait), then run analyze
           const gpsLocation = await Promise.race([
@@ -387,6 +392,7 @@ export default function MinePage() {
               setError(sessionMsg);
               setReceipt(null);
               setIsMining(false);
+              setCanLeaveAnalyzeScreen(false);
               setCurrentStep(0);
               try { URL.revokeObjectURL(imageUrl); } catch { /* ignore */ }
               toast.error(sessionMsg, { duration: 6000 });
@@ -412,6 +418,7 @@ export default function MinePage() {
             setError(errorMessage);
             setReceipt(null);
             setIsMining(false);
+            setCanLeaveAnalyzeScreen(false);
             setCurrentStep(0);
             try { URL.revokeObjectURL(imageUrl); } catch { /* ignore */ }
             return;
@@ -445,6 +452,7 @@ export default function MinePage() {
                     setError(obj.error);
                     setReceipt(null);
                     setIsMining(false);
+                    setCanLeaveAnalyzeScreen(false);
                     setCurrentStep(0);
                     try { URL.revokeObjectURL(imageUrl); } catch { /* ignore */ }
                     toast.error(t("mine.error.analyze"), { description: obj.error, duration: 5000 });
@@ -465,6 +473,7 @@ export default function MinePage() {
                   setError(obj.error);
                   setReceipt(null);
                   setIsMining(false);
+                  setCanLeaveAnalyzeScreen(false);
                   setCurrentStep(0);
                   try { URL.revokeObjectURL(imageUrl); } catch { /* ignore */ }
                   toast.error(t("mine.error.analyze"), { description: obj.error, duration: 5000 });
@@ -478,6 +487,7 @@ export default function MinePage() {
               setError(t("errors.api.analyzeFailed"));
               setReceipt(null);
               setIsMining(false);
+              setCanLeaveAnalyzeScreen(false);
               setCurrentStep(0);
               try { URL.revokeObjectURL(imageUrl); } catch { /* ignore */ }
               return;
@@ -490,6 +500,7 @@ export default function MinePage() {
             setError(t("errors.api.analyzeFailed"));
             setReceipt(null);
             setIsMining(false);
+            setCanLeaveAnalyzeScreen(false);
             setCurrentStep(0);
             try { URL.revokeObjectURL(imageUrl); } catch { /* ignore */ }
             return;
@@ -510,6 +521,7 @@ export default function MinePage() {
             setError(rejectionMessage);
             setReceipt(null);
             setIsMining(false);
+            setCanLeaveAnalyzeScreen(false);
             setCurrentStep(0);
             try { URL.revokeObjectURL(imageUrl); } catch { /* ignore */ }
             return;
@@ -530,6 +542,7 @@ export default function MinePage() {
             setPendingTimeAnalysis({ analysis: fullAnalysis, imageUrl });
             setShowTimeModal(true);
             setIsMining(false);
+            setCanLeaveAnalyzeScreen(false);
             return;
           }
           
@@ -542,6 +555,7 @@ export default function MinePage() {
           setError(translateApiError(errMsg, t) || errMsg);
           setReceipt(null);
           setIsMining(false);
+          setCanLeaveAnalyzeScreen(false);
           setCurrentStep(0);
           try { URL.revokeObjectURL(imageUrl); } catch { /* ignore */ }
           toast.error(t("mine.error.analyze"), {
@@ -570,6 +584,7 @@ export default function MinePage() {
 
       setError(translateApiError(errorMessage, t) || errorMessage);
       setReceipt(null);
+      setCanLeaveAnalyzeScreen(false);
       setCurrentStep(0);
     } finally {
       uploadAnalyzeInFlightRef.current = false;
@@ -675,6 +690,23 @@ export default function MinePage() {
     setPipelineLabel("");
     setDisplayPipelineStep(0);
     setWarmupProgress(0);
+    setCanLeaveAnalyzeScreen(false);
+  };
+
+  const handleLeaveAnalyzeScreen = () => {
+    toast.success(
+      locale === "tr"
+        ? "Fiş yüklendi, analiz arka planda devam ediyor."
+        : "Receipt uploaded, analysis continues in background.",
+      {
+        description:
+          locale === "tr"
+            ? "Analiz tamamlanınca bildirim alacaksınız."
+            : "You will be notified when analysis is complete.",
+        duration: 5000,
+      }
+    );
+    router.push("/app/receipts");
   };
 
   if (error) {
@@ -693,8 +725,8 @@ export default function MinePage() {
   }
 
   return (
-    <AppShell>
-      <div className="max-w-md mx-auto space-y-4">
+    <AppShell className={isAnalyzeScreen ? "p-2 sm:p-2 pb-[clamp(3.75rem,10svh,5rem)] min-h-0 overflow-hidden" : undefined}>
+      <div className={`max-w-md mx-auto ${isAnalyzeScreen ? "space-y-2 h-full min-h-0 overflow-hidden" : "space-y-4"}`}>
         {/* Tara – kamera ile fiş tara */}
         {currentStep === 0 && (
           <ReceiptScanner
@@ -710,8 +742,17 @@ export default function MinePage() {
             progress={displayPipelineStep === 0 ? warmupProgress : Math.round((displayPipelineStep / 11) * 100)}
             pipelineStep={displayPipelineStep}
             pipelineLabel={PIPELINE_STAGE_LABELS[displayPipelineStep] ?? ""}
+            canLeaveScreen={canLeaveAnalyzeScreen}
+            leaveHintText={
+              locale === "tr"
+                ? "Fiş sunucuya yüklendi. Bu ekrandan çıkabilirsiniz, analiz arka planda devam eder."
+                : "Receipt reached the server. You can leave this screen while analysis continues in the background."
+            }
+            leaveButtonText={locale === "tr" ? "Arka planda devam et" : "Continue in background"}
+            onLeaveScreen={handleLeaveAnalyzeScreen}
             locale={locale}
             accountLevel={accountLevel}
+            compact={true}
           />
         )}
 

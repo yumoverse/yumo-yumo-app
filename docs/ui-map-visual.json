@@ -1,0 +1,80 @@
+{
+  "generatedAt": "2026-03-27T09:25:34.674Z",
+  "baseUrl": "http://localhost:3000",
+  "viewport": {
+    "width": 430,
+    "height": 932
+  },
+  "routes": [
+    {
+      "id": "tab-home",
+      "label": "Home",
+      "route": "/app",
+      "requestedUrl": "http://localhost:3000/app",
+      "finalUrl": "http://localhost:3000/app/dashboard",
+      "status": "ok",
+      "note": null,
+      "screenshot": "docs/ui-map-assets/tab-home.png"
+    },
+    {
+      "id": "tab-receipts",
+      "label": "Receipts",
+      "route": "/app/receipts",
+      "requestedUrl": "http://localhost:3000/app/receipts",
+      "finalUrl": "http://localhost:3000/app/receipts",
+      "status": "ok",
+      "note": null,
+      "screenshot": "docs/ui-map-assets/tab-receipts.png"
+    },
+    {
+      "id": "tab-mine",
+      "label": "Mine",
+      "route": "/app/mine",
+      "requestedUrl": "http://localhost:3000/app/mine",
+      "finalUrl": "http://localhost:3000/app/mine",
+      "status": "ok",
+      "note": null,
+      "screenshot": "docs/ui-map-assets/tab-mine.png"
+    },
+    {
+      "id": "tab-leaderboard",
+      "label": "Leaderboard",
+      "route": "/app/leaderboard",
+      "requestedUrl": "http://localhost:3000/app/leaderboard",
+      "finalUrl": "http://localhost:3000/app/leaderboard",
+      "status": "ok",
+      "note": null,
+      "screenshot": "docs/ui-map-assets/tab-leaderboard.png"
+    },
+    {
+      "id": "tab-profile",
+      "label": "Profile",
+      "route": "/app/profile",
+      "requestedUrl": "http://localhost:3000/app/profile",
+      "finalUrl": "http://localhost:3000/app/profile",
+      "status": "ok",
+      "note": null,
+      "screenshot": "docs/ui-map-assets/tab-profile.png"
+    },
+    {
+      "id": "tab-insights",
+      "label": "Insights",
+      "route": "/app/insights",
+      "requestedUrl": "http://localhost:3000/app/insights",
+      "finalUrl": "http://localhost:3000/app/insights",
+      "status": "ok",
+      "note": null,
+      "screenshot": "docs/ui-map-assets/tab-insights.png"
+    },
+    {
+      "id": "tab-tasks",
+      "label": "Tasks",
+      "route": "/app/tasks",
+      "requestedUrl": "http://localhost:3000/app/tasks",
+      "finalUrl": "http://localhost:3000/app/tasks",
+      "status": "ok",
+      "note": null,
+      "screenshot": "docs/ui-map-assets/tab-tasks.png"
+    }
+  ]
+}

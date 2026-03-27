@@ -3,7 +3,7 @@
  * POST /api/internal/post-process?receiptId=...
  * Idempotent: skips if post_process_state is not pending.
  *
- * Requires Authorization: Bearer <INTERNAL_SECRET> header.
+ * Requires Authorization: Bearer <INTERNAL_SECRET> header (skipped in development when INTERNAL_SECRET is unset).
  */
 
 import { NextResponse } from "next/server";
@@ -14,6 +14,8 @@ export const runtime = "nodejs";
 
 function checkInternalAuth(req: Request): boolean {
   const secret = process.env.INTERNAL_SECRET;
+  // Local dev: enqueuePostProcess often runs without Bearer; allow only when secret unset + development
+  if (!secret && process.env.NODE_ENV === "development") return true;
   if (!secret) return false;
   const auth = req.headers.get("authorization");
   return auth === `Bearer ${secret}`;

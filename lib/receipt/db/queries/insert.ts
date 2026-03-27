@@ -15,8 +15,33 @@ import { getReceiptById } from "./select";
 import { isFaz2Enabled } from "@/config/oracle-phases";
 
 /** Fire-and-forget trigger for Faz2 post-process worker (Oracle plan). Sadece ORACLE_FAZ2_ENABLED=true ise çalışır. */
+async function runPostProcessInProcess(receiptId: string): Promise<void> {
+  try {
+    const { runPostProcess } = await import("@/lib/receipt/post-process/run-post-process");
+    const result = await runPostProcess(receiptId);
+    if (!result.ok) {
+      console.warn(
+        `[storage-db] in-process post-process failed for ${receiptId}: ${result.error || result.state}`
+      );
+    } else {
+      console.log(`[storage-db] in-process post-process completed for ${receiptId}: ${result.state}`);
+    }
+  } catch (err: any) {
+    console.warn("[storage-db] in-process post-process exception:", err?.message || err);
+  }
+}
+
 function enqueuePostProcess(receiptId: string): void {
   if (!isFaz2Enabled()) return;
+
+  // Local development: avoid network roundtrip fragility, run worker in-process.
+  if (process.env.NODE_ENV === "development") {
+    queueMicrotask(() => {
+      void runPostProcessInProcess(receiptId);
+    });
+    return;
+  }
+
   const base = process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
     : process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
@@ -26,9 +51,17 @@ function enqueuePostProcess(receiptId: string): void {
     method: "POST",
     cache: "no-store",
     ...(internalSecret && { headers: { Authorization: `Bearer ${internalSecret}` } }),
-  }).catch((err) =>
-    console.warn("[storage-db] enqueuePostProcess failed:", err?.message)
-  );
+  })
+    .then(async (res) => {
+      if (!res.ok) {
+        const body = await res.text().catch(() => "");
+        throw new Error(`HTTP ${res.status} ${body}`.trim());
+      }
+    })
+    .catch((err) => {
+      console.warn("[storage-db] enqueuePostProcess failed, falling back to in-process:", err?.message);
+      void runPostProcessInProcess(receiptId);
+    });
 }
 
 /**
@@ -69,7 +102,8 @@ export async function insertReceipt(receipt: ReceiptAnalysis): Promise<ReceiptAn
         ocr_raw_text, wallet_address, receipt_data, vision_json, created_at, updated_at,
         proof_type, is_rewarded, reward_tier, risk_score, evidence, source, receipt_hash,
         image_phash, content_hash,
-        post_process_state, post_process_retry_count, slot_type, rewarded
+        post_process_state, post_process_retry_count, slot_type, rewarded,
+        merchant_address, branch_info, merchant_city, merchant_district, merchant_neighborhood, merchant_street
       ) VALUES (
         ${columns.receiptId}, ${columns.status}, ${columns.username}, ${columns.merchantName}, ${columns.merchantId},
         ${columns.merchantPlaceId}, ${columns.merchantCategory}, ${columns.merchantCountry},
@@ -86,7 +120,9 @@ export async function insertReceipt(receipt: ReceiptAnalysis): Promise<ReceiptAn
         ${columns.proofType}, ${columns.isRewarded}, ${columns.rewardTier}, ${columns.riskScore}, 
         ${columns.evidence}::jsonb, ${columns.source}::jsonb, ${columns.receiptHash},
         ${columns.imagePhash}, ${columns.contentHash},
-        ${columns.postProcessState}, ${columns.postProcessRetryCount}, ${columns.slotType}, ${columns.rewarded}
+        ${columns.postProcessState}, ${columns.postProcessRetryCount}, ${columns.slotType}, ${columns.rewarded},
+        ${columns.merchantAddress}, ${columns.branchInfo}, ${columns.merchantCity},
+        ${columns.merchantDistrict}, ${columns.merchantNeighborhood}, ${columns.merchantStreet}
       )
       ON CONFLICT (receipt_id) 
       DO UPDATE SET
@@ -146,7 +182,13 @@ export async function insertReceipt(receipt: ReceiptAnalysis): Promise<ReceiptAn
         post_process_state = EXCLUDED.post_process_state,
         post_process_retry_count = EXCLUDED.post_process_retry_count,
         slot_type = EXCLUDED.slot_type,
-        rewarded = EXCLUDED.rewarded
+        rewarded = EXCLUDED.rewarded,
+        merchant_address = COALESCE(EXCLUDED.merchant_address, receipts.merchant_address),
+        branch_info = COALESCE(EXCLUDED.branch_info, receipts.branch_info),
+        merchant_city = COALESCE(EXCLUDED.merchant_city, receipts.merchant_city),
+        merchant_district = COALESCE(EXCLUDED.merchant_district, receipts.merchant_district),
+        merchant_neighborhood = COALESCE(EXCLUDED.merchant_neighborhood, receipts.merchant_neighborhood),
+        merchant_street = COALESCE(EXCLUDED.merchant_street, receipts.merchant_street)
     `;
 
     // Save breakdown items, flags reasons, and OCR lines in parallel
@@ -200,9 +242,14 @@ export async function insertReceipt(receipt: ReceiptAnalysis): Promise<ReceiptAn
       }
     }
 
-    // Oracle: enqueue post-process for every analyzed/verified receipt so receipt_rewards is filled
-    // (even when vision was not stored: runPostProcess uses receipts.hidden_cost_core and receipts.vision_json)
-    if (isFaz2Enabled() && (receipt.status === "analyzed" || receipt.status === "verified")) {
+    // Oracle: enqueue post-process so receipt_line_items / rewards fill (Faz2 worker).
+    // Include "scanned": analyze route autoSaveScanned uses that status before user taps Kaydet.
+    if (
+      isFaz2Enabled() &&
+      (receipt.status === "analyzed" ||
+        receipt.status === "verified" ||
+        receipt.status === "scanned")
+    ) {
       enqueuePostProcess(receipt.receiptId);
     }
 
@@ -235,10 +282,17 @@ export async function insertReceipt(receipt: ReceiptAnalysis): Promise<ReceiptAn
             createdAt: existing.created_at
           });
           
-          // Return the existing receipt instead of throwing error
-          const existingReceiptData = await getReceiptById(existing.receipt_id, receipt.username, false);
+          // Return the existing receipt instead of throwing error.
+          // IMPORTANT: use existing.username (owner of the duplicate), not receipt.username (current uploader).
+          // getReceiptById filters by username, so querying with the wrong user returns null.
+          const existingReceiptData = await getReceiptById(existing.receipt_id, existing.username, false);
           if (existingReceiptData) {
             return existingReceiptData;
+          }
+          // Last-resort: try without username filter (admin path)
+          const existingReceiptDataNoFilter = await getReceiptById(existing.receipt_id, undefined, false);
+          if (existingReceiptDataNoFilter) {
+            return existingReceiptDataNoFilter;
           }
           throw new Error(`Duplicate receipt detected but could not retrieve existing receipt.`);
         }

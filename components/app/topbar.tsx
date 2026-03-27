@@ -22,6 +22,7 @@ interface TopbarProps {
   onMarkNotificationRead?: (id: number) => void;
   onMarkAllNotificationsRead?: () => void;
   onNavigateToReceipt?: (receiptId: string) => void;
+  onNavigateToNotification?: (notification: AppNotification) => void;
   onAvatarClick?: () => void;
   /** Ana ekran modu: logo, locale toggle ve streak pill gizlenir */
   homeVariant?: boolean;
@@ -41,6 +42,7 @@ export function Topbar({
   onMarkNotificationRead,
   onMarkAllNotificationsRead,
   onNavigateToReceipt,
+  onNavigateToNotification,
   onAvatarClick,
   homeVariant = false,
   className,
@@ -227,6 +229,12 @@ export function Topbar({
                     <button
                       type="button"
                       onClick={() => {
+                        if (onNavigateToNotification) {
+                          onMarkNotificationRead?.(n.id);
+                          setNotificationsOpen(false);
+                          onNavigateToNotification(n);
+                          return;
+                        }
                         if (n.receiptId && onNavigateToReceipt) {
                           onMarkNotificationRead?.(n.id);
                           setNotificationsOpen(false);

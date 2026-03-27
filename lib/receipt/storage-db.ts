@@ -60,8 +60,6 @@ export async function getAllReceipts(
     }
     if (statusValues.length > 0) {
       filtered = filtered.filter(r => statusValues.includes(r.status ?? ""));
-    } else {
-      filtered = filtered.filter(r => r.status !== "scanned");
     }
     
     return filtered.slice(offset, offset + limit);

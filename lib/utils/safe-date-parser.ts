@@ -20,9 +20,17 @@ const MONTH_NAMES_TO_NUM: Record<string, number> = {
  * Returns YYYY-MM-DD string directly (NO Date object to avoid timezone bugs)
  */
 export function parseDateString(dateStr: string): string | null {
+  // OCR often emits Unicode dash variants (– — −) and odd separators.
+  // Normalize them so date regexes can match consistently.
+  const normalized = dateStr
+    .replace(/[–—−]/g, "-")
+    .replace(/[٫﹒·]/g, ".")
+    .replace(/\s+/g, " ")
+    .trim();
+
   // D/Mon/YYYY or D-Mon-YYYY or D Mon YYYY (slash, dash, dot, or space between day and month name)
   const monthNamePattern = /(\d{1,2})[\/\.\-\s]\s*(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*[\/\.\-]?\s*(\d{2,4})/i;
-  const matchMonthName = dateStr.match(monthNamePattern);
+  const matchMonthName = normalized.match(monthNamePattern);
   if (matchMonthName) {
     const day = matchMonthName[1].padStart(2, '0');
     const monthKey = matchMonthName[2].toLowerCase().slice(0, 3);
@@ -33,7 +41,7 @@ export function parseDateString(dateStr: string): string | null {
       const dayNum = parseInt(day, 10);
       if (dayNum >= 1 && dayNum <= 31) {
         const result = `${year}-${month}-${day}`;
-        console.log('[parseDateString]', { input: dateStr, parsed: { day, month, year }, output: result });
+        console.log('[parseDateString]', { input: normalized, parsed: { day, month, year }, output: result });
         return result;
       }
     }
@@ -47,7 +55,7 @@ export function parseDateString(dateStr: string): string | null {
   ];
 
   for (const pattern of patterns) {
-    const match = dateStr.match(pattern);
+    const match = normalized.match(pattern);
     if (match) {
       let day: string;
       let month: string;
@@ -78,7 +86,7 @@ export function parseDateString(dateStr: string): string | null {
       const result = `${year}-${month}-${day}`;
       
       console.log('[parseDateString]', { 
-        input: dateStr, 
+        input: normalized, 
         parsed: { day, month, year },
         output: result 
       });
@@ -131,7 +139,7 @@ export function extractDateFromLines(
   }
 
   // Fallback: Search for any date pattern (even without keywords)
-  for (let i = 0; i < Math.min(lines.length, 20); i++) {
+  for (let i = 0; i < Math.min(lines.length, 40); i++) {
     const line = lines[i];
     const parsed = parseDateString(line);
     

@@ -93,11 +93,26 @@ interface AnalyzingStepProps {
   pipelineStep?: number;
   /** Sunucudan gelen aşama etiketi (örn. "Metin okunuyor (OCR)"). */
   pipelineLabel?: string;
+  canLeaveScreen?: boolean;
+  leaveHintText?: string;
+  leaveButtonText?: string;
+  onLeaveScreen?: () => void;
   locale?: string;
   accountLevel?: number;
+  compact?: boolean;
 }
 
-export function ReceiptAnalyzingStep({ progress, pipelineStep = 0, pipelineLabel = "", accountLevel = 1 }: AnalyzingStepProps) {
+export function ReceiptAnalyzingStep({
+  progress,
+  pipelineStep = 0,
+  pipelineLabel = "",
+  canLeaveScreen = false,
+  leaveHintText,
+  leaveButtonText,
+  onLeaveScreen,
+  accountLevel = 1,
+  compact = false,
+}: AnalyzingStepProps) {
   const tier = useTier(accountLevel);
   const { t } = useAppLocale();
   const { playSfx } = useSound();
@@ -200,10 +215,10 @@ export function ReceiptAnalyzingStep({ progress, pipelineStep = 0, pipelineLabel
   }, [displayProgress, playSfx, playedComplete]);
 
   return (
-    <ThemeCard accountLevel={accountLevel} className="p-6">
-      <div className="flex flex-col items-center gap-5">
+    <ThemeCard accountLevel={accountLevel} className={compact ? "p-3 h-full" : "p-6"}>
+      <div className={`flex flex-col items-center ${compact ? "gap-3 h-full" : "gap-5"}`}>
         {/* Cinematic scan vignette */}
-        <div className="w-full max-w-sm">
+        <div className={`w-full ${compact ? "max-w-[min(92vw,22rem)]" : "max-w-[min(94vw,24rem)]"}`}>
           <div
             className="relative overflow-hidden rounded-2xl border"
             style={{ background: "var(--app-bg-elevated)", borderColor: "var(--app-border)" }}
@@ -223,10 +238,10 @@ export function ReceiptAnalyzingStep({ progress, pipelineStep = 0, pipelineLabel
               }}
             />
 
-            <div className="relative p-4">
+            <div className={compact ? "relative p-3" : "relative p-4"}>
               {/* “Receipt frame” */}
               <div
-                className="relative mx-auto w-[82%] aspect-[3/4] rounded-xl border border-dashed overflow-hidden"
+                className={`relative mx-auto rounded-xl border border-dashed overflow-hidden ${compact ? "w-[76%] aspect-[3/4]" : "w-[82%] aspect-[3/4]"}`}
                 style={{ borderColor: `${acc}55`, background: "color-mix(in srgb, var(--app-bg-surface) 70%, transparent)" }}
               >
                 {/* scan line */}
@@ -237,7 +252,7 @@ export function ReceiptAnalyzingStep({ progress, pipelineStep = 0, pipelineLabel
                 {/* glyph */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div
-                    className="w-14 h-14 rounded-2xl flex items-center justify-center"
+                    className={compact ? "w-[clamp(2.35rem,10vw,2.9rem)] h-[clamp(2.35rem,10vw,2.9rem)] rounded-xl flex items-center justify-center" : "w-14 h-14 rounded-2xl flex items-center justify-center"}
                     style={{
                       background: `${acc}12`,
                       border: `1px solid ${acc}2e`,
@@ -251,17 +266,17 @@ export function ReceiptAnalyzingStep({ progress, pipelineStep = 0, pipelineLabel
               </div>
 
               {/* Header copy */}
-              <div className="text-center mt-4">
+              <div className={compact ? "text-center mt-2" : "text-center mt-4"}>
                 <p className="text-[10px] font-semibold uppercase tracking-[0.18em]" style={{ color: "var(--app-text-muted)" }}>
                   {t("pipeline.analyzing")}
                 </p>
-                <h2 className="text-[17px] font-semibold mt-1" style={{ color: "var(--app-text-primary)" }}>
+                <h2 className={compact ? "text-[clamp(14px,4.1vw,16px)] font-semibold mt-1" : "text-[17px] font-semibold mt-1"} style={{ color: "var(--app-text-primary)" }}>
                   {storyTitle}
                 </h2>
-                <p className="text-[12px] mt-1 leading-snug" style={{ color: "var(--app-text-secondary)" }}>
+                <p className={compact ? "text-[clamp(10px,3vw,12px)] mt-1 leading-snug" : "text-[12px] mt-1 leading-snug"} style={{ color: "var(--app-text-secondary)" }}>
                   {storySub}
                 </p>
-                <p className="text-[11px] mt-2 receipt-analyzing-pulse" style={{ color: "var(--app-text-muted)" }}>
+                <p className={compact ? "text-[clamp(9px,2.8vw,11px)] mt-1.5 receipt-analyzing-pulse" : "text-[11px] mt-2 receipt-analyzing-pulse"} style={{ color: "var(--app-text-muted)" }}>
                   {currentLabel}
                 </p>
               </div>
@@ -269,8 +284,28 @@ export function ReceiptAnalyzingStep({ progress, pipelineStep = 0, pipelineLabel
           </div>
         </div>
 
+        {canLeaveScreen && (
+          <div className={`w-full rounded-xl border ${compact ? "max-w-[min(92vw,22rem)] px-2.5 py-2.5" : "max-w-sm px-3 py-3"}`} style={{ background: "var(--app-bg-elevated)", borderColor: "var(--app-border)" }}>
+            <p className={compact ? "text-[clamp(10px,2.9vw,12px)] leading-snug mb-1.5" : "text-[12px] leading-snug mb-2"} style={{ color: "var(--app-text-secondary)" }}>
+              {leaveHintText || "Receipt uploaded successfully. You can leave this screen; we will notify you when analysis is complete."}
+            </p>
+            <button
+              type="button"
+              onClick={onLeaveScreen}
+              className={compact ? "w-full rounded-lg py-1.5 text-[clamp(12px,3.2vw,14px)] font-semibold" : "w-full rounded-lg py-2 text-sm font-semibold"}
+              style={{
+                background: `linear-gradient(135deg, ${tier.accent}, ${tier.accent2})`,
+                color: "#0a0a0a",
+              }}
+            >
+              {leaveButtonText || "Continue in background"}
+            </button>
+          </div>
+        )}
+
         {/* Story beats (icon timeline) */}
-        <div className="w-full max-w-sm grid grid-cols-3 gap-2">
+        {!compact && (
+          <div className="w-full max-w-sm grid grid-cols-3 gap-2">
           {storyScenes.map((s, i) => {
             const isCompleted = i < sceneIndex || displayProgress >= 100;
             const isActive = i === sceneIndex && displayProgress < 100;
@@ -306,10 +341,11 @@ export function ReceiptAnalyzingStep({ progress, pipelineStep = 0, pipelineLabel
               </div>
             );
           })}
-        </div>
+          </div>
+        )}
 
         {/* Progress */}
-        <div className="w-full max-w-sm">
+        <div className={`w-full ${compact ? "max-w-[min(92vw,22rem)]" : "max-w-sm"} ${compact ? "mt-auto" : ""}`}>
           <div className="flex items-center justify-between mb-1">
             <p className="text-[11px] font-medium" style={{ color: "var(--app-text-muted)" }}>
               {t("mining.modal.progress")}
@@ -327,12 +363,14 @@ export function ReceiptAnalyzingStep({ progress, pipelineStep = 0, pipelineLabel
               }}
             />
           </div>
-          <div className="mt-3 rounded-xl border px-3 py-2 flex items-center gap-2" style={{ background: "var(--app-bg-elevated)", borderColor: "var(--app-border)" }}>
-            <ShieldCheck className="w-4 h-4" style={{ color: acc }} />
-            <p className="text-[11px] leading-snug" style={{ color: "var(--app-text-muted)" }}>
-              {t("mine.privacy.description")}
-            </p>
-          </div>
+          {!compact && (
+            <div className="mt-3 rounded-xl border px-3 py-2 flex items-center gap-2" style={{ background: "var(--app-bg-elevated)", borderColor: "var(--app-border)" }}>
+              <ShieldCheck className="w-4 h-4" style={{ color: acc }} />
+              <p className="text-[11px] leading-snug" style={{ color: "var(--app-text-muted)" }}>
+                {t("mine.privacy.description")}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </ThemeCard>

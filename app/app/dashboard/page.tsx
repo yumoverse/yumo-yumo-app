@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
+import { useQueryClient } from "@tanstack/react-query";
 import { AppShell } from "@/components/app/app-shell";
 import { ErrorState } from "@/components/app/error-state";
 import { useAppLocale } from "@/lib/i18n/app-context";
@@ -11,13 +12,13 @@ import { StreakRow } from "@/components/app/home/streak-row";
 import { TokenCards } from "@/components/app/home/token-cards";
 import { QuestsScreen } from "@/components/app/quests-screen";
 import { ACCOUNT_LEVEL_XP_THRESHOLDS } from "@/config/account-level-config";
+import { DASHBOARD_QUERY_KEY } from "@/lib/app/query-keys";
 
 export default function HomePage() {
   const { t } = useAppLocale();
   const { profile: ctxProfile, loading, error: profileError, refresh } = useAppProfile();
+  const queryClient = useQueryClient();
   const [questsRefreshKey, setQuestsRefreshKey] = useState(0);
-
-  useEffect(() => { refresh(); }, [refresh]);
 
   const profile = useMemo(() => {
     const p = ctxProfile;
@@ -55,6 +56,8 @@ export default function HomePage() {
     const data = await res.json();
     if (data.ok) {
       await refresh();
+      // Dashboard harcama verisi artık React Query cache'de — invalidate et
+      queryClient.invalidateQueries({ queryKey: DASHBOARD_QUERY_KEY("monthly") });
       setQuestsRefreshKey(k => k + 1);
     }
     return data;

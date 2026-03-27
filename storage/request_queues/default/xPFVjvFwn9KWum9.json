@@ -1,0 +1,9 @@
+{
+	"id": "xPFVjvFwn9KWum9",
+	"json": "{\"id\":\"xPFVjvFwn9KWum9\",\"url\":\"https://www.starbucks.com.tr/menu/yiyecekler/pasta-ve-kekler\",\"loadedUrl\":\"https://www.starbucks.com.tr/en/menu\",\"uniqueKey\":\"https://www.starbucks.com.tr/menu/yiyecekler/pasta-ve-kekler\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-03-16T08:19:16.946Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.starbucks.com.tr/menu/yiyecekler/pasta-ve-kekler",
+	"url": "https://www.starbucks.com.tr/menu/yiyecekler/pasta-ve-kekler"
+}

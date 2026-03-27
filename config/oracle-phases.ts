@@ -17,9 +17,16 @@ function envBool(name: string): boolean {
   return v === "true" || v === "1";
 }
 
+function envIsUnset(name: string): boolean {
+  return process.env[name] == null || process.env[name] === "";
+}
+
 export const oraclePhases = {
   /** Faz2: post-process worker (receipt_vision_raw → verified, trust-update tetiklemesi). */
   get faz2Enabled(): boolean {
+    if (process.env.NODE_ENV === "development" && envIsUnset("ORACLE_FAZ2_ENABLED")) {
+      return true;
+    }
     return envBool("ORACLE_FAZ2_ENABLED");
   },
 

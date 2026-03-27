@@ -13,6 +13,7 @@ import { ThemeLevelProvider, TierVarsInjector } from "@/lib/theme/theme-context"
 import { SoundProvider } from "@/lib/audio/sound-context";
 import { useIsDesktop } from "@/lib/hooks/use-is-desktop";
 import { cn } from "@/lib/utils";
+import { InstallPrompt } from "@/components/pwa/install-prompt";
 
 interface AppShellProps {
   children: React.ReactNode;
@@ -52,6 +53,13 @@ function AppShellInner({ children, className }: AppShellProps) {
   const isDesktop = useIsDesktop();
   const isMenuPage = pathname === "/app/menu";
   const showMenuButton = !isDesktop;
+  const handleMenuBack = () => {
+    if (typeof window !== "undefined" && window.history.length > 1) {
+      router.back();
+    } else {
+      router.push("/app/dashboard");
+    }
+  };
 
   return (
     <ThemeLevelProvider level={accountLevel}>
@@ -63,7 +71,7 @@ function AppShellInner({ children, className }: AppShellProps) {
           <div className="lg:pl-56 min-h-screen flex flex-col">
             <Topbar
               title={undefined}
-              onBack={undefined}
+              onBack={showMenuButton && isMenuPage ? handleMenuBack : undefined}
               onMenu={showMenuButton && !isMenuPage ? () => router.push("/app/menu") : undefined}
               accountLevel={accountLevel}
               streak={streak}
@@ -83,6 +91,7 @@ function AppShellInner({ children, className }: AppShellProps) {
             <main className={cn("relative z-10 w-full min-w-0 flex-1 p-3 sm:p-4 pb-24 lg:pb-8 max-w-[430px] lg:max-w-4xl mx-auto", className)}>
               {children}
             </main>
+            <InstallPrompt />
             <div className="lg:hidden">
               <BottomNav accountLevel={accountLevel} />
             </div>

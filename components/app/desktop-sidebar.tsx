@@ -20,6 +20,8 @@ import {
   FileCode,
   CheckSquare,
   ListChecks,
+  ListTree,
+  Package,
 } from "lucide-react";
 
 
@@ -188,6 +190,8 @@ export function DesktopSidebar() {
             {[
               { href: "/app/upload", label: t("nav.admin.fileUpload"), Icon: Upload },
               { href: "/app/admin/merchants", label: t("nav.merchants"), Icon: Store },
+              { href: "/app/admin/scraped-products", label: "Kazınan Ürünler", Icon: Package },
+              { href: "/app/admin/receipt-line-items", label: "Fiş satırları", Icon: ListTree },
               { href: "/app/admin/approvals", label: t("admin.approvals.title"), Icon: CheckSquare },
               { href: "/app/admin/bulk-upload", label: t("nav.admin.bulkUpload"), Icon: Upload },
               { href: "/app/admin/analyze-file", label: t("nav.admin.analyzeFile"), Icon: FileSearch },

@@ -1,0 +1,9 @@
+{
+	"id": "6NP0nxIexWdjd7N",
+	"json": "{\"id\":\"6NP0nxIexWdjd7N\",\"url\":\"https://www.starbucks.com.tr/menu/icecekler/sicak-cikolata\",\"loadedUrl\":\"https://www.starbucks.com.tr/en/menu\",\"uniqueKey\":\"https://www.starbucks.com.tr/menu/icecekler/sicak-cikolata\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-03-16T08:19:14.595Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.starbucks.com.tr/menu/icecekler/sicak-cikolata",
+	"url": "https://www.starbucks.com.tr/menu/icecekler/sicak-cikolata"
+}

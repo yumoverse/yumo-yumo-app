@@ -1,0 +1,9 @@
+{
+	"id": "bIreqM4DaIFE7sh",
+	"json": "{\"id\":\"bIreqM4DaIFE7sh\",\"url\":\"https://www.starbucks.com.tr/menu/yiyecekler/sandvicler\",\"loadedUrl\":\"https://www.starbucks.com.tr/en/menu\",\"uniqueKey\":\"https://www.starbucks.com.tr/menu/yiyecekler/sandvicler\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-03-16T08:19:16.978Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.starbucks.com.tr/menu/yiyecekler/sandvicler",
+	"url": "https://www.starbucks.com.tr/menu/yiyecekler/sandvicler"
+}

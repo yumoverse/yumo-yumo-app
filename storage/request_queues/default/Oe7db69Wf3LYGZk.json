@@ -1,0 +1,9 @@
+{
+	"id": "Oe7db69Wf3LYGZk",
+	"json": "{\"id\":\"Oe7db69Wf3LYGZk\",\"url\":\"https://www.starbucks.com.tr/menu/icecekler/espresso-bazli-icecekler\",\"loadedUrl\":\"https://www.starbucks.com.tr/en/menu\",\"uniqueKey\":\"https://www.starbucks.com.tr/menu/icecekler/espresso-bazli-icecekler\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-03-16T08:19:11.681Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.starbucks.com.tr/menu/icecekler/espresso-bazli-icecekler",
+	"url": "https://www.starbucks.com.tr/menu/icecekler/espresso-bazli-icecekler"
+}

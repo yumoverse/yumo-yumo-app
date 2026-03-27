@@ -117,8 +117,15 @@ export function receiptToDbColumns(receipt: ReceiptAnalysis) {
     imagePhash: imagePhash,
     contentHash: contentHash,
     blobUrl: blobUrl,
-    // Oracle: post-process pipeline (Faz1 → Faz2)
-    postProcessState: "pending",
+    // Merchant address fields (Gemini / GPT-4o fallback) — yazıldıkları dedicated kolonlar migration 037/038
+    merchantAddress: receipt.merchantAddress ?? null,
+    branchInfo: receipt.branchInfo ?? null,
+    merchantCity: receipt.addressCity ?? null,
+    merchantDistrict: receipt.addressDistrict ?? null,
+    merchantNeighborhood: receipt.addressNeighborhood ?? null,
+    merchantStreet: receipt.addressStreet ?? null,
+    // Oracle: post-process pipeline (Faz1 → Faz2); allow analyze to pin needs_review / validation_rejected
+    postProcessState: (receipt as { postProcessState?: string }).postProcessState ?? "pending",
     postProcessRetryCount: 0,
     slotType: "general",
     rewarded: receipt.isRewarded !== undefined ? receipt.isRewarded : true,

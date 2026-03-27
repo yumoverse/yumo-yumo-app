@@ -52,14 +52,14 @@ export function useNotifications() {
 
   const markRead = useCallback(
     async (id: number) => {
-      // Optimistik güncelleme — sunucu cevabını beklemeden UI'ı güncelle
+      // Optimistic update: remove clicked notification from list.
       queryClient.setQueryData<NotificationsData>(NOTIFICATIONS_QUERY_KEY, (old) => {
         if (!old) return old;
+        const removed = old.notifications.find((n) => n.id === id);
+        const wasUnread = Boolean(removed && !removed.readAt);
         return {
-          notifications: old.notifications.map((n) =>
-            n.id === id ? { ...n, readAt: new Date().toISOString() } : n
-          ),
-          unreadCount: Math.max(0, old.unreadCount - 1),
+          notifications: old.notifications.filter((n) => n.id !== id),
+          unreadCount: Math.max(0, old.unreadCount - (wasUnread ? 1 : 0)),
         };
       });
       try {
@@ -70,7 +70,7 @@ export function useNotifications() {
           body: JSON.stringify({ id }),
         });
       } catch {
-        // Hata durumunda sunucudan taze veri çek
+        // On error, sync with server state.
         queryClient.invalidateQueries({ queryKey: NOTIFICATIONS_QUERY_KEY });
       }
     },
