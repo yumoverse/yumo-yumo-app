@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 const APP_HOST = 'app.yumoyumo.com'
+const APP_PUBLIC_PATHS = new Set(['/manifest.webmanifest', '/offline'])
 
 function getNormalizedHost(request: NextRequest): string {
   const raw =
@@ -30,6 +31,9 @@ export function middleware(request: NextRequest) {
   if (isAppHost) {
     // Allow API
     if (pathname.startsWith('/api')) {
+      return NextResponse.next()
+    }
+    if (APP_PUBLIC_PATHS.has(pathname)) {
       return NextResponse.next()
     }
     // App root -> login
