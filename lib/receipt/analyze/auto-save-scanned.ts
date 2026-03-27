@@ -79,6 +79,31 @@ export async function autoSaveScannedReceipt(
     }
   }
 
-  // Intentionally no "analyzed" notification here.
-  // User should only receive the final verified notification from post-process.
+  // Emit verified-style notification at analyze completion as a reliable fallback
+  // for background/PWA flows. Post-process also tries to insert the same type and
+  // receipt_id, but both sides are deduped to avoid duplicates.
+  try {
+    const sql = getSql();
+    if (!sql) return;
+    await warmUpConnection();
+    await sql`
+      INSERT INTO user_notifications (username, type, title, body, payload, receipt_id)
+      SELECT
+        ${username},
+        'receipt_verified',
+        'Receipt verified',
+        'Your receipt analysis is completed. Tap to open claim.',
+        ${JSON.stringify({ receiptId: savedReceiptId, target: "claim_done" })}::jsonb,
+        ${savedReceiptId}
+      WHERE NOT EXISTS (
+        SELECT 1
+        FROM user_notifications
+        WHERE username = ${username}
+          AND receipt_id = ${savedReceiptId}
+          AND type = 'receipt_verified'
+      )
+    `;
+  } catch (error: any) {
+    console.warn("[Pipeline] Auto-save verified notification insert failed:", error?.message);
+  }
 }
